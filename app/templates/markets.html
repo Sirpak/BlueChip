@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+{% set active = "markets" %}
+{% block title %}BlueChipWager — Markets{% endblock %}
+{% block body %}
+  <section class="hero">
+    <div>
+      <p class="kicker">Stage 1 · conversion engine</p>
+      <h1>Market desk</h1>
+      <p class="lede">
+        American odds → break-even, multiplicative (or Shin) de-vig, and Stern
+        normal margin: P(win) and P(cover) from a projected home margin.
+        Market 0 is the closing spread prior, not “Vegas.”
+      </p>
+    </div>
+  </section>
+
+  <section class="split">
+    <form class="quote-form" method="get" action="/markets">
+      <h2>Quote</h2>
+      <label>League
+        <select name="league">
+          <option value="NFL" {% if league == 'NFL' %}selected{% endif %}>NFL (σ={{ sigmas['NFL default'] }})</option>
+          <option value="CFB" {% if league == 'CFB' %}selected{% endif %}>CFB (σ={{ sigmas['CFB'] }})</option>
+        </select>
+      </label>
+      <label>Home spread
+        <input type="number" step="0.5" name="home_spread" value="{{ home_spread }}" />
+      </label>
+      <label>Home price
+        <input type="number" step="1" name="home_american" value="{{ home_american }}" />
+      </label>
+      <label>Away price
+        <input type="number" step="1" name="away_american" value="{{ away_american }}" />
+      </label>
+      <label>Projected home margin (blank = market prior)
+        <input type="number" step="0.1" name="projected_home_margin" value="{{ projected_home_margin if projected_home_margin is not none else '' }}" />
+      </label>
+      <label>De-vig
+        <select name="devig_method">
+          <option value="multiplicative" {% if devig_method == 'multiplicative' %}selected{% endif %}>Multiplicative</option>
+          <option value="shin" {% if devig_method == 'shin' %}selected{% endif %}>Shin</option>
+          <option value="additive" {% if devig_method == 'additive' %}selected{% endif %}>Additive</option>
+        </select>
+      </label>
+      <label>Continuity correction
+        <select name="continuity">
+          <option value="true" {% if continuity %}selected{% endif %}>Yes</option>
+          <option value="false" {% if not continuity %}selected{% endif %}>No</option>
+        </select>
+      </label>
+      <button type="submit">Price</button>
+    </form>
+
+    <div>
+      <h2>Rams −7 (−110) worked example</h2>
+      <p class="caption">{{ priced.note }} · σ = {{ priced.sigma }}</p>
+      <table>
+        <tbody>
+          <tr><th>Break-even (home)</th><td>{{ '%.2f'|format(priced.break_even_home * 100) }}%</td></tr>
+          <tr><th>No-vig fair (home)</th><td>{% if priced.fair_home is not none %}{{ '%.2f'|format(priced.fair_home * 100) }}%{% else %}—{% endif %}</td></tr>
+          <tr><th>Overround</th><td>{% if priced.overround is not none %}{{ '%.2f'|format(priced.overround * 100) }}%{% else %}—{% endif %}</td></tr>
+          <tr><th>Model P(home win)</th><td>{% if priced.model_home_win is not none %}{{ '%.1f'|format(priced.model_home_win * 100) }}%{% else %}—{% endif %}</td></tr>
+          <tr><th>Model P(cover)</th><td>{% if priced.model_home_cover is not none %}{{ '%.1f'|format(priced.model_home_cover * 100) }}%{% else %}—{% endif %}</td></tr>
+          <tr><th>P(push)</th><td>{% if priced.model_push is not none %}{{ '%.1f'|format(priced.model_push * 100) }}%{% else %}—{% endif %}</td></tr>
+          <tr><th>Stern P(favorite wins) from |spread|</th><td>{% if priced.stern_favorite_win_from_line is not none %}{{ '%.1f'|format(priced.stern_favorite_win_from_line * 100) }}%{% else %}—{% endif %}</td></tr>
+          <tr><th>Fair home ML from P(win)</th><td>{% if priced.fair_home_moneyline is not none %}{{ '%+.0f'|format(priced.fair_home_moneyline) }}{% else %}—{% endif %}</td></tr>
+          <tr><th>Edge vs no-vig</th><td>{% if priced.edge_vs_market is not none %}{{ '%+.2f'|format(priced.edge_vs_market * 100) }} pp{% else %}—{% endif %}</td></tr>
+          <tr><th>Edge vs break-even</th><td>{% if priced.edge_vs_breakeven is not none %}{{ '%+.2f'|format(priced.edge_vs_breakeven * 100) }} pp{% else %}—{% endif %}</td></tr>
+        </tbody>
+      </table>
+      <p class="caption">
+        JSON: <a href="/api/markets/price?home_spread={{ home_spread }}&amp;home_american={{ home_american }}&amp;away_american={{ away_american }}{% if projected_home_margin is not none %}&amp;projected_home_margin={{ projected_home_margin }}{% endif %}&amp;league={{ league }}&amp;devig_method={{ devig_method }}">/api/markets/price</a>
+        · σ constants: NFL {{ sigmas['NFL default'] }} · Stern {{ sigmas['Stern 1991'] }} · PFR {{ sigmas['PFR'] }} · CFB {{ sigmas['CFB'] }}
+      </p>
+    </div>
+  </section>
+{% endblock %}

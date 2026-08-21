@@ -1,0 +1,25 @@
+{
+  "development_period": "2009-2022",
+  "holdout_period": "2023-2025",
+  "feature_version": "PURE-RAW-v0.x",
+  "ridge_family": "E",
+  "ridge_lambda": 100.0,
+  "ewma_alpha": 0.2,
+  "logistic_family": null,
+  "logistic_lambda": null,
+  "probability_conversion": null,
+  "calibration_method": null,
+  "metrics": [
+    "brier",
+    "log_loss",
+    "ece",
+    "mae",
+    "rmse",
+    "ats",
+    "n"
+  ],
+  "holdout_opened": false,
+  "status": "searching",
+  "updated_at": "2026-08-18T10:16:20.813943+00:00",
+  "notes": "Protocol frozen. Feature \u03bb/\u03b1/family not frozen. 2023\u20132025 sealed."
+}

@@ -1,0 +1,31 @@
+---
+description: Stern/market-as-prior research foundation for NFL and CFB margins
+alwaysApply: true
+---
+
+# Margin research foundation (008)
+
+Full note: `docs/research/008-margin-probability-foundations.md`. Do not reopen [04-bcw-v0.1.md](docs/roadmap/04-bcw-v0.1.md) or `DECISIONS.md`.
+
+## Architecture
+
+- **No-vig close is the prior and the hardest benchmark.** Hunt narrow, quantified deviations. Do not try to out-predict NFL closes from scratch.
+- Winner accuracy ≠ ATS. Literature ATS clusters ~50%; break-even at −110 is **52.38%**. Edge = model \(p\) − no-vig \(p\) (also report vs priced break-even).
+- **Published v0.1 number** remains Ridge home \(\mu\) (`BCW-RIDGE-v0.1`) + Stern. Elo/logistic are references, **not an ensemble**.
+
+## Engine math
+
+- \(M =\) home − away. \(P(M > x) = 1 - \Phi((x + 0.5 - \mu)/\sigma)\). Defaults: \(\sigma_{\text{NFL}}=13.5\) (Stern 13.86, PFR 13.45 as named constants), \(\sigma_{\text{CFB}}=15\) **spread-centered** (raw CFB score-diff \(\sigma\) ~21–22 is a different object).
+- Worked check: −7 favorite → \(\Phi(7/13.5)\approx 69.8\%\) / fair ML ≈ −231. −110 → 52.38%.
+- De-vig: **multiplicative default**, Shin optional. Continuity correction on.
+- Key numbers (3 ~15–18.7%, 7 ~9–10%) are **Stage 2** ordered-logistic / empirical — not a reason to abandon Stern in v0.1.
+
+## Features and staging
+
+- Strongest public predictor: **opponent-adjusted EPA/play differential**. Success rate and CPOE stabilize. Turnovers and red zone **regressed**. HFA ~**1.5–2.5** (not 3); down-weight 2020.
+- QB availability is the largest situational swing (~7 pts) — **CONTEXT/AVAILABILITY, not v0.1 PURE**. Injuries, weather, news are out of the freeze.
+- Stages: (1) conversion engine **done** `app/markets` → (2) key-number distribution → (3) EPA ridge + FTE Elo, Brier vs close, walk-forward never random CV → (4) situational **nudges** not re-predictions → (5) selective flags. **No CFB ingest** until NFL gates pass, even though CFB is the softer market.
+- Metrics: Brier, log loss, margin MAE/RMSE, ATS vs close, n. **No ROI/units/Kelly/bankroll on the v0.1 leaderboard.** Do not conflate win-% MAE (~0.05) with margin MAE (~10–12 pts).
+- If walk-forward Brier cannot match the close, defer to the market.
+
+Peer-reviewed anchors: Stern 1991; Glickman & Stern 1998; David et al. 2011; Lopez, Matthews & Baumer 2018. CS229/capstone numbers are indicative only.

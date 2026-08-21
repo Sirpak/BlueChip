@@ -1,0 +1,98 @@
+{
+  "experiment_id": "BCW-WF-v0.1",
+  "ran_at": "2026-08-18T09:18:58.424723+00:00",
+  "window": {
+    "season_start": 2009,
+    "season_end": 2022,
+    "season_type": "REG"
+  },
+  "n_games": 3615,
+  "models": {
+    "BCW-LOGISTIC-v0.1": {
+      "n": 3175,
+      "brier": 0.22592178510904665,
+      "log_loss": 0.6427692028147437,
+      "auc": 0.6686611351048172,
+      "mean_pred": 0.5737826075654988,
+      "base_rate": 0.5587401574803149,
+      "ece": 0.020738986386833913,
+      "market0_brier": 0.21141954670403687,
+      "market0_log_loss": 0.6109636515463399
+    },
+    "BCW-RIDGE-v0.1": {
+      "raw_epa": {
+        "n": 3175,
+        "mae": 10.499717868597642,
+        "rmse": 13.584919178419318,
+        "ats_pct": 0.5039370078740157,
+        "correct": 1600,
+        "market0_ats_pct": 0.47811023622047244,
+        "brier": 0.22193820405269735,
+        "log_loss": 0.6338656991580878,
+        "auc": 0.6820470480499112,
+        "cover_brier": 0.25782151898966227
+      },
+      "adj_epa": {
+        "n": 3175,
+        "mae": 10.582613101804062,
+        "rmse": 13.678437137565203,
+        "ats_pct": 0.5023622047244094,
+        "correct": 1595,
+        "market0_ats_pct": 0.47811023622047244,
+        "brier": 0.22416534408238412,
+        "log_loss": 0.6388646135513796,
+        "auc": 0.6739464563482196,
+        "cover_brier": 0.2594486967618367
+      },
+      "recommended_variant": "raw"
+    },
+    "BCW-HFA": {
+      "n": 3615,
+      "mae": 11.348736801491492,
+      "rmse": 14.68737000121595,
+      "ats_pct": 0.5164591977869987,
+      "correct": 1867,
+      "market0_ats_pct": 0.4791147994467497,
+      "brier": 0.24675782117813333,
+      "log_loss": 0.6866475196688293,
+      "auc": 0.5086475754919018,
+      "cover_brier": 0.27339572174705307
+    },
+    "BCW-SRS": {
+      "n": 3615,
+      "mae": 11.220472304397678,
+      "rmse": 14.447640279758899,
+      "ats_pct": 0.5195020746887967,
+      "correct": 1878,
+      "market0_ats_pct": 0.4791147994467497,
+      "brier": 0.24007426815062988,
+      "log_loss": 0.6734375837450024,
+      "auc": 0.6004655194435592,
+      "cover_brier": 0.2695239118517347
+    }
+  },
+  "ridge_full_fit_adj_coef": {
+    "variant": "adj",
+    "feature_names": [
+      "intercept",
+      "elo_diff",
+      "srs_diff",
+      "rest_diff",
+      "success_rate_diff",
+      "explosive_play_diff",
+      "adj_off_diff",
+      "adj_def_diff"
+    ],
+    "coef": {
+      "intercept": 2.0558449996963035,
+      "elo_diff": 0.048234187885435154,
+      "srs_diff": -0.05925837070758329,
+      "rest_diff": 0.10789923687959654,
+      "success_rate_diff": 22.817909876535754,
+      "explosive_play_diff": 9.870765047122404,
+      "adj_off_diff": 2.5232420830788267,
+      "adj_def_diff": 1.1940529975007044
+    }
+  },
+  "notes": "OOS season walk-forward inside 2009\u20132022. Holdout 2023\u20132025 not opened."
+}

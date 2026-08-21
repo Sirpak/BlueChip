@@ -1,0 +1,144 @@
+{% extends "base.html" %}
+{% set active = "dashboard" %}
+{% block title %}BlueChipWager — Dashboard{% endblock %}
+{% block body %}
+  {% set season = payload.latest_season %}
+  {% set scoring = payload.scoring or {} %}
+
+  <section class="hero">
+    <div>
+      <p class="kicker">Phase 1 · play-by-play loaded</p>
+      <h1>League desk{% if season %} · {{ season }}{% endif %}</h1>
+      <p class="lede">
+        {{ '{:,}'.format(payload.totals.plays) }} plays across
+        {{ payload.totals.games }} games. Model, odds, and backtest layers are still empty —
+        this is the ingested nflfastR book.
+      </p>
+    </div>
+    <aside class="status-card">
+      <span class="dot"></span>
+      <div>
+        <strong>SQLite live</strong>
+        <p>Seasons {{ payload.totals.seasons | join(', ') or 'none' }}</p>
+      </div>
+    </aside>
+  </section>
+
+  <section class="stats">
+    <article>
+      <span>Plays</span>
+      <b>{{ '{:,}'.format(payload.totals.plays) }}</b>
+    </article>
+    <article>
+      <span>Games</span>
+      <b>{{ '{:,}'.format(payload.totals.games) }}</b>
+    </article>
+    <article>
+      <span>{{ season }} home win rate</span>
+      <b>{{ scoring.home_win_rate | pct }}</b>
+    </article>
+    <article>
+      <span>{{ season }} avg total</span>
+      <b>{{ scoring.avg_total | num }}</b>
+    </article>
+  </section>
+
+  <section class="split">
+    <div>
+      <h2>Combined points by week · {{ season }} REG</h2>
+      <p class="caption">Average total points per game. Season mean {{ scoring.avg_total | num }}.</p>
+      <ol class="week-bars">
+        {% for week in payload.weekly_scoring %}
+          {% set height = ((week.avg_total or 0) / max_total * 100) | round %}
+          <li>
+            <div class="bar" style="height: {{ height }}%" title="Week {{ week.week }}: {{ week.avg_total }} pts"></div>
+            <em>{{ week.week }}</em>
+          </li>
+        {% endfor %}
+      </ol>
+    </div>
+    <div>
+      <h2>Ingest inventory</h2>
+      <p class="caption">Regular season is 272 games each year; 13 playoff games stacked on top.</p>
+      <table>
+        <thead>
+          <tr><th>Season</th><th>REG</th><th>POST</th><th>Plays</th></tr>
+        </thead>
+        <tbody>
+          {% for row in payload.inventory %}
+            <tr>
+              <td>{{ row.season }}</td>
+              <td>{{ row.regular }}</td>
+              <td>{{ row.postseason }}</td>
+              <td>{{ '{:,}'.format(row.plays) }}</td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-head">
+      <div>
+        <h2>{{ season }} standings · EPA per play</h2>
+        <p class="caption">Offense / defense EPA on pass and run plays only. Net = off − def (lower def EPA is better).</p>
+      </div>
+    </div>
+    <div class="table-wrap">
+      <table class="dense">
+        <thead>
+          <tr>
+            <th>Team</th>
+            <th>W-L</th>
+            <th>PF/G</th>
+            <th>PA/G</th>
+            <th>Diff</th>
+            <th>Off EPA</th>
+            <th>Def EPA</th>
+            <th>Net</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for row in payload.standings %}
+            <tr class="{% if row.wins >= 12 %}good{% elif row.wins <= 4 %}bad{% endif %}">
+              <td><a href="/teams/{{ row.team }}/ratings">{{ row.team }}</a></td>
+              <td>{{ row.record }}</td>
+              <td>{{ '%.1f'|format(row.ppg) }}</td>
+              <td>{{ '%.1f'|format(row.papg) }}</td>
+              <td>{{ '%+.1f'|format(row.diff) }}</td>
+              <td>{{ row.off_epa | epa }}</td>
+              <td>{{ row.def_epa | epa }}</td>
+              <td>{{ row.net_epa | epa }}</td>
+              <td><a class="text-link" href="/teams/{{ row.team }}/ratings">JSON</a></td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section>
+    <h2>{{ season }} playoffs</h2>
+    <p class="caption">Spread is nflfastR home line (negative = home favored).</p>
+    <table>
+      <thead>
+        <tr><th>Round</th><th>Matchup</th><th>Score</th><th>Line</th><th>Date</th></tr>
+      </thead>
+      <tbody>
+        {% for g in payload.playoffs %}
+          <tr>
+            <td>{{ g.round }}</td>
+            <td>{{ g.away_team }} @ {{ g.home_team }}</td>
+            <td>
+              {% if g.away_score is not none %}{{ g.away_score }}–{{ g.home_score }}{% else %}—{% endif %}
+            </td>
+            <td>{% if g.spread_line is not none %}{{ '%+.1f'|format(g.spread_line) }}{% else %}—{% endif %}</td>
+            <td>{{ g.game_date or '—' }}</td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </section>
+{% endblock %}

@@ -1,0 +1,35 @@
+{
+  "model_name": "BCW-RIDGE-PURE",
+  "model_version": "v0.1-candidate",
+  "family": "E",
+  "lam": 100.0,
+  "kind": "PURE-RAW-v0.x",
+  "metrics": {
+    "n": 3175,
+    "mae": 10.578988464951573,
+    "rmse": 13.683194241645266,
+    "mae_interval": {
+      "point": 10.578988464951573,
+      "lo": 10.23732242603743,
+      "hi": 10.864486919413777,
+      "n": 3175,
+      "draws": 400
+    },
+    "rmse_interval": {
+      "point": 13.683194241645266,
+      "lo": 13.309071708961259,
+      "hi": 14.032565491740856,
+      "n": 3175,
+      "draws": 400
+    },
+    "ats_pct": 0.5143307086614173,
+    "correct": 1633,
+    "market0_ats_pct": 0.47811023622047244,
+    "brier": 0.22304832898727744,
+    "log_loss": 0.6368111602760471,
+    "auc": 0.6798779580055154,
+    "cover_brier": 0.2589268054466864
+  },
+  "public_probability": false,
+  "label": "Research Preview"
+}

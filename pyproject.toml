@@ -1,0 +1,48 @@
+[project]
+name = "bluechipwager"
+version = "0.1.0"
+description = "BlueChipWager — NFL predictive modeling and betting edge research"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "alembic>=1.14.0",
+    "certifi>=2024.0.0",
+    "fastapi>=0.115.0",
+    "jinja2>=3.1.4",
+    "httpx>=0.28.0",
+    "pandas>=2.2.0",
+    "pyarrow>=18.0.0",
+    "pydantic-settings>=2.6.0",
+    "sqlalchemy>=2.0.36",
+    "tzdata>=2024.1",
+    "truststore>=0.10.0",
+    "bcrypt>=4.2.0",
+    "itsdangerous>=2.2.0",
+    "python-multipart>=0.0.9",
+    "xgboost>=2.1.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.3.0",
+    "pytest-asyncio>=0.24.0",
+]
+
+[project.scripts]
+bcw-ingest = "app.ingest.cli:main"
+bcw-features = "ml.features.build:main"
+bcw-walk-forward = "ml.pregame.walk_forward:main"
+bcw-experiments = "ml.pregame.experiments:main"
+bcw-seed-users = "app.seed_users:main"
+bcw-cfbd-ping = "app.ingest.cfbd_ping:main"
+
+[build-system]
+requires = ["setuptools>=75.0.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["app*", "db*", "ml*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]

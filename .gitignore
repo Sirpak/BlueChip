@@ -1,0 +1,43 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+dist/
+build/
+.venv/
+venv/
+.env
+
+# Data & local DB (never commit the SQLite warehouse or parquet caches)
+data/raw/**
+!data/raw/.gitkeep
+data/*.db
+data/*.db-*
+data/*.db-shm
+data/*.db-wal
+data/models/**
+!data/models/.gitkeep
+*.sqlite
+*.sqlite3
+
+# Keep small research artifacts; ignore accidental large dumps
+data/walk_forward/*.parquet
+data/walk_forward/*.csv
+data/model_freezes/*.pkl
+data/model_freezes/*.joblib
+
+# IDE / OS
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+web/node_modules/
+web/dist/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/

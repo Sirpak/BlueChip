@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{% block title %}BlueChipWager{% endblock %}</title>
+    <link rel="icon" type="image/png" href="/images/icon.png" />
+    <link rel="apple-touch-icon" href="/images/icon_big.png" />
+    <link rel="stylesheet" href="/static/app.css" />
+  </head>
+  <body>
+    <header class="masthead">
+      <a class="brand" href="/">
+        <img src="/images/icon.png" alt="" width="28" height="28" />
+        <span>
+          <strong>BlueChipWager</strong>
+          <em>NFL desk</em>
+        </span>
+      </a>
+      <nav>
+        <a href="/" class="{% if active == 'dashboard' %}is-on{% endif %}">Dashboard</a>
+        <a href="/games" class="{% if active == 'games' %}is-on{% endif %}">Games</a>
+        <a href="/markets" class="{% if active == 'markets' %}is-on{% endif %}">Markets</a>
+        <a href="/docs">API</a>
+        <a href="/health">Health</a>
+      </nav>
+    </header>
+    <main>{% block body %}{% endblock %}</main>
+    <footer class="site-foot">
+      Local SQLite · nflfastR ingest · Stern market engine
+    </footer>
+  </body>
+</html>

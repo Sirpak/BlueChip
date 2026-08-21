@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+{% set active = "games" %}
+{% block title %}BlueChipWager — Games{% endblock %}
+{% block body %}
+  <section class="hero">
+    <div>
+      <p class="kicker">Next {{ upcoming.horizon_days }} days</p>
+      <h1>Upcoming</h1>
+      <p class="lede">
+        ESPN scoreboard (FBS for college). Spreads when the book has posted them —
+        not a closing line. Cached ~20 minutes. Source tagged <code>espn</code>, not nflverse_pfr.
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <div class="tabs">
+      <a class="pill {% if tab == 'nfl' %}is-on{% endif %}" href="/games?tab=nfl">NFL ({{ upcoming.count.nfl }})</a>
+      <a class="pill {% if tab == 'cfb' %}is-on{% endif %}" href="/games?tab=cfb">CFB ({{ upcoming.count.cfb }})</a>
+    </div>
+
+    {% set rows = upcoming.nfl if tab == 'nfl' else upcoming.cfb %}
+    {% if rows %}
+      <table>
+        <thead>
+          <tr>
+            <th>Kickoff (UTC)</th>
+            <th>Matchup</th>
+            <th>Week</th>
+            <th>Spread</th>
+            <th>Total</th>
+            <th>Book</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for g in rows %}
+            <tr>
+              <td>{{ g.kickoff[:16].replace('T', ' ') if g.kickoff else '—' }}</td>
+              <td>{{ g.matchup }}</td>
+              <td>{{ g.round }}</td>
+              <td>{{ g.spread_label or '—' }}</td>
+              <td>{% if g.total_line is not none %}{{ g.total_line }}{% else %}—{% endif %}</td>
+              <td>{{ g.book or '—' }}</td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    {% else %}
+      <p class="empty">
+        No scheduled {{ tab | upper }} games in this window (or ESPN did not return a slate).
+      </p>
+    {% endif %}
+  </section>
+
+  <section>
+    <h2>Most recent NFL results (nflverse)</h2>
+    <table>
+      <thead>
+        <tr><th>Date</th><th>Matchup</th><th>Score</th><th>Round</th><th>Close</th></tr>
+      </thead>
+      <tbody>
+        {% for g in payload.recent %}
+          <tr>
+            <td>{{ g.game_date }}</td>
+            <td>{{ g.away_team }} @ {{ g.home_team }}</td>
+            <td>{{ g.away_score }}–{{ g.home_score }}</td>
+            <td>{{ g.round }}</td>
+            <td>{% if g.spread_line is not none %}{{ '%+.1f'|format(g.spread_line) }}{% else %}—{% endif %}</td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </section>
+{% endblock %}

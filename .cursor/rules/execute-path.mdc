@@ -1,0 +1,17 @@
+---
+description: Execute phases 1–15 in order; model before AI wrapper
+alwaysApply: true
+---
+
+# Immediate execution path
+
+Canonical: `docs/roadmap/02-phases.md`. Freeze: `docs/roadmap/04-bcw-v0.1.md`. Do not skip ahead.
+
+```
+1999+ PBP → schedules → snapshots → HFA → Elo → SRS → opp-adj EPA → logistic → Ridge
+→ walk-forward 2009–2022 → freeze → 2023–2025 once → put μ on the slate
+```
+
+- **Now:** logistic, then Ridge freeze on **2009–2022**. Snapshots exist (`python -m ml.features.build`). No pregame LightGBM, no CFB rows, no Stripe, no real Ask/RAG, no Odds API, no AWS.
+- WP/EP trainer is **parallel**, not a substitute for Ridge.
+- Pretty desk + Stern jitter is not Model launch. Launch is versioned \(\mu\) next to Market 0 with gates.
