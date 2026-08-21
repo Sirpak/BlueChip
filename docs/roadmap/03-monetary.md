@@ -232,7 +232,7 @@ find_similar_games
 OpenAI Apps can expose a service to ChatGPT via MCP. ([Apps in ChatGPT][openai-apps]) Full MCP is currently skewed to Business/Enterprise/Edu; Pro is more limited developer-mode read/fetch. ([Developer mode / MCP][openai-mcp]) **Do not make signup depend on another company’s plan matrix.**
 
 ```
-BlueChip web (hosted AI)     ChatGPT / Claude / Cursor / other MCP
+BlueChip web (hosted AI)     ChatGPT / Claude / other MCP clients
             \                       /
              \                     /
               same tools/ + API

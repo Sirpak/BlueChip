@@ -42,11 +42,15 @@ web/dist/
 .coverage
 htmlcov/
 
-# Cursor / local AI tooling — never publish
+# Local AI / editor agent config — never publish
 .cursor/
+**/.cursor/
 .cursorignore
+.cursorindexingignore
 .cursorrules
+**/.cursorrules
 AGENTS.md
 **/AGENTS.md
 *.canvas.tsx
+**/*.canvas.tsx
 
