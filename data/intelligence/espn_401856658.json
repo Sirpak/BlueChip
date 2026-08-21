@@ -1,0 +1,220 @@
+{
+  "game_id": "espn:401856658",
+  "version": "BCW-GIP-v0.1",
+  "created_at": "2026-08-21T03:40:47.210479+00:00",
+  "generated_at": "2026-08-21T03:40:47.210479+00:00",
+  "information_cutoff": "2026-08-21T03:40:47.210479+00:00",
+  "source_set_hash": "14861a3d3f7e6e0441afa610",
+  "game": {
+    "game_id": "espn:401856658",
+    "league": "CFB",
+    "matchup": "TNST @ UGA",
+    "home_team": "UGA",
+    "away_team": "TNST",
+    "home_name": "Georgia Bulldogs",
+    "away_name": "Tennessee State Tigers",
+    "spread_label": "UGA -46.5",
+    "home_spread": -46.5,
+    "total_line": 56.5,
+    "week": 1
+  },
+  "lean_team": "UGA",
+  "projection": {
+    "model_id": "BCW-DESK-STRENGTH-v0.x",
+    "method": "Market line + AP rank edge (CFB; no CFB Elo yet)",
+    "mu_home": 52.25,
+    "sigma": 15.0,
+    "p_home_win": 0.9997,
+    "p_home_cover": 0.6368,
+    "edge_vs_minus_110": 0.113,
+    "model_lean": "HOME",
+    "model_lean_team": "UGA",
+    "label": "Research Preview",
+    "public_probability_published": false,
+    "confidence_pct": 63.7
+  },
+  "matchup_edges": [
+    {
+      "key": "AP_RANK",
+      "title": "AP ranking gap",
+      "side": "HOME",
+      "side_team": "UGA",
+      "strength": "MAJOR",
+      "home_stat": 30.0,
+      "away_stat": 3.0,
+      "mismatch_z": 3.375,
+      "fan_line": "+++ UGA \u2014 AP ranking gap",
+      "label": "MATCHUP SIGNAL",
+      "why": "College prior until CFB EPA ingest. Lower AP rank is stronger."
+    }
+  ],
+  "headline_cards": [
+    {
+      "marks": "+++",
+      "key": "AP_RANK",
+      "title": "AP ranking gap",
+      "team": "UGA",
+      "strength": "MAJOR",
+      "fan_line": "+++ UGA \u2014 AP ranking gap",
+      "mismatch_z": 3.375,
+      "percentile_hint": "More extreme than ~95% of similar unit mismatches in a normal sample.",
+      "label": "MATCHUP SIGNAL",
+      "why": "College prior until CFB EPA ingest. Lower AP rank is stronger.",
+      "home_stat": 30.0,
+      "away_stat": 3.0
+    }
+  ],
+  "slate_edges": [
+    "+++ UGA Ap Rank"
+  ],
+  "matchup_logistic": {
+    "model_id": "BCW-MATCHUP-LOGISTIC-v0.x",
+    "label": "Research Preview",
+    "public_probability_published": false,
+    "logit": 1.1625,
+    "p_home_win": 0.7618,
+    "lean": "HOME",
+    "contributions": [
+      {
+        "key": "AP_RANK",
+        "weight": 0.3,
+        "z": 3.375,
+        "term": 1.0125
+      }
+    ],
+    "note": "Heuristic matchup logistic on EDGE z-scores. Not BCW-RIDGE. Not a ship gate."
+  },
+  "paths": {
+    "home": "Lean on ap ranking gap. Convert that mismatch before the game becomes a coin-flip script.",
+    "away": "Shorten the game, win the line of scrimmage, and force the favorite into obvious passing downs."
+  },
+  "risks": [
+    "Turnovers: the projection assumes roughly normal luck; a +2 swing can flip a UGA lean.",
+    "Injury / inactive surprise on either OL or QB would rewrite the pass-rush signal."
+  ],
+  "adjustment": {
+    "points_home": 1.6,
+    "label": "MATCHUP SIGNAL (unvalidated additive)",
+    "note": "Not fed into BCW-RIDGE-v0.1. Research Preview display only."
+  },
+  "events": [
+    {
+      "game_id": "espn:401856658",
+      "event_type": "other",
+      "headline": "No. 3 Georgia has QB Gunner Stockton back to lead pursuit of SEC and national championships - The Washington Post",
+      "publisher": "The Washington Post",
+      "source_url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxPNGVIV0ZCbm1NMHpnUlpvQXo0XzlvYnhmZkdQaDl0bTF1dUpELVVYcWcyOUFEZ1YwaGZWZlJSRkg0bDFoUFVXZTdCcVJiUWVfdWl4YktXUzdlR0hHcF8yRHI5VFExTkNxTzk3VDVQQkMxZnZuaDFkTDNEM0FhS3JPeWVhUm9rNVNMSy1nTDRXcG9nOWJVYzAyRzlxUlVoWGZSY1Y4Y080LVl6aUtvR3l0VGZOejdXbWhYcnVXNEthTDRTd0MyQkd2UERVbk5HX2VZYVE?oc=5",
+      "bucket": "availability",
+      "structured_fact": "No. 3 Georgia has QB Gunner Stockton back to lead pursuit of SEC and national championships - The Washington Post",
+      "confidence": 0.45,
+      "tier": 3
+    },
+    {
+      "game_id": "espn:401856658",
+      "event_type": "other",
+      "headline": "Where Georgia freshman DB stands after ACL injury - Yahoo Sports",
+      "publisher": "Yahoo Sports",
+      "source_url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOMzVNaURHYjFDdlNvY081LUVHNXl4QzVSOExIYi1QWkd5X3lfdzNENW80N2ZFb3Z4bEI3QkFreHhBUHlIbC1vZ2lpdzVXMmszdmlvS0s2ckpFU19rX1hLOGp3OGd1QVJOWUFObHRER1dPREUtT19Td3pXY3FRTkZORXFUM2ZIdFpm?oc=5",
+      "bucket": "availability",
+      "structured_fact": "Where Georgia freshman DB stands after ACL injury - Yahoo Sports",
+      "confidence": 0.45,
+      "tier": 3
+    },
+    {
+      "game_id": "espn:401856658",
+      "event_type": "other",
+      "headline": "Daylin Lee, Tennessee State Tigers, QB - News, Stats, Bio - CBS Sports",
+      "publisher": "CBS Sports",
+      "source_url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE1lanV1RFJvNWt4WG5jQmloSlgxMF8yeEY1RmVzWGc0VTJyQnNYTk1aZGRPdTBoM2NpVHhuZ19NQUJTTFdPRS1xalJIdTJKZ0t1VDI2Tkl0N1M1R2Z0LTZsOENYSmEwc09GZU9NYTI2STJGZHptOFh0ZEY4Yw?oc=5",
+      "bucket": "availability",
+      "structured_fact": "Daylin Lee, Tennessee State Tigers, QB - News, Stats, Bio - CBS Sports",
+      "confidence": 0.45,
+      "tier": 3
+    },
+    {
+      "game_id": "espn:401856658",
+      "event_type": "other",
+      "headline": "2026 GameDay preview: Georgia Bulldogs - timesdaily.com",
+      "publisher": "timesdaily.com",
+      "source_url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQSHZCazlCZVV1MEl1d1RGQ0h4aFhxYkdkTEJ4cjNRM1FHQ3NaM2lKX2JzS2J6bUpWMG9UQVRRNlVoRkN0YnhycEM2TG04WUxmVE03YkxSa2pjcXNUc2dlcEJWN3Zhei01R203UHhmMTdRMHdEVklrUWRYMl9FRGxicGdfUTdYaXotTHpzRUlTbENiVkNESTU2eFNqeXpfajNLR3hHdmxxajVHWUJmSWxSb1JrMGNiQkJxVTRQeUh3?oc=5",
+      "bucket": "analysis",
+      "structured_fact": "2026 GameDay preview: Georgia Bulldogs - timesdaily.com",
+      "confidence": 0.45,
+      "tier": 3
+    },
+    {
+      "game_id": "espn:401856658",
+      "event_type": "other",
+      "headline": "2026 College Football Preview: Georgia Bulldogs - PFF",
+      "publisher": "PFF",
+      "source_url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE9KNUF0bDJSWkVOUnk2Rk9OY0dUcU9MSEZKWFphd0hvckJIdTBIMWw4TGdIY2tXQXhLWWhjZkxYbjUtX0VRMGt0eHU2Vk5iN0Z2ODRZRUE0TFlCY09VM00yWnQza1NYenRxel9mcGNPVnR4M3g5?oc=5",
+      "bucket": "analysis",
+      "structured_fact": "2026 College Football Preview: Georgia Bulldogs - PFF",
+      "confidence": 0.45,
+      "tier": 3
+    },
+    {
+      "game_id": "espn:401856658",
+      "event_type": "other",
+      "headline": "College football's mad two-week scramble to land a transfer portal QB",
+      "publisher": "ESPN",
+      "source_url": "https://www.espn.com/college-football/story/_/id/49650906/college-football-two-week-scramble-transfer-portal-qb",
+      "bucket": "availability",
+      "structured_fact": "College football's mad two-week scramble to land a transfer portal QB",
+      "confidence": 0.45,
+      "tier": 2
+    }
+  ],
+  "news_citations": [
+    {
+      "headline": "No. 3 Georgia has QB Gunner Stockton back to lead pursuit of SEC and national championships - The Washington Post",
+      "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxPNGVIV0ZCbm1NMHpnUlpvQXo0XzlvYnhmZkdQaDl0bTF1dUpELVVYcWcyOUFEZ1YwaGZWZlJSRkg0bDFoUFVXZTdCcVJiUWVfdWl4YktXUzdlR0hHcF8yRHI5VFExTkNxTzk3VDVQQkMxZnZuaDFkTDNEM0FhS3JPeWVhUm9rNVNMSy1nTDRXcG9nOWJVYzAyRzlxUlVoWGZSY1Y4Y080LVl6aUtvR3l0VGZOejdXbWhYcnVXNEthTDRTd0MyQkd2UERVbk5HX2VZYVE?oc=5",
+      "publisher": "The Washington Post"
+    },
+    {
+      "headline": "Where Georgia freshman DB stands after ACL injury - Yahoo Sports",
+      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOMzVNaURHYjFDdlNvY081LUVHNXl4QzVSOExIYi1QWkd5X3lfdzNENW80N2ZFb3Z4bEI3QkFreHhBUHlIbC1vZ2lpdzVXMmszdmlvS0s2ckpFU19rX1hLOGp3OGd1QVJOWUFObHRER1dPREUtT19Td3pXY3FRTkZORXFUM2ZIdFpm?oc=5",
+      "publisher": "Yahoo Sports"
+    },
+    {
+      "headline": "Daylin Lee, Tennessee State Tigers, QB - News, Stats, Bio - CBS Sports",
+      "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE1lanV1RFJvNWt4WG5jQmloSlgxMF8yeEY1RmVzWGc0VTJyQnNYTk1aZGRPdTBoM2NpVHhuZ19NQUJTTFdPRS1xalJIdTJKZ0t1VDI2Tkl0N1M1R2Z0LTZsOENYSmEwc09GZU9NYTI2STJGZHptOFh0ZEY4Yw?oc=5",
+      "publisher": "CBS Sports"
+    },
+    {
+      "headline": "2026 GameDay preview: Georgia Bulldogs - timesdaily.com",
+      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQSHZCazlCZVV1MEl1d1RGQ0h4aFhxYkdkTEJ4cjNRM1FHQ3NaM2lKX2JzS2J6bUpWMG9UQVRRNlVoRkN0YnhycEM2TG04WUxmVE03YkxSa2pjcXNUc2dlcEJWN3Zhei01R203UHhmMTdRMHdEVklrUWRYMl9FRGxicGdfUTdYaXotTHpzRUlTbENiVkNESTU2eFNqeXpfajNLR3hHdmxxajVHWUJmSWxSb1JrMGNiQkJxVTRQeUh3?oc=5",
+      "publisher": "timesdaily.com"
+    },
+    {
+      "headline": "2026 College Football Preview: Georgia Bulldogs - PFF",
+      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE9KNUF0bDJSWkVOUnk2Rk9OY0dUcU9MSEZKWFphd0hvckJIdTBIMWw4TGdIY2tXQXhLWWhjZkxYbjUtX0VRMGt0eHU2Vk5iN0Z2ODRZRUE0TFlCY09VM00yWnQza1NYenRxel9mcGNPVnR4M3g5?oc=5",
+      "publisher": "PFF"
+    },
+    {
+      "headline": "College football's mad two-week scramble to land a transfer portal QB",
+      "url": "https://www.espn.com/college-football/story/_/id/49650906/college-football-two-week-scramble-transfer-portal-qb",
+      "publisher": "ESPN"
+    }
+  ],
+  "summary_short": "BlueChip leans UGA. Top signal: +++ UGA \u2014 AP ranking gap",
+  "summary_full": "Tennessee State Tigers at Georgia Bulldogs.\n\nBlueChip leans UGA. +++ UGA \u2014 AP ranking gap\n\nWhy UGA has the edge\n- +++ UGA \u2014 AP ranking gap\n\nBlueChip projection\nMarket: UGA -46.5\nBCW desk \u03bc (home): +52.2 (Research Preview)\nWin probability: unavailable until probability model passes validation.\n\nHow each team wins\nUGA: Lean on ap ranking gap. Convert that mismatch before the game becomes a coin-flip script.\nTNST: Shorten the game, win the line of scrimmage, and force the favorite into obvious passing downs.\n\nWhat changed this week\n\u2022 No. 3 Georgia has QB Gunner Stockton back to lead pursuit of SEC and national championships - The Washington Post\n\u2022 Where Georgia freshman DB stands after ACL injury - Yahoo Sports\n\u2022 Daylin Lee, Tennessee State Tigers, QB - News, Stats, Bio - CBS Sports\n\u2022 2026 GameDay preview: Georgia Bulldogs - timesdaily.com\n\nWhat could make BlueChip wrong?\n\u2022 Turnovers: the projection assumes roughly normal luck; a +2 swing can flip a UGA lean.\n\u2022 Injury / inactive surprise on either OL or QB would rewrite the pass-rush signal.\n\nBottom line: UGA has more ways to win on the current MATCHUP SIGNAL board, but football variance (turnovers, explosives) remains large around any margin estimate.",
+  "generation_model": "desk-template",
+  "generation_provider": "fallback",
+  "glossary": {
+    "EPA/play": "Expected Points Added estimates how much each play improves expected scoring position. Positive is good. A 5-yard gain on 3rd-and-3 is not treated like 5 yards on 3rd-and-20.",
+    "MATCHUP SIGNAL": "A descriptive strength\u00d7weakness edge. Not a published win probability and not fed into BCW-RIDGE-v0.1 until validated walk-forward.",
+    "Research Preview": "BlueChip quantitative layer that has not cleared the five public ship gates."
+  },
+  "levels": {
+    "slate": {
+      "lean": "UGA",
+      "top_edges": [
+        "+++ UGA Ap Rank"
+      ],
+      "market": "UGA -46.5",
+      "mu": 52.25,
+      "confidence_pct": 63.7
+    }
+  }
+}

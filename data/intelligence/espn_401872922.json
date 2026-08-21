@@ -1,0 +1,324 @@
+{
+  "game_id": "espn:401872922",
+  "version": "BCW-GIP-v0.1",
+  "created_at": "2026-08-21T03:43:05.784786+00:00",
+  "generated_at": "2026-08-21T03:43:05.784786+00:00",
+  "information_cutoff": "2026-08-21T03:43:05.784786+00:00",
+  "source_set_hash": "301c6f15dcde17663f7b507f",
+  "game": {
+    "game_id": "espn:401872922",
+    "league": "NFL",
+    "matchup": "CLE @ JAX",
+    "home_team": "JAX",
+    "away_team": "CLE",
+    "home_name": "Jacksonville Jaguars",
+    "away_name": "Cleveland Browns",
+    "spread_label": "JAX -7.5",
+    "home_spread": -7.5,
+    "total_line": 40.5,
+    "week": 1
+  },
+  "lean_team": "CLE",
+  "projection": {
+    "model_id": "BCW-DESK-STRENGTH-v0.x",
+    "method": "0.65\u00b7Elo/25+HFA + 0.35\u00b7(SRS+HFA)",
+    "mu_home": 6.49,
+    "sigma": 13.5,
+    "p_home_win": 0.6714,
+    "p_home_cover": 0.4555,
+    "edge_vs_minus_110": -0.0683,
+    "model_lean": "AWAY",
+    "model_lean_team": "CLE",
+    "label": "Research Preview",
+    "public_probability_published": false,
+    "confidence_pct": 54.4
+  },
+  "matchup_edges": [
+    {
+      "key": "PASSING",
+      "title": "Passing offense vs pass defense",
+      "side": "HOME",
+      "side_team": "JAX",
+      "strength": "MAJOR",
+      "home_stat": -0.0194,
+      "away_stat": -0.447,
+      "mismatch_z": 2.376,
+      "fan_line": "+++ JAX \u2014 Passing offense vs pass defense",
+      "label": "MATCHUP SIGNAL",
+      "why": "EPA/play on passes plus how much EPA the opposing defense allows. EPA weights plays by situation (3rd-and-3 \u2260 3rd-and-20)."
+    },
+    {
+      "key": "OVERALL",
+      "title": "Overall efficiency",
+      "side": "HOME",
+      "side_team": "JAX",
+      "strength": "STRONG",
+      "home_stat": 0.1866,
+      "away_stat": -0.1225,
+      "mismatch_z": 1.546,
+      "fan_line": "++ JAX \u2014 Overall efficiency",
+      "label": "MATCHUP SIGNAL",
+      "why": "Net EPA/play (offense minus defense). Broad team-strength interaction."
+    },
+    {
+      "key": "PASS_RUSH",
+      "title": "Pass rush / protection (proxy)",
+      "side": "AWAY",
+      "side_team": "CLE",
+      "strength": "MILD",
+      "home_stat": 0.1488,
+      "away_stat": 0.2093,
+      "mismatch_z": -0.605,
+      "fan_line": "+ CLE \u2014 Pass rush / protection (proxy)",
+      "label": "MATCHUP SIGNAL",
+      "why": "Proxy until true pressure/PBWR data: lower pass EPA allowed \u21d2 stronger pass defense / rush. MATCHUP SIGNAL only \u2014 not a published win probability."
+    },
+    {
+      "key": "RUN_GAME",
+      "title": "Rushing offense vs run defense",
+      "side": "HOME",
+      "side_team": "JAX",
+      "strength": "MILD",
+      "home_stat": -0.0994,
+      "away_stat": -0.1755,
+      "mismatch_z": 0.543,
+      "fan_line": "+ JAX \u2014 Rushing offense vs run defense",
+      "label": "MATCHUP SIGNAL",
+      "why": "Rush EPA/play vs EPA allowed on rushes \u2014 better than raw yards/carry."
+    }
+  ],
+  "headline_cards": [
+    {
+      "marks": "+++",
+      "key": "PASSING",
+      "title": "Passing offense vs pass defense",
+      "team": "JAX",
+      "strength": "MAJOR",
+      "fan_line": "+++ JAX \u2014 Passing offense vs pass defense",
+      "mismatch_z": 2.376,
+      "percentile_hint": "More extreme than ~95% of similar unit mismatches in a normal sample.",
+      "label": "MATCHUP SIGNAL",
+      "why": "EPA/play on passes plus how much EPA the opposing defense allows. EPA weights plays by situation (3rd-and-3 \u2260 3rd-and-20).",
+      "home_stat": -0.0194,
+      "away_stat": -0.447
+    },
+    {
+      "marks": "++",
+      "key": "OVERALL",
+      "title": "Overall efficiency",
+      "team": "JAX",
+      "strength": "STRONG",
+      "fan_line": "++ JAX \u2014 Overall efficiency",
+      "mismatch_z": 1.546,
+      "percentile_hint": "Clearly tilted versus a typical NFL/CFB unit matchup.",
+      "label": "MATCHUP SIGNAL",
+      "why": "Net EPA/play (offense minus defense). Broad team-strength interaction.",
+      "home_stat": 0.1866,
+      "away_stat": -0.1225
+    },
+    {
+      "marks": "+",
+      "key": "PASS_RUSH",
+      "title": "Pass rush / protection (proxy)",
+      "team": "CLE",
+      "strength": "MILD",
+      "fan_line": "+ CLE \u2014 Pass rush / protection (proxy)",
+      "mismatch_z": -0.605,
+      "percentile_hint": null,
+      "label": "MATCHUP SIGNAL",
+      "why": "Proxy until true pressure/PBWR data: lower pass EPA allowed \u21d2 stronger pass defense / rush. MATCHUP SIGNAL only \u2014 not a published win probability.",
+      "home_stat": 0.1488,
+      "away_stat": 0.2093
+    },
+    {
+      "marks": "+",
+      "key": "RUN_GAME",
+      "title": "Rushing offense vs run defense",
+      "team": "JAX",
+      "strength": "MILD",
+      "fan_line": "+ JAX \u2014 Rushing offense vs run defense",
+      "mismatch_z": 0.543,
+      "percentile_hint": null,
+      "label": "MATCHUP SIGNAL",
+      "why": "Rush EPA/play vs EPA allowed on rushes \u2014 better than raw yards/carry.",
+      "home_stat": -0.0994,
+      "away_stat": -0.1755
+    }
+  ],
+  "slate_edges": [
+    "+++ JAX Passing",
+    "++ JAX Overall",
+    "+ CLE Pass Rush"
+  ],
+  "matchup_logistic": {
+    "model_id": "BCW-MATCHUP-LOGISTIC-v0.x",
+    "label": "Research Preview",
+    "public_probability_published": false,
+    "logit": 1.7201,
+    "p_home_win": 0.8481,
+    "lean": "HOME",
+    "contributions": [
+      {
+        "key": "PASSING",
+        "weight": 0.4,
+        "z": 2.376,
+        "term": 0.9504
+      },
+      {
+        "key": "OVERALL",
+        "weight": 0.45,
+        "z": 1.546,
+        "term": 0.6957
+      },
+      {
+        "key": "PASS_RUSH",
+        "weight": 0.35,
+        "z": -0.605,
+        "term": -0.2117
+      },
+      {
+        "key": "RUN_GAME",
+        "weight": 0.25,
+        "z": 0.543,
+        "term": 0.1358
+      }
+    ],
+    "note": "Heuristic matchup logistic on EDGE z-scores. Not BCW-RIDGE. Not a ship gate."
+  },
+  "paths": {
+    "home": "Lean on passing offense vs pass defense. Convert that mismatch before the game becomes a coin-flip script.",
+    "away": "Attack via pass rush / protection (proxy) and keep the favorite from playing its preferred script."
+  },
+  "risks": [
+    "Turnovers: the projection assumes roughly normal luck; a +2 swing can flip a CLE lean.",
+    "JAX path: if passing offense vs pass defense plays up, CLE's edge shrinks.",
+    "Injury / inactive surprise on either OL or QB would rewrite the pass-rush signal."
+  ],
+  "adjustment": {
+    "points_home": 2.6,
+    "label": "MATCHUP SIGNAL (unvalidated additive)",
+    "note": "Not fed into BCW-RIDGE-v0.1. Research Preview display only."
+  },
+  "events": [
+    {
+      "game_id": "espn:401872922",
+      "event_type": "other",
+      "headline": "Is Cleveland's offense in trouble? Quinshon Judkins injury adds to Browns QB uncertainty - MARCA",
+      "publisher": "MARCA",
+      "source_url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxPT0RXdzdkMTBPTWNubW9rcGlvcDQ3TUh4czZJMHZCdGxyLWJqSkFDSkxxczJ3clRmaGQ2aG5pa3h4MHlodk52dWg2NUk0M0dQZTRDOXpCZVNfS1lfeXNvUlo3ZXc1eGVVdDFrOUhSTFBtRFoyYjJtYVBGbmdIYTljc3ZWaXRkei1tOEJhc1p6NjRlVFpRR1JQNVVGTVRwZDVVWS1hWk5YWno5bjN2Mm52djgwZmtOQVJUM1RvTHZqb09vMWtvRDRkbU9BcHZOZlJYQUJzcmhkZkFlS1BFa1pDX0dpUdIB4wFBVV95cUxObjZ6b2t3Q2JqdkxOS3NaYWpHQ00ydkxNaXhoOEhVb3pjNVpxVXhpUlVPZWhmbUdERURyVDl5b3NOb3JYOTZTX2F1akp6d3NqTTd5MnRSZlRJRFFOWWxQTTZoQ0gzcjlUY3FaYm5SSTEyWkdCSnpnQjJLOENtYi1UcWFYZGhCd0V4ZUNCdGxic1lfWlduaDZNYmJoRHVGQV91NzNhdTVhMnpDdUtKQXAyUC01bnk0UDFvaFU3a0x6bXZvb1U4MFFVSHFrNE95TVB0ZURVdUxIV2diMzhaNjk2Nld0NA?oc=5",
+      "bucket": "availability",
+      "structured_fact": "Is Cleveland's offense in trouble? Quinshon Judkins injury adds to Browns QB uncertainty - MARCA",
+      "confidence": 0.45,
+      "tier": 3
+    },
+    {
+      "game_id": "espn:401872922",
+      "event_type": "other",
+      "headline": "Jaguars OT Cole Van Lanen activated after Week 18 injury",
+      "publisher": "ESPN",
+      "source_url": "https://www.espn.com/nfl/story/_/id/49671935/jaguars-ot-cole-van-lanen-activated-week-18-injury",
+      "bucket": "availability",
+      "structured_fact": "Jaguars OT Cole Van Lanen activated after Week 18 injury",
+      "confidence": 0.45,
+      "tier": 2
+    },
+    {
+      "game_id": "espn:401872922",
+      "event_type": "other",
+      "headline": "The Browns are splitting QB reps against one of the NFL\u2019s best pass defenses \u2014 and some think it\u2019s a big mist - Cleveland.com",
+      "publisher": "Cleveland.com",
+      "source_url": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxOaFpYS2J4YUxLU0t5UWQ0YTc1UlFwNk0tSm5pUG9QbWRUWWpnaDFUeERZMkM5Z2lJX0w2cXl6cWI0S29vYms0X0FnTmhWejJnSFFfX1h0ZWxTdVBnR1ZCQm5kd1lmdVBYQVBrRWNwb3JtYzdQUVo2ZkhFaWdKUHk2cG1wbko3RDBiUms2Y3o0ZXBTTlBWb04wVXp2TmtZQUhPRFR0UV9qMDBLekp4elJEOUdjaXJtYnl5WTF5TnN4NG9yNDVJVGIxWnFJaVBXWFk0VDM0VFZ4YmJNZ2JiR3JpUGtTbGNDUUJkZUHSAf4BQVVfeXFMTXdMRVMzUWFSWmd3bmZ6aFN6YmR0ZXFsSDc5Vm5PS0w5d3lOaE4wa2JZRENCcU9CMmpFVmswVkNoMXVidXp4dFZEcmd1ekpvMmo5Y0dXNkEzRS1KaWRNODRVMzFSdjF5X3RQb2oxdENZWEdnSThWRlM3bFNybFZKLVZKaGwxeWlfY28tWUtzRC0xMWZ6NXA5QXJoYXEyaHRYR1FRQkdGWlhsSkZRc0JVeEptd0xCblNaUlBCODVqSGh4WGpFY2NFc0lNMVl5RDZPY0hBdDh0aDJVTmlTb0o3WEk0eF9WNEt0SjFScVJqSmZ3MW9aZWZzaXdFbkFxMlE?oc=5",
+      "bucket": "availability",
+      "structured_fact": "The Browns are splitting QB reps against one of the NFL\u2019s best pass defenses \u2014 and some think it\u2019s a big mist - Cleveland.com",
+      "confidence": 0.45,
+      "tier": 3
+    },
+    {
+      "game_id": "espn:401872922",
+      "event_type": "other",
+      "headline": "Cleveland Browns news: Gearing up for Buffalo as the QB battle rages on - Yahoo Sports",
+      "publisher": "Yahoo Sports",
+      "source_url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOUGxGODVqQmJGZDBla1lvR2h4WUtQMEVHVExldUlNVHpwM2NsTDZPWlNHdzRlSlA3aEYwREVTUXJaZXR6R1otRlBxeHpfR3NqTHdHeWlwdVZjWVJuMFRwckZCa0tzdXM3TzZHUFdWZ2dob096aTZFcVQ4eXRNX0dfdl80bUxqZjNCQ1BvVnVYUQ?oc=5",
+      "bucket": "availability",
+      "structured_fact": "Cleveland Browns news: Gearing up for Buffalo as the QB battle rages on - Yahoo Sports",
+      "confidence": 0.45,
+      "tier": 3
+    },
+    {
+      "game_id": "espn:401872922",
+      "event_type": "other",
+      "headline": "Allen gives Browns up-close view of franchise QB as Watson-Sanders battle nears finish - Bozeman Daily Chronicle",
+      "publisher": "Bozeman Daily Chronicle",
+      "source_url": "https://news.google.com/rss/articles/CBMilAJBVV95cUxNMV9PWk9mSGwtbUhCTldNMWNXRHNhU3NGOWpyUDhyajdUeEcxN1JORnMyVDZCaUZQc1NUeUlkY2d6ZGtRWE5wbnhxSUVPRHh2SENRd01OUW9KN085QnZ3T0JpRmRJaUtlbDVnQmdpdWRsMGlaNlJ4Y3pwZDJTajlIOEJxYXQxWkZvM0RpREk0WDVuS25OaGltMTVhTmxTWUU1bEliNm5EMlNFNlh4SVdqaWxUd21zS2NuU3NpaUNveDQwN1hmQ01rM1JoVEx0X01rZm1yWnVyUmNqcWxWcDRLelNvWWN2Q3RvaDVWUTExSUJBcndLWkJyYzRMNWx2Q0l0dk40TXBYY2YzVUwzc19ZUElWX2M?oc=5",
+      "bucket": "availability",
+      "structured_fact": "Allen gives Browns up-close view of franchise QB as Watson-Sanders battle nears finish - Bozeman Daily Chronicle",
+      "confidence": 0.45,
+      "tier": 3
+    },
+    {
+      "game_id": "espn:401872922",
+      "event_type": "other",
+      "headline": "Browns QB Shedeur Sanders Gets Brutally Ripped by Bills Defender - Yahoo Sports",
+      "publisher": "Yahoo Sports",
+      "source_url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPVDZuNTJNV0FIYVFidHUzRDRYdzhkNHVwa2Q4OGgtY3Fadm9zTUk3UEhmcEpoNkZhT3AxUFp3aDFaTUtWbHBUNkprSXRBR0VpcFhKZEFzZ1UySGZIUVhuenNwX0xMSUZqZGg5QmVpSm9FYzZOd0l5OS1MaktuTXVudGtnOWV1Zw?oc=5",
+      "bucket": "availability",
+      "structured_fact": "Browns QB Shedeur Sanders Gets Brutally Ripped by Bills Defender - Yahoo Sports",
+      "confidence": 0.45,
+      "tier": 3
+    }
+  ],
+  "news_citations": [
+    {
+      "headline": "Is Cleveland's offense in trouble? Quinshon Judkins injury adds to Browns QB uncertainty - MARCA",
+      "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxPT0RXdzdkMTBPTWNubW9rcGlvcDQ3TUh4czZJMHZCdGxyLWJqSkFDSkxxczJ3clRmaGQ2aG5pa3h4MHlodk52dWg2NUk0M0dQZTRDOXpCZVNfS1lfeXNvUlo3ZXc1eGVVdDFrOUhSTFBtRFoyYjJtYVBGbmdIYTljc3ZWaXRkei1tOEJhc1p6NjRlVFpRR1JQNVVGTVRwZDVVWS1hWk5YWno5bjN2Mm52djgwZmtOQVJUM1RvTHZqb09vMWtvRDRkbU9BcHZOZlJYQUJzcmhkZkFlS1BFa1pDX0dpUdIB4wFBVV95cUxObjZ6b2t3Q2JqdkxOS3NaYWpHQ00ydkxNaXhoOEhVb3pjNVpxVXhpUlVPZWhmbUdERURyVDl5b3NOb3JYOTZTX2F1akp6d3NqTTd5MnRSZlRJRFFOWWxQTTZoQ0gzcjlUY3FaYm5SSTEyWkdCSnpnQjJLOENtYi1UcWFYZGhCd0V4ZUNCdGxic1lfWlduaDZNYmJoRHVGQV91NzNhdTVhMnpDdUtKQXAyUC01bnk0UDFvaFU3a0x6bXZvb1U4MFFVSHFrNE95TVB0ZURVdUxIV2diMzhaNjk2Nld0NA?oc=5",
+      "publisher": "MARCA"
+    },
+    {
+      "headline": "Jaguars OT Cole Van Lanen activated after Week 18 injury",
+      "url": "https://www.espn.com/nfl/story/_/id/49671935/jaguars-ot-cole-van-lanen-activated-week-18-injury",
+      "publisher": "ESPN"
+    },
+    {
+      "headline": "The Browns are splitting QB reps against one of the NFL\u2019s best pass defenses \u2014 and some think it\u2019s a big mist - Cleveland.com",
+      "url": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxOaFpYS2J4YUxLU0t5UWQ0YTc1UlFwNk0tSm5pUG9QbWRUWWpnaDFUeERZMkM5Z2lJX0w2cXl6cWI0S29vYms0X0FnTmhWejJnSFFfX1h0ZWxTdVBnR1ZCQm5kd1lmdVBYQVBrRWNwb3JtYzdQUVo2ZkhFaWdKUHk2cG1wbko3RDBiUms2Y3o0ZXBTTlBWb04wVXp2TmtZQUhPRFR0UV9qMDBLekp4elJEOUdjaXJtYnl5WTF5TnN4NG9yNDVJVGIxWnFJaVBXWFk0VDM0VFZ4YmJNZ2JiR3JpUGtTbGNDUUJkZUHSAf4BQVVfeXFMTXdMRVMzUWFSWmd3bmZ6aFN6YmR0ZXFsSDc5Vm5PS0w5d3lOaE4wa2JZRENCcU9CMmpFVmswVkNoMXVidXp4dFZEcmd1ekpvMmo5Y0dXNkEzRS1KaWRNODRVMzFSdjF5X3RQb2oxdENZWEdnSThWRlM3bFNybFZKLVZKaGwxeWlfY28tWUtzRC0xMWZ6NXA5QXJoYXEyaHRYR1FRQkdGWlhsSkZRc0JVeEptd0xCblNaUlBCODVqSGh4WGpFY2NFc0lNMVl5RDZPY0hBdDh0aDJVTmlTb0o3WEk0eF9WNEt0SjFScVJqSmZ3MW9aZWZzaXdFbkFxMlE?oc=5",
+      "publisher": "Cleveland.com"
+    },
+    {
+      "headline": "Cleveland Browns news: Gearing up for Buffalo as the QB battle rages on - Yahoo Sports",
+      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOUGxGODVqQmJGZDBla1lvR2h4WUtQMEVHVExldUlNVHpwM2NsTDZPWlNHdzRlSlA3aEYwREVTUXJaZXR6R1otRlBxeHpfR3NqTHdHeWlwdVZjWVJuMFRwckZCa0tzdXM3TzZHUFdWZ2dob096aTZFcVQ4eXRNX0dfdl80bUxqZjNCQ1BvVnVYUQ?oc=5",
+      "publisher": "Yahoo Sports"
+    },
+    {
+      "headline": "Allen gives Browns up-close view of franchise QB as Watson-Sanders battle nears finish - Bozeman Daily Chronicle",
+      "url": "https://news.google.com/rss/articles/CBMilAJBVV95cUxNMV9PWk9mSGwtbUhCTldNMWNXRHNhU3NGOWpyUDhyajdUeEcxN1JORnMyVDZCaUZQc1NUeUlkY2d6ZGtRWE5wbnhxSUVPRHh2SENRd01OUW9KN085QnZ3T0JpRmRJaUtlbDVnQmdpdWRsMGlaNlJ4Y3pwZDJTajlIOEJxYXQxWkZvM0RpREk0WDVuS25OaGltMTVhTmxTWUU1bEliNm5EMlNFNlh4SVdqaWxUd21zS2NuU3NpaUNveDQwN1hmQ01rM1JoVEx0X01rZm1yWnVyUmNqcWxWcDRLelNvWWN2Q3RvaDVWUTExSUJBcndLWkJyYzRMNWx2Q0l0dk40TXBYY2YzVUwzc19ZUElWX2M?oc=5",
+      "publisher": "Bozeman Daily Chronicle"
+    },
+    {
+      "headline": "Browns QB Shedeur Sanders Gets Brutally Ripped by Bills Defender - Yahoo Sports",
+      "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPVDZuNTJNV0FIYVFidHUzRDRYdzhkNHVwa2Q4OGgtY3Fadm9zTUk3UEhmcEpoNkZhT3AxUFp3aDFaTUtWbHBUNkprSXRBR0VpcFhKZEFzZ1UySGZIUVhuenNwX0xMSUZqZGg5QmVpSm9FYzZOd0l5OS1MaktuTXVudGtnOWV1Zw?oc=5",
+      "publisher": "Yahoo Sports"
+    }
+  ],
+  "summary_short": "BlueChip leans CLE. Top signal: +++ JAX \u2014 Passing offense vs pass defense",
+  "summary_full": "Cleveland Browns at Jacksonville Jaguars.\n\nBlueChip leans CLE. +++ JAX \u2014 Passing offense vs pass defense\n\nWhy CLE has the edge\n- +++ JAX \u2014 Passing offense vs pass defense\n- ++ JAX \u2014 Overall efficiency\n- + CLE \u2014 Pass rush / protection (proxy)\n\nBlueChip projection\nMarket: JAX -7.5\nBCW desk \u03bc (home): +6.5 (Research Preview)\nWin probability: unavailable until probability model passes validation.\n\nHow each team wins\nJAX: Lean on passing offense vs pass defense. Convert that mismatch before the game becomes a coin-flip script.\nCLE: Attack via pass rush / protection (proxy) and keep the favorite from playing its preferred script.\n\nWhat changed this week\n\u2022 Is Cleveland's offense in trouble? Quinshon Judkins injury adds to Browns QB uncertainty - MARCA\n\u2022 Jaguars OT Cole Van Lanen activated after Week 18 injury\n\u2022 The Browns are splitting QB reps against one of the NFL\u2019s best pass defenses \u2014 and some think it\u2019s a big mist - Cleveland.com\n\u2022 Cleveland Browns news: Gearing up for Buffalo as the QB battle rages on - Yahoo Sports\n\nWhat could make BlueChip wrong?\n\u2022 Turnovers: the projection assumes roughly normal luck; a +2 swing can flip a CLE lean.\n\u2022 JAX path: if passing offense vs pass defense plays up, CLE's edge shrinks.\n\u2022 Injury / inactive surprise on either OL or QB would rewrite the pass-rush signal.\n\nBottom line: CLE has more ways to win on the current MATCHUP SIGNAL board, but football variance (turnovers, explosives) remains large around any margin estimate.",
+  "generation_model": "desk-template",
+  "generation_provider": "fallback",
+  "glossary": {
+    "EPA/play": "Expected Points Added estimates how much each play improves expected scoring position. Positive is good. A 5-yard gain on 3rd-and-3 is not treated like 5 yards on 3rd-and-20.",
+    "MATCHUP SIGNAL": "A descriptive strength\u00d7weakness edge. Not a published win probability and not fed into BCW-RIDGE-v0.1 until validated walk-forward.",
+    "Research Preview": "BlueChip quantitative layer that has not cleared the five public ship gates."
+  },
+  "levels": {
+    "slate": {
+      "lean": "CLE",
+      "top_edges": [
+        "+++ JAX Passing",
+        "++ JAX Overall",
+        "+ CLE Pass Rush"
+      ],
+      "market": "JAX -7.5",
+      "mu": 6.49,
+      "confidence_pct": 54.4
+    }
+  }
+}

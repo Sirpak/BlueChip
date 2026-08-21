@@ -1,0 +1,220 @@
+{
+  "game_id": "espn:401856668",
+  "version": "BCW-GIP-v0.1",
+  "created_at": "2026-08-21T03:41:02.731680+00:00",
+  "generated_at": "2026-08-21T03:41:02.731680+00:00",
+  "information_cutoff": "2026-08-21T03:41:02.731680+00:00",
+  "source_set_hash": "409ea689a480a513d128ab3d",
+  "game": {
+    "game_id": "espn:401856668",
+    "league": "CFB",
+    "matchup": "MOST @ TA&M",
+    "home_team": "TA&M",
+    "away_team": "MOST",
+    "home_name": "Texas A&M Aggies",
+    "away_name": "Missouri State Bears",
+    "spread_label": "TA&M -40.5",
+    "home_spread": -40.5,
+    "total_line": 52.5,
+    "week": 1
+  },
+  "lean_team": "TA&M",
+  "projection": {
+    "model_id": "BCW-DESK-STRENGTH-v0.x",
+    "method": "Market line + AP rank edge (CFB; no CFB Elo yet)",
+    "mu_home": 45.0,
+    "sigma": 15.0,
+    "p_home_win": 0.9985,
+    "p_home_cover": 0.6051,
+    "edge_vs_minus_110": 0.0813,
+    "model_lean": "HOME",
+    "model_lean_team": "TA&M",
+    "label": "Research Preview",
+    "public_probability_published": false,
+    "confidence_pct": 60.5
+  },
+  "matchup_edges": [
+    {
+      "key": "AP_RANK",
+      "title": "AP ranking gap",
+      "side": "HOME",
+      "side_team": "TA&M",
+      "strength": "MAJOR",
+      "home_stat": 30.0,
+      "away_stat": 8.0,
+      "mismatch_z": 2.75,
+      "fan_line": "+++ TA&M \u2014 AP ranking gap",
+      "label": "MATCHUP SIGNAL",
+      "why": "College prior until CFB EPA ingest. Lower AP rank is stronger."
+    }
+  ],
+  "headline_cards": [
+    {
+      "marks": "+++",
+      "key": "AP_RANK",
+      "title": "AP ranking gap",
+      "team": "TA&M",
+      "strength": "MAJOR",
+      "fan_line": "+++ TA&M \u2014 AP ranking gap",
+      "mismatch_z": 2.75,
+      "percentile_hint": "More extreme than ~95% of similar unit mismatches in a normal sample.",
+      "label": "MATCHUP SIGNAL",
+      "why": "College prior until CFB EPA ingest. Lower AP rank is stronger.",
+      "home_stat": 30.0,
+      "away_stat": 8.0
+    }
+  ],
+  "slate_edges": [
+    "+++ TA&M Ap Rank"
+  ],
+  "matchup_logistic": {
+    "model_id": "BCW-MATCHUP-LOGISTIC-v0.x",
+    "label": "Research Preview",
+    "public_probability_published": false,
+    "logit": 0.975,
+    "p_home_win": 0.7261,
+    "lean": "HOME",
+    "contributions": [
+      {
+        "key": "AP_RANK",
+        "weight": 0.3,
+        "z": 2.75,
+        "term": 0.825
+      }
+    ],
+    "note": "Heuristic matchup logistic on EDGE z-scores. Not BCW-RIDGE. Not a ship gate."
+  },
+  "paths": {
+    "home": "Lean on ap ranking gap. Convert that mismatch before the game becomes a coin-flip script.",
+    "away": "Shorten the game, win the line of scrimmage, and force the favorite into obvious passing downs."
+  },
+  "risks": [
+    "Turnovers: the projection assumes roughly normal luck; a +2 swing can flip a TA&M lean.",
+    "Injury / inactive surprise on either OL or QB would rewrite the pass-rush signal."
+  ],
+  "adjustment": {
+    "points_home": 1.6,
+    "label": "MATCHUP SIGNAL (unvalidated additive)",
+    "note": "Not fed into BCW-RIDGE-v0.1. Research Preview display only."
+  },
+  "events": [
+    {
+      "game_id": "espn:401856668",
+      "event_type": "other",
+      "headline": "Stinchcomb: Aggies could be 'one of the best offensive fronts' in SEC",
+      "publisher": "ESPN",
+      "source_url": "https://www.espn.com/video/clip/_/id/49652998/aggies-one-best-offensive-fronts-sec",
+      "bucket": "availability",
+      "structured_fact": "Stinchcomb: Aggies could be 'one of the best offensive fronts' in SEC",
+      "confidence": 0.45,
+      "tier": 2
+    },
+    {
+      "game_id": "espn:401856668",
+      "event_type": "other",
+      "headline": "Texas A&M QB Marcel Reed Named to Unitas Award Watch List - Yahoo Sports",
+      "publisher": "Yahoo Sports",
+      "source_url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE1ONEttMUdKS2wwcGpzcGZ0R2hRQWdVSmRxM3g1Y1FxMzdlREN1ZVE4eG9SNDdQdk9VWGhJVnotU1p3NFZlbG1Sejg3VUpSMnRLb09PbHE3ak16Nnh5cERUVnU3RlBmSFdtWGNMS05JWmVJc01SX0xqVkFrOA?oc=5",
+      "bucket": "availability",
+      "structured_fact": "Texas A&M QB Marcel Reed Named to Unitas Award Watch List - Yahoo Sports",
+      "confidence": 0.45,
+      "tier": 3
+    },
+    {
+      "game_id": "espn:401856668",
+      "event_type": "other",
+      "headline": "Texas A&M quarterback Marcel Reed named to Davey O\u2019Brien Award Preseason Watch List - On3",
+      "publisher": "On3",
+      "source_url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxPeERaYVBUbG1hX3htY2xDUk1tcy1rWVc3S2dwMThLUjctakROUzk1YjJrRE15ZnkzLVp0VzZmcG1fblpnU0U1WE1sczE0MXVvdU41ZER4REdXUDV5WkNUOHZuMDE1YlRhTGxyejhJNGVjNjZvdlNnNHFYZ0NLRklpUWpKbWVkT1B3MElCSTFfTHRmWDN4MWZ2V3Q2TWx2eEtpTVFwcDFENEdybWU3RGhNZXpwc2RQNjBwZnpNWlktRHJVa1BiSDJCYnBWSQ?oc=5",
+      "bucket": "availability",
+      "structured_fact": "Texas A&M quarterback Marcel Reed named to Davey O\u2019Brien Award Preseason Watch List - On3",
+      "confidence": 0.45,
+      "tier": 3
+    },
+    {
+      "game_id": "espn:401856668",
+      "event_type": "other",
+      "headline": "No. 8 Texas A&M eyes a bigger playoff finish with QB Marcel Reed back behind a rebuilt line - FOX Sports",
+      "publisher": "FOX Sports",
+      "source_url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQYmpxYmo4aEoyRHRlZUEyVUlDaGpQWjBXQzZZTjFNc2I4OUlPS1JQTGxTc2pEQ3A4NmNZOWZaS1c5ZU5yNzM2MTVQS284WVl3azZzellkeVVfQTZvdjZLbzhRMmxrakd0eXAtS3lVWDN2N0ZVdnpMQlZTLUdYeEl5Q2lCWVc2a19UVHk1U3U3TmxackViTDQzdXd5V2FrejZQV3RGMERfb3JmdGRyRXR6amtlTFJ6NlFQX1d0U3dYQjltSnI4cFFZ?oc=5",
+      "bucket": "availability",
+      "structured_fact": "No. 8 Texas A&M eyes a bigger playoff finish with QB Marcel Reed back behind a rebuilt line - FOX Sports",
+      "confidence": 0.45,
+      "tier": 3
+    },
+    {
+      "game_id": "espn:401856668",
+      "event_type": "other",
+      "headline": "QB Donald Tabron II, No. 2 pocket passer in '28, picks Texas A&M",
+      "publisher": "ESPN",
+      "source_url": "https://www.espn.com/college-football/story/_/id/49621203/qb-donald-tabron-ii-no-2-pocket-passer-28-picks-texas-am",
+      "bucket": "availability",
+      "structured_fact": "QB Donald Tabron II, No. 2 pocket passer in '28, picks Texas A&M",
+      "confidence": 0.45,
+      "tier": 2
+    },
+    {
+      "game_id": "espn:401856668",
+      "event_type": "other",
+      "headline": "Predicting the 2026 SEC Football Season: Texas A&M Aggies Preview & Game By Game Picks - Roll 'Bama Roll",
+      "publisher": "Roll 'Bama Roll",
+      "source_url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOWHhxYUlGeFR3SkE0dVpLcUxQdmxPWjlJSy1sTGtLNmcwMmJfQ2loNXpjVTZrMmYzcjFEX0ZiRTEyN0VYUE95LVk0M2lQVGZPM1p4ME9XZ1pFMnBrUk1VbEpRVWduN1VDQ1JPaUJIVGN1NUtFSy11N0xnM1FZYzdVTE9fTjhWa0RMU05sRUlRaUVYMkUwb3F2VnBLaXBtMUN1NmtmYmpQeE1yMldFQUt6bEtYWHhvQTRVYWFjNA?oc=5",
+      "bucket": "analysis",
+      "structured_fact": "Predicting the 2026 SEC Football Season: Texas A&M Aggies Preview & Game By Game Picks - Roll 'Bama Roll",
+      "confidence": 0.45,
+      "tier": 3
+    }
+  ],
+  "news_citations": [
+    {
+      "headline": "Stinchcomb: Aggies could be 'one of the best offensive fronts' in SEC",
+      "url": "https://www.espn.com/video/clip/_/id/49652998/aggies-one-best-offensive-fronts-sec",
+      "publisher": "ESPN"
+    },
+    {
+      "headline": "Texas A&M QB Marcel Reed Named to Unitas Award Watch List - Yahoo Sports",
+      "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE1ONEttMUdKS2wwcGpzcGZ0R2hRQWdVSmRxM3g1Y1FxMzdlREN1ZVE4eG9SNDdQdk9VWGhJVnotU1p3NFZlbG1Sejg3VUpSMnRLb09PbHE3ak16Nnh5cERUVnU3RlBmSFdtWGNMS05JWmVJc01SX0xqVkFrOA?oc=5",
+      "publisher": "Yahoo Sports"
+    },
+    {
+      "headline": "Texas A&M quarterback Marcel Reed named to Davey O\u2019Brien Award Preseason Watch List - On3",
+      "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxPeERaYVBUbG1hX3htY2xDUk1tcy1rWVc3S2dwMThLUjctakROUzk1YjJrRE15ZnkzLVp0VzZmcG1fblpnU0U1WE1sczE0MXVvdU41ZER4REdXUDV5WkNUOHZuMDE1YlRhTGxyejhJNGVjNjZvdlNnNHFYZ0NLRklpUWpKbWVkT1B3MElCSTFfTHRmWDN4MWZ2V3Q2TWx2eEtpTVFwcDFENEdybWU3RGhNZXpwc2RQNjBwZnpNWlktRHJVa1BiSDJCYnBWSQ?oc=5",
+      "publisher": "On3"
+    },
+    {
+      "headline": "No. 8 Texas A&M eyes a bigger playoff finish with QB Marcel Reed back behind a rebuilt line - FOX Sports",
+      "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQYmpxYmo4aEoyRHRlZUEyVUlDaGpQWjBXQzZZTjFNc2I4OUlPS1JQTGxTc2pEQ3A4NmNZOWZaS1c5ZU5yNzM2MTVQS284WVl3azZzellkeVVfQTZvdjZLbzhRMmxrakd0eXAtS3lVWDN2N0ZVdnpMQlZTLUdYeEl5Q2lCWVc2a19UVHk1U3U3TmxackViTDQzdXd5V2FrejZQV3RGMERfb3JmdGRyRXR6amtlTFJ6NlFQX1d0U3dYQjltSnI4cFFZ?oc=5",
+      "publisher": "FOX Sports"
+    },
+    {
+      "headline": "QB Donald Tabron II, No. 2 pocket passer in '28, picks Texas A&M",
+      "url": "https://www.espn.com/college-football/story/_/id/49621203/qb-donald-tabron-ii-no-2-pocket-passer-28-picks-texas-am",
+      "publisher": "ESPN"
+    },
+    {
+      "headline": "Predicting the 2026 SEC Football Season: Texas A&M Aggies Preview & Game By Game Picks - Roll 'Bama Roll",
+      "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOWHhxYUlGeFR3SkE0dVpLcUxQdmxPWjlJSy1sTGtLNmcwMmJfQ2loNXpjVTZrMmYzcjFEX0ZiRTEyN0VYUE95LVk0M2lQVGZPM1p4ME9XZ1pFMnBrUk1VbEpRVWduN1VDQ1JPaUJIVGN1NUtFSy11N0xnM1FZYzdVTE9fTjhWa0RMU05sRUlRaUVYMkUwb3F2VnBLaXBtMUN1NmtmYmpQeE1yMldFQUt6bEtYWHhvQTRVYWFjNA?oc=5",
+      "publisher": "Roll 'Bama Roll"
+    }
+  ],
+  "summary_short": "BlueChip leans TA&M. Top signal: +++ TA&M \u2014 AP ranking gap",
+  "summary_full": "Missouri State Bears at Texas A&M Aggies.\n\nBlueChip leans TA&M. +++ TA&M \u2014 AP ranking gap\n\nWhy TA&M has the edge\n- +++ TA&M \u2014 AP ranking gap\n\nBlueChip projection\nMarket: TA&M -40.5\nBCW desk \u03bc (home): +45.0 (Research Preview)\nWin probability: unavailable until probability model passes validation.\n\nHow each team wins\nTA&M: Lean on ap ranking gap. Convert that mismatch before the game becomes a coin-flip script.\nMOST: Shorten the game, win the line of scrimmage, and force the favorite into obvious passing downs.\n\nWhat changed this week\n\u2022 Stinchcomb: Aggies could be 'one of the best offensive fronts' in SEC\n\u2022 Texas A&M QB Marcel Reed Named to Unitas Award Watch List - Yahoo Sports\n\u2022 Texas A&M quarterback Marcel Reed named to Davey O\u2019Brien Award Preseason Watch List - On3\n\u2022 No. 8 Texas A&M eyes a bigger playoff finish with QB Marcel Reed back behind a rebuilt line - FOX Sports\n\nWhat could make BlueChip wrong?\n\u2022 Turnovers: the projection assumes roughly normal luck; a +2 swing can flip a TA&M lean.\n\u2022 Injury / inactive surprise on either OL or QB would rewrite the pass-rush signal.\n\nBottom line: TA&M has more ways to win on the current MATCHUP SIGNAL board, but football variance (turnovers, explosives) remains large around any margin estimate.",
+  "generation_model": "desk-template",
+  "generation_provider": "fallback",
+  "glossary": {
+    "EPA/play": "Expected Points Added estimates how much each play improves expected scoring position. Positive is good. A 5-yard gain on 3rd-and-3 is not treated like 5 yards on 3rd-and-20.",
+    "MATCHUP SIGNAL": "A descriptive strength\u00d7weakness edge. Not a published win probability and not fed into BCW-RIDGE-v0.1 until validated walk-forward.",
+    "Research Preview": "BlueChip quantitative layer that has not cleared the five public ship gates."
+  },
+  "levels": {
+    "slate": {
+      "lean": "TA&M",
+      "top_edges": [
+        "+++ TA&M Ap Rank"
+      ],
+      "market": "TA&M -40.5",
+      "mu": 45.0,
+      "confidence_pct": 60.5
+    }
+  }
+}

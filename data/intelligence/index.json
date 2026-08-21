@@ -1,0 +1,501 @@
+{
+  "packages": {
+    "espn:401856661": {
+      "game_id": "espn:401856661",
+      "matchup": "LOU vs MISS",
+      "league": "CFB",
+      "lean_team": "MISS",
+      "top_edges": [
+        "+++ MISS Ap Rank"
+      ],
+      "source_set_hash": "d98770c7663eeef04a959cec",
+      "generated_at": "2026-08-21T03:40:28.235091+00:00",
+      "summary_short": "BlueChip leans MISS. Top signal: +++ MISS \u2014 AP ranking gap"
+    },
+    "espn:401872928": {
+      "game_id": "espn:401872928",
+      "matchup": "MIA @ LV",
+      "league": "NFL",
+      "lean_team": "MIA",
+      "top_edges": [
+        "+++ MIA Passing",
+        "++ MIA Pass Rush",
+        "++ MIA Overall"
+      ],
+      "source_set_hash": "40ace390f4d285f022ea4609",
+      "generated_at": "2026-08-21T03:41:30.622515+00:00",
+      "summary_short": "BlueChip leans MIA. Top signal: +++ MIA \u2014 Passing offense vs pass defense"
+    },
+    "espn:401858432": {
+      "game_id": "espn:401858432",
+      "matchup": "BALL @ OSU",
+      "league": "CFB",
+      "lean_team": "OSU",
+      "top_edges": [
+        "+++ OSU Ap Rank"
+      ],
+      "source_set_hash": "22ee6785d68126aaf080a578",
+      "generated_at": "2026-08-21T03:40:35.290047+00:00",
+      "summary_short": "BlueChip leans OSU. Top signal: +++ OSU \u2014 AP ranking gap"
+    },
+    "espn:401858433": {
+      "game_id": "espn:401858433",
+      "matchup": "BOIS @ ORE",
+      "league": "CFB",
+      "lean_team": "ORE",
+      "top_edges": [
+        "+++ ORE Ap Rank"
+      ],
+      "source_set_hash": "03d1f2f5ce3625bc0108bbd8",
+      "generated_at": "2026-08-21T03:40:39.400976+00:00",
+      "summary_short": "BlueChip leans ORE. Top signal: +++ ORE \u2014 AP ranking gap"
+    },
+    "espn:401858206": {
+      "game_id": "espn:401858206",
+      "matchup": "MIA @ STAN",
+      "league": "CFB",
+      "lean_team": "MIA",
+      "top_edges": [
+        "+++ MIA Ap Rank"
+      ],
+      "source_set_hash": "502c92c3b5412f2755457f4c",
+      "generated_at": "2026-08-21T03:40:43.852499+00:00",
+      "summary_short": "BlueChip leans MIA. Top signal: +++ MIA \u2014 AP ranking gap"
+    },
+    "espn:401856658": {
+      "game_id": "espn:401856658",
+      "matchup": "TNST @ UGA",
+      "league": "CFB",
+      "lean_team": "UGA",
+      "top_edges": [
+        "+++ UGA Ap Rank"
+      ],
+      "source_set_hash": "14861a3d3f7e6e0441afa610",
+      "generated_at": "2026-08-21T03:40:47.210479+00:00",
+      "summary_short": "BlueChip leans UGA. Top signal: +++ UGA \u2014 AP ranking gap"
+    },
+    "espn:401858438": {
+      "game_id": "espn:401858438",
+      "matchup": "WIS vs ND",
+      "league": "CFB",
+      "lean_team": "ND",
+      "top_edges": [
+        "+++ ND Ap Rank"
+      ],
+      "source_set_hash": "a13497f5fab29887c3055cef",
+      "generated_at": "2026-08-21T03:40:51.560831+00:00",
+      "summary_short": "BlueChip leans ND. Top signal: +++ ND \u2014 AP ranking gap"
+    },
+    "espn:401856667": {
+      "game_id": "espn:401856667",
+      "matchup": "TXST @ TEX",
+      "league": "CFB",
+      "lean_team": "TEX",
+      "top_edges": [
+        "+++ TEX Ap Rank"
+      ],
+      "source_set_hash": "8278b008f61b58969e5fd444",
+      "generated_at": "2026-08-21T03:40:55.161197+00:00",
+      "summary_short": "BlueChip leans TEX. Top signal: +++ TEX \u2014 AP ranking gap"
+    },
+    "espn:401858425": {
+      "game_id": "espn:401858425",
+      "matchup": "UNT @ IU",
+      "league": "CFB",
+      "lean_team": "IU",
+      "top_edges": [
+        "+++ IU Ap Rank"
+      ],
+      "source_set_hash": "a9412818e82d338ddd6ddc56",
+      "generated_at": "2026-08-21T03:40:59.458888+00:00",
+      "summary_short": "BlueChip leans IU. Top signal: +++ IU \u2014 AP ranking gap"
+    },
+    "espn:401856668": {
+      "game_id": "espn:401856668",
+      "matchup": "MOST @ TA&M",
+      "league": "CFB",
+      "lean_team": "TA&M",
+      "top_edges": [
+        "+++ TA&M Ap Rank"
+      ],
+      "source_set_hash": "409ea689a480a513d128ab3d",
+      "generated_at": "2026-08-21T03:41:02.731680+00:00",
+      "summary_short": "BlueChip leans TA&M. Top signal: +++ TA&M \u2014 AP ranking gap"
+    },
+    "espn:401872929": {
+      "game_id": "espn:401872929",
+      "matchup": "WAS @ PHI",
+      "league": "NFL",
+      "lean_team": "PHI",
+      "top_edges": [
+        "+++ PHI Pass Rush",
+        "+++ PHI Passing",
+        "+++ PHI Overall"
+      ],
+      "source_set_hash": "811cbe69cc138b96c842b9e5",
+      "generated_at": "2026-08-21T03:41:06.485130+00:00",
+      "summary_short": "BlueChip leans PHI. Top signal: +++ PHI \u2014 Pass rush / protection (proxy)"
+    },
+    "espn:401856664": {
+      "game_id": "espn:401856664",
+      "matchup": "UTEP @ OU",
+      "league": "CFB",
+      "lean_team": "OU",
+      "top_edges": [
+        "+++ OU Ap Rank"
+      ],
+      "source_set_hash": "79edad80bca57a4b602048e6",
+      "generated_at": "2026-08-21T03:41:10.239032+00:00",
+      "summary_short": "BlueChip leans OU. Top signal: +++ OU \u2014 AP ranking gap"
+    },
+    "espn:401872926": {
+      "game_id": "espn:401872926",
+      "matchup": "ARI @ LAC",
+      "league": "NFL",
+      "lean_team": "ARI",
+      "top_edges": [
+        "+++ LAC Pass Rush",
+        "+++ LAC Run Game",
+        "++ LAC Passing"
+      ],
+      "source_set_hash": "d9978b7e4c15b67570c338c2",
+      "generated_at": "2026-08-21T03:41:51.736309+00:00",
+      "summary_short": "BlueChip leans ARI. Top signal: +++ LAC \u2014 Pass rush / protection (proxy)"
+    },
+    "espn:401856660": {
+      "game_id": "espn:401856660",
+      "matchup": "CLEM @ LSU",
+      "league": "CFB",
+      "lean_team": "LSU",
+      "top_edges": [
+        "+++ LSU Ap Rank"
+      ],
+      "source_set_hash": "2c5568262bd25262d3f97e6f",
+      "generated_at": "2026-08-21T03:41:55.849672+00:00",
+      "summary_short": "BlueChip leans LSU. Top signal: +++ LSU \u2014 AP ranking gap"
+    },
+    "espn:401856770": {
+      "game_id": "espn:401856770",
+      "matchup": "ACU @ TTU",
+      "league": "CFB",
+      "lean_team": "TTU",
+      "top_edges": [
+        "+++ TTU Ap Rank"
+      ],
+      "source_set_hash": "4c8499bd322c04f38bb45041",
+      "generated_at": "2026-08-21T03:41:59.585041+00:00",
+      "summary_short": "BlueChip leans TTU. Top signal: +++ TTU \u2014 AP ranking gap"
+    },
+    "espn:401872923": {
+      "game_id": "espn:401872923",
+      "matchup": "NO @ DET",
+      "league": "NFL",
+      "lean_team": "NO",
+      "top_edges": [
+        "++ NO Run Game",
+        "+ NO Pass Rush",
+        "+ NO Overall"
+      ],
+      "source_set_hash": "550974b91299b905bd937d3b",
+      "generated_at": "2026-08-21T03:42:03.402217+00:00",
+      "summary_short": "BlueChip leans NO. Top signal: ++ NO \u2014 Rushing offense vs run defense"
+    },
+    "espn:401856634": {
+      "game_id": "espn:401856634",
+      "matchup": "ECU @ ALA",
+      "league": "CFB",
+      "lean_team": "ALA",
+      "top_edges": [
+        "+++ ALA Ap Rank"
+      ],
+      "source_set_hash": "e0c569f18e9313af674fbb9b",
+      "generated_at": "2026-08-21T03:42:07.519153+00:00",
+      "summary_short": "BlueChip leans ALA. Top signal: +++ ALA \u2014 AP ranking gap"
+    },
+    "espn:401872659": {
+      "game_id": "espn:401872659",
+      "matchup": "BAL @ IND",
+      "league": "NFL",
+      "lean_team": "IND",
+      "top_edges": [
+        "+++ BAL Run Game",
+        "+ BAL Overall",
+        "+ BAL Passing"
+      ],
+      "source_set_hash": "a326f9c3bc301b9a8dcd2077",
+      "generated_at": "2026-08-21T03:42:11.244156+00:00",
+      "summary_short": "BlueChip leans IND. Top signal: +++ BAL \u2014 Rushing offense vs run defense"
+    },
+    "espn:401864494": {
+      "game_id": "espn:401864494",
+      "matchup": "SJSU @ USC",
+      "league": "CFB",
+      "lean_team": "USC",
+      "top_edges": [
+        "+++ USC Ap Rank"
+      ],
+      "source_set_hash": "d0f0013aff912de5f9597299",
+      "generated_at": "2026-08-21T03:42:14.719758+00:00",
+      "summary_short": "BlueChip leans USC. Top signal: +++ USC \u2014 AP ranking gap"
+    },
+    "espn:401858436": {
+      "game_id": "espn:401858436",
+      "matchup": "FRES @ USC",
+      "league": "CFB",
+      "lean_team": "USC",
+      "top_edges": [
+        "+++ USC Ap Rank"
+      ],
+      "source_set_hash": "7672a2a9f8b7ac63c859e95b",
+      "generated_at": "2026-08-21T03:42:17.247598+00:00",
+      "summary_short": "BlueChip leans USC. Top signal: +++ USC \u2014 AP ranking gap"
+    },
+    "espn:401856775": {
+      "game_id": "espn:401856775",
+      "matchup": "UTU @ BYU",
+      "league": "CFB",
+      "lean_team": "BYU",
+      "top_edges": [
+        "+++ BYU Ap Rank"
+      ],
+      "source_set_hash": "3bc33af720312ede4f52cd84",
+      "generated_at": "2026-08-21T03:42:20.929190+00:00",
+      "summary_short": "BlueChip leans BYU. Top signal: +++ BYU \u2014 AP ranking gap"
+    },
+    "espn:401872925": {
+      "game_id": "espn:401872925",
+      "matchup": "TB @ CIN",
+      "league": "NFL",
+      "lean_team": "TB",
+      "top_edges": [
+        "++ TB Run Game",
+        "+ TB Overall"
+      ],
+      "source_set_hash": "bc58b0794fe8359a0a07338d",
+      "generated_at": "2026-08-21T03:42:24.854698+00:00",
+      "summary_short": "BlueChip leans TB. Top signal: ++ TB \u2014 Rushing offense vs run defense"
+    },
+    "espn:401872661": {
+      "game_id": "espn:401872661",
+      "matchup": "CHI @ CAR",
+      "league": "NFL",
+      "lean_team": "CAR",
+      "top_edges": [
+        "++ CHI Run Game",
+        "++ CHI Overall",
+        "++ CHI Passing"
+      ],
+      "source_set_hash": "760dbccb92a816cfa9a54e89",
+      "generated_at": "2026-08-21T03:42:28.632679+00:00",
+      "summary_short": "BlueChip leans CAR. Top signal: ++ CHI \u2014 Rushing offense vs run defense"
+    },
+    "espn:401872656": {
+      "game_id": "espn:401872656",
+      "matchup": "NE @ SEA",
+      "league": "NFL",
+      "lean_team": "NE",
+      "top_edges": [
+        "+ NE Pass Rush"
+      ],
+      "source_set_hash": "22afd51644e0580669bc440c",
+      "generated_at": "2026-08-21T03:42:32.222927+00:00",
+      "summary_short": "BlueChip leans NE. Top signal: + NE \u2014 Pass rush / protection (proxy)"
+    },
+    "espn:401858212": {
+      "game_id": "espn:401858212",
+      "matchup": "SMU @ FSU",
+      "league": "CFB",
+      "lean_team": "SMU",
+      "top_edges": [
+        "++ SMU Ap Rank"
+      ],
+      "source_set_hash": "2351ae964805ee570679cfa6",
+      "generated_at": "2026-08-21T03:42:37.830968+00:00",
+      "summary_short": "BlueChip leans SMU. Top signal: ++ SMU \u2014 AP ranking gap"
+    },
+    "espn:401872657": {
+      "game_id": "espn:401872657",
+      "matchup": "SF vs LAR",
+      "league": "NFL",
+      "lean_team": "SF",
+      "top_edges": [
+        "+ LAR Pass Rush",
+        "+ LAR Overall",
+        "+ LAR Run Game"
+      ],
+      "source_set_hash": "86bad0e5c3d178dab3c41c70",
+      "generated_at": "2026-08-21T03:42:41.823408+00:00",
+      "summary_short": "BlueChip leans SF. Top signal: + LAR \u2014 Pass rush / protection (proxy)"
+    },
+    "espn:401858428": {
+      "game_id": "espn:401858428",
+      "matchup": "WMU @ MICH",
+      "league": "CFB",
+      "lean_team": "MICH",
+      "top_edges": [
+        "++ MICH Ap Rank"
+      ],
+      "source_set_hash": "ffa5a7b51ce4ec162d73a413",
+      "generated_at": "2026-08-21T03:42:46.261672+00:00",
+      "summary_short": "BlueChip leans MICH. Top signal: ++ MICH \u2014 AP ranking gap"
+    },
+    "espn:401872658": {
+      "game_id": "espn:401872658",
+      "matchup": "ATL @ PIT",
+      "league": "NFL",
+      "lean_team": "PIT",
+      "top_edges": [
+        "+ PIT Run Game",
+        "+ PIT Passing"
+      ],
+      "source_set_hash": "34e5c322ef664dbece02a0fb",
+      "generated_at": "2026-08-21T03:42:50.016841+00:00",
+      "summary_short": "BlueChip leans PIT. Top signal: + PIT \u2014 Rushing offense vs run defense"
+    },
+    "espn:401872931": {
+      "game_id": "espn:401872931",
+      "matchup": "DEN @ KC",
+      "league": "NFL",
+      "lean_team": "DEN",
+      "top_edges": [
+        "+++ DEN Passing",
+        "++ DEN Pass Rush",
+        "+ DEN Overall"
+      ],
+      "source_set_hash": "e050ac75a7f62c7aa80763d6",
+      "generated_at": "2026-08-21T03:42:53.728541+00:00",
+      "summary_short": "BlueChip leans DEN. Top signal: +++ DEN \u2014 Passing offense vs pass defense"
+    },
+    "espn:401872924": {
+      "game_id": "espn:401872924",
+      "matchup": "NYJ @ TEN",
+      "league": "NFL",
+      "lean_team": "NYJ",
+      "top_edges": [
+        "+++ TEN Pass Rush",
+        "+++ TEN Passing",
+        "++ TEN Overall"
+      ],
+      "source_set_hash": "88624790bb0461f9d0b7489c",
+      "generated_at": "2026-08-21T03:42:57.657599+00:00",
+      "summary_short": "BlueChip leans NYJ. Top signal: +++ TEN \u2014 Pass rush / protection (proxy)"
+    },
+    "espn:401858437": {
+      "game_id": "espn:401858437",
+      "matchup": "WSU @ WASH",
+      "league": "CFB",
+      "lean_team": "WASH",
+      "top_edges": [
+        "++ WASH Ap Rank"
+      ],
+      "source_set_hash": "4dad5c35888c190f4120db90",
+      "generated_at": "2026-08-21T03:43:02.044485+00:00",
+      "summary_short": "BlueChip leans WASH. Top signal: ++ WASH \u2014 AP ranking gap"
+    },
+    "espn:401872922": {
+      "game_id": "espn:401872922",
+      "matchup": "CLE @ JAX",
+      "league": "NFL",
+      "lean_team": "CLE",
+      "top_edges": [
+        "+++ JAX Passing",
+        "++ JAX Overall",
+        "+ CLE Pass Rush"
+      ],
+      "source_set_hash": "301c6f15dcde17663f7b507f",
+      "generated_at": "2026-08-21T03:43:05.784786+00:00",
+      "summary_short": "BlueChip leans CLE. Top signal: +++ JAX \u2014 Passing offense vs pass defense"
+    },
+    "espn:401872927": {
+      "game_id": "espn:401872927",
+      "matchup": "GB @ MIN",
+      "league": "NFL",
+      "lean_team": "GB",
+      "top_edges": [
+        "+++ MIN Pass Rush"
+      ],
+      "source_set_hash": "0ca944c0f43f2533f7a66f3f",
+      "generated_at": "2026-08-21T03:43:09.402808+00:00",
+      "summary_short": "BlueChip leans GB. Top signal: +++ MIN \u2014 Pass rush / protection (proxy)"
+    },
+    "espn:401858434": {
+      "game_id": "espn:401858434",
+      "matchup": "MRSH @ PSU",
+      "league": "CFB",
+      "lean_team": "PSU",
+      "top_edges": [
+        "++ PSU Ap Rank"
+      ],
+      "source_set_hash": "2bcd8d654f03dca34e7c14d1",
+      "generated_at": "2026-08-21T03:43:13.864558+00:00",
+      "summary_short": "BlueChip leans PSU. Top signal: ++ PSU \u2014 AP ranking gap"
+    },
+    "espn:401856666": {
+      "game_id": "espn:401856666",
+      "matchup": "FUR @ TENN",
+      "league": "CFB",
+      "lean_team": "TENN",
+      "top_edges": [
+        "++ TENN Ap Rank"
+      ],
+      "source_set_hash": "a2ab45b337ceb51cd8f865a0",
+      "generated_at": "2026-08-21T03:43:17.528215+00:00",
+      "summary_short": "BlueChip leans TENN. Top signal: ++ TENN \u2014 AP ranking gap"
+    },
+    "espn:401872660": {
+      "game_id": "espn:401872660",
+      "matchup": "BUF @ HOU",
+      "league": "NFL",
+      "lean_team": "HOU",
+      "top_edges": [
+        "++ HOU Pass Rush"
+      ],
+      "source_set_hash": "4c1e0db50462d76d6b352bb7",
+      "generated_at": "2026-08-21T03:43:21.205792+00:00",
+      "summary_short": "BlueChip leans HOU. Top signal: ++ HOU \u2014 Pass rush / protection (proxy)"
+    },
+    "espn:401856768": {
+      "game_id": "espn:401856768",
+      "matchup": "IDHO @ UTAH",
+      "league": "CFB",
+      "lean_team": "UTAH",
+      "top_edges": [
+        "++ UTAH Ap Rank"
+      ],
+      "source_set_hash": "771bb0a400a683ad63df3f4c",
+      "generated_at": "2026-08-21T03:43:25.012261+00:00",
+      "summary_short": "BlueChip leans UTAH. Top signal: ++ UTAH \u2014 AP ranking gap"
+    },
+    "espn:401856766": {
+      "game_id": "espn:401856766",
+      "matchup": "UNC vs TCU",
+      "league": "CFB",
+      "lean_team": "UNC",
+      "top_edges": [],
+      "source_set_hash": "4593453b52944569689cbc2f",
+      "generated_at": "2026-08-21T03:43:28.300513+00:00",
+      "summary_short": "BlueChip leans UNC. Top signal: Overall team strength is the clearest signal."
+    },
+    "espn:401858202": {
+      "game_id": "espn:401858202",
+      "matchup": "NCSU @ UVA",
+      "league": "CFB",
+      "lean_team": "NCSU",
+      "top_edges": [],
+      "source_set_hash": "7fef1c666596c48f2199d625",
+      "generated_at": "2026-08-21T03:43:32.145849+00:00",
+      "summary_short": "BlueChip leans NCSU. Top signal: Overall team strength is the clearest signal."
+    },
+    "espn:401864577": {
+      "game_id": "espn:401864577",
+      "matchup": "JVST @ NDSU",
+      "league": "CFB",
+      "lean_team": "JVST",
+      "top_edges": [],
+      "source_set_hash": "a884649829f68a853f973572",
+      "generated_at": "2026-08-21T03:43:36.180078+00:00",
+      "summary_short": "BlueChip leans JVST. Top signal: Overall team strength is the clearest signal."
+    }
+  },
+  "updated_at": "2026-08-21T03:43:36.182725+00:00"
+}

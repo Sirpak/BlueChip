@@ -1,0 +1,310 @@
+{
+  "game_id": "espn:401872924",
+  "version": "BCW-GIP-v0.1",
+  "created_at": "2026-08-21T03:42:57.657599+00:00",
+  "generated_at": "2026-08-21T03:42:57.657599+00:00",
+  "information_cutoff": "2026-08-21T03:42:57.657599+00:00",
+  "source_set_hash": "88624790bb0461f9d0b7489c",
+  "game": {
+    "game_id": "espn:401872924",
+    "league": "NFL",
+    "matchup": "NYJ @ TEN",
+    "home_team": "TEN",
+    "away_team": "NYJ",
+    "home_name": "Tennessee Titans",
+    "away_name": "New York Jets",
+    "spread_label": "TEN -3.0",
+    "home_spread": -3.0,
+    "total_line": 38.5,
+    "week": 1
+  },
+  "lean_team": "NYJ",
+  "projection": {
+    "model_id": "BCW-DESK-STRENGTH-v0.x",
+    "method": "0.65\u00b7Elo/25+HFA + 0.35\u00b7(SRS+HFA)",
+    "mu_home": 1.9,
+    "sigma": 13.5,
+    "p_home_win": 0.5414,
+    "p_home_cover": 0.453,
+    "edge_vs_minus_110": -0.0708,
+    "model_lean": "AWAY",
+    "model_lean_team": "NYJ",
+    "label": "Research Preview",
+    "public_probability_published": false,
+    "confidence_pct": 54.7
+  },
+  "matchup_edges": [
+    {
+      "key": "PASS_RUSH",
+      "title": "Pass rush / protection (proxy)",
+      "side": "HOME",
+      "side_team": "TEN",
+      "strength": "MAJOR",
+      "home_stat": -0.1595,
+      "away_stat": -0.3921,
+      "mismatch_z": 2.326,
+      "fan_line": "+++ TEN \u2014 Pass rush / protection (proxy)",
+      "label": "MATCHUP SIGNAL",
+      "why": "Proxy until true pressure/PBWR data: lower pass EPA allowed \u21d2 stronger pass defense / rush. MATCHUP SIGNAL only \u2014 not a published win probability."
+    },
+    {
+      "key": "PASSING",
+      "title": "Passing offense vs pass defense",
+      "side": "HOME",
+      "side_team": "TEN",
+      "strength": "MAJOR",
+      "home_stat": 0.2767,
+      "away_stat": -0.132,
+      "mismatch_z": 2.27,
+      "fan_line": "+++ TEN \u2014 Passing offense vs pass defense",
+      "label": "MATCHUP SIGNAL",
+      "why": "EPA/play on passes plus how much EPA the opposing defense allows. EPA weights plays by situation (3rd-and-3 \u2260 3rd-and-20)."
+    },
+    {
+      "key": "OVERALL",
+      "title": "Overall efficiency",
+      "side": "HOME",
+      "side_team": "TEN",
+      "strength": "STRONG",
+      "home_stat": -0.1501,
+      "away_stat": -0.3821,
+      "mismatch_z": 1.16,
+      "fan_line": "++ TEN \u2014 Overall efficiency",
+      "label": "MATCHUP SIGNAL",
+      "why": "Net EPA/play (offense minus defense). Broad team-strength interaction."
+    },
+    {
+      "key": "RUN_GAME",
+      "title": "Rushing offense vs run defense",
+      "side": "HOME",
+      "side_team": "TEN",
+      "strength": "EVEN",
+      "home_stat": -0.0615,
+      "away_stat": -0.101,
+      "mismatch_z": 0.282,
+      "fan_line": "\u00b7 TEN \u2014 Rushing offense vs run defense",
+      "label": "MATCHUP SIGNAL",
+      "why": "Rush EPA/play vs EPA allowed on rushes \u2014 better than raw yards/carry."
+    }
+  ],
+  "headline_cards": [
+    {
+      "marks": "+++",
+      "key": "PASS_RUSH",
+      "title": "Pass rush / protection (proxy)",
+      "team": "TEN",
+      "strength": "MAJOR",
+      "fan_line": "+++ TEN \u2014 Pass rush / protection (proxy)",
+      "mismatch_z": 2.326,
+      "percentile_hint": "More extreme than ~95% of similar unit mismatches in a normal sample.",
+      "label": "MATCHUP SIGNAL",
+      "why": "Proxy until true pressure/PBWR data: lower pass EPA allowed \u21d2 stronger pass defense / rush. MATCHUP SIGNAL only \u2014 not a published win probability.",
+      "home_stat": -0.1595,
+      "away_stat": -0.3921
+    },
+    {
+      "marks": "+++",
+      "key": "PASSING",
+      "title": "Passing offense vs pass defense",
+      "team": "TEN",
+      "strength": "MAJOR",
+      "fan_line": "+++ TEN \u2014 Passing offense vs pass defense",
+      "mismatch_z": 2.27,
+      "percentile_hint": "More extreme than ~95% of similar unit mismatches in a normal sample.",
+      "label": "MATCHUP SIGNAL",
+      "why": "EPA/play on passes plus how much EPA the opposing defense allows. EPA weights plays by situation (3rd-and-3 \u2260 3rd-and-20).",
+      "home_stat": 0.2767,
+      "away_stat": -0.132
+    },
+    {
+      "marks": "++",
+      "key": "OVERALL",
+      "title": "Overall efficiency",
+      "team": "TEN",
+      "strength": "STRONG",
+      "fan_line": "++ TEN \u2014 Overall efficiency",
+      "mismatch_z": 1.16,
+      "percentile_hint": "Clearly tilted versus a typical NFL/CFB unit matchup.",
+      "label": "MATCHUP SIGNAL",
+      "why": "Net EPA/play (offense minus defense). Broad team-strength interaction.",
+      "home_stat": -0.1501,
+      "away_stat": -0.3821
+    }
+  ],
+  "slate_edges": [
+    "+++ TEN Pass Rush",
+    "+++ TEN Passing",
+    "++ TEN Overall"
+  ],
+  "matchup_logistic": {
+    "model_id": "BCW-MATCHUP-LOGISTIC-v0.x",
+    "label": "Research Preview",
+    "public_probability_published": false,
+    "logit": 2.4646,
+    "p_home_win": 0.9216,
+    "lean": "HOME",
+    "contributions": [
+      {
+        "key": "PASS_RUSH",
+        "weight": 0.35,
+        "z": 2.326,
+        "term": 0.8141
+      },
+      {
+        "key": "PASSING",
+        "weight": 0.4,
+        "z": 2.27,
+        "term": 0.908
+      },
+      {
+        "key": "OVERALL",
+        "weight": 0.45,
+        "z": 1.16,
+        "term": 0.522
+      },
+      {
+        "key": "RUN_GAME",
+        "weight": 0.25,
+        "z": 0.282,
+        "term": 0.0705
+      }
+    ],
+    "note": "Heuristic matchup logistic on EDGE z-scores. Not BCW-RIDGE. Not a ship gate."
+  },
+  "paths": {
+    "home": "Lean on pass rush / protection (proxy). Convert that mismatch before the game becomes a coin-flip script.",
+    "away": "Shorten the game, win the line of scrimmage, and force the favorite into obvious passing downs."
+  },
+  "risks": [
+    "Turnovers: the projection assumes roughly normal luck; a +2 swing can flip a NYJ lean.",
+    "TEN path: if pass rush / protection (proxy) plays up, NYJ's edge shrinks.",
+    "Injury / inactive surprise on either OL or QB would rewrite the pass-rush signal."
+  ],
+  "adjustment": {
+    "points_home": 4.2,
+    "label": "MATCHUP SIGNAL (unvalidated additive)",
+    "note": "Not fed into BCW-RIDGE-v0.1. Research Preview display only."
+  },
+  "events": [
+    {
+      "game_id": "espn:401872924",
+      "event_type": "other",
+      "headline": "Jets\u2019 Breece Hall to miss 2-3 weeks with groin injury, expects to be ready for Week 1 - New York Daily News",
+      "publisher": "New York Daily News",
+      "source_url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPMzlSOWZsM005c0czdE1xVzJTSFQ4akpyeDNJdzB2UHQwRFpGbEw3RS1hVldlMm9PbW5pUzA4Z2QwdHZ0UzJhYXRjV2VHNjZCWlNBRERiNVVQaHlQdmdLZXVfTHBZRl9BVkNGM3VhMG1CLUpxNUt4U052MUxDcWN4LVdnNkp1UTJrQnJvMmN6bmFtdll0UkJ1X0dBQ3AybG94VXBZRkp4YmN2RlZhUksxV09EM0NlX0JYM1VxSmxKMEI?oc=5",
+      "bucket": "availability",
+      "structured_fact": "Jets\u2019 Breece Hall to miss 2-3 weeks with groin injury, expects to be ready for Week 1 - New York Daily News",
+      "confidence": 0.45,
+      "tier": 3
+    },
+    {
+      "game_id": "espn:401872924",
+      "event_type": "other",
+      "headline": "Jets RB Hall strains right groin, but likely not serious injury",
+      "publisher": "ESPN",
+      "source_url": "https://www.espn.com/nfl/story/_/id/49639624/jets-rb-hall-strains-right-groin-likely-not-serious-injury",
+      "bucket": "availability",
+      "structured_fact": "Jets RB Hall strains right groin, but likely not serious injury",
+      "confidence": 0.45,
+      "tier": 2
+    },
+    {
+      "game_id": "espn:401872924",
+      "event_type": "market",
+      "headline": "New York Jets at Pittsburgh Steelers odds, picks and predictions - USA Today",
+      "publisher": "USA Today",
+      "source_url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPMlgydmF1OC1XVW5ncXB3VWdvOUFyZXRhb1hFdHJMVDhlWm42S0EwcEVPcW1fQ1FXSTZtUUNCSlZJUVQ2NC1HU09uOE4tUFk0TThsZWtuZEdpeklxcnNYamNvWEstZjZsWFJXd0JsTWJVbkI1ZHkxc05JeW9ualdfTmVqQ1J5UmM2OXBLRWk3NmlsSnVPRkpBa04tMWJNdnZNSkFsNXJjM0djZTV5bXM1ekc2WFU1a3ZkYm1Jaw?oc=5",
+      "bucket": "analysis",
+      "structured_fact": "New York Jets at Pittsburgh Steelers odds, picks and predictions - USA Today",
+      "confidence": 0.7,
+      "tier": 3
+    },
+    {
+      "game_id": "espn:401872924",
+      "event_type": "other",
+      "headline": "Tennessee Titans Receive News Surrounding Mitchell Trubisky's Injury - Yahoo Sports",
+      "publisher": "Yahoo Sports",
+      "source_url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNYlVsMVVWY3lnMXBrLXlxV2Q3WGtiQ2F5ZFlYTXJFUVBucThhYW1aeUV5d21aeEt1dzNiSjVDX0pVTG5GWEhBR042aUNzcUtsY3YtTEZFLW9vQXlDNXdtWUZ6MHJoMC1nVXNvWV9SakZxNTRnYjhCLS02UWVyZ3dlM3VPQlVwZmdPYm9ZTFFRQjUtZE83?oc=5",
+      "bucket": "availability",
+      "structured_fact": "Tennessee Titans Receive News Surrounding Mitchell Trubisky's Injury - Yahoo Sports",
+      "confidence": 0.45,
+      "tier": 3
+    },
+    {
+      "game_id": "espn:401872924",
+      "event_type": "other",
+      "headline": "Tennessee Titans news: Could QB Will Levis be traded? - Music City Miracles",
+      "publisher": "Music City Miracles",
+      "source_url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPbGpCaXFyVDhMUFFQZmFjcVdscTVobTdSWWlhTEFtVGlYdFcyUjBneTVtckhZcWFvYXhXVTBqOXdtZm9YOGJBODhLUUN0cDZWQTBYSG1WSF82RkxOcDFqa1REM200TmV0aW1meU9BaE9KaGE2LTZBcl9CbXotaV9HeWtzNVlxUE5MYWF1LTNwSU9SMEtSdWV4eXV0bW5YV2JIZnBRTjktMGVEMk50aHVtdTU2Yw?oc=5",
+      "bucket": "availability",
+      "structured_fact": "Tennessee Titans news: Could QB Will Levis be traded? - Music City Miracles",
+      "confidence": 0.45,
+      "tier": 3
+    },
+    {
+      "game_id": "espn:401872924",
+      "event_type": "other",
+      "headline": "ESPN QB expert exposes exactly what Cam Ward must fix in Titans\u2019 preseason pressure test - A to Z Sports",
+      "publisher": "A to Z Sports",
+      "source_url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQeDd2UkNCanA1UTRXeEJVdnZXajRIdGNkNzc1ckhvdkY4RnR1Qjlpc0FwVXlaYTA4VUtXUDJMbDFtTUxHb0gzTjRVV213SmVIZ1paNzVrWVdJVWRWLUN3MzdSa0dZNEJabXMtQjZRVTdoSmdmcjBxel9EOGRDSTQtSjdCU1IwbGhVZ2wxM25aVFZxcVJYLS1Jc2RSWUtFX0ZOTHJFUlF2cGFNLWlXVlBhYkVB?oc=5",
+      "bucket": "availability",
+      "structured_fact": "ESPN QB expert exposes exactly what Cam Ward must fix in Titans\u2019 preseason pressure test - A to Z Sports",
+      "confidence": 0.45,
+      "tier": 3
+    }
+  ],
+  "news_citations": [
+    {
+      "headline": "Jets\u2019 Breece Hall to miss 2-3 weeks with groin injury, expects to be ready for Week 1 - New York Daily News",
+      "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPMzlSOWZsM005c0czdE1xVzJTSFQ4akpyeDNJdzB2UHQwRFpGbEw3RS1hVldlMm9PbW5pUzA4Z2QwdHZ0UzJhYXRjV2VHNjZCWlNBRERiNVVQaHlQdmdLZXVfTHBZRl9BVkNGM3VhMG1CLUpxNUt4U052MUxDcWN4LVdnNkp1UTJrQnJvMmN6bmFtdll0UkJ1X0dBQ3AybG94VXBZRkp4YmN2RlZhUksxV09EM0NlX0JYM1VxSmxKMEI?oc=5",
+      "publisher": "New York Daily News"
+    },
+    {
+      "headline": "Jets RB Hall strains right groin, but likely not serious injury",
+      "url": "https://www.espn.com/nfl/story/_/id/49639624/jets-rb-hall-strains-right-groin-likely-not-serious-injury",
+      "publisher": "ESPN"
+    },
+    {
+      "headline": "New York Jets at Pittsburgh Steelers odds, picks and predictions - USA Today",
+      "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPMlgydmF1OC1XVW5ncXB3VWdvOUFyZXRhb1hFdHJMVDhlWm42S0EwcEVPcW1fQ1FXSTZtUUNCSlZJUVQ2NC1HU09uOE4tUFk0TThsZWtuZEdpeklxcnNYamNvWEstZjZsWFJXd0JsTWJVbkI1ZHkxc05JeW9ualdfTmVqQ1J5UmM2OXBLRWk3NmlsSnVPRkpBa04tMWJNdnZNSkFsNXJjM0djZTV5bXM1ekc2WFU1a3ZkYm1Jaw?oc=5",
+      "publisher": "USA Today"
+    },
+    {
+      "headline": "Tennessee Titans Receive News Surrounding Mitchell Trubisky's Injury - Yahoo Sports",
+      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNYlVsMVVWY3lnMXBrLXlxV2Q3WGtiQ2F5ZFlYTXJFUVBucThhYW1aeUV5d21aeEt1dzNiSjVDX0pVTG5GWEhBR042aUNzcUtsY3YtTEZFLW9vQXlDNXdtWUZ6MHJoMC1nVXNvWV9SakZxNTRnYjhCLS02UWVyZ3dlM3VPQlVwZmdPYm9ZTFFRQjUtZE83?oc=5",
+      "publisher": "Yahoo Sports"
+    },
+    {
+      "headline": "Tennessee Titans news: Could QB Will Levis be traded? - Music City Miracles",
+      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPbGpCaXFyVDhMUFFQZmFjcVdscTVobTdSWWlhTEFtVGlYdFcyUjBneTVtckhZcWFvYXhXVTBqOXdtZm9YOGJBODhLUUN0cDZWQTBYSG1WSF82RkxOcDFqa1REM200TmV0aW1meU9BaE9KaGE2LTZBcl9CbXotaV9HeWtzNVlxUE5MYWF1LTNwSU9SMEtSdWV4eXV0bW5YV2JIZnBRTjktMGVEMk50aHVtdTU2Yw?oc=5",
+      "publisher": "Music City Miracles"
+    },
+    {
+      "headline": "ESPN QB expert exposes exactly what Cam Ward must fix in Titans\u2019 preseason pressure test - A to Z Sports",
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQeDd2UkNCanA1UTRXeEJVdnZXajRIdGNkNzc1ckhvdkY4RnR1Qjlpc0FwVXlaYTA4VUtXUDJMbDFtTUxHb0gzTjRVV213SmVIZ1paNzVrWVdJVWRWLUN3MzdSa0dZNEJabXMtQjZRVTdoSmdmcjBxel9EOGRDSTQtSjdCU1IwbGhVZ2wxM25aVFZxcVJYLS1Jc2RSWUtFX0ZOTHJFUlF2cGFNLWlXVlBhYkVB?oc=5",
+      "publisher": "A to Z Sports"
+    }
+  ],
+  "summary_short": "BlueChip leans NYJ. Top signal: +++ TEN \u2014 Pass rush / protection (proxy)",
+  "summary_full": "New York Jets at Tennessee Titans.\n\nBlueChip leans NYJ. +++ TEN \u2014 Pass rush / protection (proxy)\n\nWhy NYJ has the edge\n- +++ TEN \u2014 Pass rush / protection (proxy)\n- +++ TEN \u2014 Passing offense vs pass defense\n- ++ TEN \u2014 Overall efficiency\n\nBlueChip projection\nMarket: TEN -3.0\nBCW desk \u03bc (home): +1.9 (Research Preview)\nWin probability: unavailable until probability model passes validation.\n\nHow each team wins\nTEN: Lean on pass rush / protection (proxy). Convert that mismatch before the game becomes a coin-flip script.\nNYJ: Shorten the game, win the line of scrimmage, and force the favorite into obvious passing downs.\n\nWhat changed this week\n\u2022 Jets\u2019 Breece Hall to miss 2-3 weeks with groin injury, expects to be ready for Week 1 - New York Daily News\n\u2022 Jets RB Hall strains right groin, but likely not serious injury\n\u2022 New York Jets at Pittsburgh Steelers odds, picks and predictions - USA Today\n\u2022 Tennessee Titans Receive News Surrounding Mitchell Trubisky's Injury - Yahoo Sports\n\nWhat could make BlueChip wrong?\n\u2022 Turnovers: the projection assumes roughly normal luck; a +2 swing can flip a NYJ lean.\n\u2022 TEN path: if pass rush / protection (proxy) plays up, NYJ's edge shrinks.\n\u2022 Injury / inactive surprise on either OL or QB would rewrite the pass-rush signal.\n\nBottom line: NYJ has more ways to win on the current MATCHUP SIGNAL board, but football variance (turnovers, explosives) remains large around any margin estimate.",
+  "generation_model": "desk-template",
+  "generation_provider": "fallback",
+  "glossary": {
+    "EPA/play": "Expected Points Added estimates how much each play improves expected scoring position. Positive is good. A 5-yard gain on 3rd-and-3 is not treated like 5 yards on 3rd-and-20.",
+    "MATCHUP SIGNAL": "A descriptive strength\u00d7weakness edge. Not a published win probability and not fed into BCW-RIDGE-v0.1 until validated walk-forward.",
+    "Research Preview": "BlueChip quantitative layer that has not cleared the five public ship gates."
+  },
+  "levels": {
+    "slate": {
+      "lean": "NYJ",
+      "top_edges": [
+        "+++ TEN Pass Rush",
+        "+++ TEN Passing",
+        "++ TEN Overall"
+      ],
+      "market": "TEN -3.0",
+      "mu": 1.9,
+      "confidence_pct": 54.7
+    }
+  }
+}

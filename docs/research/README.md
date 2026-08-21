@@ -15,6 +15,7 @@ Committed on purpose: BlueChip is a **research repo**. Each note uses the same s
 | [009-nflfastr-replication.md](009-nflfastr-replication.md) | Python EP/WP, not an R wrap; live ≠ pregame | Partial (WP trainer) |
 | [010-snapshot-superset-vs-ridge.md](010-snapshot-superset-vs-ridge.md) | Snapshot may be rich; Ridge freeze stays small | Spec |
 | [011-model-lab-reproductions.md](011-model-lab-reproductions.md) | Reproduce SRS / FPI-style EPA / logistic / LGBM / \(F_M\) on one dataset | Spec |
+| [012-matchup-interaction-engine.md](012-matchup-interaction-engine.md) | Strength×weakness matchups; logistic / LGBM / \(F_M\); EDGE headlines | Spec only — **after** Model Launch |
 
 Sources: [nflfastR](https://github.com/nflverse/nflfastR), [nflverse](https://github.com/nflverse), [CFBD API](https://api.collegefootballdata.com/getting-started).
 

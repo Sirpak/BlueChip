@@ -1,8 +1,17 @@
-# BlueChipWager
+# BlueChip
 
-NFL + CFB football intelligence — research desk UI, FastAPI, data pipeline, models.
+**BlueChip** (repo: BlueChipWager) is a probabilistic NFL/CFB research desk: leakage-safe features, versioned margin models, and a fan-readable **Game Intelligence Brief** — not a pick’em tout.
+
+BlueChip calculates; the AI explains. Market close is the hardest benchmark. Public cover probabilities ship only after calibration gates.
 
 **Status:** Research Preview. Walk-forward on **2009–2022** only. Sacred holdout **2023–2025** is sealed. Public cover % is not published. Market 0 remains the benchmark.
+
+## What it does
+
+- **Model lab** — HFA, Elo, SRS, opponent-adjusted EPA, logistic, Ridge \(\mu\) + Stern conversion
+- **Slate & matchups** — ESPN schedules, news/events, weekly desk publishes, confidence leans
+- **Game Intelligence Packages** — cached matchup edges + briefs (no LLM on every page view)
+- **Research desk UI** — Games, Teams, Models, Markets, About/glossary
 
 ## Quick start
 

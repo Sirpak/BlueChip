@@ -1,0 +1,220 @@
+{
+  "game_id": "espn:401858432",
+  "version": "BCW-GIP-v0.1",
+  "created_at": "2026-08-21T03:40:35.290047+00:00",
+  "generated_at": "2026-08-21T03:40:35.290047+00:00",
+  "information_cutoff": "2026-08-21T03:40:35.290047+00:00",
+  "source_set_hash": "22ee6785d68126aaf080a578",
+  "game": {
+    "game_id": "espn:401858432",
+    "league": "CFB",
+    "matchup": "BALL @ OSU",
+    "home_team": "OSU",
+    "away_team": "BALL",
+    "home_name": "Ohio State Buckeyes",
+    "away_name": "Ball State Cardinals",
+    "spread_label": "OSU -50.5",
+    "home_spread": -50.5,
+    "total_line": 56.5,
+    "week": 1
+  },
+  "lean_team": "OSU",
+  "projection": {
+    "model_id": "BCW-DESK-STRENGTH-v0.x",
+    "method": "Market line + AP rank edge (CFB; no CFB Elo yet)",
+    "mu_home": 56.75,
+    "sigma": 15.0,
+    "p_home_win": 0.9999,
+    "p_home_cover": 0.6493,
+    "edge_vs_minus_110": 0.1255,
+    "model_lean": "HOME",
+    "model_lean_team": "OSU",
+    "label": "Research Preview",
+    "public_probability_published": false,
+    "confidence_pct": 64.9
+  },
+  "matchup_edges": [
+    {
+      "key": "AP_RANK",
+      "title": "AP ranking gap",
+      "side": "HOME",
+      "side_team": "OSU",
+      "strength": "MAJOR",
+      "home_stat": 30.0,
+      "away_stat": 1.0,
+      "mismatch_z": 3.625,
+      "fan_line": "+++ OSU \u2014 AP ranking gap",
+      "label": "MATCHUP SIGNAL",
+      "why": "College prior until CFB EPA ingest. Lower AP rank is stronger."
+    }
+  ],
+  "headline_cards": [
+    {
+      "marks": "+++",
+      "key": "AP_RANK",
+      "title": "AP ranking gap",
+      "team": "OSU",
+      "strength": "MAJOR",
+      "fan_line": "+++ OSU \u2014 AP ranking gap",
+      "mismatch_z": 3.625,
+      "percentile_hint": "More extreme than ~95% of similar unit mismatches in a normal sample.",
+      "label": "MATCHUP SIGNAL",
+      "why": "College prior until CFB EPA ingest. Lower AP rank is stronger.",
+      "home_stat": 30.0,
+      "away_stat": 1.0
+    }
+  ],
+  "slate_edges": [
+    "+++ OSU Ap Rank"
+  ],
+  "matchup_logistic": {
+    "model_id": "BCW-MATCHUP-LOGISTIC-v0.x",
+    "label": "Research Preview",
+    "public_probability_published": false,
+    "logit": 1.2375,
+    "p_home_win": 0.7751,
+    "lean": "HOME",
+    "contributions": [
+      {
+        "key": "AP_RANK",
+        "weight": 0.3,
+        "z": 3.625,
+        "term": 1.0875
+      }
+    ],
+    "note": "Heuristic matchup logistic on EDGE z-scores. Not BCW-RIDGE. Not a ship gate."
+  },
+  "paths": {
+    "home": "Lean on ap ranking gap. Convert that mismatch before the game becomes a coin-flip script.",
+    "away": "Shorten the game, win the line of scrimmage, and force the favorite into obvious passing downs."
+  },
+  "risks": [
+    "Turnovers: the projection assumes roughly normal luck; a +2 swing can flip a OSU lean.",
+    "Injury / inactive surprise on either OL or QB would rewrite the pass-rush signal."
+  ],
+  "adjustment": {
+    "points_home": 1.6,
+    "label": "MATCHUP SIGNAL (unvalidated additive)",
+    "note": "Not fed into BCW-RIDGE-v0.1. Research Preview display only."
+  },
+  "events": [
+    {
+      "game_id": "espn:401858432",
+      "event_type": "other",
+      "headline": "Buckeyes Opponent Preview: Week One, Ball State Cardinals - Yahoo Sports",
+      "publisher": "Yahoo Sports",
+      "source_url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQOXhGSkUxMzR1S2FxWlhLTHI0VDFTUmVIQTBhS2FYeEpPSGZ0RzN2MlVUaExJR245TU1zM0p4NGd1b0NwTVAwN0MzNEJtOEYtbG44WmgxNms3bWdkVHJUMVVMU0diaE9ZUGZ5TjBFby1nR3otMjZ2QjI3UzkzYWVhUUtZMnZHd0tBYWhj?oc=5",
+      "bucket": "analysis",
+      "structured_fact": "Buckeyes Opponent Preview: Week One, Ball State Cardinals - Yahoo Sports",
+      "confidence": 0.45,
+      "tier": 3
+    },
+    {
+      "game_id": "espn:401858432",
+      "event_type": "other",
+      "headline": "2025 MAC Football Week 6 Preview: Ohio Bobcats at Ball State Cardinals - Hustle Belt",
+      "publisher": "Hustle Belt",
+      "source_url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNNzVxZll5OTNtQUd5OUgyT2I5OHVNNkxmT0JiclJfUXk3V3hNY21DaUIwRld2MmYxdXc2dXZBMDVGZlo3blBYalU2YVdaanZib0xiVzFxeU5YbVVPb05NWnJpYXJxOWdQT3lTT1BoU2FRWi10b245bW1QSktjVXlZaWhZNzBoRTRua3NTS0VRWWd6a2ZaOGFPMzYwcXE5bmJsQVpFZmotLVJPdm16T000bGpfVnpkbXI5RlhERg?oc=5",
+      "bucket": "analysis",
+      "structured_fact": "2025 MAC Football Week 6 Preview: Ohio Bobcats at Ball State Cardinals - Hustle Belt",
+      "confidence": 0.45,
+      "tier": 3
+    },
+    {
+      "game_id": "espn:401858432",
+      "event_type": "other",
+      "headline": "College football's mad two-week scramble to land a transfer portal QB",
+      "publisher": "ESPN",
+      "source_url": "https://www.espn.com/college-football/story/_/id/49650906/college-football-two-week-scramble-transfer-portal-qb",
+      "bucket": "availability",
+      "structured_fact": "College football's mad two-week scramble to land a transfer portal QB",
+      "confidence": 0.45,
+      "tier": 2
+    },
+    {
+      "game_id": "espn:401858432",
+      "event_type": "other",
+      "headline": "Michigan Football 2026 Opponent Preview: Ohio State - Yahoo Sports",
+      "publisher": "Yahoo Sports",
+      "source_url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPWHRfcVpMZHptcktsUno3QXhzQzZmcDVIYS04b2QtNXYzamp2c0ZZdnJDcVZULUU4WGpzeXJhT1FpWm1GbWpDelk0amIwTzRaTnFVaF95a2RITkNoUnpZNGNvTEM0cmk2U3VkWHhHVVRVbWhEaFQ3WjRCLWc2X2pocnlxRzRjZE9sMmVtMUpIWXE5dw?oc=5",
+      "bucket": "analysis",
+      "structured_fact": "Michigan Football 2026 Opponent Preview: Ohio State - Yahoo Sports",
+      "confidence": 0.45,
+      "tier": 3
+    },
+    {
+      "game_id": "espn:401858432",
+      "event_type": "other",
+      "headline": "Every QB Ohio State Will Face This Season, Ranked From Worst to Best - Sports Illustrated",
+      "publisher": "Sports Illustrated",
+      "source_url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQZXJ4WlIwcm9zUWZCMnRoSjhaeVcwb05WRUd5OVhkVnpXM0YxYkgzSUVuZzE3X3JXX1RGV2Q4Q2tuc0QyUktLd0hiMWwzN1B5UFdsd2dXWnRKVjJNX2hWYWt2dkNzek9CTExHMmE3cU1KdDdLbVJteGZhRXJDcV9EbUtuNVplYWRfbGgxT3dmXzVwSmYtY1BpRFhtMmlUbnM3UjlEcTZUeWpVaWhxRTF5VVlOUDE2ZThZTy13c0lQZw?oc=5",
+      "bucket": "availability",
+      "structured_fact": "Every QB Ohio State Will Face This Season, Ranked From Worst to Best - Sports Illustrated",
+      "confidence": 0.45,
+      "tier": 3
+    },
+    {
+      "game_id": "espn:401858432",
+      "event_type": "other",
+      "headline": "Ball State Cardinals vs. Ohio State Buckeyes - Live Score - September 05, 2026 - FOX Sports",
+      "publisher": "FOX Sports",
+      "source_url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPYzhldTMyWVp5UWd3Q29jZFJYRkdmVEdEdzdBaHNVSkhYUk9pVGhwY0xyMzdnMVh2ZWl1SDZ2emptZTVSZ2hleHpBM1Fzck9zRG9mMGZoODFhQkZwMnNpaGt1M25RUk51UVE4cXA0RXNxbFh0ZHd1cks0YWFkaE92UWlBOHlfUW1VRnpoMTA1U3JuQlF0dE45QkNVcTZ0ZTB6eFNoYjRvMUwzTG9EVl9QMXU0YnQxUzNIakE?oc=5",
+      "bucket": "matchup",
+      "structured_fact": "Ball State Cardinals vs. Ohio State Buckeyes - Live Score - September 05, 2026 - FOX Sports",
+      "confidence": 0.45,
+      "tier": 3
+    }
+  ],
+  "news_citations": [
+    {
+      "headline": "Buckeyes Opponent Preview: Week One, Ball State Cardinals - Yahoo Sports",
+      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQOXhGSkUxMzR1S2FxWlhLTHI0VDFTUmVIQTBhS2FYeEpPSGZ0RzN2MlVUaExJR245TU1zM0p4NGd1b0NwTVAwN0MzNEJtOEYtbG44WmgxNms3bWdkVHJUMVVMU0diaE9ZUGZ5TjBFby1nR3otMjZ2QjI3UzkzYWVhUUtZMnZHd0tBYWhj?oc=5",
+      "publisher": "Yahoo Sports"
+    },
+    {
+      "headline": "2025 MAC Football Week 6 Preview: Ohio Bobcats at Ball State Cardinals - Hustle Belt",
+      "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNNzVxZll5OTNtQUd5OUgyT2I5OHVNNkxmT0JiclJfUXk3V3hNY21DaUIwRld2MmYxdXc2dXZBMDVGZlo3blBYalU2YVdaanZib0xiVzFxeU5YbVVPb05NWnJpYXJxOWdQT3lTT1BoU2FRWi10b245bW1QSktjVXlZaWhZNzBoRTRua3NTS0VRWWd6a2ZaOGFPMzYwcXE5bmJsQVpFZmotLVJPdm16T000bGpfVnpkbXI5RlhERg?oc=5",
+      "publisher": "Hustle Belt"
+    },
+    {
+      "headline": "College football's mad two-week scramble to land a transfer portal QB",
+      "url": "https://www.espn.com/college-football/story/_/id/49650906/college-football-two-week-scramble-transfer-portal-qb",
+      "publisher": "ESPN"
+    },
+    {
+      "headline": "Michigan Football 2026 Opponent Preview: Ohio State - Yahoo Sports",
+      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPWHRfcVpMZHptcktsUno3QXhzQzZmcDVIYS04b2QtNXYzamp2c0ZZdnJDcVZULUU4WGpzeXJhT1FpWm1GbWpDelk0amIwTzRaTnFVaF95a2RITkNoUnpZNGNvTEM0cmk2U3VkWHhHVVRVbWhEaFQ3WjRCLWc2X2pocnlxRzRjZE9sMmVtMUpIWXE5dw?oc=5",
+      "publisher": "Yahoo Sports"
+    },
+    {
+      "headline": "Every QB Ohio State Will Face This Season, Ranked From Worst to Best - Sports Illustrated",
+      "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQZXJ4WlIwcm9zUWZCMnRoSjhaeVcwb05WRUd5OVhkVnpXM0YxYkgzSUVuZzE3X3JXX1RGV2Q4Q2tuc0QyUktLd0hiMWwzN1B5UFdsd2dXWnRKVjJNX2hWYWt2dkNzek9CTExHMmE3cU1KdDdLbVJteGZhRXJDcV9EbUtuNVplYWRfbGgxT3dmXzVwSmYtY1BpRFhtMmlUbnM3UjlEcTZUeWpVaWhxRTF5VVlOUDE2ZThZTy13c0lQZw?oc=5",
+      "publisher": "Sports Illustrated"
+    },
+    {
+      "headline": "Ball State Cardinals vs. Ohio State Buckeyes - Live Score - September 05, 2026 - FOX Sports",
+      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPYzhldTMyWVp5UWd3Q29jZFJYRkdmVEdEdzdBaHNVSkhYUk9pVGhwY0xyMzdnMVh2ZWl1SDZ2emptZTVSZ2hleHpBM1Fzck9zRG9mMGZoODFhQkZwMnNpaGt1M25RUk51UVE4cXA0RXNxbFh0ZHd1cks0YWFkaE92UWlBOHlfUW1VRnpoMTA1U3JuQlF0dE45QkNVcTZ0ZTB6eFNoYjRvMUwzTG9EVl9QMXU0YnQxUzNIakE?oc=5",
+      "publisher": "FOX Sports"
+    }
+  ],
+  "summary_short": "BlueChip leans OSU. Top signal: +++ OSU \u2014 AP ranking gap",
+  "summary_full": "Ball State Cardinals at Ohio State Buckeyes.\n\nBlueChip leans OSU. +++ OSU \u2014 AP ranking gap\n\nWhy OSU has the edge\n- +++ OSU \u2014 AP ranking gap\n\nBlueChip projection\nMarket: OSU -50.5\nBCW desk \u03bc (home): +56.8 (Research Preview)\nWin probability: unavailable until probability model passes validation.\n\nHow each team wins\nOSU: Lean on ap ranking gap. Convert that mismatch before the game becomes a coin-flip script.\nBALL: Shorten the game, win the line of scrimmage, and force the favorite into obvious passing downs.\n\nWhat changed this week\n\u2022 Buckeyes Opponent Preview: Week One, Ball State Cardinals - Yahoo Sports\n\u2022 2025 MAC Football Week 6 Preview: Ohio Bobcats at Ball State Cardinals - Hustle Belt\n\u2022 College football's mad two-week scramble to land a transfer portal QB\n\u2022 Michigan Football 2026 Opponent Preview: Ohio State - Yahoo Sports\n\nWhat could make BlueChip wrong?\n\u2022 Turnovers: the projection assumes roughly normal luck; a +2 swing can flip a OSU lean.\n\u2022 Injury / inactive surprise on either OL or QB would rewrite the pass-rush signal.\n\nBottom line: OSU has more ways to win on the current MATCHUP SIGNAL board, but football variance (turnovers, explosives) remains large around any margin estimate.",
+  "generation_model": "desk-template",
+  "generation_provider": "fallback",
+  "glossary": {
+    "EPA/play": "Expected Points Added estimates how much each play improves expected scoring position. Positive is good. A 5-yard gain on 3rd-and-3 is not treated like 5 yards on 3rd-and-20.",
+    "MATCHUP SIGNAL": "A descriptive strength\u00d7weakness edge. Not a published win probability and not fed into BCW-RIDGE-v0.1 until validated walk-forward.",
+    "Research Preview": "BlueChip quantitative layer that has not cleared the five public ship gates."
+  },
+  "levels": {
+    "slate": {
+      "lean": "OSU",
+      "top_edges": [
+        "+++ OSU Ap Rank"
+      ],
+      "market": "OSU -50.5",
+      "mu": 56.75,
+      "confidence_pct": 64.9
+    }
+  }
+}

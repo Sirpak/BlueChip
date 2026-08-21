@@ -1,0 +1,220 @@
+{
+  "game_id": "espn:401856634",
+  "version": "BCW-GIP-v0.1",
+  "created_at": "2026-08-21T03:42:07.519153+00:00",
+  "generated_at": "2026-08-21T03:42:07.519153+00:00",
+  "information_cutoff": "2026-08-21T03:42:07.519153+00:00",
+  "source_set_hash": "e0c569f18e9313af674fbb9b",
+  "game": {
+    "game_id": "espn:401856634",
+    "league": "CFB",
+    "matchup": "ECU @ ALA",
+    "home_team": "ALA",
+    "away_team": "ECU",
+    "home_name": "Alabama Crimson Tide",
+    "away_name": "East Carolina Pirates",
+    "spread_label": "ALA -28.5",
+    "home_spread": -28.5,
+    "total_line": 54.5,
+    "week": 1
+  },
+  "lean_team": "ALA",
+  "projection": {
+    "model_id": "BCW-DESK-STRENGTH-v0.x",
+    "method": "Market line + AP rank edge (CFB; no CFB Elo yet)",
+    "mu_home": 31.75,
+    "sigma": 15.0,
+    "p_home_win": 0.9814,
+    "p_home_cover": 0.5727,
+    "edge_vs_minus_110": 0.0489,
+    "model_lean": "HOME",
+    "model_lean_team": "ALA",
+    "label": "Research Preview",
+    "public_probability_published": false,
+    "confidence_pct": 57.3
+  },
+  "matchup_edges": [
+    {
+      "key": "AP_RANK",
+      "title": "AP ranking gap",
+      "side": "HOME",
+      "side_team": "ALA",
+      "strength": "MAJOR",
+      "home_stat": 30.0,
+      "away_stat": 13.0,
+      "mismatch_z": 2.125,
+      "fan_line": "+++ ALA \u2014 AP ranking gap",
+      "label": "MATCHUP SIGNAL",
+      "why": "College prior until CFB EPA ingest. Lower AP rank is stronger."
+    }
+  ],
+  "headline_cards": [
+    {
+      "marks": "+++",
+      "key": "AP_RANK",
+      "title": "AP ranking gap",
+      "team": "ALA",
+      "strength": "MAJOR",
+      "fan_line": "+++ ALA \u2014 AP ranking gap",
+      "mismatch_z": 2.125,
+      "percentile_hint": "More extreme than ~95% of similar unit mismatches in a normal sample.",
+      "label": "MATCHUP SIGNAL",
+      "why": "College prior until CFB EPA ingest. Lower AP rank is stronger.",
+      "home_stat": 30.0,
+      "away_stat": 13.0
+    }
+  ],
+  "slate_edges": [
+    "+++ ALA Ap Rank"
+  ],
+  "matchup_logistic": {
+    "model_id": "BCW-MATCHUP-LOGISTIC-v0.x",
+    "label": "Research Preview",
+    "public_probability_published": false,
+    "logit": 0.7875,
+    "p_home_win": 0.6873,
+    "lean": "HOME",
+    "contributions": [
+      {
+        "key": "AP_RANK",
+        "weight": 0.3,
+        "z": 2.125,
+        "term": 0.6375
+      }
+    ],
+    "note": "Heuristic matchup logistic on EDGE z-scores. Not BCW-RIDGE. Not a ship gate."
+  },
+  "paths": {
+    "home": "Lean on ap ranking gap. Convert that mismatch before the game becomes a coin-flip script.",
+    "away": "Shorten the game, win the line of scrimmage, and force the favorite into obvious passing downs."
+  },
+  "risks": [
+    "Turnovers: the projection assumes roughly normal luck; a +2 swing can flip a ALA lean.",
+    "Injury / inactive surprise on either OL or QB would rewrite the pass-rush signal."
+  ],
+  "adjustment": {
+    "points_home": 1.6,
+    "label": "MATCHUP SIGNAL (unvalidated additive)",
+    "note": "Not fed into BCW-RIDGE-v0.1. Research Preview display only."
+  },
+  "events": [
+    {
+      "game_id": "espn:401856634",
+      "event_type": "other",
+      "headline": "Evaluating whether Russell or Mack is best QB option for Crimson Tide",
+      "publisher": "ESPN",
+      "source_url": "https://www.espn.com/video/clip/_/id/49664319/evaluating-whether-russell-mack-best-qb-option-crimson-tide",
+      "bucket": "availability",
+      "structured_fact": "Evaluating whether Russell or Mack is best QB option for Crimson Tide",
+      "confidence": 0.45,
+      "tier": 2
+    },
+    {
+      "game_id": "espn:401856634",
+      "event_type": "starter_change",
+      "headline": "Updated Alabama football depth chart projection during fall camp - Roll Tide Wire",
+      "publisher": "Roll Tide Wire",
+      "source_url": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxQWkZYbFpoX0R3ZkoxcDJrUkpYX091bzVNaEtQdElpQ1lkTEd1SWN0QW14cWpoMnI3Z3pQTGpLSmdVT09qY1NkZHM3RTFCUUptSXA2YV9JQi1JclB5cllEOFNMcGwyeXB6UlZ2R0E2Z1hMdTg2cmNFaFJrXzJiM2FnVGdfdzl2ZWRZcVdfMkV1bWh3QUw2MHpSOHJISGk4N29wTUVoUVZJemNsa0x6aFZ2dTFwSDllN3FsUlJjUzNmSWpvdk9KZTBHRmNncExZSGJ6bXI4TTJrZW1oXzlOUUtZRlRSZGJDOWxl?oc=5",
+      "bucket": "availability",
+      "structured_fact": "Updated Alabama football depth chart projection during fall camp - Roll Tide Wire",
+      "confidence": 0.7,
+      "tier": 3
+    },
+    {
+      "game_id": "espn:401856634",
+      "event_type": "market",
+      "headline": "Alabama football betting preview 2026: Crimson Tide odds, futures, win total prediction, sportsbook promos, more - sportingnews.com",
+      "publisher": "sportingnews.com",
+      "source_url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPSFdCZ18wTkI1VnhETkdRQ2dUSUpvNHFaRU5GT0hhZm5RUTAwNGRyTjdmdHExZkdNa1ZtOFZsa2ljSkpHZXc0bzlUbUozSGN6aUZQRExDN3h6cmV3Sm95SjFDcEpITDY0MkZRZGF5SEx4aS1BUW43ZHRTVVF5WUpDU1NVQWZ4c2hjQUk4YS12RXloekFubG0yQjY1alRIZFFaZUVVbk1TdkRjczJ1UEFxSjRmSEtYaUtzM2ZxeklQNW5oUTFjWDNCcUtR?oc=5",
+      "bucket": "analysis",
+      "structured_fact": "Alabama football betting preview 2026: Crimson Tide odds, futures, win total prediction, sportsbook promos, more - sportingnews.com",
+      "confidence": 0.7,
+      "tier": 3
+    },
+    {
+      "game_id": "espn:401856634",
+      "event_type": "other",
+      "headline": "Kalen DeBoer updates status of injured Alabama players after scrimmage - Yahoo Sports",
+      "publisher": "Yahoo Sports",
+      "source_url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxORzMwX1RGc3N0MENvNERNcmhGOVJMNVQ2ZlFOTldLSzNEQkZBRlVPTmNRWnpZbEVJTm1IMmlyTWtienpnSjJtMVV6LWhrZENySkl5U1oxczlxOXU4VXRkUklHTWcxa285bG5aNjdsT200LXJiRkE4eFlTMWptTzhtNGtVOEwzN0FMUDltSQ?oc=5",
+      "bucket": "availability",
+      "structured_fact": "Kalen DeBoer updates status of injured Alabama players after scrimmage - Yahoo Sports",
+      "confidence": 0.45,
+      "tier": 3
+    },
+    {
+      "game_id": "espn:401856634",
+      "event_type": "other",
+      "headline": "Alabama QB Decision Reportedly Coming Early Next Week - Yahoo Sports",
+      "publisher": "Yahoo Sports",
+      "source_url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPbHFVQzNJdFV5b0NpbkljQXNtTTY5aTREUTlQY0VXaTFGNHRfOWpDVmFzUy1Cb1B3QUE4a2piWHQtd19lXzdQak9XLWdEXzl0bXN1U2p6YzhXUWdjeTA4ZGFsWU1kTVFnV0trWW1NeWZSTVdXUzdnb1NhYkVvU2xZS3ZWZkplOUpVa2gzbDhvcw?oc=5",
+      "bucket": "availability",
+      "structured_fact": "Alabama QB Decision Reportedly Coming Early Next Week - Yahoo Sports",
+      "confidence": 0.45,
+      "tier": 3
+    },
+    {
+      "game_id": "espn:401856634",
+      "event_type": "starter_change",
+      "headline": "No. 13 Alabama looks to return to the CFP with a new starting QB - WAKA 8",
+      "publisher": "WAKA 8",
+      "source_url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNQXZJU1JZeDZ0VkIzYk5DdE81QUZnTWl5NXg0aFlBMmJDQlJxazdWS1BmbEstQk5Va1M5SWcyam9TQ0hhai1SaElPQUREMkJPZEE5anhoOFljS2kteDJ3M2lMNnhoVEs3ZkM3QmxNSkxRR3VoWHBZZEhzenhsZ21WTjYybGIxak5aX3ptdkVTTW9BNVRqbzNxbzR5Z3E?oc=5",
+      "bucket": "availability",
+      "structured_fact": "No. 13 Alabama looks to return to the CFP with a new starting QB - WAKA 8",
+      "confidence": 0.7,
+      "tier": 3
+    }
+  ],
+  "news_citations": [
+    {
+      "headline": "Evaluating whether Russell or Mack is best QB option for Crimson Tide",
+      "url": "https://www.espn.com/video/clip/_/id/49664319/evaluating-whether-russell-mack-best-qb-option-crimson-tide",
+      "publisher": "ESPN"
+    },
+    {
+      "headline": "Updated Alabama football depth chart projection during fall camp - Roll Tide Wire",
+      "url": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxQWkZYbFpoX0R3ZkoxcDJrUkpYX091bzVNaEtQdElpQ1lkTEd1SWN0QW14cWpoMnI3Z3pQTGpLSmdVT09qY1NkZHM3RTFCUUptSXA2YV9JQi1JclB5cllEOFNMcGwyeXB6UlZ2R0E2Z1hMdTg2cmNFaFJrXzJiM2FnVGdfdzl2ZWRZcVdfMkV1bWh3QUw2MHpSOHJISGk4N29wTUVoUVZJemNsa0x6aFZ2dTFwSDllN3FsUlJjUzNmSWpvdk9KZTBHRmNncExZSGJ6bXI4TTJrZW1oXzlOUUtZRlRSZGJDOWxl?oc=5",
+      "publisher": "Roll Tide Wire"
+    },
+    {
+      "headline": "Alabama football betting preview 2026: Crimson Tide odds, futures, win total prediction, sportsbook promos, more - sportingnews.com",
+      "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPSFdCZ18wTkI1VnhETkdRQ2dUSUpvNHFaRU5GT0hhZm5RUTAwNGRyTjdmdHExZkdNa1ZtOFZsa2ljSkpHZXc0bzlUbUozSGN6aUZQRExDN3h6cmV3Sm95SjFDcEpITDY0MkZRZGF5SEx4aS1BUW43ZHRTVVF5WUpDU1NVQWZ4c2hjQUk4YS12RXloekFubG0yQjY1alRIZFFaZUVVbk1TdkRjczJ1UEFxSjRmSEtYaUtzM2ZxeklQNW5oUTFjWDNCcUtR?oc=5",
+      "publisher": "sportingnews.com"
+    },
+    {
+      "headline": "Kalen DeBoer updates status of injured Alabama players after scrimmage - Yahoo Sports",
+      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxORzMwX1RGc3N0MENvNERNcmhGOVJMNVQ2ZlFOTldLSzNEQkZBRlVPTmNRWnpZbEVJTm1IMmlyTWtienpnSjJtMVV6LWhrZENySkl5U1oxczlxOXU4VXRkUklHTWcxa285bG5aNjdsT200LXJiRkE4eFlTMWptTzhtNGtVOEwzN0FMUDltSQ?oc=5",
+      "publisher": "Yahoo Sports"
+    },
+    {
+      "headline": "Alabama QB Decision Reportedly Coming Early Next Week - Yahoo Sports",
+      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPbHFVQzNJdFV5b0NpbkljQXNtTTY5aTREUTlQY0VXaTFGNHRfOWpDVmFzUy1Cb1B3QUE4a2piWHQtd19lXzdQak9XLWdEXzl0bXN1U2p6YzhXUWdjeTA4ZGFsWU1kTVFnV0trWW1NeWZSTVdXUzdnb1NhYkVvU2xZS3ZWZkplOUpVa2gzbDhvcw?oc=5",
+      "publisher": "Yahoo Sports"
+    },
+    {
+      "headline": "No. 13 Alabama looks to return to the CFP with a new starting QB - WAKA 8",
+      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNQXZJU1JZeDZ0VkIzYk5DdE81QUZnTWl5NXg0aFlBMmJDQlJxazdWS1BmbEstQk5Va1M5SWcyam9TQ0hhai1SaElPQUREMkJPZEE5anhoOFljS2kteDJ3M2lMNnhoVEs3ZkM3QmxNSkxRR3VoWHBZZEhzenhsZ21WTjYybGIxak5aX3ptdkVTTW9BNVRqbzNxbzR5Z3E?oc=5",
+      "publisher": "WAKA 8"
+    }
+  ],
+  "summary_short": "BlueChip leans ALA. Top signal: +++ ALA \u2014 AP ranking gap",
+  "summary_full": "East Carolina Pirates at Alabama Crimson Tide.\n\nBlueChip leans ALA. +++ ALA \u2014 AP ranking gap\n\nWhy ALA has the edge\n- +++ ALA \u2014 AP ranking gap\n\nBlueChip projection\nMarket: ALA -28.5\nBCW desk \u03bc (home): +31.8 (Research Preview)\nWin probability: unavailable until probability model passes validation.\n\nHow each team wins\nALA: Lean on ap ranking gap. Convert that mismatch before the game becomes a coin-flip script.\nECU: Shorten the game, win the line of scrimmage, and force the favorite into obvious passing downs.\n\nWhat changed this week\n\u2022 Evaluating whether Russell or Mack is best QB option for Crimson Tide\n\u2022 Updated Alabama football depth chart projection during fall camp - Roll Tide Wire\n\u2022 Alabama football betting preview 2026: Crimson Tide odds, futures, win total prediction, sportsbook promos, more - sportingnews.com\n\u2022 Kalen DeBoer updates status of injured Alabama players after scrimmage - Yahoo Sports\n\nWhat could make BlueChip wrong?\n\u2022 Turnovers: the projection assumes roughly normal luck; a +2 swing can flip a ALA lean.\n\u2022 Injury / inactive surprise on either OL or QB would rewrite the pass-rush signal.\n\nBottom line: ALA has more ways to win on the current MATCHUP SIGNAL board, but football variance (turnovers, explosives) remains large around any margin estimate.",
+  "generation_model": "desk-template",
+  "generation_provider": "fallback",
+  "glossary": {
+    "EPA/play": "Expected Points Added estimates how much each play improves expected scoring position. Positive is good. A 5-yard gain on 3rd-and-3 is not treated like 5 yards on 3rd-and-20.",
+    "MATCHUP SIGNAL": "A descriptive strength\u00d7weakness edge. Not a published win probability and not fed into BCW-RIDGE-v0.1 until validated walk-forward.",
+    "Research Preview": "BlueChip quantitative layer that has not cleared the five public ship gates."
+  },
+  "levels": {
+    "slate": {
+      "lean": "ALA",
+      "top_edges": [
+        "+++ ALA Ap Rank"
+      ],
+      "market": "ALA -28.5",
+      "mu": 31.75,
+      "confidence_pct": 57.3
+    }
+  }
+}

@@ -1,0 +1,324 @@
+{
+  "game_id": "espn:401872926",
+  "version": "BCW-GIP-v0.1",
+  "created_at": "2026-08-21T03:41:51.736309+00:00",
+  "generated_at": "2026-08-21T03:41:51.736309+00:00",
+  "information_cutoff": "2026-08-21T03:41:51.736309+00:00",
+  "source_set_hash": "d9978b7e4c15b67570c338c2",
+  "game": {
+    "game_id": "espn:401872926",
+    "league": "NFL",
+    "matchup": "ARI @ LAC",
+    "home_team": "LAC",
+    "away_team": "ARI",
+    "home_name": "Los Angeles Chargers",
+    "away_name": "Arizona Cardinals",
+    "spread_label": "LAC -10.5",
+    "home_spread": -10.5,
+    "total_line": 46.5,
+    "week": 1
+  },
+  "lean_team": "ARI",
+  "projection": {
+    "model_id": "BCW-DESK-STRENGTH-v0.x",
+    "method": "0.65\u00b7Elo/25+HFA + 0.35\u00b7(SRS+HFA)",
+    "mu_home": 7.97,
+    "sigma": 13.5,
+    "p_home_win": 0.7101,
+    "p_home_cover": 0.4113,
+    "edge_vs_minus_110": -0.1125,
+    "model_lean": "AWAY",
+    "model_lean_team": "ARI",
+    "label": "Research Preview",
+    "public_probability_published": false,
+    "confidence_pct": 58.9
+  },
+  "matchup_edges": [
+    {
+      "key": "PASS_RUSH",
+      "title": "Pass rush / protection (proxy)",
+      "side": "HOME",
+      "side_team": "LAC",
+      "strength": "MAJOR",
+      "home_stat": 0.0872,
+      "away_stat": -0.2703,
+      "mismatch_z": 3.575,
+      "fan_line": "+++ LAC \u2014 Pass rush / protection (proxy)",
+      "label": "MATCHUP SIGNAL",
+      "why": "Proxy until true pressure/PBWR data: lower pass EPA allowed \u21d2 stronger pass defense / rush. MATCHUP SIGNAL only \u2014 not a published win probability."
+    },
+    {
+      "key": "RUN_GAME",
+      "title": "Rushing offense vs run defense",
+      "side": "HOME",
+      "side_team": "LAC",
+      "strength": "MAJOR",
+      "home_stat": 0.0158,
+      "away_stat": -0.2501,
+      "mismatch_z": 1.9,
+      "fan_line": "+++ LAC \u2014 Rushing offense vs run defense",
+      "label": "MATCHUP SIGNAL",
+      "why": "Rush EPA/play vs EPA allowed on rushes \u2014 better than raw yards/carry."
+    },
+    {
+      "key": "PASSING",
+      "title": "Passing offense vs pass defense",
+      "side": "HOME",
+      "side_team": "LAC",
+      "strength": "STRONG",
+      "home_stat": 0.1575,
+      "away_stat": -0.105,
+      "mismatch_z": 1.459,
+      "fan_line": "++ LAC \u2014 Passing offense vs pass defense",
+      "label": "MATCHUP SIGNAL",
+      "why": "EPA/play on passes plus how much EPA the opposing defense allows. EPA weights plays by situation (3rd-and-3 \u2260 3rd-and-20)."
+    },
+    {
+      "key": "OVERALL",
+      "title": "Overall efficiency",
+      "side": "HOME",
+      "side_team": "LAC",
+      "strength": "MILD",
+      "home_stat": 0.0234,
+      "away_stat": -0.1702,
+      "mismatch_z": 0.968,
+      "fan_line": "+ LAC \u2014 Overall efficiency",
+      "label": "MATCHUP SIGNAL",
+      "why": "Net EPA/play (offense minus defense). Broad team-strength interaction."
+    }
+  ],
+  "headline_cards": [
+    {
+      "marks": "+++",
+      "key": "PASS_RUSH",
+      "title": "Pass rush / protection (proxy)",
+      "team": "LAC",
+      "strength": "MAJOR",
+      "fan_line": "+++ LAC \u2014 Pass rush / protection (proxy)",
+      "mismatch_z": 3.575,
+      "percentile_hint": "More extreme than ~95% of similar unit mismatches in a normal sample.",
+      "label": "MATCHUP SIGNAL",
+      "why": "Proxy until true pressure/PBWR data: lower pass EPA allowed \u21d2 stronger pass defense / rush. MATCHUP SIGNAL only \u2014 not a published win probability.",
+      "home_stat": 0.0872,
+      "away_stat": -0.2703
+    },
+    {
+      "marks": "+++",
+      "key": "RUN_GAME",
+      "title": "Rushing offense vs run defense",
+      "team": "LAC",
+      "strength": "MAJOR",
+      "fan_line": "+++ LAC \u2014 Rushing offense vs run defense",
+      "mismatch_z": 1.9,
+      "percentile_hint": "More extreme than ~90% of similar unit mismatches in a normal sample.",
+      "label": "MATCHUP SIGNAL",
+      "why": "Rush EPA/play vs EPA allowed on rushes \u2014 better than raw yards/carry.",
+      "home_stat": 0.0158,
+      "away_stat": -0.2501
+    },
+    {
+      "marks": "++",
+      "key": "PASSING",
+      "title": "Passing offense vs pass defense",
+      "team": "LAC",
+      "strength": "STRONG",
+      "fan_line": "++ LAC \u2014 Passing offense vs pass defense",
+      "mismatch_z": 1.459,
+      "percentile_hint": "Clearly tilted versus a typical NFL/CFB unit matchup.",
+      "label": "MATCHUP SIGNAL",
+      "why": "EPA/play on passes plus how much EPA the opposing defense allows. EPA weights plays by situation (3rd-and-3 \u2260 3rd-and-20).",
+      "home_stat": 0.1575,
+      "away_stat": -0.105
+    },
+    {
+      "marks": "+",
+      "key": "OVERALL",
+      "title": "Overall efficiency",
+      "team": "LAC",
+      "strength": "MILD",
+      "fan_line": "+ LAC \u2014 Overall efficiency",
+      "mismatch_z": 0.968,
+      "percentile_hint": null,
+      "label": "MATCHUP SIGNAL",
+      "why": "Net EPA/play (offense minus defense). Broad team-strength interaction.",
+      "home_stat": 0.0234,
+      "away_stat": -0.1702
+    }
+  ],
+  "slate_edges": [
+    "+++ LAC Pass Rush",
+    "+++ LAC Run Game",
+    "++ LAC Passing"
+  ],
+  "matchup_logistic": {
+    "model_id": "BCW-MATCHUP-LOGISTIC-v0.x",
+    "label": "Research Preview",
+    "public_probability_published": false,
+    "logit": 2.8954,
+    "p_home_win": 0.9476,
+    "lean": "HOME",
+    "contributions": [
+      {
+        "key": "PASS_RUSH",
+        "weight": 0.35,
+        "z": 3.575,
+        "term": 1.2512
+      },
+      {
+        "key": "RUN_GAME",
+        "weight": 0.25,
+        "z": 1.9,
+        "term": 0.475
+      },
+      {
+        "key": "PASSING",
+        "weight": 0.4,
+        "z": 1.459,
+        "term": 0.5836
+      },
+      {
+        "key": "OVERALL",
+        "weight": 0.45,
+        "z": 0.968,
+        "term": 0.4356
+      }
+    ],
+    "note": "Heuristic matchup logistic on EDGE z-scores. Not BCW-RIDGE. Not a ship gate."
+  },
+  "paths": {
+    "home": "Lean on pass rush / protection (proxy). Convert that mismatch before the game becomes a coin-flip script.",
+    "away": "Shorten the game, win the line of scrimmage, and force the favorite into obvious passing downs."
+  },
+  "risks": [
+    "Turnovers: the projection assumes roughly normal luck; a +2 swing can flip a ARI lean.",
+    "LAC path: if pass rush / protection (proxy) plays up, ARI's edge shrinks.",
+    "Injury / inactive surprise on either OL or QB would rewrite the pass-rush signal."
+  ],
+  "adjustment": {
+    "points_home": 4.65,
+    "label": "MATCHUP SIGNAL (unvalidated additive)",
+    "note": "Not fed into BCW-RIDGE-v0.1. Research Preview display only."
+  },
+  "events": [
+    {
+      "game_id": "espn:401872926",
+      "event_type": "injury",
+      "headline": "Los Angeles Chargers C Tyler Biadasz out indefinitely with knee injury - Yahoo Sports",
+      "publisher": "Yahoo Sports",
+      "source_url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxOeXk5ZGthMmIweHhzSzg0RUdHblhOVVhhVEZUd1dIVndKUFdScTlSV0NtZ1ltakJZal9qWkp1SHlaX3llNnRhVzFTb2FOMkx1ekxtS01XMEhnR2dDVE56WjJNdFB0ZUhrXzcwLU83YWpHa2FtQUFyZmdwSmdRSVpOMldpWQ?oc=5",
+      "bucket": "availability",
+      "structured_fact": "Los Angeles Chargers C Tyler Biadasz out indefinitely with knee injury - Yahoo Sports",
+      "confidence": 0.7,
+      "tier": 3
+    },
+    {
+      "game_id": "espn:401872926",
+      "event_type": "other",
+      "headline": "Tyler Biadasz Injury Update - Los Angeles Chargers",
+      "publisher": "Los Angeles Chargers",
+      "source_url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE9qN3hBRnlUMVZrYUttd3NLazBVeEh5TndGdFdLR3lweEFjNlNDU1R4OEJFR3VnQ1lNRnF2eVRtdFJ6S0ljcjNzbXRqcGxfYW5iRnViVDFTdWRRbXBRMl9xcFhTT2dQbkpZTTJkenNxUQ?oc=5",
+      "bucket": "availability",
+      "structured_fact": "Tyler Biadasz Injury Update - Los Angeles Chargers",
+      "confidence": 0.45,
+      "tier": 3
+    },
+    {
+      "game_id": "espn:401872926",
+      "event_type": "other",
+      "headline": "Chargers center Tyler Biadasz reportedly out indefinitely with an ACL injury - Los Angeles Times",
+      "publisher": "Los Angeles Times",
+      "source_url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNdlRjcTQ2cHBEc0gyeWxpMF9WYS1ZTUs0Tjh4ZUU3ektWOW1jdXNKbGZweVBYUkF6dy1nSlczb0pZeHlDOWFHV0NDd2lJaTNWLTB2Y3dqRXhReGlpMkVpUFNsenhERWpFdFVUM0c4UUNibjJzMlp5TzdYNmhtRTVHZ2ZqRklBQmpPT3FmeFQ1cEljX2FOcTk2OWZCX1RlT051UDl5Z2pJaUVlcE0wQ05oTmpiNXZtdlRSS2FoZXZPanNTamc4?oc=5",
+      "bucket": "availability",
+      "structured_fact": "Chargers center Tyler Biadasz reportedly out indefinitely with an ACL injury - Los Angeles Times",
+      "confidence": 0.45,
+      "tier": 3
+    },
+    {
+      "game_id": "espn:401872926",
+      "event_type": "other",
+      "headline": "QB Jacoby Brissett will sit out Arizona Cardinals' preseason game vs. Cowboys - Yahoo Sports",
+      "publisher": "Yahoo Sports",
+      "source_url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPcDdwU3F6NGRnbzBkMFVCaUtyQXNWa2tsa3Axb0RGV1I1empaS09jdDEyb2NJQW9sX3ZJRm55WWdUdjRhYkprVU5SdThOS2pDZmxVQnc0dG1mRk1wUExpbXFiOV90LVlNcC1abmQ5c3d2dTEtYTNIUnA4RFdwUk1iY25UZTB3QQ?oc=5",
+      "bucket": "availability",
+      "structured_fact": "QB Jacoby Brissett will sit out Arizona Cardinals' preseason game vs. Cowboys - Yahoo Sports",
+      "confidence": 0.45,
+      "tier": 3
+    },
+    {
+      "game_id": "espn:401872926",
+      "event_type": "other",
+      "headline": "Arizona Cardinals Get Great Garrett Williams Injury News Before Cowboys Preseason Game - heavy.com",
+      "publisher": "heavy.com",
+      "source_url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPbjF6akJsWGt1dG14WVV2b3J1RnpNWFFlXzI4Nl90SEdDcFNZQ3FYYXpsN2tQa0Jtb09pQl9sQzZSTFAtRE1sa2JjSzF4Y0J6LVB6dXFYQ0p0NjFvNzRuczF1QjYxLVFZWG1pSkNhWHJrd3c5NU9xS1BlODYybDVYSEFFTHNfcm02NHRJ?oc=5",
+      "bucket": "availability",
+      "structured_fact": "Arizona Cardinals Get Great Garrett Williams Injury News Before Cowboys Preseason Game - heavy.com",
+      "confidence": 0.45,
+      "tier": 3
+    },
+    {
+      "game_id": "espn:401872926",
+      "event_type": "other",
+      "headline": "Chargers' McDaniel lauds Herbert's progression in offense",
+      "publisher": "ESPN",
+      "source_url": "https://www.espn.com/nfl/story/_/id/49642371/chargers-mcdaniel-lauds-herbert-progression-offense",
+      "bucket": "availability",
+      "structured_fact": "Chargers' McDaniel lauds Herbert's progression in offense",
+      "confidence": 0.45,
+      "tier": 2
+    }
+  ],
+  "news_citations": [
+    {
+      "headline": "Los Angeles Chargers C Tyler Biadasz out indefinitely with knee injury - Yahoo Sports",
+      "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxOeXk5ZGthMmIweHhzSzg0RUdHblhOVVhhVEZUd1dIVndKUFdScTlSV0NtZ1ltakJZal9qWkp1SHlaX3llNnRhVzFTb2FOMkx1ekxtS01XMEhnR2dDVE56WjJNdFB0ZUhrXzcwLU83YWpHa2FtQUFyZmdwSmdRSVpOMldpWQ?oc=5",
+      "publisher": "Yahoo Sports"
+    },
+    {
+      "headline": "Tyler Biadasz Injury Update - Los Angeles Chargers",
+      "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE9qN3hBRnlUMVZrYUttd3NLazBVeEh5TndGdFdLR3lweEFjNlNDU1R4OEJFR3VnQ1lNRnF2eVRtdFJ6S0ljcjNzbXRqcGxfYW5iRnViVDFTdWRRbXBRMl9xcFhTT2dQbkpZTTJkenNxUQ?oc=5",
+      "publisher": "Los Angeles Chargers"
+    },
+    {
+      "headline": "Chargers center Tyler Biadasz reportedly out indefinitely with an ACL injury - Los Angeles Times",
+      "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNdlRjcTQ2cHBEc0gyeWxpMF9WYS1ZTUs0Tjh4ZUU3ektWOW1jdXNKbGZweVBYUkF6dy1nSlczb0pZeHlDOWFHV0NDd2lJaTNWLTB2Y3dqRXhReGlpMkVpUFNsenhERWpFdFVUM0c4UUNibjJzMlp5TzdYNmhtRTVHZ2ZqRklBQmpPT3FmeFQ1cEljX2FOcTk2OWZCX1RlT051UDl5Z2pJaUVlcE0wQ05oTmpiNXZtdlRSS2FoZXZPanNTamc4?oc=5",
+      "publisher": "Los Angeles Times"
+    },
+    {
+      "headline": "QB Jacoby Brissett will sit out Arizona Cardinals' preseason game vs. Cowboys - Yahoo Sports",
+      "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPcDdwU3F6NGRnbzBkMFVCaUtyQXNWa2tsa3Axb0RGV1I1empaS09jdDEyb2NJQW9sX3ZJRm55WWdUdjRhYkprVU5SdThOS2pDZmxVQnc0dG1mRk1wUExpbXFiOV90LVlNcC1abmQ5c3d2dTEtYTNIUnA4RFdwUk1iY25UZTB3QQ?oc=5",
+      "publisher": "Yahoo Sports"
+    },
+    {
+      "headline": "Arizona Cardinals Get Great Garrett Williams Injury News Before Cowboys Preseason Game - heavy.com",
+      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPbjF6akJsWGt1dG14WVV2b3J1RnpNWFFlXzI4Nl90SEdDcFNZQ3FYYXpsN2tQa0Jtb09pQl9sQzZSTFAtRE1sa2JjSzF4Y0J6LVB6dXFYQ0p0NjFvNzRuczF1QjYxLVFZWG1pSkNhWHJrd3c5NU9xS1BlODYybDVYSEFFTHNfcm02NHRJ?oc=5",
+      "publisher": "heavy.com"
+    },
+    {
+      "headline": "Chargers' McDaniel lauds Herbert's progression in offense",
+      "url": "https://www.espn.com/nfl/story/_/id/49642371/chargers-mcdaniel-lauds-herbert-progression-offense",
+      "publisher": "ESPN"
+    }
+  ],
+  "summary_short": "BlueChip leans ARI. Top signal: +++ LAC \u2014 Pass rush / protection (proxy)",
+  "summary_full": "Arizona Cardinals at Los Angeles Chargers.\n\nBlueChip leans ARI. +++ LAC \u2014 Pass rush / protection (proxy)\n\nWhy ARI has the edge\n- +++ LAC \u2014 Pass rush / protection (proxy)\n- +++ LAC \u2014 Rushing offense vs run defense\n- ++ LAC \u2014 Passing offense vs pass defense\n\nBlueChip projection\nMarket: LAC -10.5\nBCW desk \u03bc (home): +8.0 (Research Preview)\nWin probability: unavailable until probability model passes validation.\n\nHow each team wins\nLAC: Lean on pass rush / protection (proxy). Convert that mismatch before the game becomes a coin-flip script.\nARI: Shorten the game, win the line of scrimmage, and force the favorite into obvious passing downs.\n\nWhat changed this week\n\u2022 Los Angeles Chargers C Tyler Biadasz out indefinitely with knee injury - Yahoo Sports\n\u2022 Tyler Biadasz Injury Update - Los Angeles Chargers\n\u2022 Chargers center Tyler Biadasz reportedly out indefinitely with an ACL injury - Los Angeles Times\n\u2022 QB Jacoby Brissett will sit out Arizona Cardinals' preseason game vs. Cowboys - Yahoo Sports\n\nWhat could make BlueChip wrong?\n\u2022 Turnovers: the projection assumes roughly normal luck; a +2 swing can flip a ARI lean.\n\u2022 LAC path: if pass rush / protection (proxy) plays up, ARI's edge shrinks.\n\u2022 Injury / inactive surprise on either OL or QB would rewrite the pass-rush signal.\n\nBottom line: ARI has more ways to win on the current MATCHUP SIGNAL board, but football variance (turnovers, explosives) remains large around any margin estimate.",
+  "generation_model": "desk-template",
+  "generation_provider": "fallback",
+  "glossary": {
+    "EPA/play": "Expected Points Added estimates how much each play improves expected scoring position. Positive is good. A 5-yard gain on 3rd-and-3 is not treated like 5 yards on 3rd-and-20.",
+    "MATCHUP SIGNAL": "A descriptive strength\u00d7weakness edge. Not a published win probability and not fed into BCW-RIDGE-v0.1 until validated walk-forward.",
+    "Research Preview": "BlueChip quantitative layer that has not cleared the five public ship gates."
+  },
+  "levels": {
+    "slate": {
+      "lean": "ARI",
+      "top_edges": [
+        "+++ LAC Pass Rush",
+        "+++ LAC Run Game",
+        "++ LAC Passing"
+      ],
+      "market": "LAC -10.5",
+      "mu": 7.97,
+      "confidence_pct": 58.9
+    }
+  }
+}

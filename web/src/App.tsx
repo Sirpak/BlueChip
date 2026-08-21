@@ -15,6 +15,7 @@ import { ModelsPage } from './pages/ModelsPage'
 import { ResearchPage } from './pages/ResearchPage'
 import { BacktestsPage } from './pages/BacktestsPage'
 import { MatchupPage } from './pages/MatchupPage'
+import { AboutPage } from './pages/AboutPage'
 import { MarketsPage, PricingPage, Settings, Teams } from './pages/ProductPages'
 
 type LeagueFilter = 'All' | 'NFL' | 'CFB'
@@ -92,6 +93,7 @@ export default function App() {
               <Route path="/teams" element={<Teams />} />
               <Route path="/backtests" element={<BacktestsPage />} />
               <Route path="/research" element={<ResearchPage />} />
+              <Route path="/about" element={<AboutPage />} />
               <Route path="/pricing" element={<PricingPage embedded />} />
               <Route path="/pricing/coming-soon" element={<ComingSoonPage />} />
               <Route path="/settings" element={<Settings />} />

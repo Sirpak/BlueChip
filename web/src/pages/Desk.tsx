@@ -1,6 +1,7 @@
 import { useMemo } from 'react'
 import { Link } from 'react-router-dom'
 import { Reliability, Sparkline } from '../components/Charts'
+import { Hint, HintLabel } from '../components/Hint'
 import { TeamMark } from '../components/Marks'
 import { UpgradeCard } from '../components/Locked'
 import { kickoffLocal } from '../lib/preview'
@@ -25,10 +26,14 @@ export function Desk({ league, onLeague }: { league: LeagueFilter; onLeague: (v:
         <div>
           <h1>Football Research Desk</h1>
           <p className="muted">
-            {count.nfl} NFL + {count.cfb} FBS games in the current ESPN window
+            {count.nfl} NFL + {count.cfb} FBS games in the current ESPN window. New here? Read{' '}
+            <Link to="/about">About in plain English</Link> — hover any dotted term for a tip.
           </p>
         </div>
-        <span className="preview-flag">Research Preview · public cover % not published</span>
+        <span className="preview-flag">
+          <Hint t="research-preview">Research Preview</Hint> ·{' '}
+          <Hint t="public-probability">public cover %</Hint> not published
+        </span>
       </div>
 
       <div className="kpis">
@@ -41,7 +46,9 @@ export function Desk({ league, onLeague }: { league: LeagueFilter; onLeague: (v:
           <b>{BASELINE_MODELS.length}</b>
         </article>
         <article className="kpi">
-          <span>Holdout</span>
+          <span>
+            <HintLabel t="holdout">Holdout</HintLabel>
+          </span>
           <b>2023–2025 sealed</b>
         </article>
         <article className="kpi">
@@ -64,9 +71,15 @@ export function Desk({ league, onLeague }: { league: LeagueFilter; onLeague: (v:
             <tr>
               <th>Game</th>
               <th>Kickoff</th>
-              <th>Market</th>
-              <th>BCW Research Preview</th>
-              <th>Public probability</th>
+              <th>
+                <HintLabel t="Market">Market</HintLabel>
+              </th>
+              <th>
+                <HintLabel t="BCW Research Preview">BCW Research Preview</HintLabel>
+              </th>
+              <th>
+                <HintLabel t="Public probability">Public probability</HintLabel>
+              </th>
             </tr>
           </thead>
           <tbody>
@@ -75,8 +88,8 @@ export function Desk({ league, onLeague }: { league: LeagueFilter; onLeague: (v:
                 <td>
                   <Link to={`/games/${encodeURIComponent(g.game_id)}`} className="game-cell">
                     <div className="logos">
-                      <TeamMark abbr={g.away_team} league={g.league} />
-                      <TeamMark abbr={g.home_team} league={g.league} />
+                      <TeamMark abbr={g.away_team} league={g.league} espnId={g.away_espn_id} />
+                      <TeamMark abbr={g.home_team} league={g.league} espnId={g.home_espn_id} />
                     </div>
                     <div>
                       <strong>
@@ -116,39 +129,53 @@ export function Desk({ league, onLeague }: { league: LeagueFilter; onLeague: (v:
             </li>
             {BASELINE_MODELS.map((m) => (
               <li key={m}>
-                <strong>{m}</strong> — Baseline on snapshots
+                <strong>
+                  <Hint t={m}>{m}</Hint>
+                </strong>{' '}
+                — Baseline on snapshots
               </li>
             ))}
           </ul>
         </section>
         <section className="card">
-          <h2>Projected margin</h2>
+          <h2>
+            Projected margin (<Hint t="mu">μ</Hint>)
+          </h2>
           <p className="muted">
-            Candidate μ is fit on 2009–2022 only. Upcoming ESPN games need a leakage-safe snapshot before a number appears. Public cover % stays unpublished.
+            Candidate <Hint t="mu">μ</Hint> is fit on 2009–2022 only. Upcoming ESPN games need a leakage-safe{' '}
+            <Hint t="snapshot">snapshot</Hint> before a number appears.{' '}
+            <Hint t="public-probability">Public cover %</Hint> stays unpublished.
           </p>
         </section>
         <section className="card">
           <h2>Model health</h2>
           <p className="muted" style={{ marginTop: 0, fontSize: 12 }}>
-            Walk-forward lives in 2009–2022. Holdout closed. No ROI.
+            <Hint t="walk-forward">Walk-forward</Hint> lives in 2009–2022.{' '}
+            <Hint t="holdout">Holdout</Hint> closed. No ROI.
           </p>
           <div className="health-grid">
             <div>
-              <strong>Reliability</strong>
+              <strong>
+                <Hint t="calibration">Reliability</Hint>
+              </strong>
               <Reliability />
             </div>
             <div>
-              <strong>Brier vs Market 0</strong>
+              <strong>
+                <HintLabel t="brier">Brier</HintLabel> vs <Hint t="market-0">Market 0</Hint>
+              </strong>
               <Sparkline seed={42} up />
               <div className="muted" style={{ fontSize: 11 }}>
                 Market still leads — not a ship claim
               </div>
             </div>
             <div>
-              <strong>Margin MAE</strong>
+              <strong>
+                Margin <HintLabel t="mae">MAE</HintLabel>
+              </strong>
               <Sparkline seed={91} up={false} />
               <div className="muted" style={{ fontSize: 11 }}>
-                vs HFA / SRS on the development window
+                vs <Hint t="hfa">HFA</Hint> / <Hint t="srs">SRS</Hint> on the development window
               </div>
             </div>
           </div>

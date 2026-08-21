@@ -78,6 +78,8 @@ Freeze: [04-bcw-v0.1.md](04-bcw-v0.1.md) (reconfirmed 2026-08-18). Published num
 
 Catalog: [011](../research/011-model-lab-reproductions.md). After freeze: LightGBM, NGBoost, \(F_M\), classifier shootout, Power Index, consensus.
 
+**Next generation:** W2A matchup stats + W2B Game Intelligence Package + W3 EDGE/brief UI are **in code** ([012](../research/012-matchup-interaction-engine.md)). Still do **not** feed MATCHUP SIGNAL into Ridge freeze. Finish Wave 1 (Model Launch) in parallel.
+
 ---
 
 ## Sprint A — Product shell & auth ([05-project-aws-roadmap.md](05-project-aws-roadmap.md))

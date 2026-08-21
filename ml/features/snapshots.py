@@ -14,6 +14,7 @@ from sqlalchemy.orm import Session
 from ml.features.constants import EWMA_ALPHA, FEATURE_VERSION, era_label
 from ml.features.ratings import walk_ratings
 from ml.features.team_games import aggregate_team_games
+from app.ingest.identity import canonicalize_nfl_columns
 from db.models import FeatureSnapshot
 
 logger = logging.getLogger(__name__)
@@ -93,7 +94,7 @@ def load_games_frame(session: Session) -> pd.DataFrame:
     )
     games["home_win"] = (games["home_margin"] > 0).astype(float)
     games.loc[games["home_margin"].isna(), "home_win"] = pd.NA
-    return games
+    return canonicalize_nfl_columns(games, ["home_team", "away_team"])
 
 
 def attach_schedule_to_team_games(tg: pd.DataFrame, games: pd.DataFrame) -> pd.DataFrame:
@@ -101,6 +102,7 @@ def attach_schedule_to_team_games(tg: pd.DataFrame, games: pd.DataFrame) -> pd.D
         ["game_id", "home_team", "away_team", "sort_ts", "season", "week", "season_type"]
     ]
     out = tg.merge(meta, on="game_id", how="inner")
+    out = canonicalize_nfl_columns(out, ["team", "home_team", "away_team"])
     out["is_home"] = out["team"] == out["home_team"]
     out["opponent"] = out["away_team"].where(out["is_home"], out["home_team"])
     return out

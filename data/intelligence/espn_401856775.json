@@ -1,0 +1,220 @@
+{
+  "game_id": "espn:401856775",
+  "version": "BCW-GIP-v0.1",
+  "created_at": "2026-08-21T03:42:20.929190+00:00",
+  "generated_at": "2026-08-21T03:42:20.929190+00:00",
+  "information_cutoff": "2026-08-21T03:42:20.929190+00:00",
+  "source_set_hash": "3bc33af720312ede4f52cd84",
+  "game": {
+    "game_id": "espn:401856775",
+    "league": "CFB",
+    "matchup": "UTU @ BYU",
+    "home_team": "BYU",
+    "away_team": "UTU",
+    "home_name": "BYU Cougars",
+    "away_name": "Utah Tech Trailblazers",
+    "spread_label": "BYU -47.5",
+    "home_spread": -47.5,
+    "total_line": 54.5,
+    "week": 1
+  },
+  "lean_team": "BYU",
+  "projection": {
+    "model_id": "BCW-DESK-STRENGTH-v0.x",
+    "method": "Market line + AP rank edge (CFB; no CFB Elo yet)",
+    "mu_home": 50.5,
+    "sigma": 15.0,
+    "p_home_win": 0.9996,
+    "p_home_cover": 0.5662,
+    "edge_vs_minus_110": 0.0424,
+    "model_lean": "HOME",
+    "model_lean_team": "BYU",
+    "label": "Research Preview",
+    "public_probability_published": false,
+    "confidence_pct": 56.6
+  },
+  "matchup_edges": [
+    {
+      "key": "AP_RANK",
+      "title": "AP ranking gap",
+      "side": "HOME",
+      "side_team": "BYU",
+      "strength": "MAJOR",
+      "home_stat": 30.0,
+      "away_stat": 14.0,
+      "mismatch_z": 2.0,
+      "fan_line": "+++ BYU \u2014 AP ranking gap",
+      "label": "MATCHUP SIGNAL",
+      "why": "College prior until CFB EPA ingest. Lower AP rank is stronger."
+    }
+  ],
+  "headline_cards": [
+    {
+      "marks": "+++",
+      "key": "AP_RANK",
+      "title": "AP ranking gap",
+      "team": "BYU",
+      "strength": "MAJOR",
+      "fan_line": "+++ BYU \u2014 AP ranking gap",
+      "mismatch_z": 2.0,
+      "percentile_hint": "More extreme than ~95% of similar unit mismatches in a normal sample.",
+      "label": "MATCHUP SIGNAL",
+      "why": "College prior until CFB EPA ingest. Lower AP rank is stronger.",
+      "home_stat": 30.0,
+      "away_stat": 14.0
+    }
+  ],
+  "slate_edges": [
+    "+++ BYU Ap Rank"
+  ],
+  "matchup_logistic": {
+    "model_id": "BCW-MATCHUP-LOGISTIC-v0.x",
+    "label": "Research Preview",
+    "public_probability_published": false,
+    "logit": 0.75,
+    "p_home_win": 0.6792,
+    "lean": "HOME",
+    "contributions": [
+      {
+        "key": "AP_RANK",
+        "weight": 0.3,
+        "z": 2.0,
+        "term": 0.6
+      }
+    ],
+    "note": "Heuristic matchup logistic on EDGE z-scores. Not BCW-RIDGE. Not a ship gate."
+  },
+  "paths": {
+    "home": "Lean on ap ranking gap. Convert that mismatch before the game becomes a coin-flip script.",
+    "away": "Shorten the game, win the line of scrimmage, and force the favorite into obvious passing downs."
+  },
+  "risks": [
+    "Turnovers: the projection assumes roughly normal luck; a +2 swing can flip a BYU lean.",
+    "Injury / inactive surprise on either OL or QB would rewrite the pass-rush signal."
+  ],
+  "adjustment": {
+    "points_home": 1.6,
+    "label": "MATCHUP SIGNAL (unvalidated additive)",
+    "note": "Not fed into BCW-RIDGE-v0.1. Research Preview display only."
+  },
+  "events": [
+    {
+      "game_id": "espn:401856775",
+      "event_type": "starter_change",
+      "headline": "Former BYU Starter Weylin Lapuaho Enters the Transfer Portal - Sports Illustrated",
+      "publisher": "Sports Illustrated",
+      "source_url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQbG01dXc0QVh2aGc1Nm9YVU1EUFJuTnJueE9EZGVnUThOemlFUU1TWEhJd1hUWjV1Q2Q3UDE4YllGVE45Q2lfRm5QeW81VnA0ekxQZ1NYWGQweUZza1BrOGFELTdEaGRESmNpcmgwLXc2OXlyOHM1dzNhbWo0MWlfby1iUmlhTURrNFQzY3FCdlU1aUYwNzA4dVFlcnlaQ0lLTXc?oc=5",
+      "bucket": "availability",
+      "structured_fact": "Former BYU Starter Weylin Lapuaho Enters the Transfer Portal - Sports Illustrated",
+      "confidence": 0.7,
+      "tier": 3
+    },
+    {
+      "game_id": "espn:401856775",
+      "event_type": "other",
+      "headline": "Group of players granted restraining order enter transfer portal",
+      "publisher": "ESPN",
+      "source_url": "https://www.espn.com/college-football/story/_/id/49674298/group-players-granted-restraining-order-enter-transfer-portal",
+      "bucket": "availability",
+      "structured_fact": "Group of players granted restraining order enter transfer portal",
+      "confidence": 0.45,
+      "tier": 2
+    },
+    {
+      "game_id": "espn:401856775",
+      "event_type": "other",
+      "headline": "College football's mad two-week scramble to land a transfer portal QB",
+      "publisher": "ESPN",
+      "source_url": "https://www.espn.com/college-football/story/_/id/49650906/college-football-two-week-scramble-transfer-portal-qb",
+      "bucket": "availability",
+      "structured_fact": "College football's mad two-week scramble to land a transfer portal QB",
+      "confidence": 0.45,
+      "tier": 2
+    },
+    {
+      "game_id": "espn:401856775",
+      "event_type": "market",
+      "headline": "BYU football betting preview 2026: Cougars odds, futures, win total prediction, sportsbook promos, more - sportingnews.com",
+      "publisher": "sportingnews.com",
+      "source_url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxQbDZ3cnVIVnlGZF9fTmozQWp0NS11WjU2R1RRYW03ZlhLbUdFX2dhM2VPNWExY2VHVDEwbmdxc1BFT2tIUjBNZHFkUmhpcS1sQ21FZEdDV1lKWkg0WE1hZkVDYTF4WVdReVdhLWcyaWZEeFQtTXJoMDVGRTM1M2s3dEN0TWRXMjFYRHQyQmpheUNoRXFGV3FVay1WOEJXLXN0RDMyNTJfZXBpQUtOT3ZOU2VFdF9nUldfUlhIVUFwczZ0SGxh?oc=5",
+      "bucket": "analysis",
+      "structured_fact": "BYU football betting preview 2026: Cougars odds, futures, win total prediction, sportsbook promos, more - sportingnews.com",
+      "confidence": 0.7,
+      "tier": 3
+    },
+    {
+      "game_id": "espn:401856775",
+      "event_type": "other",
+      "headline": "Former BYU QB Marc Wilson named to Sporting News 1970s All-Decade Team - BYU Athletics",
+      "publisher": "BYU Athletics",
+      "source_url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPNkk2LWNVVnczb3lxYUJKZVBQZnZlR19sVGdJNzRzSkpyVy15WmZOMHEwTTY0YWNGWl9uODJKSEd1VVV3ejRxWXMzRHNOTElvZmZTSFBqQUJMZ1ZNcThqWDg5ZVZtX2R2b1RkYk93OHFrOU5PVzhyUHZqY2pLbjFfQS1Kbklvb1BvRlVhakhZdXBEU29POGljbkl5d0prbWt5anhwUUxuTjlwN3o5Rmc?oc=5",
+      "bucket": "availability",
+      "structured_fact": "Former BYU QB Marc Wilson named to Sporting News 1970s All-Decade Team - BYU Athletics",
+      "confidence": 0.45,
+      "tier": 3
+    },
+    {
+      "game_id": "espn:401856775",
+      "event_type": "other",
+      "headline": "Southern Utah Thunderbirds vs Utah Tech Trailblazers Box Score - January 16, 2027 - The Athletic - The New York Times",
+      "publisher": "The New York Times",
+      "source_url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxPa2ZINVBQdG91bkszX2NoLXdselVpTDM0OW1fSDV3NDBiOEh3SkhfMHNmMlJZV2pHb0RWQnYwRW1ETDA4dkxueGlPZ0xvWmJzb01fUi1EX0FpY2s1M1pXcE1ldkRNc1pIVmpCNV81R2xfTUFLVUIxZWNZV0ZscG9tdS1sajlJQzFoTWROTGR2S09IUHJuem5Sd0VSdUtxRXhVQjRELXlqVEF3ZFJvd1dCd2pTNlNlT3doN3p2eFlSMFZQUWlnVkdsajNhc05aS0E?oc=5",
+      "bucket": "matchup",
+      "structured_fact": "Southern Utah Thunderbirds vs Utah Tech Trailblazers Box Score - January 16, 2027 - The Athletic - The New York Times",
+      "confidence": 0.45,
+      "tier": 3
+    }
+  ],
+  "news_citations": [
+    {
+      "headline": "Former BYU Starter Weylin Lapuaho Enters the Transfer Portal - Sports Illustrated",
+      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQbG01dXc0QVh2aGc1Nm9YVU1EUFJuTnJueE9EZGVnUThOemlFUU1TWEhJd1hUWjV1Q2Q3UDE4YllGVE45Q2lfRm5QeW81VnA0ekxQZ1NYWGQweUZza1BrOGFELTdEaGRESmNpcmgwLXc2OXlyOHM1dzNhbWo0MWlfby1iUmlhTURrNFQzY3FCdlU1aUYwNzA4dVFlcnlaQ0lLTXc?oc=5",
+      "publisher": "Sports Illustrated"
+    },
+    {
+      "headline": "Group of players granted restraining order enter transfer portal",
+      "url": "https://www.espn.com/college-football/story/_/id/49674298/group-players-granted-restraining-order-enter-transfer-portal",
+      "publisher": "ESPN"
+    },
+    {
+      "headline": "College football's mad two-week scramble to land a transfer portal QB",
+      "url": "https://www.espn.com/college-football/story/_/id/49650906/college-football-two-week-scramble-transfer-portal-qb",
+      "publisher": "ESPN"
+    },
+    {
+      "headline": "BYU football betting preview 2026: Cougars odds, futures, win total prediction, sportsbook promos, more - sportingnews.com",
+      "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxQbDZ3cnVIVnlGZF9fTmozQWp0NS11WjU2R1RRYW03ZlhLbUdFX2dhM2VPNWExY2VHVDEwbmdxc1BFT2tIUjBNZHFkUmhpcS1sQ21FZEdDV1lKWkg0WE1hZkVDYTF4WVdReVdhLWcyaWZEeFQtTXJoMDVGRTM1M2s3dEN0TWRXMjFYRHQyQmpheUNoRXFGV3FVay1WOEJXLXN0RDMyNTJfZXBpQUtOT3ZOU2VFdF9nUldfUlhIVUFwczZ0SGxh?oc=5",
+      "publisher": "sportingnews.com"
+    },
+    {
+      "headline": "Former BYU QB Marc Wilson named to Sporting News 1970s All-Decade Team - BYU Athletics",
+      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPNkk2LWNVVnczb3lxYUJKZVBQZnZlR19sVGdJNzRzSkpyVy15WmZOMHEwTTY0YWNGWl9uODJKSEd1VVV3ejRxWXMzRHNOTElvZmZTSFBqQUJMZ1ZNcThqWDg5ZVZtX2R2b1RkYk93OHFrOU5PVzhyUHZqY2pLbjFfQS1Kbklvb1BvRlVhakhZdXBEU29POGljbkl5d0prbWt5anhwUUxuTjlwN3o5Rmc?oc=5",
+      "publisher": "BYU Athletics"
+    },
+    {
+      "headline": "Southern Utah Thunderbirds vs Utah Tech Trailblazers Box Score - January 16, 2027 - The Athletic - The New York Times",
+      "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxPa2ZINVBQdG91bkszX2NoLXdselVpTDM0OW1fSDV3NDBiOEh3SkhfMHNmMlJZV2pHb0RWQnYwRW1ETDA4dkxueGlPZ0xvWmJzb01fUi1EX0FpY2s1M1pXcE1ldkRNc1pIVmpCNV81R2xfTUFLVUIxZWNZV0ZscG9tdS1sajlJQzFoTWROTGR2S09IUHJuem5Sd0VSdUtxRXhVQjRELXlqVEF3ZFJvd1dCd2pTNlNlT3doN3p2eFlSMFZQUWlnVkdsajNhc05aS0E?oc=5",
+      "publisher": "The New York Times"
+    }
+  ],
+  "summary_short": "BlueChip leans BYU. Top signal: +++ BYU \u2014 AP ranking gap",
+  "summary_full": "Utah Tech Trailblazers at BYU Cougars.\n\nBlueChip leans BYU. +++ BYU \u2014 AP ranking gap\n\nWhy BYU has the edge\n- +++ BYU \u2014 AP ranking gap\n\nBlueChip projection\nMarket: BYU -47.5\nBCW desk \u03bc (home): +50.5 (Research Preview)\nWin probability: unavailable until probability model passes validation.\n\nHow each team wins\nBYU: Lean on ap ranking gap. Convert that mismatch before the game becomes a coin-flip script.\nUTU: Shorten the game, win the line of scrimmage, and force the favorite into obvious passing downs.\n\nWhat changed this week\n\u2022 Former BYU Starter Weylin Lapuaho Enters the Transfer Portal - Sports Illustrated\n\u2022 Group of players granted restraining order enter transfer portal\n\u2022 College football's mad two-week scramble to land a transfer portal QB\n\u2022 BYU football betting preview 2026: Cougars odds, futures, win total prediction, sportsbook promos, more - sportingnews.com\n\nWhat could make BlueChip wrong?\n\u2022 Turnovers: the projection assumes roughly normal luck; a +2 swing can flip a BYU lean.\n\u2022 Injury / inactive surprise on either OL or QB would rewrite the pass-rush signal.\n\nBottom line: BYU has more ways to win on the current MATCHUP SIGNAL board, but football variance (turnovers, explosives) remains large around any margin estimate.",
+  "generation_model": "desk-template",
+  "generation_provider": "fallback",
+  "glossary": {
+    "EPA/play": "Expected Points Added estimates how much each play improves expected scoring position. Positive is good. A 5-yard gain on 3rd-and-3 is not treated like 5 yards on 3rd-and-20.",
+    "MATCHUP SIGNAL": "A descriptive strength\u00d7weakness edge. Not a published win probability and not fed into BCW-RIDGE-v0.1 until validated walk-forward.",
+    "Research Preview": "BlueChip quantitative layer that has not cleared the five public ship gates."
+  },
+  "levels": {
+    "slate": {
+      "lean": "BYU",
+      "top_edges": [
+        "+++ BYU Ap Rank"
+      ],
+      "market": "BYU -47.5",
+      "mu": 50.5,
+      "confidence_pct": 56.6
+    }
+  }
+}

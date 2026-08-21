@@ -43,6 +43,12 @@ class Settings(BaseSettings):
     auth_demo_password: str | None = Field(default=None, alias="AUTH_DEMO_PASSWORD")
     environment: str = Field(default="dev", alias="ENVIRONMENT")
     log_level: str = Field(default="INFO", alias="LOG_LEVEL")
+    openrouter_api_key: str | None = Field(default=None, alias="OPENROUTER_API_KEY")
+    google_studio_api_key: str | None = Field(
+        default=None,
+        validation_alias=AliasChoices("GOOGLE_STUDIO_API_KEY", "GOOGLE_API_KEY", "GEMINI_API_KEY"),
+    )
+    grok_api_key: str | None = Field(default=None, alias="GROK_API_KEY")
     data_dir: Path = Field(default=ROOT_DIR / "data")
     raw_data_dir: Path = Field(default=ROOT_DIR / "data" / "raw")
 

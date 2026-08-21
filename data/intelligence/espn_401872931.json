@@ -1,0 +1,324 @@
+{
+  "game_id": "espn:401872931",
+  "version": "BCW-GIP-v0.1",
+  "created_at": "2026-08-21T03:42:53.728541+00:00",
+  "generated_at": "2026-08-21T03:42:53.728541+00:00",
+  "information_cutoff": "2026-08-21T03:42:53.728541+00:00",
+  "source_set_hash": "e050ac75a7f62c7aa80763d6",
+  "game": {
+    "game_id": "espn:401872931",
+    "league": "NFL",
+    "matchup": "DEN @ KC",
+    "home_team": "KC",
+    "away_team": "DEN",
+    "home_name": "Kansas City Chiefs",
+    "away_name": "Denver Broncos",
+    "spread_label": "KC -3.0",
+    "home_spread": -3.0,
+    "total_line": 42.5,
+    "week": 1
+  },
+  "lean_team": "DEN",
+  "projection": {
+    "model_id": "BCW-DESK-STRENGTH-v0.x",
+    "method": "0.65\u00b7Elo/25+HFA + 0.35\u00b7(SRS+HFA)",
+    "mu_home": 1.83,
+    "sigma": 13.5,
+    "p_home_win": 0.5391,
+    "p_home_cover": 0.4507,
+    "edge_vs_minus_110": -0.0731,
+    "model_lean": "AWAY",
+    "model_lean_team": "DEN",
+    "label": "Research Preview",
+    "public_probability_published": false,
+    "confidence_pct": 54.9
+  },
+  "matchup_edges": [
+    {
+      "key": "PASSING",
+      "title": "Passing offense vs pass defense",
+      "side": "AWAY",
+      "side_team": "DEN",
+      "strength": "MAJOR",
+      "home_stat": -0.1448,
+      "away_stat": 0.2413,
+      "mismatch_z": -2.145,
+      "fan_line": "+++ DEN \u2014 Passing offense vs pass defense",
+      "label": "MATCHUP SIGNAL",
+      "why": "EPA/play on passes plus how much EPA the opposing defense allows. EPA weights plays by situation (3rd-and-3 \u2260 3rd-and-20)."
+    },
+    {
+      "key": "PASS_RUSH",
+      "title": "Pass rush / protection (proxy)",
+      "side": "AWAY",
+      "side_team": "DEN",
+      "strength": "STRONG",
+      "home_stat": -0.0879,
+      "away_stat": 0.0138,
+      "mismatch_z": -1.016,
+      "fan_line": "++ DEN \u2014 Pass rush / protection (proxy)",
+      "label": "MATCHUP SIGNAL",
+      "why": "Proxy until true pressure/PBWR data: lower pass EPA allowed \u21d2 stronger pass defense / rush. MATCHUP SIGNAL only \u2014 not a published win probability."
+    },
+    {
+      "key": "OVERALL",
+      "title": "Overall efficiency",
+      "side": "AWAY",
+      "side_team": "DEN",
+      "strength": "MILD",
+      "home_stat": -0.0954,
+      "away_stat": 0.0745,
+      "mismatch_z": -0.849,
+      "fan_line": "+ DEN \u2014 Overall efficiency",
+      "label": "MATCHUP SIGNAL",
+      "why": "Net EPA/play (offense minus defense). Broad team-strength interaction."
+    },
+    {
+      "key": "RUN_GAME",
+      "title": "Rushing offense vs run defense",
+      "side": "HOME",
+      "side_team": "KC",
+      "strength": "MILD",
+      "home_stat": -0.0432,
+      "away_stat": -0.1377,
+      "mismatch_z": 0.675,
+      "fan_line": "+ KC \u2014 Rushing offense vs run defense",
+      "label": "MATCHUP SIGNAL",
+      "why": "Rush EPA/play vs EPA allowed on rushes \u2014 better than raw yards/carry."
+    }
+  ],
+  "headline_cards": [
+    {
+      "marks": "+++",
+      "key": "PASSING",
+      "title": "Passing offense vs pass defense",
+      "team": "DEN",
+      "strength": "MAJOR",
+      "fan_line": "+++ DEN \u2014 Passing offense vs pass defense",
+      "mismatch_z": -2.145,
+      "percentile_hint": "More extreme than ~95% of similar unit mismatches in a normal sample.",
+      "label": "MATCHUP SIGNAL",
+      "why": "EPA/play on passes plus how much EPA the opposing defense allows. EPA weights plays by situation (3rd-and-3 \u2260 3rd-and-20).",
+      "home_stat": -0.1448,
+      "away_stat": 0.2413
+    },
+    {
+      "marks": "++",
+      "key": "PASS_RUSH",
+      "title": "Pass rush / protection (proxy)",
+      "team": "DEN",
+      "strength": "STRONG",
+      "fan_line": "++ DEN \u2014 Pass rush / protection (proxy)",
+      "mismatch_z": -1.016,
+      "percentile_hint": "Clearly tilted versus a typical NFL/CFB unit matchup.",
+      "label": "MATCHUP SIGNAL",
+      "why": "Proxy until true pressure/PBWR data: lower pass EPA allowed \u21d2 stronger pass defense / rush. MATCHUP SIGNAL only \u2014 not a published win probability.",
+      "home_stat": -0.0879,
+      "away_stat": 0.0138
+    },
+    {
+      "marks": "+",
+      "key": "OVERALL",
+      "title": "Overall efficiency",
+      "team": "DEN",
+      "strength": "MILD",
+      "fan_line": "+ DEN \u2014 Overall efficiency",
+      "mismatch_z": -0.849,
+      "percentile_hint": null,
+      "label": "MATCHUP SIGNAL",
+      "why": "Net EPA/play (offense minus defense). Broad team-strength interaction.",
+      "home_stat": -0.0954,
+      "away_stat": 0.0745
+    },
+    {
+      "marks": "+",
+      "key": "RUN_GAME",
+      "title": "Rushing offense vs run defense",
+      "team": "KC",
+      "strength": "MILD",
+      "fan_line": "+ KC \u2014 Rushing offense vs run defense",
+      "mismatch_z": 0.675,
+      "percentile_hint": null,
+      "label": "MATCHUP SIGNAL",
+      "why": "Rush EPA/play vs EPA allowed on rushes \u2014 better than raw yards/carry.",
+      "home_stat": -0.0432,
+      "away_stat": -0.1377
+    }
+  ],
+  "slate_edges": [
+    "+++ DEN Passing",
+    "++ DEN Pass Rush",
+    "+ DEN Overall"
+  ],
+  "matchup_logistic": {
+    "model_id": "BCW-MATCHUP-LOGISTIC-v0.x",
+    "label": "Research Preview",
+    "public_probability_published": false,
+    "logit": -1.2769,
+    "p_home_win": 0.2181,
+    "lean": "AWAY",
+    "contributions": [
+      {
+        "key": "PASSING",
+        "weight": 0.4,
+        "z": -2.145,
+        "term": -0.858
+      },
+      {
+        "key": "PASS_RUSH",
+        "weight": 0.35,
+        "z": -1.016,
+        "term": -0.3556
+      },
+      {
+        "key": "OVERALL",
+        "weight": 0.45,
+        "z": -0.849,
+        "term": -0.3821
+      },
+      {
+        "key": "RUN_GAME",
+        "weight": 0.25,
+        "z": 0.675,
+        "term": 0.1688
+      }
+    ],
+    "note": "Heuristic matchup logistic on EDGE z-scores. Not BCW-RIDGE. Not a ship gate."
+  },
+  "paths": {
+    "home": "Lean on rushing offense vs run defense. Convert that mismatch before the game becomes a coin-flip script.",
+    "away": "Attack via passing offense vs pass defense and keep the favorite from playing its preferred script."
+  },
+  "risks": [
+    "Turnovers: the projection assumes roughly normal luck; a +2 swing can flip a DEN lean.",
+    "KC path: if rushing offense vs run defense plays up, DEN's edge shrinks.",
+    "Injury / inactive surprise on either OL or QB would rewrite the pass-rush signal."
+  ],
+  "adjustment": {
+    "points_home": -2.6,
+    "label": "MATCHUP SIGNAL (unvalidated additive)",
+    "note": "Not fed into BCW-RIDGE-v0.1. Research Preview display only."
+  },
+  "events": [
+    {
+      "game_id": "espn:401872931",
+      "event_type": "other",
+      "headline": "Kansas City Chiefs HC Andy Reid provides concerning update on DE Ashton Gillotte after latest training camp injury - A to Z Sports",
+      "publisher": "A to Z Sports",
+      "source_url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxNZDNiRDdpOWI1bG9PNXhmbDluRlptcmxfTWE4dUVIV2VBcXhkMnNwSmlVRWtPSklmYnY1WGFud3AweS1uUHoxMlo0bmtVSFNlYkYxYW1GNTFwWDNiOWJJbG5GY1FwWGw1Y1JGbFhxSElNTzREamliNW4yMFplYmhIeGkyYlJTZTRHR2VsWUU2dl91U1hqSnNMT2txWkpHaUVhWXd3ZWQwMWs0TnN4YnpYM1J2VTNPcHh1d1J6RWx0c1pud2RRWjA4dU1zRlJXQQ?oc=5",
+      "bucket": "availability",
+      "structured_fact": "Kansas City Chiefs HC Andy Reid provides concerning update on DE Ashton Gillotte after latest training camp injury - A to Z Sports",
+      "confidence": 0.45,
+      "tier": 3
+    },
+    {
+      "game_id": "espn:401872931",
+      "event_type": "other",
+      "headline": "Kansas City Chiefs' latest roster move swaps longshot offensive linemen as injuries stack up at training camp - A to Z Sports",
+      "publisher": "A to Z Sports",
+      "source_url": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxNWmZRZmhxZElEa1lsVmpsYW41LUhVV1J5NGdLSXVNV1lJZzNqNW82eE1fT0s5eF85aFRLX3lNQTB3cHJ6ZkdLUTJiNlRQay15M0d1WGx4N3FxLWprUDl4a1NYU1RuZkhrWkZtMHRka2NiQXhZSmZnenRUanNVWFo3MzlpbE5DalpOdHUyNUZWTW13aWRCT3hUTXpuWUhGTEJNWTFQNFlEQ1l2R1hHMVR4LTVZak5rYlNXSmZaY2NPWFdkajBhTVNfUk9FeXR5dnRWSWFfU242QnkybnlKNkJrZlpSY05nNlk?oc=5",
+      "bucket": "availability",
+      "structured_fact": "Kansas City Chiefs' latest roster move swaps longshot offensive linemen as injuries stack up at training camp - A to Z Sports",
+      "confidence": 0.45,
+      "tier": 3
+    },
+    {
+      "game_id": "espn:401872931",
+      "event_type": "other",
+      "headline": "Kansas City Chiefs Star Player Carted Off Field After Suffering Concerning Injury - Yahoo Sports",
+      "publisher": "Yahoo Sports",
+      "source_url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOaFVRS0JIYjVVQlpULXJ3QmVMVHVLVHFLb0NWVWZKMzAxeVFGSXVsdVhTUWhGT3NUMDlucVpEQXhYbFlLZzV3Uk1iTmNrZkdmZE1WdFZrM0w4NUtjMmIxb0NjamxPa1JxcWhodjBrWW9rMUJ3bW5PeUV3NkM5UmFKVmpreXlSdw?oc=5",
+      "bucket": "availability",
+      "structured_fact": "Kansas City Chiefs Star Player Carted Off Field After Suffering Concerning Injury - Yahoo Sports",
+      "confidence": 0.45,
+      "tier": 3
+    },
+    {
+      "game_id": "espn:401872931",
+      "event_type": "other",
+      "headline": "Broncos add veteran safety Taylor Rapp with LB Levelle Bailey waived after injury - The Denver Post",
+      "publisher": "The Denver Post",
+      "source_url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE5pcE5iTmxVYTB5c21PbmhuV29GLU51ejZZOWltT3I4RkJQXzBJbGV2MHBUSGlTMjRJcTZSNUF3RUxSYjJXM3hKUWZDU2E1dVYtRlNPRUJDVVFqSXNFa0x6RTRzWVdvY1RKcjlCa1BrWEVEcFlhdVdiSDF3?oc=5",
+      "bucket": "availability",
+      "structured_fact": "Broncos add veteran safety Taylor Rapp with LB Levelle Bailey waived after injury - The Denver Post",
+      "confidence": 0.45,
+      "tier": 3
+    },
+    {
+      "game_id": "espn:401872931",
+      "event_type": "other",
+      "headline": "Micah Parsons Slaps Kansas City Chiefs With Brutal Prediction - heavy.com",
+      "publisher": "heavy.com",
+      "source_url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQbldHQ0ZuRGZ4ejU0RVM2MzBVUlVxSXlxRWdPbGsxZEExTnVZbGcybi13SlRDQ3c1akhSZ044SGR0V3pMT0NIZmlxbm9oQlpKUDZFcGNIUm1Qck9fQzRodlpVNlpVSEVrcURvY3RGU1BnTTFra01xcGtyS2RDckZldm1qOEsxa1dmOWpqNk5XNA?oc=5",
+      "bucket": "analysis",
+      "structured_fact": "Micah Parsons Slaps Kansas City Chiefs With Brutal Prediction - heavy.com",
+      "confidence": 0.45,
+      "tier": 3
+    },
+    {
+      "game_id": "espn:401872931",
+      "event_type": "other",
+      "headline": "Broncos officially sign Super Bowl champion safety; LB waived/injured - Broncos Wire",
+      "publisher": "Broncos Wire",
+      "source_url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxPdkdPaFJ1RGNtRzNUcmU4VFREa0VMdzdJUFg3R19TeGstOWxFemJqSGNEaXhtQXdrdGotdU05d0hfcjBrSkp1SFNMQUlrWkxrSTBkVHNZNF92X3FGYW9HRWhEbHFXR0k5SlVMbWV3WTZBenRlLU5uUjZZNldaS1hnNFZreTB5NVVlX3pVUXZuWlBKU2JvWWFpZVJoNENFS2tEWGM1dGp3bkxyQnlpUmJCSzl3Q192MEFQNkhYWmt0VjJkZ1R5bFdlSEtOTWZiakxHM3kzUDNKaDFEUQ?oc=5",
+      "bucket": "availability",
+      "structured_fact": "Broncos officially sign Super Bowl champion safety; LB waived/injured - Broncos Wire",
+      "confidence": 0.45,
+      "tier": 3
+    }
+  ],
+  "news_citations": [
+    {
+      "headline": "Kansas City Chiefs HC Andy Reid provides concerning update on DE Ashton Gillotte after latest training camp injury - A to Z Sports",
+      "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxNZDNiRDdpOWI1bG9PNXhmbDluRlptcmxfTWE4dUVIV2VBcXhkMnNwSmlVRWtPSklmYnY1WGFud3AweS1uUHoxMlo0bmtVSFNlYkYxYW1GNTFwWDNiOWJJbG5GY1FwWGw1Y1JGbFhxSElNTzREamliNW4yMFplYmhIeGkyYlJTZTRHR2VsWUU2dl91U1hqSnNMT2txWkpHaUVhWXd3ZWQwMWs0TnN4YnpYM1J2VTNPcHh1d1J6RWx0c1pud2RRWjA4dU1zRlJXQQ?oc=5",
+      "publisher": "A to Z Sports"
+    },
+    {
+      "headline": "Kansas City Chiefs' latest roster move swaps longshot offensive linemen as injuries stack up at training camp - A to Z Sports",
+      "url": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxNWmZRZmhxZElEa1lsVmpsYW41LUhVV1J5NGdLSXVNV1lJZzNqNW82eE1fT0s5eF85aFRLX3lNQTB3cHJ6ZkdLUTJiNlRQay15M0d1WGx4N3FxLWprUDl4a1NYU1RuZkhrWkZtMHRka2NiQXhZSmZnenRUanNVWFo3MzlpbE5DalpOdHUyNUZWTW13aWRCT3hUTXpuWUhGTEJNWTFQNFlEQ1l2R1hHMVR4LTVZak5rYlNXSmZaY2NPWFdkajBhTVNfUk9FeXR5dnRWSWFfU242QnkybnlKNkJrZlpSY05nNlk?oc=5",
+      "publisher": "A to Z Sports"
+    },
+    {
+      "headline": "Kansas City Chiefs Star Player Carted Off Field After Suffering Concerning Injury - Yahoo Sports",
+      "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOaFVRS0JIYjVVQlpULXJ3QmVMVHVLVHFLb0NWVWZKMzAxeVFGSXVsdVhTUWhGT3NUMDlucVpEQXhYbFlLZzV3Uk1iTmNrZkdmZE1WdFZrM0w4NUtjMmIxb0NjamxPa1JxcWhodjBrWW9rMUJ3bW5PeUV3NkM5UmFKVmpreXlSdw?oc=5",
+      "publisher": "Yahoo Sports"
+    },
+    {
+      "headline": "Broncos add veteran safety Taylor Rapp with LB Levelle Bailey waived after injury - The Denver Post",
+      "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE5pcE5iTmxVYTB5c21PbmhuV29GLU51ejZZOWltT3I4RkJQXzBJbGV2MHBUSGlTMjRJcTZSNUF3RUxSYjJXM3hKUWZDU2E1dVYtRlNPRUJDVVFqSXNFa0x6RTRzWVdvY1RKcjlCa1BrWEVEcFlhdVdiSDF3?oc=5",
+      "publisher": "The Denver Post"
+    },
+    {
+      "headline": "Micah Parsons Slaps Kansas City Chiefs With Brutal Prediction - heavy.com",
+      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQbldHQ0ZuRGZ4ejU0RVM2MzBVUlVxSXlxRWdPbGsxZEExTnVZbGcybi13SlRDQ3c1akhSZ044SGR0V3pMT0NIZmlxbm9oQlpKUDZFcGNIUm1Qck9fQzRodlpVNlpVSEVrcURvY3RGU1BnTTFra01xcGtyS2RDckZldm1qOEsxa1dmOWpqNk5XNA?oc=5",
+      "publisher": "heavy.com"
+    },
+    {
+      "headline": "Broncos officially sign Super Bowl champion safety; LB waived/injured - Broncos Wire",
+      "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxPdkdPaFJ1RGNtRzNUcmU4VFREa0VMdzdJUFg3R19TeGstOWxFemJqSGNEaXhtQXdrdGotdU05d0hfcjBrSkp1SFNMQUlrWkxrSTBkVHNZNF92X3FGYW9HRWhEbHFXR0k5SlVMbWV3WTZBenRlLU5uUjZZNldaS1hnNFZreTB5NVVlX3pVUXZuWlBKU2JvWWFpZVJoNENFS2tEWGM1dGp3bkxyQnlpUmJCSzl3Q192MEFQNkhYWmt0VjJkZ1R5bFdlSEtOTWZiakxHM3kzUDNKaDFEUQ?oc=5",
+      "publisher": "Broncos Wire"
+    }
+  ],
+  "summary_short": "BlueChip leans DEN. Top signal: +++ DEN \u2014 Passing offense vs pass defense",
+  "summary_full": "Denver Broncos at Kansas City Chiefs.\n\nBlueChip leans DEN. +++ DEN \u2014 Passing offense vs pass defense\n\nWhy DEN has the edge\n- +++ DEN \u2014 Passing offense vs pass defense\n- ++ DEN \u2014 Pass rush / protection (proxy)\n- + DEN \u2014 Overall efficiency\n\nBlueChip projection\nMarket: KC -3.0\nBCW desk \u03bc (home): +1.8 (Research Preview)\nWin probability: unavailable until probability model passes validation.\n\nHow each team wins\nKC: Lean on rushing offense vs run defense. Convert that mismatch before the game becomes a coin-flip script.\nDEN: Attack via passing offense vs pass defense and keep the favorite from playing its preferred script.\n\nWhat changed this week\n\u2022 Kansas City Chiefs HC Andy Reid provides concerning update on DE Ashton Gillotte after latest training camp injury - A to Z Sports\n\u2022 Kansas City Chiefs' latest roster move swaps longshot offensive linemen as injuries stack up at training camp - A to Z Sports\n\u2022 Kansas City Chiefs Star Player Carted Off Field After Suffering Concerning Injury - Yahoo Sports\n\u2022 Broncos add veteran safety Taylor Rapp with LB Levelle Bailey waived after injury - The Denver Post\n\nWhat could make BlueChip wrong?\n\u2022 Turnovers: the projection assumes roughly normal luck; a +2 swing can flip a DEN lean.\n\u2022 KC path: if rushing offense vs run defense plays up, DEN's edge shrinks.\n\u2022 Injury / inactive surprise on either OL or QB would rewrite the pass-rush signal.\n\nBottom line: DEN has more ways to win on the current MATCHUP SIGNAL board, but football variance (turnovers, explosives) remains large around any margin estimate.",
+  "generation_model": "desk-template",
+  "generation_provider": "fallback",
+  "glossary": {
+    "EPA/play": "Expected Points Added estimates how much each play improves expected scoring position. Positive is good. A 5-yard gain on 3rd-and-3 is not treated like 5 yards on 3rd-and-20.",
+    "MATCHUP SIGNAL": "A descriptive strength\u00d7weakness edge. Not a published win probability and not fed into BCW-RIDGE-v0.1 until validated walk-forward.",
+    "Research Preview": "BlueChip quantitative layer that has not cleared the five public ship gates."
+  },
+  "levels": {
+    "slate": {
+      "lean": "DEN",
+      "top_edges": [
+        "+++ DEN Passing",
+        "++ DEN Pass Rush",
+        "+ DEN Overall"
+      ],
+      "market": "KC -3.0",
+      "mu": 1.83,
+      "confidence_pct": 54.9
+    }
+  }
+}

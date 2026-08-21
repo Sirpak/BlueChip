@@ -1,0 +1,220 @@
+{
+  "game_id": "espn:401856770",
+  "version": "BCW-GIP-v0.1",
+  "created_at": "2026-08-21T03:41:59.585041+00:00",
+  "generated_at": "2026-08-21T03:41:59.585041+00:00",
+  "information_cutoff": "2026-08-21T03:41:59.585041+00:00",
+  "source_set_hash": "4c8499bd322c04f38bb45041",
+  "game": {
+    "game_id": "espn:401856770",
+    "league": "CFB",
+    "matchup": "ACU @ TTU",
+    "home_team": "TTU",
+    "away_team": "ACU",
+    "home_name": "Texas Tech Red Raiders",
+    "away_name": "Abilene Christian Wildcats",
+    "spread_label": "TTU -42.5",
+    "home_spread": -42.5,
+    "total_line": 59.5,
+    "week": 1
+  },
+  "lean_team": "TTU",
+  "projection": {
+    "model_id": "BCW-DESK-STRENGTH-v0.x",
+    "method": "Market line + AP rank edge (CFB; no CFB Elo yet)",
+    "mu_home": 46.0,
+    "sigma": 15.0,
+    "p_home_win": 0.9988,
+    "p_home_cover": 0.5793,
+    "edge_vs_minus_110": 0.0555,
+    "model_lean": "HOME",
+    "model_lean_team": "TTU",
+    "label": "Research Preview",
+    "public_probability_published": false,
+    "confidence_pct": 57.9
+  },
+  "matchup_edges": [
+    {
+      "key": "AP_RANK",
+      "title": "AP ranking gap",
+      "side": "HOME",
+      "side_team": "TTU",
+      "strength": "MAJOR",
+      "home_stat": 30.0,
+      "away_stat": 12.0,
+      "mismatch_z": 2.25,
+      "fan_line": "+++ TTU \u2014 AP ranking gap",
+      "label": "MATCHUP SIGNAL",
+      "why": "College prior until CFB EPA ingest. Lower AP rank is stronger."
+    }
+  ],
+  "headline_cards": [
+    {
+      "marks": "+++",
+      "key": "AP_RANK",
+      "title": "AP ranking gap",
+      "team": "TTU",
+      "strength": "MAJOR",
+      "fan_line": "+++ TTU \u2014 AP ranking gap",
+      "mismatch_z": 2.25,
+      "percentile_hint": "More extreme than ~95% of similar unit mismatches in a normal sample.",
+      "label": "MATCHUP SIGNAL",
+      "why": "College prior until CFB EPA ingest. Lower AP rank is stronger.",
+      "home_stat": 30.0,
+      "away_stat": 12.0
+    }
+  ],
+  "slate_edges": [
+    "+++ TTU Ap Rank"
+  ],
+  "matchup_logistic": {
+    "model_id": "BCW-MATCHUP-LOGISTIC-v0.x",
+    "label": "Research Preview",
+    "public_probability_published": false,
+    "logit": 0.825,
+    "p_home_win": 0.6953,
+    "lean": "HOME",
+    "contributions": [
+      {
+        "key": "AP_RANK",
+        "weight": 0.3,
+        "z": 2.25,
+        "term": 0.675
+      }
+    ],
+    "note": "Heuristic matchup logistic on EDGE z-scores. Not BCW-RIDGE. Not a ship gate."
+  },
+  "paths": {
+    "home": "Lean on ap ranking gap. Convert that mismatch before the game becomes a coin-flip script.",
+    "away": "Shorten the game, win the line of scrimmage, and force the favorite into obvious passing downs."
+  },
+  "risks": [
+    "Turnovers: the projection assumes roughly normal luck; a +2 swing can flip a TTU lean.",
+    "Injury / inactive surprise on either OL or QB would rewrite the pass-rush signal."
+  ],
+  "adjustment": {
+    "points_home": 1.6,
+    "label": "MATCHUP SIGNAL (unvalidated additive)",
+    "note": "Not fed into BCW-RIDGE-v0.1. Research Preview display only."
+  },
+  "events": [
+    {
+      "game_id": "espn:401856770",
+      "event_type": "other",
+      "headline": "Officially Returning/Signed: Donovan Atwell - Texas Tech Red Raiders - Texas Tech Red Raiders",
+      "publisher": "Texas Tech Red Raiders",
+      "source_url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPNWZsYzNCZVo5OGJsdnBOTEo4OVNJZHZpSHRhbWRvTmVtNHl2ZWQtXzlCdkNURHM2Rk14NWp5dDJXOW1SaDc0eGY3X0NZb3o1cS1XUWFEdU84QWpyRlZuOXgtcTVRc05lNEJnaWJ0MUU3V2ZxMFc4cHF1VlNQQklMOGRrazN2M3o0UFRTdW9jcWdoVHVYRnNBLUJsaw?oc=5",
+      "bucket": "availability",
+      "structured_fact": "Officially Returning/Signed: Donovan Atwell - Texas Tech Red Raiders - Texas Tech Red Raiders",
+      "confidence": 0.45,
+      "tier": 3
+    },
+    {
+      "game_id": "espn:401856770",
+      "event_type": "market",
+      "headline": "Big 12 odds, win totals, projections: Texas Tech clear favorite to win conference again - The New York Times",
+      "publisher": "The New York Times",
+      "source_url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNbjg4RENzUGtUQ3psYzlmb2xHQkwxZm14bHlsTnlSa3pWSEZSSzJNOTY1R2g0R3NTZk9sUi1iZTJGUTVMdnMzV0ItcjBpQThKZ0NBVm5TZ0VNNlNZSVZCWk5DdmFpbEpuZnpmZGpfSTk1ZFJzTFcxeEU2bHlCMkVkRUZuVzBESXozMVBDeGZpRVlUbDZwdmo3S0htQ2NBd3M?oc=5",
+      "bucket": "analysis",
+      "structured_fact": "Big 12 odds, win totals, projections: Texas Tech clear favorite to win conference again - The New York Times",
+      "confidence": 0.7,
+      "tier": 3
+    },
+    {
+      "game_id": "espn:401856770",
+      "event_type": "other",
+      "headline": "2026 Big 12 college football preview, predictions, top transfers and more",
+      "publisher": "ESPN",
+      "source_url": "https://www.espn.com/college-football/story/_/id/49001728/2026-big-12-college-football-preview-predictions-top-transfers-more",
+      "bucket": "availability",
+      "structured_fact": "2026 Big 12 college football preview, predictions, top transfers and more",
+      "confidence": 0.45,
+      "tier": 2
+    },
+    {
+      "game_id": "espn:401856770",
+      "event_type": "other",
+      "headline": "Behren Morton\u2019s Injury Update is Great News for Texas Tech - Heartland College Sports",
+      "publisher": "Heartland College Sports",
+      "source_url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxONFV1cGZPNC1XcEZuM3dGdlZ0Z08xWlNYeWhPbmJzSU1MSWlBSTRPcEFxX3VSd0dlc3YzeU10bXR1VzdCaTRfQlVmMEQ3SlRoTzVlYVQtMkh6bzF3YjVZa0I2eFFGZTNHTkhydFhsTDZFRjlVZkM2TXRBWHVZaWJtSl9IX1JoNnF2d2trN0N4SjdOX3VISUdnUDg0d29LazQyT0E4?oc=5",
+      "bucket": "availability",
+      "structured_fact": "Behren Morton\u2019s Injury Update is Great News for Texas Tech - Heartland College Sports",
+      "confidence": 0.45,
+      "tier": 3
+    },
+    {
+      "game_id": "espn:401856770",
+      "event_type": "other",
+      "headline": "Earle tallies 5 TDs to lead Abilene Christian to UAC title beating Central Arkansas",
+      "publisher": "ESPN",
+      "source_url": "http://www.espn.com/ncf/recap?gameId=401767247",
+      "bucket": "availability",
+      "structured_fact": "Earle tallies 5 TDs to lead Abilene Christian to UAC title beating Central Arkansas",
+      "confidence": 0.45,
+      "tier": 2
+    },
+    {
+      "game_id": "espn:401856770",
+      "event_type": "other",
+      "headline": "2026 Abilene Christian Football Preview: Can The Wildcats Stay Atop The UAC? - Sports Illustrated",
+      "publisher": "Sports Illustrated",
+      "source_url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPbGlsSGVreC1jV21HLUdXMWJLTXh4STNaZzNuWlBJYVpYRUpySHdYbUVma3RGZnJqWHRILWRrZWtqVzBaUnBhSlpFVFBjN3IzakFWbVFtM2JmN2lWdUh3WFBfUUlnNFNOOTNHMGxJY0g2WFdocnFfYWlxMUJYRS01N3hwcGFfcTQxVHdlUS1jdER2SFpiSGFsWS1lRVV6Nm9UWFNkRGk0NEV3QTV0dXc?oc=5",
+      "bucket": "analysis",
+      "structured_fact": "2026 Abilene Christian Football Preview: Can The Wildcats Stay Atop The UAC? - Sports Illustrated",
+      "confidence": 0.45,
+      "tier": 3
+    }
+  ],
+  "news_citations": [
+    {
+      "headline": "Officially Returning/Signed: Donovan Atwell - Texas Tech Red Raiders - Texas Tech Red Raiders",
+      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPNWZsYzNCZVo5OGJsdnBOTEo4OVNJZHZpSHRhbWRvTmVtNHl2ZWQtXzlCdkNURHM2Rk14NWp5dDJXOW1SaDc0eGY3X0NZb3o1cS1XUWFEdU84QWpyRlZuOXgtcTVRc05lNEJnaWJ0MUU3V2ZxMFc4cHF1VlNQQklMOGRrazN2M3o0UFRTdW9jcWdoVHVYRnNBLUJsaw?oc=5",
+      "publisher": "Texas Tech Red Raiders"
+    },
+    {
+      "headline": "Big 12 odds, win totals, projections: Texas Tech clear favorite to win conference again - The New York Times",
+      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNbjg4RENzUGtUQ3psYzlmb2xHQkwxZm14bHlsTnlSa3pWSEZSSzJNOTY1R2g0R3NTZk9sUi1iZTJGUTVMdnMzV0ItcjBpQThKZ0NBVm5TZ0VNNlNZSVZCWk5DdmFpbEpuZnpmZGpfSTk1ZFJzTFcxeEU2bHlCMkVkRUZuVzBESXozMVBDeGZpRVlUbDZwdmo3S0htQ2NBd3M?oc=5",
+      "publisher": "The New York Times"
+    },
+    {
+      "headline": "2026 Big 12 college football preview, predictions, top transfers and more",
+      "url": "https://www.espn.com/college-football/story/_/id/49001728/2026-big-12-college-football-preview-predictions-top-transfers-more",
+      "publisher": "ESPN"
+    },
+    {
+      "headline": "Behren Morton\u2019s Injury Update is Great News for Texas Tech - Heartland College Sports",
+      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxONFV1cGZPNC1XcEZuM3dGdlZ0Z08xWlNYeWhPbmJzSU1MSWlBSTRPcEFxX3VSd0dlc3YzeU10bXR1VzdCaTRfQlVmMEQ3SlRoTzVlYVQtMkh6bzF3YjVZa0I2eFFGZTNHTkhydFhsTDZFRjlVZkM2TXRBWHVZaWJtSl9IX1JoNnF2d2trN0N4SjdOX3VISUdnUDg0d29LazQyT0E4?oc=5",
+      "publisher": "Heartland College Sports"
+    },
+    {
+      "headline": "Earle tallies 5 TDs to lead Abilene Christian to UAC title beating Central Arkansas",
+      "url": "http://www.espn.com/ncf/recap?gameId=401767247",
+      "publisher": "ESPN"
+    },
+    {
+      "headline": "2026 Abilene Christian Football Preview: Can The Wildcats Stay Atop The UAC? - Sports Illustrated",
+      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPbGlsSGVreC1jV21HLUdXMWJLTXh4STNaZzNuWlBJYVpYRUpySHdYbUVma3RGZnJqWHRILWRrZWtqVzBaUnBhSlpFVFBjN3IzakFWbVFtM2JmN2lWdUh3WFBfUUlnNFNOOTNHMGxJY0g2WFdocnFfYWlxMUJYRS01N3hwcGFfcTQxVHdlUS1jdER2SFpiSGFsWS1lRVV6Nm9UWFNkRGk0NEV3QTV0dXc?oc=5",
+      "publisher": "Sports Illustrated"
+    }
+  ],
+  "summary_short": "BlueChip leans TTU. Top signal: +++ TTU \u2014 AP ranking gap",
+  "summary_full": "Abilene Christian Wildcats at Texas Tech Red Raiders.\n\nBlueChip leans TTU. +++ TTU \u2014 AP ranking gap\n\nWhy TTU has the edge\n- +++ TTU \u2014 AP ranking gap\n\nBlueChip projection\nMarket: TTU -42.5\nBCW desk \u03bc (home): +46.0 (Research Preview)\nWin probability: unavailable until probability model passes validation.\n\nHow each team wins\nTTU: Lean on ap ranking gap. Convert that mismatch before the game becomes a coin-flip script.\nACU: Shorten the game, win the line of scrimmage, and force the favorite into obvious passing downs.\n\nWhat changed this week\n\u2022 Officially Returning/Signed: Donovan Atwell - Texas Tech Red Raiders - Texas Tech Red Raiders\n\u2022 Big 12 odds, win totals, projections: Texas Tech clear favorite to win conference again - The New York Times\n\u2022 2026 Big 12 college football preview, predictions, top transfers and more\n\u2022 Behren Morton\u2019s Injury Update is Great News for Texas Tech - Heartland College Sports\n\nWhat could make BlueChip wrong?\n\u2022 Turnovers: the projection assumes roughly normal luck; a +2 swing can flip a TTU lean.\n\u2022 Injury / inactive surprise on either OL or QB would rewrite the pass-rush signal.\n\nBottom line: TTU has more ways to win on the current MATCHUP SIGNAL board, but football variance (turnovers, explosives) remains large around any margin estimate.",
+  "generation_model": "desk-template",
+  "generation_provider": "fallback",
+  "glossary": {
+    "EPA/play": "Expected Points Added estimates how much each play improves expected scoring position. Positive is good. A 5-yard gain on 3rd-and-3 is not treated like 5 yards on 3rd-and-20.",
+    "MATCHUP SIGNAL": "A descriptive strength\u00d7weakness edge. Not a published win probability and not fed into BCW-RIDGE-v0.1 until validated walk-forward.",
+    "Research Preview": "BlueChip quantitative layer that has not cleared the five public ship gates."
+  },
+  "levels": {
+    "slate": {
+      "lean": "TTU",
+      "top_edges": [
+        "+++ TTU Ap Rank"
+      ],
+      "market": "TTU -42.5",
+      "mu": 46.0,
+      "confidence_pct": 57.9
+    }
+  }
+}

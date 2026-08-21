@@ -1,0 +1,220 @@
+{
+  "game_id": "espn:401858425",
+  "version": "BCW-GIP-v0.1",
+  "created_at": "2026-08-21T03:40:59.458888+00:00",
+  "generated_at": "2026-08-21T03:40:59.458888+00:00",
+  "information_cutoff": "2026-08-21T03:40:59.458888+00:00",
+  "source_set_hash": "a9412818e82d338ddd6ddc56",
+  "game": {
+    "game_id": "espn:401858425",
+    "league": "CFB",
+    "matchup": "UNT @ IU",
+    "home_team": "IU",
+    "away_team": "UNT",
+    "home_name": "Indiana Hoosiers",
+    "away_name": "North Texas Mean Green",
+    "spread_label": "IU -40.5",
+    "home_spread": -40.5,
+    "total_line": 55.5,
+    "week": 1
+  },
+  "lean_team": "IU",
+  "projection": {
+    "model_id": "BCW-DESK-STRENGTH-v0.x",
+    "method": "Market line + AP rank edge (CFB; no CFB Elo yet)",
+    "mu_home": 45.5,
+    "sigma": 15.0,
+    "p_home_win": 0.9987,
+    "p_home_cover": 0.6179,
+    "edge_vs_minus_110": 0.0941,
+    "model_lean": "HOME",
+    "model_lean_team": "IU",
+    "label": "Research Preview",
+    "public_probability_published": false,
+    "confidence_pct": 61.8
+  },
+  "matchup_edges": [
+    {
+      "key": "AP_RANK",
+      "title": "AP ranking gap",
+      "side": "HOME",
+      "side_team": "IU",
+      "strength": "MAJOR",
+      "home_stat": 30.0,
+      "away_stat": 6.0,
+      "mismatch_z": 3.0,
+      "fan_line": "+++ IU \u2014 AP ranking gap",
+      "label": "MATCHUP SIGNAL",
+      "why": "College prior until CFB EPA ingest. Lower AP rank is stronger."
+    }
+  ],
+  "headline_cards": [
+    {
+      "marks": "+++",
+      "key": "AP_RANK",
+      "title": "AP ranking gap",
+      "team": "IU",
+      "strength": "MAJOR",
+      "fan_line": "+++ IU \u2014 AP ranking gap",
+      "mismatch_z": 3.0,
+      "percentile_hint": "More extreme than ~95% of similar unit mismatches in a normal sample.",
+      "label": "MATCHUP SIGNAL",
+      "why": "College prior until CFB EPA ingest. Lower AP rank is stronger.",
+      "home_stat": 30.0,
+      "away_stat": 6.0
+    }
+  ],
+  "slate_edges": [
+    "+++ IU Ap Rank"
+  ],
+  "matchup_logistic": {
+    "model_id": "BCW-MATCHUP-LOGISTIC-v0.x",
+    "label": "Research Preview",
+    "public_probability_published": false,
+    "logit": 1.05,
+    "p_home_win": 0.7408,
+    "lean": "HOME",
+    "contributions": [
+      {
+        "key": "AP_RANK",
+        "weight": 0.3,
+        "z": 3.0,
+        "term": 0.9
+      }
+    ],
+    "note": "Heuristic matchup logistic on EDGE z-scores. Not BCW-RIDGE. Not a ship gate."
+  },
+  "paths": {
+    "home": "Lean on ap ranking gap. Convert that mismatch before the game becomes a coin-flip script.",
+    "away": "Shorten the game, win the line of scrimmage, and force the favorite into obvious passing downs."
+  },
+  "risks": [
+    "Turnovers: the projection assumes roughly normal luck; a +2 swing can flip a IU lean.",
+    "Injury / inactive surprise on either OL or QB would rewrite the pass-rush signal."
+  ],
+  "adjustment": {
+    "points_home": 1.6,
+    "label": "MATCHUP SIGNAL (unvalidated additive)",
+    "note": "Not fed into BCW-RIDGE-v0.1. Research Preview display only."
+  },
+  "events": [
+    {
+      "game_id": "espn:401858425",
+      "event_type": "other",
+      "headline": "Indiana Football 2026 opponent preview: North Texas Mean Green - Hoosier State of Mind",
+      "publisher": "Hoosier State of Mind",
+      "source_url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPR3FZN2ExaTVtVnNacDV5M1JfY1JrWWViY1NDeW9tM2ROaEpQM3I5dG9HOFNobk5ZQnlibGxEQzdkbUhSZ2RJaFBwakNkcFNzWlJlM0tJWWNTQXJvN0U4MlNTbW5CVTdaRzFlSjZYREhZelVGVXB1d0MwX1doYkgxVHk4REtkVFhzbkhpQVZSem10U0N4Rl9aRFluVHZ3endTQzlHRU5aTEM?oc=5",
+      "bucket": "analysis",
+      "structured_fact": "Indiana Football 2026 opponent preview: North Texas Mean Green - Hoosier State of Mind",
+      "confidence": 0.45,
+      "tier": 3
+    },
+    {
+      "game_id": "espn:401858425",
+      "event_type": "other",
+      "headline": "North Texas Football Preview 2026: How Fast Can the Mean Green Reload? - College Football News",
+      "publisher": "College Football News",
+      "source_url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQVEF1SU5yTmFHbjdhVFB6VzJ6ZExoaEFIaDBVMnh2anl0UW5kRElqQ2xZTklyOTVnUU1sOHVjdFdiT3c0WW5fZGloalJaYzdxUGRpZFNqTDd3cXV6SXFkLVI1a0c4MzREb25rMEZuaDhuUUN2NjEwdlBVWi1LOExCRTN5Rjk4NFFjUHc?oc=5",
+      "bucket": "analysis",
+      "structured_fact": "North Texas Football Preview 2026: How Fast Can the Mean Green Reload? - College Football News",
+      "confidence": 0.45,
+      "tier": 3
+    },
+    {
+      "game_id": "espn:401858425",
+      "event_type": "other",
+      "headline": "2026 First Glance Preview: North Texas Mean Green - Hoosier Huddle",
+      "publisher": "Hoosier Huddle",
+      "source_url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQNzhuNjE1MlRtTHpzc3dpdUllUjNydTVxVEtjS3lEOHEtcGpFS2NvWldYeTZYajNwdVZ3TE10TFRnZVFmdWN2dFd1SlpQRzhBY3NrSjQxU3JoMEQ5dmljOHYyaHQxeUxfczc4NVVRc003UDk1VGE0TjdjaHRBWmpXclMtd3dTMFF2MG1wQS0tMA?oc=5",
+      "bucket": "analysis",
+      "structured_fact": "2026 First Glance Preview: North Texas Mean Green - Hoosier Huddle",
+      "confidence": 0.45,
+      "tier": 3
+    },
+    {
+      "game_id": "espn:401858425",
+      "event_type": "other",
+      "headline": "North Texas Mean Green vs Indiana Hoosiers | September 5, 2026 | NCAAF Matchup - theScore",
+      "publisher": "theScore",
+      "source_url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE92ajVvVmVfbDkzQ01qSUpnUE0xM3N0OE5HSXF1SXdvTzJWR0t1Q3BQT3lfZDlvZnhfNnVQZHNwSkxIc1BuQ2JuX0hVR0kwV25mcWc2UVZB?oc=5",
+      "bucket": "analysis",
+      "structured_fact": "North Texas Mean Green vs Indiana Hoosiers | September 5, 2026 | NCAAF Matchup - theScore",
+      "confidence": 0.45,
+      "tier": 3
+    },
+    {
+      "game_id": "espn:401858425",
+      "event_type": "market",
+      "headline": "North Texas Mean Green at Indiana Hoosiers - NCAAF Odds - Sep 05, 2026 - USA Today",
+      "publisher": "USA Today",
+      "source_url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9lZjQ4ZHlCdjYyUlNTelRaejVQdXJJZnJKUFNKYzE1WGttQktiQ2FjdkFGbUI3X0hKTTVJbmpZSXFDNE0xdUNncWhlTllMbUhTQmlwNkVWXzJtQThkMWF0aEhwZXdTRHhlTnZv?oc=5",
+      "bucket": "analysis",
+      "structured_fact": "North Texas Mean Green at Indiana Hoosiers - NCAAF Odds - Sep 05, 2026 - USA Today",
+      "confidence": 0.7,
+      "tier": 3
+    },
+    {
+      "game_id": "espn:401858425",
+      "event_type": "other",
+      "headline": "2025 New Mexico Bowl Preview: North Texas Mean Green vs. San Diego State Aztecs - Underdog Dynasty",
+      "publisher": "Underdog Dynasty",
+      "source_url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxOWC1ycnFSNUUzd0hGd0R1QXBucGhqUVpDZzdjOEtZS3h5N0hZaUd3R29TbEdxUXZDMTE5RGYwRzlJcHJPT2VHa1BxeXEzUVFON3VSN3hUbjR6bTFXRHNKWWNFQlQwS0p1N1FqYmprUlUxTy1XXzkya2d1dGs4N1M2NUpTVkxoTFpkZXhUYTBDZWY4RHlSQXFEclNOdW14WVYzaEZ1WlUxR2RkdVZpZVlKRUpCbUY4SFAxUDlWZllmZVpJcnNkUjVuT0xldDB4ZDl1?oc=5",
+      "bucket": "analysis",
+      "structured_fact": "2025 New Mexico Bowl Preview: North Texas Mean Green vs. San Diego State Aztecs - Underdog Dynasty",
+      "confidence": 0.45,
+      "tier": 3
+    }
+  ],
+  "news_citations": [
+    {
+      "headline": "Indiana Football 2026 opponent preview: North Texas Mean Green - Hoosier State of Mind",
+      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPR3FZN2ExaTVtVnNacDV5M1JfY1JrWWViY1NDeW9tM2ROaEpQM3I5dG9HOFNobk5ZQnlibGxEQzdkbUhSZ2RJaFBwakNkcFNzWlJlM0tJWWNTQXJvN0U4MlNTbW5CVTdaRzFlSjZYREhZelVGVXB1d0MwX1doYkgxVHk4REtkVFhzbkhpQVZSem10U0N4Rl9aRFluVHZ3endTQzlHRU5aTEM?oc=5",
+      "publisher": "Hoosier State of Mind"
+    },
+    {
+      "headline": "North Texas Football Preview 2026: How Fast Can the Mean Green Reload? - College Football News",
+      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQVEF1SU5yTmFHbjdhVFB6VzJ6ZExoaEFIaDBVMnh2anl0UW5kRElqQ2xZTklyOTVnUU1sOHVjdFdiT3c0WW5fZGloalJaYzdxUGRpZFNqTDd3cXV6SXFkLVI1a0c4MzREb25rMEZuaDhuUUN2NjEwdlBVWi1LOExCRTN5Rjk4NFFjUHc?oc=5",
+      "publisher": "College Football News"
+    },
+    {
+      "headline": "2026 First Glance Preview: North Texas Mean Green - Hoosier Huddle",
+      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQNzhuNjE1MlRtTHpzc3dpdUllUjNydTVxVEtjS3lEOHEtcGpFS2NvWldYeTZYajNwdVZ3TE10TFRnZVFmdWN2dFd1SlpQRzhBY3NrSjQxU3JoMEQ5dmljOHYyaHQxeUxfczc4NVVRc003UDk1VGE0TjdjaHRBWmpXclMtd3dTMFF2MG1wQS0tMA?oc=5",
+      "publisher": "Hoosier Huddle"
+    },
+    {
+      "headline": "North Texas Mean Green vs Indiana Hoosiers | September 5, 2026 | NCAAF Matchup - theScore",
+      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE92ajVvVmVfbDkzQ01qSUpnUE0xM3N0OE5HSXF1SXdvTzJWR0t1Q3BQT3lfZDlvZnhfNnVQZHNwSkxIc1BuQ2JuX0hVR0kwV25mcWc2UVZB?oc=5",
+      "publisher": "theScore"
+    },
+    {
+      "headline": "North Texas Mean Green at Indiana Hoosiers - NCAAF Odds - Sep 05, 2026 - USA Today",
+      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9lZjQ4ZHlCdjYyUlNTelRaejVQdXJJZnJKUFNKYzE1WGttQktiQ2FjdkFGbUI3X0hKTTVJbmpZSXFDNE0xdUNncWhlTllMbUhTQmlwNkVWXzJtQThkMWF0aEhwZXdTRHhlTnZv?oc=5",
+      "publisher": "USA Today"
+    },
+    {
+      "headline": "2025 New Mexico Bowl Preview: North Texas Mean Green vs. San Diego State Aztecs - Underdog Dynasty",
+      "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxOWC1ycnFSNUUzd0hGd0R1QXBucGhqUVpDZzdjOEtZS3h5N0hZaUd3R29TbEdxUXZDMTE5RGYwRzlJcHJPT2VHa1BxeXEzUVFON3VSN3hUbjR6bTFXRHNKWWNFQlQwS0p1N1FqYmprUlUxTy1XXzkya2d1dGs4N1M2NUpTVkxoTFpkZXhUYTBDZWY4RHlSQXFEclNOdW14WVYzaEZ1WlUxR2RkdVZpZVlKRUpCbUY4SFAxUDlWZllmZVpJcnNkUjVuT0xldDB4ZDl1?oc=5",
+      "publisher": "Underdog Dynasty"
+    }
+  ],
+  "summary_short": "BlueChip leans IU. Top signal: +++ IU \u2014 AP ranking gap",
+  "summary_full": "North Texas Mean Green at Indiana Hoosiers.\n\nBlueChip leans IU. +++ IU \u2014 AP ranking gap\n\nWhy IU has the edge\n- +++ IU \u2014 AP ranking gap\n\nBlueChip projection\nMarket: IU -40.5\nBCW desk \u03bc (home): +45.5 (Research Preview)\nWin probability: unavailable until probability model passes validation.\n\nHow each team wins\nIU: Lean on ap ranking gap. Convert that mismatch before the game becomes a coin-flip script.\nUNT: Shorten the game, win the line of scrimmage, and force the favorite into obvious passing downs.\n\nWhat changed this week\n\u2022 Indiana Football 2026 opponent preview: North Texas Mean Green - Hoosier State of Mind\n\u2022 North Texas Football Preview 2026: How Fast Can the Mean Green Reload? - College Football News\n\u2022 2026 First Glance Preview: North Texas Mean Green - Hoosier Huddle\n\u2022 North Texas Mean Green vs Indiana Hoosiers | September 5, 2026 | NCAAF Matchup - theScore\n\nWhat could make BlueChip wrong?\n\u2022 Turnovers: the projection assumes roughly normal luck; a +2 swing can flip a IU lean.\n\u2022 Injury / inactive surprise on either OL or QB would rewrite the pass-rush signal.\n\nBottom line: IU has more ways to win on the current MATCHUP SIGNAL board, but football variance (turnovers, explosives) remains large around any margin estimate.",
+  "generation_model": "desk-template",
+  "generation_provider": "fallback",
+  "glossary": {
+    "EPA/play": "Expected Points Added estimates how much each play improves expected scoring position. Positive is good. A 5-yard gain on 3rd-and-3 is not treated like 5 yards on 3rd-and-20.",
+    "MATCHUP SIGNAL": "A descriptive strength\u00d7weakness edge. Not a published win probability and not fed into BCW-RIDGE-v0.1 until validated walk-forward.",
+    "Research Preview": "BlueChip quantitative layer that has not cleared the five public ship gates."
+  },
+  "levels": {
+    "slate": {
+      "lean": "IU",
+      "top_edges": [
+        "+++ IU Ap Rank"
+      ],
+      "market": "IU -40.5",
+      "mu": 45.5,
+      "confidence_pct": 61.8
+    }
+  }
+}

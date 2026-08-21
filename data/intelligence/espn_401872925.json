@@ -1,0 +1,293 @@
+{
+  "game_id": "espn:401872925",
+  "version": "BCW-GIP-v0.1",
+  "created_at": "2026-08-21T03:42:24.854698+00:00",
+  "generated_at": "2026-08-21T03:42:24.854698+00:00",
+  "information_cutoff": "2026-08-21T03:42:24.854698+00:00",
+  "source_set_hash": "bc58b0794fe8359a0a07338d",
+  "game": {
+    "game_id": "espn:401872925",
+    "league": "NFL",
+    "matchup": "TB @ CIN",
+    "home_team": "CIN",
+    "away_team": "TB",
+    "home_name": "Cincinnati Bengals",
+    "away_name": "Tampa Bay Buccaneers",
+    "spread_label": "CIN -3.5",
+    "home_spread": -3.5,
+    "total_line": 51.5,
+    "week": 1
+  },
+  "lean_team": "TB",
+  "projection": {
+    "model_id": "BCW-DESK-STRENGTH-v0.x",
+    "method": "0.65\u00b7Elo/25+HFA + 0.35\u00b7(SRS+HFA)",
+    "mu_home": 1.9,
+    "sigma": 13.5,
+    "p_home_win": 0.5412,
+    "p_home_cover": 0.4381,
+    "edge_vs_minus_110": -0.0857,
+    "model_lean": "AWAY",
+    "model_lean_team": "TB",
+    "label": "Research Preview",
+    "public_probability_published": false,
+    "confidence_pct": 56.2
+  },
+  "matchup_edges": [
+    {
+      "key": "RUN_GAME",
+      "title": "Rushing offense vs run defense",
+      "side": "AWAY",
+      "side_team": "TB",
+      "strength": "STRONG",
+      "home_stat": -0.106,
+      "away_stat": 0.1083,
+      "mismatch_z": -1.531,
+      "fan_line": "++ TB \u2014 Rushing offense vs run defense",
+      "label": "MATCHUP SIGNAL",
+      "why": "Rush EPA/play vs EPA allowed on rushes \u2014 better than raw yards/carry."
+    },
+    {
+      "key": "OVERALL",
+      "title": "Overall efficiency",
+      "side": "AWAY",
+      "side_team": "TB",
+      "strength": "MILD",
+      "home_stat": -0.1754,
+      "away_stat": -0.0833,
+      "mismatch_z": -0.46,
+      "fan_line": "+ TB \u2014 Overall efficiency",
+      "label": "MATCHUP SIGNAL",
+      "why": "Net EPA/play (offense minus defense). Broad team-strength interaction."
+    },
+    {
+      "key": "PASS_RUSH",
+      "title": "Pass rush / protection (proxy)",
+      "side": "AWAY",
+      "side_team": "TB",
+      "strength": "EVEN",
+      "home_stat": -0.1541,
+      "away_stat": -0.1276,
+      "mismatch_z": -0.265,
+      "fan_line": "\u00b7 TB \u2014 Pass rush / protection (proxy)",
+      "label": "MATCHUP SIGNAL",
+      "why": "Proxy until true pressure/PBWR data: lower pass EPA allowed \u21d2 stronger pass defense / rush. MATCHUP SIGNAL only \u2014 not a published win probability."
+    },
+    {
+      "key": "PASSING",
+      "title": "Passing offense vs pass defense",
+      "side": "EVEN",
+      "side_team": "CIN",
+      "strength": "EVEN",
+      "home_stat": 0.0589,
+      "away_stat": 0.0969,
+      "mismatch_z": -0.211,
+      "fan_line": "Passing offense vs pass defense: roughly even",
+      "label": "MATCHUP SIGNAL",
+      "why": "EPA/play on passes plus how much EPA the opposing defense allows. EPA weights plays by situation (3rd-and-3 \u2260 3rd-and-20)."
+    }
+  ],
+  "headline_cards": [
+    {
+      "marks": "++",
+      "key": "RUN_GAME",
+      "title": "Rushing offense vs run defense",
+      "team": "TB",
+      "strength": "STRONG",
+      "fan_line": "++ TB \u2014 Rushing offense vs run defense",
+      "mismatch_z": -1.531,
+      "percentile_hint": "Clearly tilted versus a typical NFL/CFB unit matchup.",
+      "label": "MATCHUP SIGNAL",
+      "why": "Rush EPA/play vs EPA allowed on rushes \u2014 better than raw yards/carry.",
+      "home_stat": -0.106,
+      "away_stat": 0.1083
+    },
+    {
+      "marks": "+",
+      "key": "OVERALL",
+      "title": "Overall efficiency",
+      "team": "TB",
+      "strength": "MILD",
+      "fan_line": "+ TB \u2014 Overall efficiency",
+      "mismatch_z": -0.46,
+      "percentile_hint": null,
+      "label": "MATCHUP SIGNAL",
+      "why": "Net EPA/play (offense minus defense). Broad team-strength interaction.",
+      "home_stat": -0.1754,
+      "away_stat": -0.0833
+    }
+  ],
+  "slate_edges": [
+    "++ TB Run Game",
+    "+ TB Overall"
+  ],
+  "matchup_logistic": {
+    "model_id": "BCW-MATCHUP-LOGISTIC-v0.x",
+    "label": "Research Preview",
+    "public_probability_published": false,
+    "logit": -0.6169,
+    "p_home_win": 0.3505,
+    "lean": "AWAY",
+    "contributions": [
+      {
+        "key": "RUN_GAME",
+        "weight": 0.25,
+        "z": -1.531,
+        "term": -0.3827
+      },
+      {
+        "key": "OVERALL",
+        "weight": 0.45,
+        "z": -0.46,
+        "term": -0.207
+      },
+      {
+        "key": "PASS_RUSH",
+        "weight": 0.35,
+        "z": -0.265,
+        "term": -0.0927
+      },
+      {
+        "key": "PASSING",
+        "weight": 0.4,
+        "z": -0.211,
+        "term": -0.0844
+      }
+    ],
+    "note": "Heuristic matchup logistic on EDGE z-scores. Not BCW-RIDGE. Not a ship gate."
+  },
+  "paths": {
+    "home": "Stay efficient on early downs and avoid giving the visitor explosive answers.",
+    "away": "Attack via rushing offense vs run defense and keep the favorite from playing its preferred script."
+  },
+  "risks": [
+    "Turnovers: the projection assumes roughly normal luck; a +2 swing can flip a TB lean.",
+    "Injury / inactive surprise on either OL or QB would rewrite the pass-rush signal."
+  ],
+  "adjustment": {
+    "points_home": -1.45,
+    "label": "MATCHUP SIGNAL (unvalidated additive)",
+    "note": "Not fed into BCW-RIDGE-v0.1. Research Preview display only."
+  },
+  "events": [
+    {
+      "game_id": "espn:401872925",
+      "event_type": "other",
+      "headline": "Bucs QB Baker Mayfield: 'We're gonna shock a lot of people'",
+      "publisher": "ESPN",
+      "source_url": "https://www.espn.com/nfl/story/_/id/49650741/gonna-shock-lot-people",
+      "bucket": "availability",
+      "structured_fact": "Bucs QB Baker Mayfield: 'We're gonna shock a lot of people'",
+      "confidence": 0.45,
+      "tier": 2
+    },
+    {
+      "game_id": "espn:401872925",
+      "event_type": "market",
+      "headline": "Tampa Bay Buccaneers at Cincinnati Bengals - NFL Odds - Sep 13, 2026 - USA Today",
+      "publisher": "USA Today",
+      "source_url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE1wQW9JWkVEZVR6d2ZsY3pzQTNKaExBZjh1bjNXUTU5U2pCM0I5cmFrZGdma29wOEI5Ukt6dWRIN3JlWVZPZGZ3Rl9jQUhPSzVvTk4yVW0xaXdMam1HWVRXX2xTM2diZjNY?oc=5",
+      "bucket": "analysis",
+      "structured_fact": "Tampa Bay Buccaneers at Cincinnati Bengals - NFL Odds - Sep 13, 2026 - USA Today",
+      "confidence": 0.7,
+      "tier": 3
+    },
+    {
+      "game_id": "espn:401872925",
+      "event_type": "other",
+      "headline": "Bengals 2026 Opponent Preview: Tampa Bay Buccaneers - Bengals",
+      "publisher": "Bengals",
+      "source_url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQc0JxVzd3SmY4YjFmbUNoa2E0a0x0XzlBLURlWS1pMWxqTVU5NDZBR3kwNER1WGkyVGZzbl83bTlBaHNBaDljalJsaUFzNHlLOHB0c001c2FfYVBsdEZva0J1VHBmbzdfb2dwb2d5MFpSOWpPUW9OSkJ5Q2xBQ1NvdWZXaWNvQQ?oc=5",
+      "bucket": "analysis",
+      "structured_fact": "Bengals 2026 Opponent Preview: Tampa Bay Buccaneers - Bengals",
+      "confidence": 0.45,
+      "tier": 3
+    },
+    {
+      "game_id": "espn:401872925",
+      "event_type": "other",
+      "headline": "2026 Opponent Preview: Cincinnati Bengals, Week 1 - Tampa Bay Buccaneers",
+      "publisher": "Tampa Bay Buccaneers",
+      "source_url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPdnI2dmowTUhGRm55NDJNTTRZMzRhdzkzUWFUaERmOEREMVNpUnNYTkV0OFdjVHh6MGlFcXI5cVBJQ3lhNW12cFNRZ3JOalVVNlRnVlQ0Qi1DekZhUldtT3M4Nm0zRDF1T3pxekZNTjhZN0NOc0ZiQ0tsWkd2bGhXVHF6V1NjQQ?oc=5",
+      "bucket": "analysis",
+      "structured_fact": "2026 Opponent Preview: Cincinnati Bengals, Week 1 - Tampa Bay Buccaneers",
+      "confidence": 0.45,
+      "tier": 3
+    },
+    {
+      "game_id": "espn:401872925",
+      "event_type": "other",
+      "headline": "Bengals QB Joe Burrow 'trying to manifest' Super Bowl win this season: 'I'm tired of saying next year' - Yahoo Sports",
+      "publisher": "Yahoo Sports",
+      "source_url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxOdUJJS1pLNlJIaDg5aWdIbEdPZU1ORjlvTFc0dnJLSkZ3NlF4RE1zVzZQSjZibVZUcU1kb1FLN0ZOaHpfUFVwdlp1T1NhZ1NnYnJWZTVrY2VqYWhkVG1xZ1djajVEbHZrTWFOV1JtdEdaZTN3ajYtb0Juakp6NWsxcE1YYklzdGE3S3BvZzdGN2N0a1p6ei16XzdKQzRta1czSTFRLUZiMHZsRzBBenYzQVNveXJDYWxwbFNrYzZRcF9qX0JxaldjMGdNRkNjbmZnbWFOaWh4OUxsWkVQYjJVUGpn?oc=5",
+      "bucket": "availability",
+      "structured_fact": "Bengals QB Joe Burrow 'trying to manifest' Super Bowl win this season: 'I'm tired of saying next year' - Yahoo Sports",
+      "confidence": 0.45,
+      "tier": 3
+    },
+    {
+      "game_id": "espn:401872925",
+      "event_type": "other",
+      "headline": "Tampa Bay Buccaneers news: Vita Vea signs contract extension - Yahoo Sports",
+      "publisher": "Yahoo Sports",
+      "source_url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNbGVIRzdPY19WV2RGaXNRTnJkc1RtWkx0WWg5VDc5ZVZWWWhWdXJRb0UzSm5uN0JsNVU4QUNLTzUtSjhlMnFPTmxQelZrWFdFaUVxU0ZMWXVoWFR2SnRuNXc3VjZORk5ZUjJfYVo0NE9vNC01bFBEQVN4YWF4WWpaTmNOUlFWZw?oc=5",
+      "bucket": "update",
+      "structured_fact": "Tampa Bay Buccaneers news: Vita Vea signs contract extension - Yahoo Sports",
+      "confidence": 0.45,
+      "tier": 3
+    }
+  ],
+  "news_citations": [
+    {
+      "headline": "Bucs QB Baker Mayfield: 'We're gonna shock a lot of people'",
+      "url": "https://www.espn.com/nfl/story/_/id/49650741/gonna-shock-lot-people",
+      "publisher": "ESPN"
+    },
+    {
+      "headline": "Tampa Bay Buccaneers at Cincinnati Bengals - NFL Odds - Sep 13, 2026 - USA Today",
+      "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE1wQW9JWkVEZVR6d2ZsY3pzQTNKaExBZjh1bjNXUTU5U2pCM0I5cmFrZGdma29wOEI5Ukt6dWRIN3JlWVZPZGZ3Rl9jQUhPSzVvTk4yVW0xaXdMam1HWVRXX2xTM2diZjNY?oc=5",
+      "publisher": "USA Today"
+    },
+    {
+      "headline": "Bengals 2026 Opponent Preview: Tampa Bay Buccaneers - Bengals",
+      "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQc0JxVzd3SmY4YjFmbUNoa2E0a0x0XzlBLURlWS1pMWxqTVU5NDZBR3kwNER1WGkyVGZzbl83bTlBaHNBaDljalJsaUFzNHlLOHB0c001c2FfYVBsdEZva0J1VHBmbzdfb2dwb2d5MFpSOWpPUW9OSkJ5Q2xBQ1NvdWZXaWNvQQ?oc=5",
+      "publisher": "Bengals"
+    },
+    {
+      "headline": "2026 Opponent Preview: Cincinnati Bengals, Week 1 - Tampa Bay Buccaneers",
+      "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPdnI2dmowTUhGRm55NDJNTTRZMzRhdzkzUWFUaERmOEREMVNpUnNYTkV0OFdjVHh6MGlFcXI5cVBJQ3lhNW12cFNRZ3JOalVVNlRnVlQ0Qi1DekZhUldtT3M4Nm0zRDF1T3pxekZNTjhZN0NOc0ZiQ0tsWkd2bGhXVHF6V1NjQQ?oc=5",
+      "publisher": "Tampa Bay Buccaneers"
+    },
+    {
+      "headline": "Bengals QB Joe Burrow 'trying to manifest' Super Bowl win this season: 'I'm tired of saying next year' - Yahoo Sports",
+      "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxOdUJJS1pLNlJIaDg5aWdIbEdPZU1ORjlvTFc0dnJLSkZ3NlF4RE1zVzZQSjZibVZUcU1kb1FLN0ZOaHpfUFVwdlp1T1NhZ1NnYnJWZTVrY2VqYWhkVG1xZ1djajVEbHZrTWFOV1JtdEdaZTN3ajYtb0Juakp6NWsxcE1YYklzdGE3S3BvZzdGN2N0a1p6ei16XzdKQzRta1czSTFRLUZiMHZsRzBBenYzQVNveXJDYWxwbFNrYzZRcF9qX0JxaldjMGdNRkNjbmZnbWFOaWh4OUxsWkVQYjJVUGpn?oc=5",
+      "publisher": "Yahoo Sports"
+    },
+    {
+      "headline": "Tampa Bay Buccaneers news: Vita Vea signs contract extension - Yahoo Sports",
+      "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNbGVIRzdPY19WV2RGaXNRTnJkc1RtWkx0WWg5VDc5ZVZWWWhWdXJRb0UzSm5uN0JsNVU4QUNLTzUtSjhlMnFPTmxQelZrWFdFaUVxU0ZMWXVoWFR2SnRuNXc3VjZORk5ZUjJfYVo0NE9vNC01bFBEQVN4YWF4WWpaTmNOUlFWZw?oc=5",
+      "publisher": "Yahoo Sports"
+    }
+  ],
+  "summary_short": "BlueChip leans TB. Top signal: ++ TB \u2014 Rushing offense vs run defense",
+  "summary_full": "Tampa Bay Buccaneers at Cincinnati Bengals.\n\nBlueChip leans TB. ++ TB \u2014 Rushing offense vs run defense\n\nWhy TB has the edge\n- ++ TB \u2014 Rushing offense vs run defense\n- + TB \u2014 Overall efficiency\n\nBlueChip projection\nMarket: CIN -3.5\nBCW desk \u03bc (home): +1.9 (Research Preview)\nWin probability: unavailable until probability model passes validation.\n\nHow each team wins\nCIN: Stay efficient on early downs and avoid giving the visitor explosive answers.\nTB: Attack via rushing offense vs run defense and keep the favorite from playing its preferred script.\n\nWhat changed this week\n\u2022 Bucs QB Baker Mayfield: 'We're gonna shock a lot of people'\n\u2022 Tampa Bay Buccaneers at Cincinnati Bengals - NFL Odds - Sep 13, 2026 - USA Today\n\u2022 Bengals 2026 Opponent Preview: Tampa Bay Buccaneers - Bengals\n\u2022 2026 Opponent Preview: Cincinnati Bengals, Week 1 - Tampa Bay Buccaneers\n\nWhat could make BlueChip wrong?\n\u2022 Turnovers: the projection assumes roughly normal luck; a +2 swing can flip a TB lean.\n\u2022 Injury / inactive surprise on either OL or QB would rewrite the pass-rush signal.\n\nBottom line: TB has more ways to win on the current MATCHUP SIGNAL board, but football variance (turnovers, explosives) remains large around any margin estimate.",
+  "generation_model": "desk-template",
+  "generation_provider": "fallback",
+  "glossary": {
+    "EPA/play": "Expected Points Added estimates how much each play improves expected scoring position. Positive is good. A 5-yard gain on 3rd-and-3 is not treated like 5 yards on 3rd-and-20.",
+    "MATCHUP SIGNAL": "A descriptive strength\u00d7weakness edge. Not a published win probability and not fed into BCW-RIDGE-v0.1 until validated walk-forward.",
+    "Research Preview": "BlueChip quantitative layer that has not cleared the five public ship gates."
+  },
+  "levels": {
+    "slate": {
+      "lean": "TB",
+      "top_edges": [
+        "++ TB Run Game",
+        "+ TB Overall"
+      ],
+      "market": "CIN -3.5",
+      "mu": 1.9,
+      "confidence_pct": 56.2
+    }
+  }
+}

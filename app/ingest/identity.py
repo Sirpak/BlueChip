@@ -36,24 +36,116 @@ NFL_NAMES: dict[str, str] = {
     "LAC": "Los Angeles Chargers",
     "LAR": "Los Angeles Rams",
     "LV": "Las Vegas Raiders",
+    "LVR": "Las Vegas Raiders",
     "MIA": "Miami Dolphins",
     "MIN": "Minnesota Vikings",
     "NE": "New England Patriots",
     "NO": "New Orleans Saints",
     "NYG": "New York Giants",
     "NYJ": "New York Jets",
-    "OAK": "Oakland Raiders",
+    "OAK": "Las Vegas Raiders",
     "PHI": "Philadelphia Eagles",
     "PIT": "Pittsburgh Steelers",
-    "SD": "San Diego Chargers",
+    "SD": "Los Angeles Chargers",
     "SEA": "Seattle Seahawks",
     "SF": "San Francisco 49ers",
-    "STL": "St. Louis Rams",
+    "STL": "Los Angeles Rams",
     "TB": "Tampa Bay Buccaneers",
     "TEN": "Tennessee Titans",
-    "WAS": "Washington",
-    "WSH": "Washington",
+    "WAS": "Washington Commanders",
+    "WSH": "Washington Commanders",
 }
+
+# Historical / alternate abbreviations → current franchise id (32-team map).
+# Relocations stay the same franchise: STL/LA→LAR, OAK→LV, SD→LAC, etc.
+NFL_FRANCHISE_CANON: dict[str, str] = {
+    "STL": "LAR",
+    "LA": "LAR",
+    "OAK": "LV",
+    "LVR": "LV",
+    "SD": "LAC",
+    "JAC": "JAX",
+    "WSH": "WAS",
+}
+
+CURRENT_NFL_TEAMS: frozenset[str] = frozenset(
+    {
+        "ARI",
+        "ATL",
+        "BAL",
+        "BUF",
+        "CAR",
+        "CHI",
+        "CIN",
+        "CLE",
+        "DAL",
+        "DEN",
+        "DET",
+        "GB",
+        "HOU",
+        "IND",
+        "JAX",
+        "KC",
+        "LAC",
+        "LAR",
+        "LV",
+        "MIA",
+        "MIN",
+        "NE",
+        "NO",
+        "NYG",
+        "NYJ",
+        "PHI",
+        "PIT",
+        "SEA",
+        "SF",
+        "TB",
+        "TEN",
+        "WAS",
+    }
+)
+
+
+def canonicalize_nfl_team(abbr: str | None) -> str | None:
+    """Map any historical/alt abbr onto the current 32-team franchise code."""
+    if not abbr:
+        return None
+    key = str(abbr).strip().upper()
+    if key in {"", "NONE", "NAN", "NULL", "?"}:
+        return None
+    return NFL_FRANCHISE_CANON.get(key, key)
+
+
+def nfl_team_name(abbr: str | None) -> str:
+    if not abbr:
+        return "—"
+    canon = canonicalize_nfl_team(abbr) or abbr
+    return NFL_NAMES.get(canon, NFL_NAMES.get(str(abbr).upper(), str(abbr)))
+
+
+def nfl_franchise_sql(column: str) -> str:
+    """SQL CASE that folds historical NFL abbrs into the current franchise."""
+    parts = [f"CASE {column}"]
+    for old, new in sorted(NFL_FRANCHISE_CANON.items()):
+        parts.append(f"WHEN '{old}' THEN '{new}'")
+    parts.append(f"ELSE {column}")
+    parts.append("END")
+    return " ".join(parts)
+
+
+def canonicalize_nfl_columns(df: Any, columns: list[str]) -> Any:
+    """In-place franchise fold for pandas DataFrames used in features/ingest."""
+    import pandas as pd
+
+    if df is None or getattr(df, "empty", True):
+        return df
+    out = df
+    for col in columns:
+        if col not in out.columns:
+            continue
+        out[col] = out[col].map(lambda v: canonicalize_nfl_team(v) if pd.notna(v) else v)
+    return out
+
 
 
 def _now() -> datetime:
@@ -70,7 +162,13 @@ def ensure_leagues(session: Session) -> None:
 
 def seed_teams_from_games(session: Session) -> int:
     rows = session.execute(text("SELECT DISTINCT home_team AS abbr FROM games UNION SELECT DISTINCT away_team FROM games"))
-    abbrs = sorted({str(r[0]) for r in rows if r[0]})
+    abbrs = sorted(
+        {
+            canonicalize_nfl_team(str(r[0]))
+            for r in rows
+            if r[0] and canonicalize_nfl_team(str(r[0])) in CURRENT_NFL_TEAMS
+        }
+    )
     existing = set(session.scalars(select(Team.abbreviation).where(Team.league == "NFL")))
     created = 0
     for abbr in abbrs:
@@ -79,7 +177,7 @@ def seed_teams_from_games(session: Session) -> int:
         team = Team(
             league="NFL",
             abbreviation=abbr,
-            name=NFL_NAMES.get(abbr, abbr),
+            name=nfl_team_name(abbr),
             source="nflverse",
             source_id=abbr,
         )

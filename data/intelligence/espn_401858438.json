@@ -1,0 +1,220 @@
+{
+  "game_id": "espn:401858438",
+  "version": "BCW-GIP-v0.1",
+  "created_at": "2026-08-21T03:40:51.560831+00:00",
+  "generated_at": "2026-08-21T03:40:51.560831+00:00",
+  "information_cutoff": "2026-08-21T03:40:51.560831+00:00",
+  "source_set_hash": "a13497f5fab29887c3055cef",
+  "game": {
+    "game_id": "espn:401858438",
+    "league": "CFB",
+    "matchup": "WIS vs ND",
+    "home_team": "ND",
+    "away_team": "WIS",
+    "home_name": "Notre Dame Fighting Irish",
+    "away_name": "Wisconsin Badgers",
+    "spread_label": "ND -20.5",
+    "home_spread": -20.5,
+    "total_line": 47.5,
+    "week": 1
+  },
+  "lean_team": "ND",
+  "projection": {
+    "model_id": "BCW-DESK-STRENGTH-v0.x",
+    "method": "Market line + AP rank edge (CFB; no CFB Elo yet)",
+    "mu_home": 26.0,
+    "sigma": 15.0,
+    "p_home_win": 0.9554,
+    "p_home_cover": 0.6306,
+    "edge_vs_minus_110": 0.1067,
+    "model_lean": "HOME",
+    "model_lean_team": "ND",
+    "label": "Research Preview",
+    "public_probability_published": false,
+    "confidence_pct": 63.1
+  },
+  "matchup_edges": [
+    {
+      "key": "AP_RANK",
+      "title": "AP ranking gap",
+      "side": "HOME",
+      "side_team": "ND",
+      "strength": "MAJOR",
+      "home_stat": 30.0,
+      "away_stat": 4.0,
+      "mismatch_z": 3.25,
+      "fan_line": "+++ ND \u2014 AP ranking gap",
+      "label": "MATCHUP SIGNAL",
+      "why": "College prior until CFB EPA ingest. Lower AP rank is stronger."
+    }
+  ],
+  "headline_cards": [
+    {
+      "marks": "+++",
+      "key": "AP_RANK",
+      "title": "AP ranking gap",
+      "team": "ND",
+      "strength": "MAJOR",
+      "fan_line": "+++ ND \u2014 AP ranking gap",
+      "mismatch_z": 3.25,
+      "percentile_hint": "More extreme than ~95% of similar unit mismatches in a normal sample.",
+      "label": "MATCHUP SIGNAL",
+      "why": "College prior until CFB EPA ingest. Lower AP rank is stronger.",
+      "home_stat": 30.0,
+      "away_stat": 4.0
+    }
+  ],
+  "slate_edges": [
+    "+++ ND Ap Rank"
+  ],
+  "matchup_logistic": {
+    "model_id": "BCW-MATCHUP-LOGISTIC-v0.x",
+    "label": "Research Preview",
+    "public_probability_published": false,
+    "logit": 1.125,
+    "p_home_win": 0.7549,
+    "lean": "HOME",
+    "contributions": [
+      {
+        "key": "AP_RANK",
+        "weight": 0.3,
+        "z": 3.25,
+        "term": 0.975
+      }
+    ],
+    "note": "Heuristic matchup logistic on EDGE z-scores. Not BCW-RIDGE. Not a ship gate."
+  },
+  "paths": {
+    "home": "Lean on ap ranking gap. Convert that mismatch before the game becomes a coin-flip script.",
+    "away": "Shorten the game, win the line of scrimmage, and force the favorite into obvious passing downs."
+  },
+  "risks": [
+    "Turnovers: the projection assumes roughly normal luck; a +2 swing can flip a ND lean.",
+    "Injury / inactive surprise on either OL or QB would rewrite the pass-rush signal."
+  ],
+  "adjustment": {
+    "points_home": 1.6,
+    "label": "MATCHUP SIGNAL (unvalidated additive)",
+    "note": "Not fed into BCW-RIDGE-v0.1. Research Preview display only."
+  },
+  "events": [
+    {
+      "game_id": "espn:401858438",
+      "event_type": "other",
+      "headline": "PREVIEW: Irish Open Up 2026 Season At #22 Indiana - Notre Dame Fighting Irish",
+      "publisher": "Notre Dame Fighting Irish",
+      "source_url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQRG9OVU1QRXBkbGhYTjVjclh4VXVaS0ZzdUhaOGpsalZNb1BhTmxDQWRfS1pRM0RuenpnVG1LMVo3MGVBTkE4WTlINUF3dDJ1QVVWdUdSaDMzOG5jeVROcEc2YV9YVVJwamgtcEpqMFo2eDBHUkFoMXhUSU1oY0YyZjBfbw?oc=5",
+      "bucket": "analysis",
+      "structured_fact": "PREVIEW: Irish Open Up 2026 Season At #22 Indiana - Notre Dame Fighting Irish",
+      "confidence": 0.45,
+      "tier": 3
+    },
+    {
+      "game_id": "espn:401858438",
+      "event_type": "market",
+      "headline": "Notre Dame football odds, picks, predictions: Fighting Irish will reach championship heights - New York Post",
+      "publisher": "New York Post",
+      "source_url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQamFoWEdWR0ZDd0huWThFOVJiNGFzaEotQWdGdzYzVEpDNTktcDktbnFZc3ZWeEtGcDVnVEkzay15dUplMC1yWVY0UnMyYjRKRC1UV1R0SGdUQXBaeGFJNFJHdHJQYkhqRHF6TUhndXowZEZFWGxmY01CdGdydXBXZUJiUF9CZ2RzbW1FUjdSOHRYeWttclRHWjlTcVVLM1hhbDcwaC05MEQ2R3R6ekh0elZOSkM2UG44V0lv?oc=5",
+      "bucket": "analysis",
+      "structured_fact": "Notre Dame football odds, picks, predictions: Fighting Irish will reach championship heights - New York Post",
+      "confidence": 0.7,
+      "tier": 3
+    },
+    {
+      "game_id": "espn:401858438",
+      "event_type": "other",
+      "headline": "Notre Dame Fall camp preview: Biggest questions that the Fighting Irish defensive line needs to answer - A to Z Sports",
+      "publisher": "A to Z Sports",
+      "source_url": "https://news.google.com/rss/articles/CBMiqAJBVV95cUxPb2x3M2lBLWJMbDA3WFFtNVVMbktPek9nQllyVGdzWS10eE40dXBmM3R0cVUtaUpxZ29nY09TRFB4MjJjS3Fra2ZVYU9WMVlWc21XejRCdW5oMjlKU0JmazRyZmllNkgtQjk5OWs0a2huUThOa2g1VVBENnVBMkR0cTNodGVuWHk1V3lLWnFoTHVmWW1kTTNyaE9kd1VVSzM2Szg5UUl5UGYxd1lBbFV2TF9nN0VkX3VHUS1YdVc1QktEdHkzV3J5MTB6UE1FQl9zbnFIODR6WU45MFQzVU51ck5TQ3FuYU9leWExbTlQcHRVQU9LVFk0eldhUEFkczlqTGNjRHg0aHh1M0EzVmZQWmd4Zmd0NThleFA3bEZ0ejdxMnRSMjN4LQ?oc=5",
+      "bucket": "analysis",
+      "structured_fact": "Notre Dame Fall camp preview: Biggest questions that the Fighting Irish defensive line needs to answer - A to Z Sports",
+      "confidence": 0.45,
+      "tier": 3
+    },
+    {
+      "game_id": "espn:401858438",
+      "event_type": "other",
+      "headline": "Wisconsin practice stat shows they might not be ready for Notre Dame - Yahoo Sports",
+      "publisher": "Yahoo Sports",
+      "source_url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPRkxZaWpuQ3dGRVM3MXhLb25VSjhQazRBQS1xQk14STY0cVBpUkxHVkQ5U0hVa2R4OEdTMGExNW1hRUs3cEJhY2g3NzVjNTE3YzJobC1aVHl2NXBkSHdPRXIzR3dtS0plOVFKc2tERHVpUURJUURiQUd1Q2dfYThpTHdBNS1vYXU0N09kcw?oc=5",
+      "bucket": "update",
+      "structured_fact": "Wisconsin practice stat shows they might not be ready for Notre Dame - Yahoo Sports",
+      "confidence": 0.45,
+      "tier": 3
+    },
+    {
+      "game_id": "espn:401858438",
+      "event_type": "other",
+      "headline": "Notre Dame OL Augustine (toe), CB Smith (wrist) to have surgery",
+      "publisher": "ESPN",
+      "source_url": "https://www.espn.com/college-football/story/_/id/49590397/notre-dame-ol-augustine-toe-cb-smith-wrist-surgery",
+      "bucket": "availability",
+      "structured_fact": "Notre Dame OL Augustine (toe), CB Smith (wrist) to have surgery",
+      "confidence": 0.45,
+      "tier": 2
+    },
+    {
+      "game_id": "espn:401858438",
+      "event_type": "starter_change",
+      "headline": "Former Badgers QB wins starting job at ACC school - Yahoo Sports",
+      "publisher": "Yahoo Sports",
+      "source_url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPc2I2VXN1cFhHMGROc0RfREdxVnFmUUg2bS1jZllRY3h6aWZIVXFUWFRRa0ZpZklFS1dtV2FPaUJJNHhJcWoxalgyWEdfWEhKNU1nbVVXRVlVOVRjS0hhdFpwTkJqMGI4RkpiSWxIZERaUkdqV25oNXB3QnJodlQ0aEF6QU5leTQ?oc=5",
+      "bucket": "availability",
+      "structured_fact": "Former Badgers QB wins starting job at ACC school - Yahoo Sports",
+      "confidence": 0.7,
+      "tier": 3
+    }
+  ],
+  "news_citations": [
+    {
+      "headline": "PREVIEW: Irish Open Up 2026 Season At #22 Indiana - Notre Dame Fighting Irish",
+      "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQRG9OVU1QRXBkbGhYTjVjclh4VXVaS0ZzdUhaOGpsalZNb1BhTmxDQWRfS1pRM0RuenpnVG1LMVo3MGVBTkE4WTlINUF3dDJ1QVVWdUdSaDMzOG5jeVROcEc2YV9YVVJwamgtcEpqMFo2eDBHUkFoMXhUSU1oY0YyZjBfbw?oc=5",
+      "publisher": "Notre Dame Fighting Irish"
+    },
+    {
+      "headline": "Notre Dame football odds, picks, predictions: Fighting Irish will reach championship heights - New York Post",
+      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQamFoWEdWR0ZDd0huWThFOVJiNGFzaEotQWdGdzYzVEpDNTktcDktbnFZc3ZWeEtGcDVnVEkzay15dUplMC1yWVY0UnMyYjRKRC1UV1R0SGdUQXBaeGFJNFJHdHJQYkhqRHF6TUhndXowZEZFWGxmY01CdGdydXBXZUJiUF9CZ2RzbW1FUjdSOHRYeWttclRHWjlTcVVLM1hhbDcwaC05MEQ2R3R6ekh0elZOSkM2UG44V0lv?oc=5",
+      "publisher": "New York Post"
+    },
+    {
+      "headline": "Notre Dame Fall camp preview: Biggest questions that the Fighting Irish defensive line needs to answer - A to Z Sports",
+      "url": "https://news.google.com/rss/articles/CBMiqAJBVV95cUxPb2x3M2lBLWJMbDA3WFFtNVVMbktPek9nQllyVGdzWS10eE40dXBmM3R0cVUtaUpxZ29nY09TRFB4MjJjS3Fra2ZVYU9WMVlWc21XejRCdW5oMjlKU0JmazRyZmllNkgtQjk5OWs0a2huUThOa2g1VVBENnVBMkR0cTNodGVuWHk1V3lLWnFoTHVmWW1kTTNyaE9kd1VVSzM2Szg5UUl5UGYxd1lBbFV2TF9nN0VkX3VHUS1YdVc1QktEdHkzV3J5MTB6UE1FQl9zbnFIODR6WU45MFQzVU51ck5TQ3FuYU9leWExbTlQcHRVQU9LVFk0eldhUEFkczlqTGNjRHg0aHh1M0EzVmZQWmd4Zmd0NThleFA3bEZ0ejdxMnRSMjN4LQ?oc=5",
+      "publisher": "A to Z Sports"
+    },
+    {
+      "headline": "Wisconsin practice stat shows they might not be ready for Notre Dame - Yahoo Sports",
+      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPRkxZaWpuQ3dGRVM3MXhLb25VSjhQazRBQS1xQk14STY0cVBpUkxHVkQ5U0hVa2R4OEdTMGExNW1hRUs3cEJhY2g3NzVjNTE3YzJobC1aVHl2NXBkSHdPRXIzR3dtS0plOVFKc2tERHVpUURJUURiQUd1Q2dfYThpTHdBNS1vYXU0N09kcw?oc=5",
+      "publisher": "Yahoo Sports"
+    },
+    {
+      "headline": "Notre Dame OL Augustine (toe), CB Smith (wrist) to have surgery",
+      "url": "https://www.espn.com/college-football/story/_/id/49590397/notre-dame-ol-augustine-toe-cb-smith-wrist-surgery",
+      "publisher": "ESPN"
+    },
+    {
+      "headline": "Former Badgers QB wins starting job at ACC school - Yahoo Sports",
+      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPc2I2VXN1cFhHMGROc0RfREdxVnFmUUg2bS1jZllRY3h6aWZIVXFUWFRRa0ZpZklFS1dtV2FPaUJJNHhJcWoxalgyWEdfWEhKNU1nbVVXRVlVOVRjS0hhdFpwTkJqMGI4RkpiSWxIZERaUkdqV25oNXB3QnJodlQ0aEF6QU5leTQ?oc=5",
+      "publisher": "Yahoo Sports"
+    }
+  ],
+  "summary_short": "BlueChip leans ND. Top signal: +++ ND \u2014 AP ranking gap",
+  "summary_full": "Wisconsin Badgers at Notre Dame Fighting Irish.\n\nBlueChip leans ND. +++ ND \u2014 AP ranking gap\n\nWhy ND has the edge\n- +++ ND \u2014 AP ranking gap\n\nBlueChip projection\nMarket: ND -20.5\nBCW desk \u03bc (home): +26.0 (Research Preview)\nWin probability: unavailable until probability model passes validation.\n\nHow each team wins\nND: Lean on ap ranking gap. Convert that mismatch before the game becomes a coin-flip script.\nWIS: Shorten the game, win the line of scrimmage, and force the favorite into obvious passing downs.\n\nWhat changed this week\n\u2022 PREVIEW: Irish Open Up 2026 Season At #22 Indiana - Notre Dame Fighting Irish\n\u2022 Notre Dame football odds, picks, predictions: Fighting Irish will reach championship heights - New York Post\n\u2022 Notre Dame Fall camp preview: Biggest questions that the Fighting Irish defensive line needs to answer - A to Z Sports\n\u2022 Wisconsin practice stat shows they might not be ready for Notre Dame - Yahoo Sports\n\nWhat could make BlueChip wrong?\n\u2022 Turnovers: the projection assumes roughly normal luck; a +2 swing can flip a ND lean.\n\u2022 Injury / inactive surprise on either OL or QB would rewrite the pass-rush signal.\n\nBottom line: ND has more ways to win on the current MATCHUP SIGNAL board, but football variance (turnovers, explosives) remains large around any margin estimate.",
+  "generation_model": "desk-template",
+  "generation_provider": "fallback",
+  "glossary": {
+    "EPA/play": "Expected Points Added estimates how much each play improves expected scoring position. Positive is good. A 5-yard gain on 3rd-and-3 is not treated like 5 yards on 3rd-and-20.",
+    "MATCHUP SIGNAL": "A descriptive strength\u00d7weakness edge. Not a published win probability and not fed into BCW-RIDGE-v0.1 until validated walk-forward.",
+    "Research Preview": "BlueChip quantitative layer that has not cleared the five public ship gates."
+  },
+  "levels": {
+    "slate": {
+      "lean": "ND",
+      "top_edges": [
+        "+++ ND Ap Rank"
+      ],
+      "market": "ND -20.5",
+      "mu": 26.0,
+      "confidence_pct": 63.1
+    }
+  }
+}

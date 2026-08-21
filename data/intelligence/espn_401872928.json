@@ -1,0 +1,323 @@
+{
+  "game_id": "espn:401872928",
+  "version": "BCW-GIP-v0.1",
+  "created_at": "2026-08-21T03:40:31.907756+00:00",
+  "generated_at": "2026-08-21T03:41:30.622515+00:00",
+  "information_cutoff": "2026-08-21T03:41:30.622515+00:00",
+  "source_set_hash": "40ace390f4d285f022ea4609",
+  "game": {
+    "game_id": "espn:401872928",
+    "league": "NFL",
+    "matchup": "MIA @ LV",
+    "home_team": "LV",
+    "away_team": "MIA",
+    "home_name": "Las Vegas Raiders",
+    "away_name": "Miami Dolphins",
+    "spread_label": "LV -3.5",
+    "home_spread": -3.5,
+    "total_line": 40.5,
+    "week": 1
+  },
+  "lean_team": "MIA",
+  "projection": {
+    "model_id": "BCW-DESK-STRENGTH-v0.x",
+    "method": "0.65\u00b7Elo/25+HFA + 0.35\u00b7(SRS+HFA)",
+    "mu_home": -1.94,
+    "sigma": 13.5,
+    "p_home_win": 0.4283,
+    "p_home_cover": 0.33,
+    "edge_vs_minus_110": -0.1938,
+    "model_lean": "AWAY",
+    "model_lean_team": "MIA",
+    "label": "Research Preview",
+    "public_probability_published": false,
+    "confidence_pct": 67.0
+  },
+  "matchup_edges": [
+    {
+      "key": "PASSING",
+      "title": "Passing offense vs pass defense",
+      "side": "AWAY",
+      "side_team": "MIA",
+      "strength": "MAJOR",
+      "home_stat": -0.1457,
+      "away_stat": 0.3213,
+      "mismatch_z": -2.595,
+      "fan_line": "+++ MIA \u2014 Passing offense vs pass defense",
+      "label": "MATCHUP SIGNAL",
+      "why": "EPA/play on passes plus how much EPA the opposing defense allows. EPA weights plays by situation (3rd-and-3 \u2260 3rd-and-20)."
+    },
+    {
+      "key": "PASS_RUSH",
+      "title": "Pass rush / protection (proxy)",
+      "side": "AWAY",
+      "side_team": "MIA",
+      "strength": "STRONG",
+      "home_stat": -0.2567,
+      "away_stat": -0.1044,
+      "mismatch_z": -1.523,
+      "fan_line": "++ MIA \u2014 Pass rush / protection (proxy)",
+      "label": "MATCHUP SIGNAL",
+      "why": "Proxy until true pressure/PBWR data: lower pass EPA allowed \u21d2 stronger pass defense / rush. MATCHUP SIGNAL only \u2014 not a published win probability."
+    },
+    {
+      "key": "OVERALL",
+      "title": "Overall efficiency",
+      "side": "AWAY",
+      "side_team": "MIA",
+      "strength": "STRONG",
+      "home_stat": -0.3212,
+      "away_stat": -0.0294,
+      "mismatch_z": -1.459,
+      "fan_line": "++ MIA \u2014 Overall efficiency",
+      "label": "MATCHUP SIGNAL",
+      "why": "Net EPA/play (offense minus defense). Broad team-strength interaction."
+    },
+    {
+      "key": "RUN_GAME",
+      "title": "Rushing offense vs run defense",
+      "side": "AWAY",
+      "side_team": "MIA",
+      "strength": "STRONG",
+      "home_stat": -0.2595,
+      "away_stat": -0.1068,
+      "mismatch_z": -1.091,
+      "fan_line": "++ MIA \u2014 Rushing offense vs run defense",
+      "label": "MATCHUP SIGNAL",
+      "why": "Rush EPA/play vs EPA allowed on rushes \u2014 better than raw yards/carry."
+    }
+  ],
+  "headline_cards": [
+    {
+      "marks": "+++",
+      "key": "PASSING",
+      "title": "Passing offense vs pass defense",
+      "team": "MIA",
+      "strength": "MAJOR",
+      "fan_line": "+++ MIA \u2014 Passing offense vs pass defense",
+      "mismatch_z": -2.595,
+      "percentile_hint": "More extreme than ~95% of similar unit mismatches in a normal sample.",
+      "label": "MATCHUP SIGNAL",
+      "why": "EPA/play on passes plus how much EPA the opposing defense allows. EPA weights plays by situation (3rd-and-3 \u2260 3rd-and-20).",
+      "home_stat": -0.1457,
+      "away_stat": 0.3213
+    },
+    {
+      "marks": "++",
+      "key": "PASS_RUSH",
+      "title": "Pass rush / protection (proxy)",
+      "team": "MIA",
+      "strength": "STRONG",
+      "fan_line": "++ MIA \u2014 Pass rush / protection (proxy)",
+      "mismatch_z": -1.523,
+      "percentile_hint": "Clearly tilted versus a typical NFL/CFB unit matchup.",
+      "label": "MATCHUP SIGNAL",
+      "why": "Proxy until true pressure/PBWR data: lower pass EPA allowed \u21d2 stronger pass defense / rush. MATCHUP SIGNAL only \u2014 not a published win probability.",
+      "home_stat": -0.2567,
+      "away_stat": -0.1044
+    },
+    {
+      "marks": "++",
+      "key": "OVERALL",
+      "title": "Overall efficiency",
+      "team": "MIA",
+      "strength": "STRONG",
+      "fan_line": "++ MIA \u2014 Overall efficiency",
+      "mismatch_z": -1.459,
+      "percentile_hint": "Clearly tilted versus a typical NFL/CFB unit matchup.",
+      "label": "MATCHUP SIGNAL",
+      "why": "Net EPA/play (offense minus defense). Broad team-strength interaction.",
+      "home_stat": -0.3212,
+      "away_stat": -0.0294
+    },
+    {
+      "marks": "++",
+      "key": "RUN_GAME",
+      "title": "Rushing offense vs run defense",
+      "team": "MIA",
+      "strength": "STRONG",
+      "fan_line": "++ MIA \u2014 Rushing offense vs run defense",
+      "mismatch_z": -1.091,
+      "percentile_hint": "Clearly tilted versus a typical NFL/CFB unit matchup.",
+      "label": "MATCHUP SIGNAL",
+      "why": "Rush EPA/play vs EPA allowed on rushes \u2014 better than raw yards/carry.",
+      "home_stat": -0.2595,
+      "away_stat": -0.1068
+    }
+  ],
+  "slate_edges": [
+    "+++ MIA Passing",
+    "++ MIA Pass Rush",
+    "++ MIA Overall"
+  ],
+  "matchup_logistic": {
+    "model_id": "BCW-MATCHUP-LOGISTIC-v0.x",
+    "label": "Research Preview",
+    "public_probability_published": false,
+    "logit": -2.3503,
+    "p_home_win": 0.087,
+    "lean": "AWAY",
+    "contributions": [
+      {
+        "key": "PASSING",
+        "weight": 0.4,
+        "z": -2.595,
+        "term": -1.038
+      },
+      {
+        "key": "PASS_RUSH",
+        "weight": 0.35,
+        "z": -1.523,
+        "term": -0.533
+      },
+      {
+        "key": "OVERALL",
+        "weight": 0.45,
+        "z": -1.459,
+        "term": -0.6566
+      },
+      {
+        "key": "RUN_GAME",
+        "weight": 0.25,
+        "z": -1.091,
+        "term": -0.2727
+      }
+    ],
+    "note": "Heuristic matchup logistic on EDGE z-scores. Not BCW-RIDGE. Not a ship gate."
+  },
+  "paths": {
+    "home": "Stay efficient on early downs and avoid giving the visitor explosive answers.",
+    "away": "Attack via passing offense vs pass defense and keep the favorite from playing its preferred script."
+  },
+  "risks": [
+    "Turnovers: the projection assumes roughly normal luck; a +2 swing can flip a MIA lean.",
+    "Injury / inactive surprise on either OL or QB would rewrite the pass-rush signal."
+  ],
+  "adjustment": {
+    "points_home": -4.6,
+    "label": "MATCHUP SIGNAL (unvalidated additive)",
+    "note": "Not fed into BCW-RIDGE-v0.1. Research Preview display only."
+  },
+  "events": [
+    {
+      "game_id": "espn:401872928",
+      "event_type": "injury",
+      "headline": "Raiders cornerback carted off field in Houston with knee injury - Las Vegas Review-Journal",
+      "publisher": "Las Vegas Review-Journal",
+      "source_url": "https://news.google.com/rss/articles/CBMi_wJBVV95cUxNajRSdkROV1ZFQVE3Uzc1d1ptLUdNN1o3bGhCMmVyWjRERm4zcFloUlpaRHpwSlFrSVZpYVZReVJvQW5SQ1AwcmtkNXlXLTVXR2tDcUF4SGVwQUUyTWtLc1R3UlFWUkhOMDdoazQ1Z1h1YjB2cTFKN2xSMkpKSXhLeU9oVlc3S2lxR2F4NkhST25XUFNwVHlhREo3clEyZzR6bHhpQ0c2OFlFWEZ1UkRsWUNPQndoUGY3bkFRb05hSGJ5T2RqbmJKcEktay1ZUVBQUjhDSHp6LVF1dzFnOW5MYU9ZZlAyZzFHcjdnbTlMVjB3LWVDOFdIUFBIejVfRWI5X3M3V25MMVhBNGdsdThlZGQ2VGVXemxsWEt2OFNGSzROMW0tanhNX0lBRjlfUnp3Tk5SYmJ2WWs2ekdrODJ3Z01lV3RQdU5lS0xCc2JleTFtTHo2TEN0VlNxUU42R2ZabFFJaGdnU3dtdWd1aGtiTTIwU01DbGYyY0J6M2Jjbw?oc=5",
+      "bucket": "availability",
+      "structured_fact": "Raiders cornerback carted off field in Houston with knee injury - Las Vegas Review-Journal",
+      "confidence": 0.7,
+      "tier": 3
+    },
+    {
+      "game_id": "espn:401872928",
+      "event_type": "other",
+      "headline": "Fernando Mendoza throws a pick-6, struggles in 1st half of Raiders' 22-20 preseason win over Texans",
+      "publisher": "ESPN",
+      "source_url": "http://www.espn.com/nfl/recap?gameId=401873286",
+      "bucket": "analysis",
+      "structured_fact": "Fernando Mendoza throws a pick-6, struggles in 1st half of Raiders' 22-20 preseason win over Texans",
+      "confidence": 0.45,
+      "tier": 2
+    },
+    {
+      "game_id": "espn:401872928",
+      "event_type": "other",
+      "headline": "Miami Dolphins news: Cameron Goode position battle, Chris Bell returns, training camp injury updates - The Phinsider",
+      "publisher": "The Phinsider",
+      "source_url": "https://news.google.com/rss/articles/CBMijgJBVV95cUxObklQMmVXcEpNN2hjellOS01qMWVfRDlVWlNKakY1aGxqMXU0c2F1YlgwMWh5U3RMN2ZjT3pTYkRCVENjbzJpSUl5dDhYS2l4bGVkR2hwcXRlUkxwaUl6elJ4R1J0Y2JaZXhjNFNaQm51clNiLXNGY2pPVEg1NjM1V2lPOFhyOHgxUFExX1h1UjNBZHlTR0o3UXI2M0RNaFItcjhNTF9jSjRIV0RwTEp0MFFUa0JKdWdtUTZRaXkyRE9CT1pTR25kWUw5cEh3SjdYVU9DeUhIaWQybThmU1hFdlg1cmQ0eE40X29TbE9pckRaS083WUhuaER4eFZFcWtXdWxPWGlwYmhhWkpuaGc?oc=5",
+      "bucket": "availability",
+      "structured_fact": "Miami Dolphins news: Cameron Goode position battle, Chris Bell returns, training camp injury updates - The Phinsider",
+      "confidence": 0.45,
+      "tier": 3
+    },
+    {
+      "game_id": "espn:401872928",
+      "event_type": "other",
+      "headline": "Dolphins Update Zach Sieler\u2019s Status for Week 1 Game vs. Raiders - Yahoo Sports",
+      "publisher": "Yahoo Sports",
+      "source_url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPTGZWUGVoOFhQNnZ2UElaM3RPRk51cXNsQ1BHb0lpLXFyQ243OXlkZ2RBQUlBZ0ZDZV9EOE9RQ0h5d1RxQlI2MUVQYk1QMEhHSWx6c05GRVBiR21mVTg5VXVkbWNCQmtwMVZKeV94WlM2ajRHUlRENjBTQVY2cE85R2tnOXJwSW1H?oc=5",
+      "bucket": "availability",
+      "structured_fact": "Dolphins Update Zach Sieler\u2019s Status for Week 1 Game vs. Raiders - Yahoo Sports",
+      "confidence": 0.45,
+      "tier": 3
+    },
+    {
+      "game_id": "espn:401872928",
+      "event_type": "other",
+      "headline": "Raiders CB Chigozie Anusiem carted off with leg injury - NBC Sports",
+      "publisher": "NBC Sports",
+      "source_url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOSkRXMU1Cbnk5aU9NSW9OOEQzQ2NoZWFWTWJZbFRRMzFoR1hZd1NlVjZoVW1IdmhUZTBxcVhaOFktNzRYY1VlLUNlVDhVaTNxNkFkbFE0cXZFSGxhYVRseHo4aDItU2pGbTdFLVNSTFg4SEE3a0dhTDEtV0M1UThueWw5TW1RUmd1V3VSWjlnLVIwaFlkWndZVVJIdEt3YWZKLW1YcVJ4M21yUmlQRUw5WlI5ZTh4MXM?oc=5",
+      "bucket": "availability",
+      "structured_fact": "Raiders CB Chigozie Anusiem carted off with leg injury - NBC Sports",
+      "confidence": 0.45,
+      "tier": 3
+    },
+    {
+      "game_id": "espn:401872928",
+      "event_type": "other",
+      "headline": "Raiders DB surrounded by kneeling teammates, carted off with leg injury - Yahoo Sports",
+      "publisher": "Yahoo Sports",
+      "source_url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQWTl2bFhpQWtIUl9TLVd2UlQ1V1A1bGJuMG9lNnMtNElldXpZZkxmUnlPLXplaW1rM3JYV3ZmdDhmNGloNWR1bEtjS2hpd3JjdDVlNUg3Sk9jMFNmb0trUlBJLXY1UjlXWUNjOVNDRUZDWWF6ajluVFpFVmlDa0NFbVZjTUtRcWI3NWZSRmFCR3lianc?oc=5",
+      "bucket": "availability",
+      "structured_fact": "Raiders DB surrounded by kneeling teammates, carted off with leg injury - Yahoo Sports",
+      "confidence": 0.45,
+      "tier": 3
+    }
+  ],
+  "news_citations": [
+    {
+      "headline": "Raiders cornerback carted off field in Houston with knee injury - Las Vegas Review-Journal",
+      "url": "https://news.google.com/rss/articles/CBMi_wJBVV95cUxNajRSdkROV1ZFQVE3Uzc1d1ptLUdNN1o3bGhCMmVyWjRERm4zcFloUlpaRHpwSlFrSVZpYVZReVJvQW5SQ1AwcmtkNXlXLTVXR2tDcUF4SGVwQUUyTWtLc1R3UlFWUkhOMDdoazQ1Z1h1YjB2cTFKN2xSMkpKSXhLeU9oVlc3S2lxR2F4NkhST25XUFNwVHlhREo3clEyZzR6bHhpQ0c2OFlFWEZ1UkRsWUNPQndoUGY3bkFRb05hSGJ5T2RqbmJKcEktay1ZUVBQUjhDSHp6LVF1dzFnOW5MYU9ZZlAyZzFHcjdnbTlMVjB3LWVDOFdIUFBIejVfRWI5X3M3V25MMVhBNGdsdThlZGQ2VGVXemxsWEt2OFNGSzROMW0tanhNX0lBRjlfUnp3Tk5SYmJ2WWs2ekdrODJ3Z01lV3RQdU5lS0xCc2JleTFtTHo2TEN0VlNxUU42R2ZabFFJaGdnU3dtdWd1aGtiTTIwU01DbGYyY0J6M2Jjbw?oc=5",
+      "publisher": "Las Vegas Review-Journal"
+    },
+    {
+      "headline": "Fernando Mendoza throws a pick-6, struggles in 1st half of Raiders' 22-20 preseason win over Texans",
+      "url": "http://www.espn.com/nfl/recap?gameId=401873286",
+      "publisher": "ESPN"
+    },
+    {
+      "headline": "Miami Dolphins news: Cameron Goode position battle, Chris Bell returns, training camp injury updates - The Phinsider",
+      "url": "https://news.google.com/rss/articles/CBMijgJBVV95cUxObklQMmVXcEpNN2hjellOS01qMWVfRDlVWlNKakY1aGxqMXU0c2F1YlgwMWh5U3RMN2ZjT3pTYkRCVENjbzJpSUl5dDhYS2l4bGVkR2hwcXRlUkxwaUl6elJ4R1J0Y2JaZXhjNFNaQm51clNiLXNGY2pPVEg1NjM1V2lPOFhyOHgxUFExX1h1UjNBZHlTR0o3UXI2M0RNaFItcjhNTF9jSjRIV0RwTEp0MFFUa0JKdWdtUTZRaXkyRE9CT1pTR25kWUw5cEh3SjdYVU9DeUhIaWQybThmU1hFdlg1cmQ0eE40X29TbE9pckRaS083WUhuaER4eFZFcWtXdWxPWGlwYmhhWkpuaGc?oc=5",
+      "publisher": "The Phinsider"
+    },
+    {
+      "headline": "Dolphins Update Zach Sieler\u2019s Status for Week 1 Game vs. Raiders - Yahoo Sports",
+      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPTGZWUGVoOFhQNnZ2UElaM3RPRk51cXNsQ1BHb0lpLXFyQ243OXlkZ2RBQUlBZ0ZDZV9EOE9RQ0h5d1RxQlI2MUVQYk1QMEhHSWx6c05GRVBiR21mVTg5VXVkbWNCQmtwMVZKeV94WlM2ajRHUlRENjBTQVY2cE85R2tnOXJwSW1H?oc=5",
+      "publisher": "Yahoo Sports"
+    },
+    {
+      "headline": "Raiders CB Chigozie Anusiem carted off with leg injury - NBC Sports",
+      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOSkRXMU1Cbnk5aU9NSW9OOEQzQ2NoZWFWTWJZbFRRMzFoR1hZd1NlVjZoVW1IdmhUZTBxcVhaOFktNzRYY1VlLUNlVDhVaTNxNkFkbFE0cXZFSGxhYVRseHo4aDItU2pGbTdFLVNSTFg4SEE3a0dhTDEtV0M1UThueWw5TW1RUmd1V3VSWjlnLVIwaFlkWndZVVJIdEt3YWZKLW1YcVJ4M21yUmlQRUw5WlI5ZTh4MXM?oc=5",
+      "publisher": "NBC Sports"
+    },
+    {
+      "headline": "Raiders DB surrounded by kneeling teammates, carted off with leg injury - Yahoo Sports",
+      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQWTl2bFhpQWtIUl9TLVd2UlQ1V1A1bGJuMG9lNnMtNElldXpZZkxmUnlPLXplaW1rM3JYV3ZmdDhmNGloNWR1bEtjS2hpd3JjdDVlNUg3Sk9jMFNmb0trUlBJLXY1UjlXWUNjOVNDRUZDWWF6ajluVFpFVmlDa0NFbVZjTUtRcWI3NWZSRmFCR3lianc?oc=5",
+      "publisher": "Yahoo Sports"
+    }
+  ],
+  "summary_short": "BlueChip leans MIA. Top signal: +++ MIA \u2014 Passing offense vs pass defense",
+  "summary_full": "Miami Dolphins at Las Vegas Raiders.\n\nBlueChip leans MIA. +++ MIA \u2014 Passing offense vs pass defense\n\nWhy MIA has the edge\n- +++ MIA \u2014 Passing offense vs pass defense\n- ++ MIA \u2014 Pass rush / protection (proxy)\n- ++ MIA \u2014 Overall efficiency\n\nBlueChip projection\nMarket: LV -3.5\nBCW desk \u03bc (home): -1.9 (Research Preview)\nWin probability: unavailable until probability model passes validation.\n\nHow each team wins\nLV: Stay efficient on early downs and avoid giving the visitor explosive answers.\nMIA: Attack via passing offense vs pass defense and keep the favorite from playing its preferred script.\n\nWhat changed this week\n\u2022 Raiders cornerback carted off field in Houston with knee injury - Las Vegas Review-Journal\n\u2022 Fernando Mendoza throws a pick-6, struggles in 1st half of Raiders' 22-20 preseason win over Texans\n\u2022 Miami Dolphins news: Cameron Goode position battle, Chris Bell returns, training camp injury updates - The Phinsider\n\u2022 Dolphins Update Zach Sieler\u2019s Status for Week 1 Game vs. Raiders - Yahoo Sports\n\nWhat could make BlueChip wrong?\n\u2022 Turnovers: the projection assumes roughly normal luck; a +2 swing can flip a MIA lean.\n\u2022 Injury / inactive surprise on either OL or QB would rewrite the pass-rush signal.\n\nBottom line: MIA has more ways to win on the current MATCHUP SIGNAL board, but football variance (turnovers, explosives) remains large around any margin estimate.",
+  "generation_model": "desk-template",
+  "generation_provider": "fallback",
+  "glossary": {
+    "EPA/play": "Expected Points Added estimates how much each play improves expected scoring position. Positive is good. A 5-yard gain on 3rd-and-3 is not treated like 5 yards on 3rd-and-20.",
+    "MATCHUP SIGNAL": "A descriptive strength\u00d7weakness edge. Not a published win probability and not fed into BCW-RIDGE-v0.1 until validated walk-forward.",
+    "Research Preview": "BlueChip quantitative layer that has not cleared the five public ship gates."
+  },
+  "levels": {
+    "slate": {
+      "lean": "MIA",
+      "top_edges": [
+        "+++ MIA Passing",
+        "++ MIA Pass Rush",
+        "++ MIA Overall"
+      ],
+      "market": "LV -3.5",
+      "mu": -1.94,
+      "confidence_pct": 67.0
+    }
+  }
+}

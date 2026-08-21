@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
+import { Hint } from '../components/Hint'
 import { MODELS } from '../data/catalog'
 
 const FILTERS = ['NFL', 'CFB', 'Model', 'Season', 'Spread range', 'Favorite / underdog', 'Home / away'] as const
@@ -103,9 +104,12 @@ export function BacktestsPage() {
       <section className="card">
         <h2>Methodology</h2>
         <p>
-          Season walk-forward inside <strong>2009–2022</strong>. No random CV. Compare every model to Market 0 (nflverse
-          close). Metrics: Brier, log loss, MAE, RMSE, ATS vs close, n, calibration buckets.{' '}
-          <strong>No ROI, units, or bankroll</strong> at v0.1 launch.
+          Season <Hint t="walk-forward">walk-forward</Hint> inside <strong>2009–2022</strong>. No random CV. Compare
+          every model to <Hint t="market-0">Market 0</Hint> (closing line). Metrics:{' '}
+          <Hint t="brier">Brier</Hint>, <Hint t="log-loss">log loss</Hint>, <Hint t="mae">MAE</Hint>,{' '}
+          <Hint t="rmse">RMSE</Hint>, <Hint t="ats">ATS</Hint> vs close, <Hint t="n">n</Hint>,{' '}
+          <Hint t="calibration">calibration</Hint>. <strong>No ROI, units, or bankroll</strong> at v0.1. Glossary:{' '}
+          <Link to="/about">About</Link>.
         </p>
         {lb?.available && (
           <p className="muted">

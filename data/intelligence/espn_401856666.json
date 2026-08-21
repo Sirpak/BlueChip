@@ -1,0 +1,220 @@
+{
+  "game_id": "espn:401856666",
+  "version": "BCW-GIP-v0.1",
+  "created_at": "2026-08-21T03:43:17.528215+00:00",
+  "generated_at": "2026-08-21T03:43:17.528215+00:00",
+  "information_cutoff": "2026-08-21T03:43:17.528215+00:00",
+  "source_set_hash": "a2ab45b337ceb51cd8f865a0",
+  "game": {
+    "game_id": "espn:401856666",
+    "league": "CFB",
+    "matchup": "FUR @ TENN",
+    "home_team": "TENN",
+    "away_team": "FUR",
+    "home_name": "Tennessee Volunteers",
+    "away_name": "Furman Paladins",
+    "spread_label": "TENN -46.5",
+    "home_spread": -46.5,
+    "total_line": 66.5,
+    "week": 1
+  },
+  "lean_team": "TENN",
+  "projection": {
+    "model_id": "BCW-DESK-STRENGTH-v0.x",
+    "method": "Market line + AP rank edge (CFB; no CFB Elo yet)",
+    "mu_home": 48.0,
+    "sigma": 15.0,
+    "p_home_win": 0.9992,
+    "p_home_cover": 0.5266,
+    "edge_vs_minus_110": 0.0028,
+    "model_lean": "HOME",
+    "model_lean_team": "TENN",
+    "label": "Research Preview",
+    "public_probability_published": false,
+    "confidence_pct": 52.7
+  },
+  "matchup_edges": [
+    {
+      "key": "AP_RANK",
+      "title": "AP ranking gap",
+      "side": "HOME",
+      "side_team": "TENN",
+      "strength": "STRONG",
+      "home_stat": 30.0,
+      "away_stat": 20.0,
+      "mismatch_z": 1.25,
+      "fan_line": "++ TENN \u2014 AP ranking gap",
+      "label": "MATCHUP SIGNAL",
+      "why": "College prior until CFB EPA ingest. Lower AP rank is stronger."
+    }
+  ],
+  "headline_cards": [
+    {
+      "marks": "++",
+      "key": "AP_RANK",
+      "title": "AP ranking gap",
+      "team": "TENN",
+      "strength": "STRONG",
+      "fan_line": "++ TENN \u2014 AP ranking gap",
+      "mismatch_z": 1.25,
+      "percentile_hint": "Clearly tilted versus a typical NFL/CFB unit matchup.",
+      "label": "MATCHUP SIGNAL",
+      "why": "College prior until CFB EPA ingest. Lower AP rank is stronger.",
+      "home_stat": 30.0,
+      "away_stat": 20.0
+    }
+  ],
+  "slate_edges": [
+    "++ TENN Ap Rank"
+  ],
+  "matchup_logistic": {
+    "model_id": "BCW-MATCHUP-LOGISTIC-v0.x",
+    "label": "Research Preview",
+    "public_probability_published": false,
+    "logit": 0.525,
+    "p_home_win": 0.6283,
+    "lean": "HOME",
+    "contributions": [
+      {
+        "key": "AP_RANK",
+        "weight": 0.3,
+        "z": 1.25,
+        "term": 0.375
+      }
+    ],
+    "note": "Heuristic matchup logistic on EDGE z-scores. Not BCW-RIDGE. Not a ship gate."
+  },
+  "paths": {
+    "home": "Lean on ap ranking gap. Convert that mismatch before the game becomes a coin-flip script.",
+    "away": "Shorten the game, win the line of scrimmage, and force the favorite into obvious passing downs."
+  },
+  "risks": [
+    "Turnovers: the projection assumes roughly normal luck; a +2 swing can flip a TENN lean.",
+    "Injury / inactive surprise on either OL or QB would rewrite the pass-rush signal."
+  ],
+  "adjustment": {
+    "points_home": 1.0,
+    "label": "MATCHUP SIGNAL (unvalidated additive)",
+    "note": "Not fed into BCW-RIDGE-v0.1. Research Preview display only."
+  },
+  "events": [
+    {
+      "game_id": "espn:401856666",
+      "event_type": "other",
+      "headline": "A New Leader Emerges in Tennessee Quarterback Battle - Yahoo Sports",
+      "publisher": "Yahoo Sports",
+      "source_url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNSGxwSldkOEV2MjBrcDlsazh3VktqNWFPQWpRSjhMSm9pV1Q5SWlwVV83bGFodjVsVTNsZFVFUy1VbEdma2VVRmF4eTkxTHNLV2pOVW5YR0pFWFV5eDllU04tb05mNlR3dGswTVZldDc4SFE0SjdWRGRlUi1VZkpOeU5EcElvVU5fVS1xMFYyQVExUmVQLXpR?oc=5",
+      "bucket": "availability",
+      "structured_fact": "A New Leader Emerges in Tennessee Quarterback Battle - Yahoo Sports",
+      "confidence": 0.45,
+      "tier": 3
+    },
+    {
+      "game_id": "espn:401856666",
+      "event_type": "starter_change",
+      "headline": "National college football insider drops his \u2018high confidence' prediction for Tennessee Vols starting quarterback battle - Yahoo Sports",
+      "publisher": "Yahoo Sports",
+      "source_url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxOaUZHRGY2RWs3THFuVzFnVVdFd1VDc2MybXl6TGh5MFp4TGZ4b0RnWWkwRnR0UV9IRlJJTEk1dnNSak5JcHk4RDhHMVIxYW90ekE3UE1kN0xFaGFRaXpEYjJjZHZkYmVQT2didVlnXzNvRlRNZ3o2b2FESEdMeTZqRVBvRGZwZ2NkdFBncmxSdktaQQ?oc=5",
+      "bucket": "availability",
+      "structured_fact": "National college football insider drops his \u2018high confidence' prediction for Tennessee Vols starting quarterback battle - Yahoo Sports",
+      "confidence": 0.7,
+      "tier": 3
+    },
+    {
+      "game_id": "espn:401856666",
+      "event_type": "other",
+      "headline": "2028 four-star quarterback Kaden Craft commits to Tennessee",
+      "publisher": "ESPN",
+      "source_url": "https://www.espn.com/college-football/story/_/id/49641600/2028-four-star-quarterback-kaden-craft-commits-tennessee",
+      "bucket": "availability",
+      "structured_fact": "2028 four-star quarterback Kaden Craft commits to Tennessee",
+      "confidence": 0.45,
+      "tier": 2
+    },
+    {
+      "game_id": "espn:401856666",
+      "event_type": "other",
+      "headline": "Analyzing Tennessee's QB battle ahead of Week 1",
+      "publisher": "ESPN",
+      "source_url": "https://www.espn.com/video/clip/_/id/49664293/analyzing-tennessee-qb-battle-ahead-week-1",
+      "bucket": "availability",
+      "structured_fact": "Analyzing Tennessee's QB battle ahead of Week 1",
+      "confidence": 0.45,
+      "tier": 2
+    },
+    {
+      "game_id": "espn:401856666",
+      "event_type": "other",
+      "headline": "Tennessee Football Lands New Transfer Portal Addition Following Massive Rule Change - Yahoo Sports",
+      "publisher": "Yahoo Sports",
+      "source_url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQSHBSbTFPWV9xUnJoNlBSc0lKYXFxeG03YS1uZ0M1NFFQNzdzYTVGRlpMNXpPMmxuV2wzalNycks2emN2MjY4ZWxIZ0Jzb3AzSWJ1ZHZ5YXJneTg0QlZjRGZ1Z01oaWJOTDJWYjVoUHREelR6SDR6MEZ2MklqVTh1Qk42TXlXbnBnLXJTV3BtN2lNOGM?oc=5",
+      "bucket": "availability",
+      "structured_fact": "Tennessee Football Lands New Transfer Portal Addition Following Massive Rule Change - Yahoo Sports",
+      "confidence": 0.45,
+      "tier": 3
+    },
+    {
+      "game_id": "espn:401856666",
+      "event_type": "market",
+      "headline": "Experts release early Tennessee Football betting preview: Furman opener odds & Kalshi SEC Futures - Rocky Top Insider",
+      "publisher": "Rocky Top Insider",
+      "source_url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNaFJmOU53Yldyd0VST3pBbm1xMllBdXpJS0xJSUJuRDhmUzVjYWo1ckV4a1RBNU5HTm0xOTZXRm1Ka0I1M1o5bmtQb1RiNHJOV0NUOWRNb1MyM1BKZlpiZTZldE1EWUVyRlNVTlVuTnJ5a2JUT25LVEEzNVhSbHltUk42RXNNVDBjZGJ2VzVPX0hnXzBzc2N1dUFXOEdQMWs?oc=5",
+      "bucket": "analysis",
+      "structured_fact": "Experts release early Tennessee Football betting preview: Furman opener odds & Kalshi SEC Futures - Rocky Top Insider",
+      "confidence": 0.7,
+      "tier": 3
+    }
+  ],
+  "news_citations": [
+    {
+      "headline": "A New Leader Emerges in Tennessee Quarterback Battle - Yahoo Sports",
+      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNSGxwSldkOEV2MjBrcDlsazh3VktqNWFPQWpRSjhMSm9pV1Q5SWlwVV83bGFodjVsVTNsZFVFUy1VbEdma2VVRmF4eTkxTHNLV2pOVW5YR0pFWFV5eDllU04tb05mNlR3dGswTVZldDc4SFE0SjdWRGRlUi1VZkpOeU5EcElvVU5fVS1xMFYyQVExUmVQLXpR?oc=5",
+      "publisher": "Yahoo Sports"
+    },
+    {
+      "headline": "National college football insider drops his \u2018high confidence' prediction for Tennessee Vols starting quarterback battle - Yahoo Sports",
+      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxOaUZHRGY2RWs3THFuVzFnVVdFd1VDc2MybXl6TGh5MFp4TGZ4b0RnWWkwRnR0UV9IRlJJTEk1dnNSak5JcHk4RDhHMVIxYW90ekE3UE1kN0xFaGFRaXpEYjJjZHZkYmVQT2didVlnXzNvRlRNZ3o2b2FESEdMeTZqRVBvRGZwZ2NkdFBncmxSdktaQQ?oc=5",
+      "publisher": "Yahoo Sports"
+    },
+    {
+      "headline": "2028 four-star quarterback Kaden Craft commits to Tennessee",
+      "url": "https://www.espn.com/college-football/story/_/id/49641600/2028-four-star-quarterback-kaden-craft-commits-tennessee",
+      "publisher": "ESPN"
+    },
+    {
+      "headline": "Analyzing Tennessee's QB battle ahead of Week 1",
+      "url": "https://www.espn.com/video/clip/_/id/49664293/analyzing-tennessee-qb-battle-ahead-week-1",
+      "publisher": "ESPN"
+    },
+    {
+      "headline": "Tennessee Football Lands New Transfer Portal Addition Following Massive Rule Change - Yahoo Sports",
+      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQSHBSbTFPWV9xUnJoNlBSc0lKYXFxeG03YS1uZ0M1NFFQNzdzYTVGRlpMNXpPMmxuV2wzalNycks2emN2MjY4ZWxIZ0Jzb3AzSWJ1ZHZ5YXJneTg0QlZjRGZ1Z01oaWJOTDJWYjVoUHREelR6SDR6MEZ2MklqVTh1Qk42TXlXbnBnLXJTV3BtN2lNOGM?oc=5",
+      "publisher": "Yahoo Sports"
+    },
+    {
+      "headline": "Experts release early Tennessee Football betting preview: Furman opener odds & Kalshi SEC Futures - Rocky Top Insider",
+      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNaFJmOU53Yldyd0VST3pBbm1xMllBdXpJS0xJSUJuRDhmUzVjYWo1ckV4a1RBNU5HTm0xOTZXRm1Ka0I1M1o5bmtQb1RiNHJOV0NUOWRNb1MyM1BKZlpiZTZldE1EWUVyRlNVTlVuTnJ5a2JUT25LVEEzNVhSbHltUk42RXNNVDBjZGJ2VzVPX0hnXzBzc2N1dUFXOEdQMWs?oc=5",
+      "publisher": "Rocky Top Insider"
+    }
+  ],
+  "summary_short": "BlueChip leans TENN. Top signal: ++ TENN \u2014 AP ranking gap",
+  "summary_full": "Furman Paladins at Tennessee Volunteers.\n\nBlueChip leans TENN. ++ TENN \u2014 AP ranking gap\n\nWhy TENN has the edge\n- ++ TENN \u2014 AP ranking gap\n\nBlueChip projection\nMarket: TENN -46.5\nBCW desk \u03bc (home): +48.0 (Research Preview)\nWin probability: unavailable until probability model passes validation.\n\nHow each team wins\nTENN: Lean on ap ranking gap. Convert that mismatch before the game becomes a coin-flip script.\nFUR: Shorten the game, win the line of scrimmage, and force the favorite into obvious passing downs.\n\nWhat changed this week\n\u2022 A New Leader Emerges in Tennessee Quarterback Battle - Yahoo Sports\n\u2022 National college football insider drops his \u2018high confidence' prediction for Tennessee Vols starting quarterback battle - Yahoo Sports\n\u2022 2028 four-star quarterback Kaden Craft commits to Tennessee\n\u2022 Analyzing Tennessee's QB battle ahead of Week 1\n\nWhat could make BlueChip wrong?\n\u2022 Turnovers: the projection assumes roughly normal luck; a +2 swing can flip a TENN lean.\n\u2022 Injury / inactive surprise on either OL or QB would rewrite the pass-rush signal.\n\nBottom line: TENN has more ways to win on the current MATCHUP SIGNAL board, but football variance (turnovers, explosives) remains large around any margin estimate.",
+  "generation_model": "desk-template",
+  "generation_provider": "fallback",
+  "glossary": {
+    "EPA/play": "Expected Points Added estimates how much each play improves expected scoring position. Positive is good. A 5-yard gain on 3rd-and-3 is not treated like 5 yards on 3rd-and-20.",
+    "MATCHUP SIGNAL": "A descriptive strength\u00d7weakness edge. Not a published win probability and not fed into BCW-RIDGE-v0.1 until validated walk-forward.",
+    "Research Preview": "BlueChip quantitative layer that has not cleared the five public ship gates."
+  },
+  "levels": {
+    "slate": {
+      "lean": "TENN",
+      "top_edges": [
+        "++ TENN Ap Rank"
+      ],
+      "market": "TENN -46.5",
+      "mu": 48.0,
+      "confidence_pct": 52.7
+    }
+  }
+}

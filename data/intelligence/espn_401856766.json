@@ -1,0 +1,180 @@
+{
+  "game_id": "espn:401856766",
+  "version": "BCW-GIP-v0.1",
+  "created_at": "2026-08-21T03:43:28.300513+00:00",
+  "generated_at": "2026-08-21T03:43:28.300513+00:00",
+  "information_cutoff": "2026-08-21T03:43:28.300513+00:00",
+  "source_set_hash": "4593453b52944569689cbc2f",
+  "game": {
+    "game_id": "espn:401856766",
+    "league": "CFB",
+    "matchup": "UNC vs TCU",
+    "home_team": "TCU",
+    "away_team": "UNC",
+    "home_name": "TCU Horned Frogs",
+    "away_name": "North Carolina Tar Heels",
+    "spread_label": "TCU -7.5",
+    "home_spread": -7.5,
+    "total_line": 47.5,
+    "week": 1
+  },
+  "lean_team": "UNC",
+  "projection": {
+    "model_id": "BCW-DESK-STRENGTH-v0.x",
+    "method": "Market line + AP rank edge (CFB; no CFB Elo yet)",
+    "mu_home": 7.5,
+    "sigma": 15.0,
+    "p_home_win": 0.6796,
+    "p_home_cover": 0.4867,
+    "edge_vs_minus_110": -0.0371,
+    "model_lean": "AWAY",
+    "model_lean_team": "UNC",
+    "label": "Research Preview",
+    "public_probability_published": false,
+    "confidence_pct": 51.3
+  },
+  "matchup_edges": [],
+  "headline_cards": [],
+  "slate_edges": [],
+  "matchup_logistic": {
+    "model_id": "BCW-MATCHUP-LOGISTIC-v0.x",
+    "label": "Research Preview",
+    "public_probability_published": false,
+    "logit": 0.15,
+    "p_home_win": 0.5374,
+    "lean": "HOME",
+    "contributions": [],
+    "note": "Heuristic matchup logistic on EDGE z-scores. Not BCW-RIDGE. Not a ship gate."
+  },
+  "paths": {
+    "home": "Stay efficient on early downs and avoid giving the visitor explosive answers.",
+    "away": "Shorten the game, win the line of scrimmage, and force the favorite into obvious passing downs."
+  },
+  "risks": [
+    "Turnovers: the projection assumes roughly normal luck; a +2 swing can flip a UNC lean.",
+    "Injury / inactive surprise on either OL or QB would rewrite the pass-rush signal."
+  ],
+  "adjustment": {
+    "points_home": 0.0,
+    "label": "MATCHUP SIGNAL (unvalidated additive)",
+    "note": "Not fed into BCW-RIDGE-v0.1. Research Preview display only."
+  },
+  "events": [
+    {
+      "game_id": "espn:401856766",
+      "event_type": "other",
+      "headline": "Sources: Billy Edwards Jr. to start at QB for North Carolina",
+      "publisher": "ESPN",
+      "source_url": "https://www.espn.com/college-football/story/_/id/49651014/sources-billy-edwards-jr-start-qb-north-carolina",
+      "bucket": "availability",
+      "structured_fact": "Sources: Billy Edwards Jr. to start at QB for North Carolina",
+      "confidence": 0.45,
+      "tier": 2
+    },
+    {
+      "game_id": "espn:401856766",
+      "event_type": "starter_change",
+      "headline": "North Carolina football news: Tar Heels tabbing Billy Edwards Jr. as starting QB - Yahoo Sports",
+      "publisher": "Yahoo Sports",
+      "source_url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNcVVkXzFYU0pTRlFNMWd5eF9vc3EwUFNGTUpMVGdXQWVIREtDZ1FZdE5RSENYZjFZZGZHNUxhTUp4RjFtOTBLazhNdW9zdkpFSkE4WUtnXzllNEJvTzdORHBxejRTeTdxRWo4Nk9EYlpRazh1ZGZkY0NNem9xTHZPVGdNVEFLeWZS?oc=5",
+      "bucket": "availability",
+      "structured_fact": "North Carolina football news: Tar Heels tabbing Billy Edwards Jr. as starting QB - Yahoo Sports",
+      "confidence": 0.7,
+      "tier": 3
+    },
+    {
+      "game_id": "espn:401856766",
+      "event_type": "starter_change",
+      "headline": "North Carolina names starting quarterback for TCU game - Yahoo Sports",
+      "publisher": "Yahoo Sports",
+      "source_url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQNHhGVVlhWDY5Q3N2bWV2WXB3NTR4TFIyalVJZE5zUkRkbVNKNzZHTEI5MHBWMDZheVJja2tLVW9YVlQ1NlRWREdkakk5d2ZBMmFxVnZrcEQzLU1Idi1jWERKV0FrcUhnamtkWWNkenhqUnY2WnY1eExycDZ2QUdueGtDV2xaUkltWHdORDlqVEhMY1dv?oc=5",
+      "bucket": "availability",
+      "structured_fact": "North Carolina names starting quarterback for TCU game - Yahoo Sports",
+      "confidence": 0.7,
+      "tier": 3
+    },
+    {
+      "game_id": "espn:401856766",
+      "event_type": "other",
+      "headline": "Why North Carolina\u2019s Quarterback Debate Is Far From Over - Sports Illustrated",
+      "publisher": "Sports Illustrated",
+      "source_url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxOaDFseU1tc25fbngzRVlXYzdpYWl5dGdKUEh5eEVBNzFfejFUblk2VjI2cFV6cXV6Mk1NTkRHNkxKcG1ZSWV1cDF5clF4R3c0VFpWaUpRaXFTYmJQWWRMaEhnVmFUZndVNXNqM0xfT0NibGtEekNQMDVQMzJkVkRTRDI4TQ?oc=5",
+      "bucket": "availability",
+      "structured_fact": "Why North Carolina\u2019s Quarterback Debate Is Far From Over - Sports Illustrated",
+      "confidence": 0.45,
+      "tier": 3
+    },
+    {
+      "game_id": "espn:401856766",
+      "event_type": "starter_change",
+      "headline": "Bill Belichick names Billy Edwards Jr. as North Carolina\u2019s starting QB: Reports - The New York Times",
+      "publisher": "The New York Times",
+      "source_url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQYTdfaTZCQVN2N0trckVhdVZycUVSSDJKV3l6Y0hrbTJpNDl4RXdfZXhpR1hLOGRnNTZiaXA4WDRxT0NQTEk4VXlLZ0FZZGtwZ1dGWVI5SmxuY25fOURQNHZXWjcxNUVodmY0UnpSSkNZY19adWtId213ci1EZi1jMDQtQVRYbnhqbWZFeERJakpIQ1dxUjhPLVRTTnp3VTZVS0dOVEtqRmU0a2lC?oc=5",
+      "bucket": "availability",
+      "structured_fact": "Bill Belichick names Billy Edwards Jr. as North Carolina\u2019s starting QB: Reports - The New York Times",
+      "confidence": 0.7,
+      "tier": 3
+    },
+    {
+      "game_id": "espn:401856766",
+      "event_type": "market",
+      "headline": "North Carolina vs. TCU odds: 2026 college football picks for Dublin, Ireland, Week 0 predictions from proven model - SportsLine",
+      "publisher": "SportsLine",
+      "source_url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxPMGszbFRTODdsSi1yV21vVWRJT2JUZVJtdEhNazNLRWcyQ2NWMEFUcFZiVlR4TWVaWUFoR1lUMWNnSkMwWkZZS1dpN2N2MmRTR1FCc25sUDNlSVVYcjJhZUNRUDVtTHRYNHczcUdvT3E1YzF4MHlONkVSWDhzZUlXN21tUDZ3VmNHcy1LY0NrZmgxMTNWcG9ZcEZ1ZmRrRDJLSG9YMThzcGMxbEZqZWx6M1ROZTIyQkZKekE2SDNCTFF0NFJya2JDazdaZ0k0X05WS1g5MHhuUTRTOWhGazluOA?oc=5",
+      "bucket": "analysis",
+      "structured_fact": "North Carolina vs. TCU odds: 2026 college football picks for Dublin, Ireland, Week 0 predictions from proven model - SportsLine",
+      "confidence": 0.7,
+      "tier": 3
+    }
+  ],
+  "news_citations": [
+    {
+      "headline": "Sources: Billy Edwards Jr. to start at QB for North Carolina",
+      "url": "https://www.espn.com/college-football/story/_/id/49651014/sources-billy-edwards-jr-start-qb-north-carolina",
+      "publisher": "ESPN"
+    },
+    {
+      "headline": "North Carolina football news: Tar Heels tabbing Billy Edwards Jr. as starting QB - Yahoo Sports",
+      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNcVVkXzFYU0pTRlFNMWd5eF9vc3EwUFNGTUpMVGdXQWVIREtDZ1FZdE5RSENYZjFZZGZHNUxhTUp4RjFtOTBLazhNdW9zdkpFSkE4WUtnXzllNEJvTzdORHBxejRTeTdxRWo4Nk9EYlpRazh1ZGZkY0NNem9xTHZPVGdNVEFLeWZS?oc=5",
+      "publisher": "Yahoo Sports"
+    },
+    {
+      "headline": "North Carolina names starting quarterback for TCU game - Yahoo Sports",
+      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQNHhGVVlhWDY5Q3N2bWV2WXB3NTR4TFIyalVJZE5zUkRkbVNKNzZHTEI5MHBWMDZheVJja2tLVW9YVlQ1NlRWREdkakk5d2ZBMmFxVnZrcEQzLU1Idi1jWERKV0FrcUhnamtkWWNkenhqUnY2WnY1eExycDZ2QUdueGtDV2xaUkltWHdORDlqVEhMY1dv?oc=5",
+      "publisher": "Yahoo Sports"
+    },
+    {
+      "headline": "Why North Carolina\u2019s Quarterback Debate Is Far From Over - Sports Illustrated",
+      "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxOaDFseU1tc25fbngzRVlXYzdpYWl5dGdKUEh5eEVBNzFfejFUblk2VjI2cFV6cXV6Mk1NTkRHNkxKcG1ZSWV1cDF5clF4R3c0VFpWaUpRaXFTYmJQWWRMaEhnVmFUZndVNXNqM0xfT0NibGtEekNQMDVQMzJkVkRTRDI4TQ?oc=5",
+      "publisher": "Sports Illustrated"
+    },
+    {
+      "headline": "Bill Belichick names Billy Edwards Jr. as North Carolina\u2019s starting QB: Reports - The New York Times",
+      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQYTdfaTZCQVN2N0trckVhdVZycUVSSDJKV3l6Y0hrbTJpNDl4RXdfZXhpR1hLOGRnNTZiaXA4WDRxT0NQTEk4VXlLZ0FZZGtwZ1dGWVI5SmxuY25fOURQNHZXWjcxNUVodmY0UnpSSkNZY19adWtId213ci1EZi1jMDQtQVRYbnhqbWZFeERJakpIQ1dxUjhPLVRTTnp3VTZVS0dOVEtqRmU0a2lC?oc=5",
+      "publisher": "The New York Times"
+    },
+    {
+      "headline": "North Carolina vs. TCU odds: 2026 college football picks for Dublin, Ireland, Week 0 predictions from proven model - SportsLine",
+      "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxPMGszbFRTODdsSi1yV21vVWRJT2JUZVJtdEhNazNLRWcyQ2NWMEFUcFZiVlR4TWVaWUFoR1lUMWNnSkMwWkZZS1dpN2N2MmRTR1FCc25sUDNlSVVYcjJhZUNRUDVtTHRYNHczcUdvT3E1YzF4MHlONkVSWDhzZUlXN21tUDZ3VmNHcy1LY0NrZmgxMTNWcG9ZcEZ1ZmRrRDJLSG9YMThzcGMxbEZqZWx6M1ROZTIyQkZKekE2SDNCTFF0NFJya2JDazdaZ0k0X05WS1g5MHhuUTRTOWhGazluOA?oc=5",
+      "publisher": "SportsLine"
+    }
+  ],
+  "summary_short": "BlueChip leans UNC. Top signal: Overall team strength is the clearest signal.",
+  "summary_full": "North Carolina Tar Heels at TCU Horned Frogs.\n\nBlueChip leans UNC. Overall team strength is the clearest signal.\n\nWhy UNC has the edge\n\n\nBlueChip projection\nMarket: TCU -7.5\nBCW desk \u03bc (home): +7.5 (Research Preview)\nWin probability: unavailable until probability model passes validation.\n\nHow each team wins\nTCU: Stay efficient on early downs and avoid giving the visitor explosive answers.\nUNC: Shorten the game, win the line of scrimmage, and force the favorite into obvious passing downs.\n\nWhat changed this week\n\u2022 Sources: Billy Edwards Jr. to start at QB for North Carolina\n\u2022 North Carolina football news: Tar Heels tabbing Billy Edwards Jr. as starting QB - Yahoo Sports\n\u2022 North Carolina names starting quarterback for TCU game - Yahoo Sports\n\u2022 Why North Carolina\u2019s Quarterback Debate Is Far From Over - Sports Illustrated\n\nWhat could make BlueChip wrong?\n\u2022 Turnovers: the projection assumes roughly normal luck; a +2 swing can flip a UNC lean.\n\u2022 Injury / inactive surprise on either OL or QB would rewrite the pass-rush signal.\n\nBottom line: UNC has more ways to win on the current MATCHUP SIGNAL board, but football variance (turnovers, explosives) remains large around any margin estimate.",
+  "generation_model": "desk-template",
+  "generation_provider": "fallback",
+  "glossary": {
+    "EPA/play": "Expected Points Added estimates how much each play improves expected scoring position. Positive is good. A 5-yard gain on 3rd-and-3 is not treated like 5 yards on 3rd-and-20.",
+    "MATCHUP SIGNAL": "A descriptive strength\u00d7weakness edge. Not a published win probability and not fed into BCW-RIDGE-v0.1 until validated walk-forward.",
+    "Research Preview": "BlueChip quantitative layer that has not cleared the five public ship gates."
+  },
+  "levels": {
+    "slate": {
+      "lean": "UNC",
+      "top_edges": [],
+      "market": "TCU -7.5",
+      "mu": 7.5,
+      "confidence_pct": 51.3
+    }
+  }
+}

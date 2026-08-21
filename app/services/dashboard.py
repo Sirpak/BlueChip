@@ -9,6 +9,8 @@ from typing import Any
 from sqlalchemy import text
 from sqlalchemy.orm import Session
 
+from app.ingest.identity import nfl_franchise_sql
+
 
 @dataclass(frozen=True)
 class SeasonCounts:
@@ -135,9 +137,11 @@ def weekly_scoring(session: Session, season: int) -> list[dict[str, Any]]:
 
 
 def _epa_maps(session: Session, season: int) -> tuple[dict[str, Any], dict[str, Any]]:
-    off_sql = """
+    team_expr = nfl_franchise_sql("posteam")
+    def_expr = nfl_franchise_sql("defteam")
+    off_sql = f"""
         SELECT
-            posteam AS team,
+            {team_expr} AS team,
             AVG(epa) AS off_epa,
             AVG(CASE WHEN pass_attempt = 1 THEN epa END) AS pass_epa,
             AVG(CASE WHEN rush_attempt = 1 THEN epa END) AS rush_epa
@@ -147,17 +151,17 @@ def _epa_maps(session: Session, season: int) -> tuple[dict[str, Any], dict[str, 
           AND posteam IS NOT NULL
           AND play_type IN ('pass', 'run')
           AND epa IS NOT NULL
-        GROUP BY posteam
+        GROUP BY {team_expr}
     """
-    def_sql = """
-        SELECT defteam AS team, AVG(epa) AS def_epa
+    def_sql = f"""
+        SELECT {def_expr} AS team, AVG(epa) AS def_epa
         FROM plays
         WHERE season = :season
           AND season_type = 'REG'
           AND defteam IS NOT NULL
           AND play_type IN ('pass', 'run')
           AND epa IS NOT NULL
-        GROUP BY defteam
+        GROUP BY {def_expr}
     """
     offense = {
         r.team: {
@@ -177,10 +181,12 @@ def _epa_maps(session: Session, season: int) -> tuple[dict[str, Any], dict[str, 
 
 
 def standings(session: Session, season: int) -> list[Standing]:
-    sql = """
+    home_expr = nfl_franchise_sql("home_team")
+    away_expr = nfl_franchise_sql("away_team")
+    sql = f"""
         WITH teams AS (
             SELECT
-                home_team AS team,
+                {home_expr} AS team,
                 CASE WHEN home_score > away_score THEN 1 ELSE 0 END AS w,
                 CASE WHEN home_score < away_score THEN 1 ELSE 0 END AS l,
                 CASE WHEN home_score = away_score THEN 1 ELSE 0 END AS t,
@@ -192,7 +198,7 @@ def standings(session: Session, season: int) -> list[Standing]:
               AND home_score IS NOT NULL
             UNION ALL
             SELECT
-                away_team,
+                {away_expr},
                 CASE WHEN away_score > home_score THEN 1 ELSE 0 END,
                 CASE WHEN away_score < home_score THEN 1 ELSE 0 END,
                 CASE WHEN away_score = home_score THEN 1 ELSE 0 END,

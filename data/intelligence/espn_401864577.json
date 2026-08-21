@@ -1,0 +1,180 @@
+{
+  "game_id": "espn:401864577",
+  "version": "BCW-GIP-v0.1",
+  "created_at": "2026-08-21T03:43:36.180078+00:00",
+  "generated_at": "2026-08-21T03:43:36.180078+00:00",
+  "information_cutoff": "2026-08-21T03:43:36.180078+00:00",
+  "source_set_hash": "a884649829f68a853f973572",
+  "game": {
+    "game_id": "espn:401864577",
+    "league": "CFB",
+    "matchup": "JVST @ NDSU",
+    "home_team": "NDSU",
+    "away_team": "JVST",
+    "home_name": "North Dakota State Bison",
+    "away_name": "Jacksonville State Gamecocks",
+    "spread_label": "NDSU -7.0",
+    "home_spread": -7.0,
+    "total_line": 46.5,
+    "week": 1
+  },
+  "lean_team": "JVST",
+  "projection": {
+    "model_id": "BCW-DESK-STRENGTH-v0.x",
+    "method": "Market line + AP rank edge (CFB; no CFB Elo yet)",
+    "mu_home": 7.0,
+    "sigma": 15.0,
+    "p_home_win": 0.6676,
+    "p_home_cover": 0.4867,
+    "edge_vs_minus_110": -0.0371,
+    "model_lean": "AWAY",
+    "model_lean_team": "JVST",
+    "label": "Research Preview",
+    "public_probability_published": false,
+    "confidence_pct": 51.3
+  },
+  "matchup_edges": [],
+  "headline_cards": [],
+  "slate_edges": [],
+  "matchup_logistic": {
+    "model_id": "BCW-MATCHUP-LOGISTIC-v0.x",
+    "label": "Research Preview",
+    "public_probability_published": false,
+    "logit": 0.15,
+    "p_home_win": 0.5374,
+    "lean": "HOME",
+    "contributions": [],
+    "note": "Heuristic matchup logistic on EDGE z-scores. Not BCW-RIDGE. Not a ship gate."
+  },
+  "paths": {
+    "home": "Stay efficient on early downs and avoid giving the visitor explosive answers.",
+    "away": "Shorten the game, win the line of scrimmage, and force the favorite into obvious passing downs."
+  },
+  "risks": [
+    "Turnovers: the projection assumes roughly normal luck; a +2 swing can flip a JVST lean.",
+    "Injury / inactive surprise on either OL or QB would rewrite the pass-rush signal."
+  ],
+  "adjustment": {
+    "points_home": 0.0,
+    "label": "MATCHUP SIGNAL (unvalidated additive)",
+    "note": "Not fed into BCW-RIDGE-v0.1. Research Preview display only."
+  },
+  "events": [
+    {
+      "game_id": "espn:401864577",
+      "event_type": "market",
+      "headline": "Jacksonville State vs. North Dakota State odds, line: 2026 college football picks, Week 0 predictions from proven model - SportsLine",
+      "publisher": "SportsLine",
+      "source_url": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxOVFdSTUlBOWZ6U3FDeDl0WG1NOEFtZG02N2pRZzdJSktSeHlVWTlZeWlVeGZoWGtlRXBjVVk5WWtoX3J1U25EVHBkdkdmS3padmhfZmk3d2NjdlV1aUduSTJOV2JGNVc3OFVqS0gzYzhXVmxUY0ZYQm1XZWpRdVZaTmJVanRQcFFJRUhDQm9zOHRIaGxtS0hDQTI3ajhiYkJuaGVTNVc4YnRJRTFiXzFIWXlfMzBsSHNJdWJqMVhrbGZZbWtSYkxtaURVck1sY1FwUkNlSVhGMWdwRC0xMTVpT1JqSFF1S1k?oc=5",
+      "bucket": "analysis",
+      "structured_fact": "Jacksonville State vs. North Dakota State odds, line: 2026 college football picks, Week 0 predictions from proven model - SportsLine",
+      "confidence": 0.7,
+      "tier": 3
+    },
+    {
+      "game_id": "espn:401864577",
+      "event_type": "other",
+      "headline": "2026 GameDay preview: Jacksonville State Gamecocks - timesdaily.com",
+      "publisher": "timesdaily.com",
+      "source_url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxPbGx5TUNUSk9aVVhLUjdtemRVYW9FT0lsa015emhJTXEwUWlCM2Eyblpjcng2cEFjX0xsQmdmbTU3QlE0OGRPN1pSbXlSbzkxQ3o5OV80OWJvNlV6ZHpucGxaMVZfLUFlOEhuTG5scUpwZUxBS1Zwd0JnblZpcjRKYzdTMmtqZU50NlhXZk1MaWY3dlVqTHlEMDZuNC1NWEI4YlNqYVZRaXVoTkxmRFhPcmNpcmVvWTB6SGZHQXI2RW1CaXFrZGo1TXhSbGlVdw?oc=5",
+      "bucket": "analysis",
+      "structured_fact": "2026 GameDay preview: Jacksonville State Gamecocks - timesdaily.com",
+      "confidence": 0.45,
+      "tier": 3
+    },
+    {
+      "game_id": "espn:401864577",
+      "event_type": "other",
+      "headline": "Eagles select QB Cole Payton on Day 3 of NFL draft",
+      "publisher": "ESPN",
+      "source_url": "https://www.espn.com/nfl/story/_/id/48592933/eagles-select-qb-cole-payton-day-3-nfl-draft",
+      "bucket": "availability",
+      "structured_fact": "Eagles select QB Cole Payton on Day 3 of NFL draft",
+      "confidence": 0.45,
+      "tier": 2
+    },
+    {
+      "game_id": "espn:401864577",
+      "event_type": "other",
+      "headline": "North Dakota State Bison Football Preview 2026 - College Football News",
+      "publisher": "College Football News",
+      "source_url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPTUFJamJ1RjZ3UXNWMU9rNEFmQVJtcGdQd282Sk1hNkVGZjV4cTdvTExjdmFDaEM5X3NsclVJQmJBRmlkZlJwaVVXV2NVd1R0cGU2Vk1Id2JRdlhOR1hfRkdMbTVkZnMwbVNaSnhLX2tHbTRzVlJIOTAwN2dvSGJzRGh1cVRyZDZMdVlFaXlMMUcyc1gyMWE2RG5nSQ?oc=5",
+      "bucket": "analysis",
+      "structured_fact": "North Dakota State Bison Football Preview 2026 - College Football News",
+      "confidence": 0.45,
+      "tier": 3
+    },
+    {
+      "game_id": "espn:401864577",
+      "event_type": "other",
+      "headline": "Jacksonville State star RB Cam Cook plans to enter portal",
+      "publisher": "ESPN",
+      "source_url": "https://www.espn.com/college-football/story/_/id/47408021/jacksonville-state-star-rb-cam-cook-plans-enter-portal",
+      "bucket": "availability",
+      "structured_fact": "Jacksonville State star RB Cam Cook plans to enter portal",
+      "confidence": 0.45,
+      "tier": 2
+    },
+    {
+      "game_id": "espn:401864577",
+      "event_type": "other",
+      "headline": "North Dakota State Football Preview: Lofty Expectations for 2026 FBS Debut - betmgm.com",
+      "publisher": "betmgm.com",
+      "source_url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQQXdmWFh3ckdxTkFGVFV5VVlUUXpJeHRzVV96X0VEbDJGbm01ZEt1NnBHa0lJb0xkV0JJTmZYa1kwdUpRNlAtUUlzbVQtN2s1anNDVGZQeldUUG9oSmduY1lKdWctc04tRDE0SzZoMjg5VmdZX3pQSDUtbWktanFlLVRrdTUwMFlJVmVBZ3J5NWVCSDctc212ZEtSME16MHJPU2haNkNzdkxjTVdycU4tVmZYWnQ?oc=5",
+      "bucket": "analysis",
+      "structured_fact": "North Dakota State Football Preview: Lofty Expectations for 2026 FBS Debut - betmgm.com",
+      "confidence": 0.45,
+      "tier": 3
+    }
+  ],
+  "news_citations": [
+    {
+      "headline": "Jacksonville State vs. North Dakota State odds, line: 2026 college football picks, Week 0 predictions from proven model - SportsLine",
+      "url": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxOVFdSTUlBOWZ6U3FDeDl0WG1NOEFtZG02N2pRZzdJSktSeHlVWTlZeWlVeGZoWGtlRXBjVVk5WWtoX3J1U25EVHBkdkdmS3padmhfZmk3d2NjdlV1aUduSTJOV2JGNVc3OFVqS0gzYzhXVmxUY0ZYQm1XZWpRdVZaTmJVanRQcFFJRUhDQm9zOHRIaGxtS0hDQTI3ajhiYkJuaGVTNVc4YnRJRTFiXzFIWXlfMzBsSHNJdWJqMVhrbGZZbWtSYkxtaURVck1sY1FwUkNlSVhGMWdwRC0xMTVpT1JqSFF1S1k?oc=5",
+      "publisher": "SportsLine"
+    },
+    {
+      "headline": "2026 GameDay preview: Jacksonville State Gamecocks - timesdaily.com",
+      "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxPbGx5TUNUSk9aVVhLUjdtemRVYW9FT0lsa015emhJTXEwUWlCM2Eyblpjcng2cEFjX0xsQmdmbTU3QlE0OGRPN1pSbXlSbzkxQ3o5OV80OWJvNlV6ZHpucGxaMVZfLUFlOEhuTG5scUpwZUxBS1Zwd0JnblZpcjRKYzdTMmtqZU50NlhXZk1MaWY3dlVqTHlEMDZuNC1NWEI4YlNqYVZRaXVoTkxmRFhPcmNpcmVvWTB6SGZHQXI2RW1CaXFrZGo1TXhSbGlVdw?oc=5",
+      "publisher": "timesdaily.com"
+    },
+    {
+      "headline": "Eagles select QB Cole Payton on Day 3 of NFL draft",
+      "url": "https://www.espn.com/nfl/story/_/id/48592933/eagles-select-qb-cole-payton-day-3-nfl-draft",
+      "publisher": "ESPN"
+    },
+    {
+      "headline": "North Dakota State Bison Football Preview 2026 - College Football News",
+      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPTUFJamJ1RjZ3UXNWMU9rNEFmQVJtcGdQd282Sk1hNkVGZjV4cTdvTExjdmFDaEM5X3NsclVJQmJBRmlkZlJwaVVXV2NVd1R0cGU2Vk1Id2JRdlhOR1hfRkdMbTVkZnMwbVNaSnhLX2tHbTRzVlJIOTAwN2dvSGJzRGh1cVRyZDZMdVlFaXlMMUcyc1gyMWE2RG5nSQ?oc=5",
+      "publisher": "College Football News"
+    },
+    {
+      "headline": "Jacksonville State star RB Cam Cook plans to enter portal",
+      "url": "https://www.espn.com/college-football/story/_/id/47408021/jacksonville-state-star-rb-cam-cook-plans-enter-portal",
+      "publisher": "ESPN"
+    },
+    {
+      "headline": "North Dakota State Football Preview: Lofty Expectations for 2026 FBS Debut - betmgm.com",
+      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQQXdmWFh3ckdxTkFGVFV5VVlUUXpJeHRzVV96X0VEbDJGbm01ZEt1NnBHa0lJb0xkV0JJTmZYa1kwdUpRNlAtUUlzbVQtN2s1anNDVGZQeldUUG9oSmduY1lKdWctc04tRDE0SzZoMjg5VmdZX3pQSDUtbWktanFlLVRrdTUwMFlJVmVBZ3J5NWVCSDctc212ZEtSME16MHJPU2haNkNzdkxjTVdycU4tVmZYWnQ?oc=5",
+      "publisher": "betmgm.com"
+    }
+  ],
+  "summary_short": "BlueChip leans JVST. Top signal: Overall team strength is the clearest signal.",
+  "summary_full": "Jacksonville State Gamecocks at North Dakota State Bison.\n\nBlueChip leans JVST. Overall team strength is the clearest signal.\n\nWhy JVST has the edge\n\n\nBlueChip projection\nMarket: NDSU -7.0\nBCW desk \u03bc (home): +7.0 (Research Preview)\nWin probability: unavailable until probability model passes validation.\n\nHow each team wins\nNDSU: Stay efficient on early downs and avoid giving the visitor explosive answers.\nJVST: Shorten the game, win the line of scrimmage, and force the favorite into obvious passing downs.\n\nWhat changed this week\n\u2022 Jacksonville State vs. North Dakota State odds, line: 2026 college football picks, Week 0 predictions from proven model - SportsLine\n\u2022 2026 GameDay preview: Jacksonville State Gamecocks - timesdaily.com\n\u2022 Eagles select QB Cole Payton on Day 3 of NFL draft\n\u2022 North Dakota State Bison Football Preview 2026 - College Football News\n\nWhat could make BlueChip wrong?\n\u2022 Turnovers: the projection assumes roughly normal luck; a +2 swing can flip a JVST lean.\n\u2022 Injury / inactive surprise on either OL or QB would rewrite the pass-rush signal.\n\nBottom line: JVST has more ways to win on the current MATCHUP SIGNAL board, but football variance (turnovers, explosives) remains large around any margin estimate.",
+  "generation_model": "desk-template",
+  "generation_provider": "fallback",
+  "glossary": {
+    "EPA/play": "Expected Points Added estimates how much each play improves expected scoring position. Positive is good. A 5-yard gain on 3rd-and-3 is not treated like 5 yards on 3rd-and-20.",
+    "MATCHUP SIGNAL": "A descriptive strength\u00d7weakness edge. Not a published win probability and not fed into BCW-RIDGE-v0.1 until validated walk-forward.",
+    "Research Preview": "BlueChip quantitative layer that has not cleared the five public ship gates."
+  },
+  "levels": {
+    "slate": {
+      "lean": "JVST",
+      "top_edges": [],
+      "market": "NDSU -7.0",
+      "mu": 7.0,
+      "confidence_pct": 51.3
+    }
+  }
+}

@@ -6,6 +6,7 @@ const links = [
   ['/games?league=NFL', 'NFL'],
   ['/games?league=CFB', 'College Football'],
   ['/models', 'Models'],
+  ['/about', 'About'],
   ['/research', 'Research'],
   ['/pricing', 'Pricing'],
 ] as const

@@ -15,11 +15,11 @@ SAMPLE_EVENT = {
             "competitors": [
                 {
                     "homeAway": "home",
-                    "team": {"abbreviation": "SEA", "displayName": "Seattle Seahawks"},
+                    "team": {"id": "26", "abbreviation": "SEA", "displayName": "Seattle Seahawks"},
                 },
                 {
                     "homeAway": "away",
-                    "team": {"abbreviation": "NE", "displayName": "New England Patriots"},
+                    "team": {"id": "17", "abbreviation": "NE", "displayName": "New England Patriots"},
                 },
             ],
             "odds": [
@@ -58,6 +58,8 @@ def test_parse_event_matchup() -> None:
     assert game["total_line"] == 44.5
     assert game["round"] == "Week 1"
     assert game["source"] == "espn"
+    assert game["home_espn_id"] == "26"
+    assert game["away_espn_id"] == "17"
 
 
 def test_parse_scoreboard_skips_empty() -> None:

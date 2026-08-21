@@ -20,6 +20,7 @@ from sqlalchemy.orm import Session
 
 from app.config import Settings, get_settings
 from app.ingest.game_fields import SCHEDULE_OWNED_GAME_COLS
+from app.ingest.identity import canonicalize_nfl_team
 from app.ingest.nflfastr import _as_bool, _as_date, _batch_size, _to_python
 from db.models import Game, GameExternalId, IngestConflict
 
@@ -195,8 +196,8 @@ def _scores_conflict(existing: int | None, incoming: int | None) -> bool:
 
 def row_from_schedule(record: dict[str, Any]) -> dict[str, Any] | None:
     game_id = _as_str(record.get("game_id"))
-    home = _as_str(record.get("home_team"))
-    away = _as_str(record.get("away_team"))
+    home = canonicalize_nfl_team(_as_str(record.get("home_team")))
+    away = canonicalize_nfl_team(_as_str(record.get("away_team")))
     season = _as_int(record.get("season"))
     week = _as_int(record.get("week"))
     if not game_id or not home or not away or season is None or week is None:

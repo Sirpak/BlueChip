@@ -1,0 +1,323 @@
+{
+  "game_id": "espn:401872929",
+  "version": "BCW-GIP-v0.1",
+  "created_at": "2026-08-21T03:41:06.485130+00:00",
+  "generated_at": "2026-08-21T03:41:06.485130+00:00",
+  "information_cutoff": "2026-08-21T03:41:06.485130+00:00",
+  "source_set_hash": "811cbe69cc138b96c842b9e5",
+  "game": {
+    "game_id": "espn:401872929",
+    "league": "NFL",
+    "matchup": "WAS @ PHI",
+    "home_team": "PHI",
+    "away_team": "WAS",
+    "home_name": "Philadelphia Eagles",
+    "away_name": "Washington Commanders",
+    "spread_label": "PHI -4.5",
+    "home_spread": -4.5,
+    "total_line": 47.5,
+    "week": 1
+  },
+  "lean_team": "PHI",
+  "projection": {
+    "model_id": "BCW-DESK-STRENGTH-v0.x",
+    "method": "0.65\u00b7Elo/25+HFA + 0.35\u00b7(SRS+HFA)",
+    "mu_home": 8.29,
+    "sigma": 13.5,
+    "p_home_win": 0.7182,
+    "p_home_cover": 0.5964,
+    "edge_vs_minus_110": 0.0726,
+    "model_lean": "HOME",
+    "model_lean_team": "PHI",
+    "label": "Research Preview",
+    "public_probability_published": false,
+    "confidence_pct": 59.6
+  },
+  "matchup_edges": [
+    {
+      "key": "PASS_RUSH",
+      "title": "Pass rush / protection (proxy)",
+      "side": "HOME",
+      "side_team": "PHI",
+      "strength": "MAJOR",
+      "home_stat": 0.259,
+      "away_stat": -0.2567,
+      "mismatch_z": 5.156,
+      "fan_line": "+++ PHI \u2014 Pass rush / protection (proxy)",
+      "label": "MATCHUP SIGNAL",
+      "why": "Proxy until true pressure/PBWR data: lower pass EPA allowed \u21d2 stronger pass defense / rush. MATCHUP SIGNAL only \u2014 not a published win probability."
+    },
+    {
+      "key": "PASSING",
+      "title": "Passing offense vs pass defense",
+      "side": "HOME",
+      "side_team": "PHI",
+      "strength": "MAJOR",
+      "home_stat": 0.4473,
+      "away_stat": -0.3131,
+      "mismatch_z": 4.225,
+      "fan_line": "+++ PHI \u2014 Passing offense vs pass defense",
+      "label": "MATCHUP SIGNAL",
+      "why": "EPA/play on passes plus how much EPA the opposing defense allows. EPA weights plays by situation (3rd-and-3 \u2260 3rd-and-20)."
+    },
+    {
+      "key": "OVERALL",
+      "title": "Overall efficiency",
+      "side": "HOME",
+      "side_team": "PHI",
+      "strength": "MAJOR",
+      "home_stat": 0.2219,
+      "away_stat": -0.1967,
+      "mismatch_z": 2.093,
+      "fan_line": "+++ PHI \u2014 Overall efficiency",
+      "label": "MATCHUP SIGNAL",
+      "why": "Net EPA/play (offense minus defense). Broad team-strength interaction."
+    },
+    {
+      "key": "RUN_GAME",
+      "title": "Rushing offense vs run defense",
+      "side": "HOME",
+      "side_team": "PHI",
+      "strength": "MILD",
+      "home_stat": 0.0995,
+      "away_stat": -0.0016,
+      "mismatch_z": 0.723,
+      "fan_line": "+ PHI \u2014 Rushing offense vs run defense",
+      "label": "MATCHUP SIGNAL",
+      "why": "Rush EPA/play vs EPA allowed on rushes \u2014 better than raw yards/carry."
+    }
+  ],
+  "headline_cards": [
+    {
+      "marks": "+++",
+      "key": "PASS_RUSH",
+      "title": "Pass rush / protection (proxy)",
+      "team": "PHI",
+      "strength": "MAJOR",
+      "fan_line": "+++ PHI \u2014 Pass rush / protection (proxy)",
+      "mismatch_z": 5.156,
+      "percentile_hint": "More extreme than ~95% of similar unit mismatches in a normal sample.",
+      "label": "MATCHUP SIGNAL",
+      "why": "Proxy until true pressure/PBWR data: lower pass EPA allowed \u21d2 stronger pass defense / rush. MATCHUP SIGNAL only \u2014 not a published win probability.",
+      "home_stat": 0.259,
+      "away_stat": -0.2567
+    },
+    {
+      "marks": "+++",
+      "key": "PASSING",
+      "title": "Passing offense vs pass defense",
+      "team": "PHI",
+      "strength": "MAJOR",
+      "fan_line": "+++ PHI \u2014 Passing offense vs pass defense",
+      "mismatch_z": 4.225,
+      "percentile_hint": "More extreme than ~95% of similar unit mismatches in a normal sample.",
+      "label": "MATCHUP SIGNAL",
+      "why": "EPA/play on passes plus how much EPA the opposing defense allows. EPA weights plays by situation (3rd-and-3 \u2260 3rd-and-20).",
+      "home_stat": 0.4473,
+      "away_stat": -0.3131
+    },
+    {
+      "marks": "+++",
+      "key": "OVERALL",
+      "title": "Overall efficiency",
+      "team": "PHI",
+      "strength": "MAJOR",
+      "fan_line": "+++ PHI \u2014 Overall efficiency",
+      "mismatch_z": 2.093,
+      "percentile_hint": "More extreme than ~95% of similar unit mismatches in a normal sample.",
+      "label": "MATCHUP SIGNAL",
+      "why": "Net EPA/play (offense minus defense). Broad team-strength interaction.",
+      "home_stat": 0.2219,
+      "away_stat": -0.1967
+    },
+    {
+      "marks": "+",
+      "key": "RUN_GAME",
+      "title": "Rushing offense vs run defense",
+      "team": "PHI",
+      "strength": "MILD",
+      "fan_line": "+ PHI \u2014 Rushing offense vs run defense",
+      "mismatch_z": 0.723,
+      "percentile_hint": null,
+      "label": "MATCHUP SIGNAL",
+      "why": "Rush EPA/play vs EPA allowed on rushes \u2014 better than raw yards/carry.",
+      "home_stat": 0.0995,
+      "away_stat": -0.0016
+    }
+  ],
+  "slate_edges": [
+    "+++ PHI Pass Rush",
+    "+++ PHI Passing",
+    "+++ PHI Overall"
+  ],
+  "matchup_logistic": {
+    "model_id": "BCW-MATCHUP-LOGISTIC-v0.x",
+    "label": "Research Preview",
+    "public_probability_published": false,
+    "logit": 4.7672,
+    "p_home_win": 0.9916,
+    "lean": "HOME",
+    "contributions": [
+      {
+        "key": "PASS_RUSH",
+        "weight": 0.35,
+        "z": 5.156,
+        "term": 1.8046
+      },
+      {
+        "key": "PASSING",
+        "weight": 0.4,
+        "z": 4.225,
+        "term": 1.69
+      },
+      {
+        "key": "OVERALL",
+        "weight": 0.45,
+        "z": 2.093,
+        "term": 0.9418
+      },
+      {
+        "key": "RUN_GAME",
+        "weight": 0.25,
+        "z": 0.723,
+        "term": 0.1807
+      }
+    ],
+    "note": "Heuristic matchup logistic on EDGE z-scores. Not BCW-RIDGE. Not a ship gate."
+  },
+  "paths": {
+    "home": "Lean on pass rush / protection (proxy). Convert that mismatch before the game becomes a coin-flip script.",
+    "away": "Shorten the game, win the line of scrimmage, and force the favorite into obvious passing downs."
+  },
+  "risks": [
+    "Turnovers: the projection assumes roughly normal luck; a +2 swing can flip a PHI lean.",
+    "Injury / inactive surprise on either OL or QB would rewrite the pass-rush signal."
+  ],
+  "adjustment": {
+    "points_home": 5.25,
+    "label": "MATCHUP SIGNAL (unvalidated additive)",
+    "note": "Not fed into BCW-RIDGE-v0.1. Research Preview display only."
+  },
+  "events": [
+    {
+      "game_id": "espn:401872929",
+      "event_type": "other",
+      "headline": "A.J. Brown, Jalen Hurts reunite briefly amid post-trade rift",
+      "publisher": "ESPN",
+      "source_url": "https://www.espn.com/nfl/story/_/id/49672812/aj-brown-jalen-hurts-reunite-briefly-amid-post-trade-rift",
+      "bucket": "availability",
+      "structured_fact": "A.J. Brown, Jalen Hurts reunite briefly amid post-trade rift",
+      "confidence": 0.45,
+      "tier": 2
+    },
+    {
+      "game_id": "espn:401872929",
+      "event_type": "other",
+      "headline": "Commanders Dealt More Bad News On Injury Front Before Week 1 vs Eagles - heavy.com",
+      "publisher": "heavy.com",
+      "source_url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNZzgtX2N3Si1LZG5sN3hVRHViMmJxaDlUeW1lWDRrWkZ2NlJpXzlZOTNKQUtsSUpIb0FxRklHbUFnalQxRS01QmhJakhVNTkxOGJLb2hkbXlvQm1qekdIaGFzanNaZjA5Qk5PSld2ZGYyQ1Y1MEpUcGVqTGxMNDd4TFB6d1lmdlNCb2VxVDhMWGR1MWlzbUVZRXpZZEVnaEp6dVpXcQ?oc=5",
+      "bucket": "availability",
+      "structured_fact": "Commanders Dealt More Bad News On Injury Front Before Week 1 vs Eagles - heavy.com",
+      "confidence": 0.45,
+      "tier": 3
+    },
+    {
+      "game_id": "espn:401872929",
+      "event_type": "other",
+      "headline": "Commanders vs. Eagles Injury Report - Philadelphia Eagles",
+      "publisher": "Philadelphia Eagles",
+      "source_url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQc3U4am0wSTVEamF3dkNpalFUMnkyS1lja2otRVdaZk5PYTZuNlExSGo4Z044VnBQRHFGRXdGa2Z5WU5XRUh1SWh0SVlNcl9DbW81X1dYbExKZXByVlBIV0MydHR6R0ZOZm92VG5mMUFvTEZlMTk0RllYTGhSLW5IcF9FdXNLUEMwOERaV2NldWJyNHFIZGktOTExQ0M0TV9kX2RfWWVLU3ZCZHpKcUZoR1BrSFA3MXVmSTg0S2VtVlc?oc=5",
+      "bucket": "availability",
+      "structured_fact": "Commanders vs. Eagles Injury Report - Philadelphia Eagles",
+      "confidence": 0.45,
+      "tier": 3
+    },
+    {
+      "game_id": "espn:401872929",
+      "event_type": "other",
+      "headline": "Patriots\u2019 Star QB Gets Honest On Eagles\u2019 Jalen Hurts After Practice - heavy.com",
+      "publisher": "heavy.com",
+      "source_url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNSEdnVmlyZWlJcVlXS2pHRjNkc1QzcGZNVU0tNDFDa2RDRTNob2pTbXFybzd1amhOcG12dlhwcWJvdEtfbmNRWVVDSkcza3M0Vzg1MHRZc0d5LWJpYXAxRDRJRHo4M0VibjZaNENPSzVKa1MtaTU0Ql91Sm11MmJLWWhDYmhjN3Vybk9yTE1MbzlMMG9ac25Cdk03RFE1TDJ5ekVGWnRJWQ?oc=5",
+      "bucket": "availability",
+      "structured_fact": "Patriots\u2019 Star QB Gets Honest On Eagles\u2019 Jalen Hurts After Practice - heavy.com",
+      "confidence": 0.45,
+      "tier": 3
+    },
+    {
+      "game_id": "espn:401872929",
+      "event_type": "starter_change",
+      "headline": "Commanders' Dan Quinn provides injury update on a key starter - Commanders Wire",
+      "publisher": "Commanders Wire",
+      "source_url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxQRFVLM1VQU2lRVGg5NC1qbGliQ3FZcUpiSERXSHpEV3oyLXo4aGg4R0JXSEJ6emdIWjdNU2dUYWJ6eDl1ZVQwVlBHZGM5VW5MUHZfMFRnRnJ4WUlsQkpFVXVCUDh2VWNzWFZzSTIyUWdRTjhCME1GN0RnWlUyX1FERjNoZkVKdUJCWmdKVHVWUDVEZGRJOUxGWHkzWGJhNmh2LUFmLWlETVZBT01OckpEZmVnbTVqbVVXZEctSk5TNUdKLXhlUXpVQmh6VllHalhpbHRwOE5jekNEZ1g4b3JqbW1yNA?oc=5",
+      "bucket": "availability",
+      "structured_fact": "Commanders' Dan Quinn provides injury update on a key starter - Commanders Wire",
+      "confidence": 0.7,
+      "tier": 3
+    },
+    {
+      "game_id": "espn:401872929",
+      "event_type": "other",
+      "headline": "Commanders' O-line faces early concerns",
+      "publisher": "ESPN",
+      "source_url": "https://www.espn.com/video/clip/_/id/49673283/commanders-o-line-faces-early-concerns",
+      "bucket": "availability",
+      "structured_fact": "Commanders' O-line faces early concerns",
+      "confidence": 0.45,
+      "tier": 2
+    }
+  ],
+  "news_citations": [
+    {
+      "headline": "A.J. Brown, Jalen Hurts reunite briefly amid post-trade rift",
+      "url": "https://www.espn.com/nfl/story/_/id/49672812/aj-brown-jalen-hurts-reunite-briefly-amid-post-trade-rift",
+      "publisher": "ESPN"
+    },
+    {
+      "headline": "Commanders Dealt More Bad News On Injury Front Before Week 1 vs Eagles - heavy.com",
+      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNZzgtX2N3Si1LZG5sN3hVRHViMmJxaDlUeW1lWDRrWkZ2NlJpXzlZOTNKQUtsSUpIb0FxRklHbUFnalQxRS01QmhJakhVNTkxOGJLb2hkbXlvQm1qekdIaGFzanNaZjA5Qk5PSld2ZGYyQ1Y1MEpUcGVqTGxMNDd4TFB6d1lmdlNCb2VxVDhMWGR1MWlzbUVZRXpZZEVnaEp6dVpXcQ?oc=5",
+      "publisher": "heavy.com"
+    },
+    {
+      "headline": "Commanders vs. Eagles Injury Report - Philadelphia Eagles",
+      "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQc3U4am0wSTVEamF3dkNpalFUMnkyS1lja2otRVdaZk5PYTZuNlExSGo4Z044VnBQRHFGRXdGa2Z5WU5XRUh1SWh0SVlNcl9DbW81X1dYbExKZXByVlBIV0MydHR6R0ZOZm92VG5mMUFvTEZlMTk0RllYTGhSLW5IcF9FdXNLUEMwOERaV2NldWJyNHFIZGktOTExQ0M0TV9kX2RfWWVLU3ZCZHpKcUZoR1BrSFA3MXVmSTg0S2VtVlc?oc=5",
+      "publisher": "Philadelphia Eagles"
+    },
+    {
+      "headline": "Patriots\u2019 Star QB Gets Honest On Eagles\u2019 Jalen Hurts After Practice - heavy.com",
+      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNSEdnVmlyZWlJcVlXS2pHRjNkc1QzcGZNVU0tNDFDa2RDRTNob2pTbXFybzd1amhOcG12dlhwcWJvdEtfbmNRWVVDSkcza3M0Vzg1MHRZc0d5LWJpYXAxRDRJRHo4M0VibjZaNENPSzVKa1MtaTU0Ql91Sm11MmJLWWhDYmhjN3Vybk9yTE1MbzlMMG9ac25Cdk03RFE1TDJ5ekVGWnRJWQ?oc=5",
+      "publisher": "heavy.com"
+    },
+    {
+      "headline": "Commanders' Dan Quinn provides injury update on a key starter - Commanders Wire",
+      "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxQRFVLM1VQU2lRVGg5NC1qbGliQ3FZcUpiSERXSHpEV3oyLXo4aGg4R0JXSEJ6emdIWjdNU2dUYWJ6eDl1ZVQwVlBHZGM5VW5MUHZfMFRnRnJ4WUlsQkpFVXVCUDh2VWNzWFZzSTIyUWdRTjhCME1GN0RnWlUyX1FERjNoZkVKdUJCWmdKVHVWUDVEZGRJOUxGWHkzWGJhNmh2LUFmLWlETVZBT01OckpEZmVnbTVqbVVXZEctSk5TNUdKLXhlUXpVQmh6VllHalhpbHRwOE5jekNEZ1g4b3JqbW1yNA?oc=5",
+      "publisher": "Commanders Wire"
+    },
+    {
+      "headline": "Commanders' O-line faces early concerns",
+      "url": "https://www.espn.com/video/clip/_/id/49673283/commanders-o-line-faces-early-concerns",
+      "publisher": "ESPN"
+    }
+  ],
+  "summary_short": "BlueChip leans PHI. Top signal: +++ PHI \u2014 Pass rush / protection (proxy)",
+  "summary_full": "Washington Commanders at Philadelphia Eagles.\n\nBlueChip leans PHI. +++ PHI \u2014 Pass rush / protection (proxy)\n\nWhy PHI has the edge\n- +++ PHI \u2014 Pass rush / protection (proxy)\n- +++ PHI \u2014 Passing offense vs pass defense\n- +++ PHI \u2014 Overall efficiency\n\nBlueChip projection\nMarket: PHI -4.5\nBCW desk \u03bc (home): +8.3 (Research Preview)\nWin probability: unavailable until probability model passes validation.\n\nHow each team wins\nPHI: Lean on pass rush / protection (proxy). Convert that mismatch before the game becomes a coin-flip script.\nWAS: Shorten the game, win the line of scrimmage, and force the favorite into obvious passing downs.\n\nWhat changed this week\n\u2022 A.J. Brown, Jalen Hurts reunite briefly amid post-trade rift\n\u2022 Commanders Dealt More Bad News On Injury Front Before Week 1 vs Eagles - heavy.com\n\u2022 Commanders vs. Eagles Injury Report - Philadelphia Eagles\n\u2022 Patriots\u2019 Star QB Gets Honest On Eagles\u2019 Jalen Hurts After Practice - heavy.com\n\nWhat could make BlueChip wrong?\n\u2022 Turnovers: the projection assumes roughly normal luck; a +2 swing can flip a PHI lean.\n\u2022 Injury / inactive surprise on either OL or QB would rewrite the pass-rush signal.\n\nBottom line: PHI has more ways to win on the current MATCHUP SIGNAL board, but football variance (turnovers, explosives) remains large around any margin estimate.",
+  "generation_model": "desk-template",
+  "generation_provider": "fallback",
+  "glossary": {
+    "EPA/play": "Expected Points Added estimates how much each play improves expected scoring position. Positive is good. A 5-yard gain on 3rd-and-3 is not treated like 5 yards on 3rd-and-20.",
+    "MATCHUP SIGNAL": "A descriptive strength\u00d7weakness edge. Not a published win probability and not fed into BCW-RIDGE-v0.1 until validated walk-forward.",
+    "Research Preview": "BlueChip quantitative layer that has not cleared the five public ship gates."
+  },
+  "levels": {
+    "slate": {
+      "lean": "PHI",
+      "top_edges": [
+        "+++ PHI Pass Rush",
+        "+++ PHI Passing",
+        "+++ PHI Overall"
+      ],
+      "market": "PHI -4.5",
+      "mu": 8.29,
+      "confidence_pct": 59.6
+    }
+  }
+}

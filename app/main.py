@@ -10,7 +10,8 @@ from starlette.middleware.cors import CORSMiddleware
 from app import __version__
 from app.auth.seed import seed_dev_users
 from app.config import ROOT_DIR
-from app.routers import admin, ask, auth, dashboard, entitlements, health, markets, models_lab
+from app.routers import admin, ask, auth, dashboard, entitlements, game_context, health, intelligence, markets, models_lab, rankings, weekly
+
 from db.session import get_session_factory
 
 WEB_DIST = ROOT_DIR / "web" / "dist"
@@ -21,6 +22,7 @@ SPA_PAGES = (
     "models",
     "markets",
     "research",
+    "about",
     "pricing",
     "teams",
     "backtests",
@@ -80,6 +82,10 @@ app.include_router(markets.router)
 app.include_router(models_lab.router)
 app.include_router(ask.router)
 app.include_router(entitlements.router)
+app.include_router(game_context.router)
+app.include_router(rankings.router)
+app.include_router(weekly.router)
+app.include_router(intelligence.router)
 
 if (WEB_DIST / "assets").is_dir():
     app.mount("/assets", StaticFiles(directory=str(WEB_DIST / "assets")), name="spa-assets")

@@ -1,0 +1,180 @@
+{
+  "game_id": "espn:401858202",
+  "version": "BCW-GIP-v0.1",
+  "created_at": "2026-08-21T03:43:32.145849+00:00",
+  "generated_at": "2026-08-21T03:43:32.145849+00:00",
+  "information_cutoff": "2026-08-21T03:43:32.145849+00:00",
+  "source_set_hash": "7fef1c666596c48f2199d625",
+  "game": {
+    "game_id": "espn:401858202",
+    "league": "CFB",
+    "matchup": "NCSU @ UVA",
+    "home_team": "UVA",
+    "away_team": "NCSU",
+    "home_name": "Virginia Cavaliers",
+    "away_name": "NC State Wolfpack",
+    "spread_label": "UVA -5.5",
+    "home_spread": -5.5,
+    "total_line": 53.5,
+    "week": 1
+  },
+  "lean_team": "NCSU",
+  "projection": {
+    "model_id": "BCW-DESK-STRENGTH-v0.x",
+    "method": "Market line + AP rank edge (CFB; no CFB Elo yet)",
+    "mu_home": 5.5,
+    "sigma": 15.0,
+    "p_home_win": 0.6306,
+    "p_home_cover": 0.4867,
+    "edge_vs_minus_110": -0.0371,
+    "model_lean": "AWAY",
+    "model_lean_team": "NCSU",
+    "label": "Research Preview",
+    "public_probability_published": false,
+    "confidence_pct": 51.3
+  },
+  "matchup_edges": [],
+  "headline_cards": [],
+  "slate_edges": [],
+  "matchup_logistic": {
+    "model_id": "BCW-MATCHUP-LOGISTIC-v0.x",
+    "label": "Research Preview",
+    "public_probability_published": false,
+    "logit": 0.15,
+    "p_home_win": 0.5374,
+    "lean": "HOME",
+    "contributions": [],
+    "note": "Heuristic matchup logistic on EDGE z-scores. Not BCW-RIDGE. Not a ship gate."
+  },
+  "paths": {
+    "home": "Stay efficient on early downs and avoid giving the visitor explosive answers.",
+    "away": "Shorten the game, win the line of scrimmage, and force the favorite into obvious passing downs."
+  },
+  "risks": [
+    "Turnovers: the projection assumes roughly normal luck; a +2 swing can flip a NCSU lean.",
+    "Injury / inactive surprise on either OL or QB would rewrite the pass-rush signal."
+  ],
+  "adjustment": {
+    "points_home": 0.0,
+    "label": "MATCHUP SIGNAL (unvalidated additive)",
+    "note": "Not fed into BCW-RIDGE-v0.1. Research Preview display only."
+  },
+  "events": [
+    {
+      "game_id": "espn:401858202",
+      "event_type": "starter_change",
+      "headline": "Final UVA Starting Lineup Projection Before Week Zero Game vs NC State - Sports Illustrated",
+      "publisher": "Sports Illustrated",
+      "source_url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxOUVp0UDNDMEotRFZSNndyVk1FbnZvSTRvTFNUZEhlTGdLNFM4ZkNBazNaa2ZEN1k5ZWkwbk5laGlFM2RTMno4TGhKSzRnaEhzRlcwNVdKMXpHb3VvbGVmYXh0Yjljb05EaXkwQ1g4WHAtX3R3T2U0LWZfSkFDbWJTMEJXWkNtUXVLcFhRUDZaNlR6TTN3Ql9xb1pjM1VOQ3FBb0RjZGtlc3pqVUJYNG1kRjFEdlZNZHptU05rZFUyUTcydExjdDE0?oc=5",
+      "bucket": "availability",
+      "structured_fact": "Final UVA Starting Lineup Projection Before Week Zero Game vs NC State - Sports Illustrated",
+      "confidence": 0.7,
+      "tier": 3
+    },
+    {
+      "game_id": "espn:401858202",
+      "event_type": "other",
+      "headline": "College football's mad two-week scramble to land a transfer portal QB",
+      "publisher": "ESPN",
+      "source_url": "https://www.espn.com/college-football/story/_/id/49650906/college-football-two-week-scramble-transfer-portal-qb",
+      "bucket": "availability",
+      "structured_fact": "College football's mad two-week scramble to land a transfer portal QB",
+      "confidence": 0.45,
+      "tier": 2
+    },
+    {
+      "game_id": "espn:401858202",
+      "event_type": "other",
+      "headline": "NC State enters Year 14 under Dave Doeren knowing it has a strength in returning QB CJ Bailey - Times West Virginian",
+      "publisher": "Times West Virginian",
+      "source_url": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxOcUtKblVoLXZER2h4cGRQTXNtR3lLc0I1aUNLN2tpQ1p6eXlUWmlKRjBLRXJPNjM1bXpBUWFkMk9nMGNuLVZfZ1RYVVAzUjFKUTctMW5CNUZ4RlRhbFBxV3lhVGVwX01ZUFMxRDhPeFRvRWpFSkNjOXBCWFRSSWpReGdOcHZ3RGk4eHp0dGZUZVNfZDk1eWhuellfZy1kMHNPS3dZT0lVLVJtbkhnTXVkSElTVThEU3BYdnNlS2FOQ2xVQmlMVGtlcE1qVlJMdHhkU3FpVHp5UW1aeXlGOGZFY3RiTVVfSUo5bXByMEU0VG4xOHM?oc=5",
+      "bucket": "availability",
+      "structured_fact": "NC State enters Year 14 under Dave Doeren knowing it has a strength in returning QB CJ Bailey - Times West Virginian",
+      "confidence": 0.45,
+      "tier": 3
+    },
+    {
+      "game_id": "espn:401858202",
+      "event_type": "market",
+      "headline": "NC State vs. Virginia odds: 2026 college football picks, Week 0 predictions from proven model - SportsLine",
+      "publisher": "SportsLine",
+      "source_url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQSDc4TTNRYWhXcnQ5UjRkUUdob0FvNzNMYTd1Y2xzbUNZRFRKRUZ3Y2hsX1BCQXBzOE9NSmF2THZaUHRkbk5fX01uTXVIVTZ2YWtXR3hIZDJiczFxOV8xNWdsWjM0MEdBTW9HMGd4SWNOYXhzd0QtbjhYTmpsNFNvaVhvcXN3emEzYkNUVDFLdUtfdk5LcnhBZDJHSEZmcWtSOE9Rb0szV3drUUtiWFJYZi1VQzd5cGg4dUhDRUFhWjBhS0FoTUE?oc=5",
+      "bucket": "analysis",
+      "structured_fact": "NC State vs. Virginia odds: 2026 college football picks, Week 0 predictions from proven model - SportsLine",
+      "confidence": 0.7,
+      "tier": 3
+    },
+    {
+      "game_id": "espn:401858202",
+      "event_type": "other",
+      "headline": "NC State football 2026 preview: Can CJ Bailey lead Wolfpack higher? - ABC11 News",
+      "publisher": "ABC11 News",
+      "source_url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxObEw3aEk1QUpNMmc0ZmtZN1czMzd2cnRYem54Z1d3dmlpSXFrbTVUaloxcmFBRTFYa1Izd2hSYWN3RWdLTmZhZzhkdF9qNkxVeExTdVpIQTRCSlo2OWxEWW5JcEFfMGluRlpId3F2ZFhaSkpwMW14S1o3TG1MMHdBczNNUXNDdmxmU3FIQTJUM2V0OWJtTy1xNTN0ODN0dE3SAaQBQVVfeXFMUGtvZnJuN0hnQmNBRGFMMGtnMXpnSE5CMXRLN1BTUjY4MUNGN0trbFhvM3BtMnRxb3dsX3lodUFNeWlsNnNXanRrN0VGXzdWWXkweW8xSXVCVlYyWEFuOGVkR0FqRjVCZUF1aUgwRXNINk9UQ244SHo5YUZ3ZnQ2ejVOZGUtd0IyX3RuMmU2OHlfMWxSODFIUnA1RmYxcTlsdm9lUTM?oc=5",
+      "bucket": "analysis",
+      "structured_fact": "NC State football 2026 preview: Can CJ Bailey lead Wolfpack higher? - ABC11 News",
+      "confidence": 0.45,
+      "tier": 3
+    },
+    {
+      "game_id": "espn:401858202",
+      "event_type": "market",
+      "headline": "Virginia Football 2026: Win Total, Betting Odds, Full Schedule - betmgm.com",
+      "publisher": "betmgm.com",
+      "source_url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQRkU4bDlNN1BqelNQTEd0MlN5a1BYMktkTW5aaDA5S29nVkk4RHhEUmFfZEdEZFFpUzJGYXBjRXBNZWZxQ1J5dnFPTS1TMWlSWjlPUXZ0d3Jpb2tKSTRCUjY0elJsVjMxMlB3SG9BNE5qcFBtWEE5MFY2YVRoSWVJT0VsdWFSOVVfRGtPcjNySVlaWHdvM1JwTzE1R1ZNVlpOSlBvNVJQX1VWMEcwUDdxQg?oc=5",
+      "bucket": "analysis",
+      "structured_fact": "Virginia Football 2026: Win Total, Betting Odds, Full Schedule - betmgm.com",
+      "confidence": 0.7,
+      "tier": 3
+    }
+  ],
+  "news_citations": [
+    {
+      "headline": "Final UVA Starting Lineup Projection Before Week Zero Game vs NC State - Sports Illustrated",
+      "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxOUVp0UDNDMEotRFZSNndyVk1FbnZvSTRvTFNUZEhlTGdLNFM4ZkNBazNaa2ZEN1k5ZWkwbk5laGlFM2RTMno4TGhKSzRnaEhzRlcwNVdKMXpHb3VvbGVmYXh0Yjljb05EaXkwQ1g4WHAtX3R3T2U0LWZfSkFDbWJTMEJXWkNtUXVLcFhRUDZaNlR6TTN3Ql9xb1pjM1VOQ3FBb0RjZGtlc3pqVUJYNG1kRjFEdlZNZHptU05rZFUyUTcydExjdDE0?oc=5",
+      "publisher": "Sports Illustrated"
+    },
+    {
+      "headline": "College football's mad two-week scramble to land a transfer portal QB",
+      "url": "https://www.espn.com/college-football/story/_/id/49650906/college-football-two-week-scramble-transfer-portal-qb",
+      "publisher": "ESPN"
+    },
+    {
+      "headline": "NC State enters Year 14 under Dave Doeren knowing it has a strength in returning QB CJ Bailey - Times West Virginian",
+      "url": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxOcUtKblVoLXZER2h4cGRQTXNtR3lLc0I1aUNLN2tpQ1p6eXlUWmlKRjBLRXJPNjM1bXpBUWFkMk9nMGNuLVZfZ1RYVVAzUjFKUTctMW5CNUZ4RlRhbFBxV3lhVGVwX01ZUFMxRDhPeFRvRWpFSkNjOXBCWFRSSWpReGdOcHZ3RGk4eHp0dGZUZVNfZDk1eWhuellfZy1kMHNPS3dZT0lVLVJtbkhnTXVkSElTVThEU3BYdnNlS2FOQ2xVQmlMVGtlcE1qVlJMdHhkU3FpVHp5UW1aeXlGOGZFY3RiTVVfSUo5bXByMEU0VG4xOHM?oc=5",
+      "publisher": "Times West Virginian"
+    },
+    {
+      "headline": "NC State vs. Virginia odds: 2026 college football picks, Week 0 predictions from proven model - SportsLine",
+      "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQSDc4TTNRYWhXcnQ5UjRkUUdob0FvNzNMYTd1Y2xzbUNZRFRKRUZ3Y2hsX1BCQXBzOE9NSmF2THZaUHRkbk5fX01uTXVIVTZ2YWtXR3hIZDJiczFxOV8xNWdsWjM0MEdBTW9HMGd4SWNOYXhzd0QtbjhYTmpsNFNvaVhvcXN3emEzYkNUVDFLdUtfdk5LcnhBZDJHSEZmcWtSOE9Rb0szV3drUUtiWFJYZi1VQzd5cGg4dUhDRUFhWjBhS0FoTUE?oc=5",
+      "publisher": "SportsLine"
+    },
+    {
+      "headline": "NC State football 2026 preview: Can CJ Bailey lead Wolfpack higher? - ABC11 News",
+      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxObEw3aEk1QUpNMmc0ZmtZN1czMzd2cnRYem54Z1d3dmlpSXFrbTVUaloxcmFBRTFYa1Izd2hSYWN3RWdLTmZhZzhkdF9qNkxVeExTdVpIQTRCSlo2OWxEWW5JcEFfMGluRlpId3F2ZFhaSkpwMW14S1o3TG1MMHdBczNNUXNDdmxmU3FIQTJUM2V0OWJtTy1xNTN0ODN0dE3SAaQBQVVfeXFMUGtvZnJuN0hnQmNBRGFMMGtnMXpnSE5CMXRLN1BTUjY4MUNGN0trbFhvM3BtMnRxb3dsX3lodUFNeWlsNnNXanRrN0VGXzdWWXkweW8xSXVCVlYyWEFuOGVkR0FqRjVCZUF1aUgwRXNINk9UQ244SHo5YUZ3ZnQ2ejVOZGUtd0IyX3RuMmU2OHlfMWxSODFIUnA1RmYxcTlsdm9lUTM?oc=5",
+      "publisher": "ABC11 News"
+    },
+    {
+      "headline": "Virginia Football 2026: Win Total, Betting Odds, Full Schedule - betmgm.com",
+      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQRkU4bDlNN1BqelNQTEd0MlN5a1BYMktkTW5aaDA5S29nVkk4RHhEUmFfZEdEZFFpUzJGYXBjRXBNZWZxQ1J5dnFPTS1TMWlSWjlPUXZ0d3Jpb2tKSTRCUjY0elJsVjMxMlB3SG9BNE5qcFBtWEE5MFY2YVRoSWVJT0VsdWFSOVVfRGtPcjNySVlaWHdvM1JwTzE1R1ZNVlpOSlBvNVJQX1VWMEcwUDdxQg?oc=5",
+      "publisher": "betmgm.com"
+    }
+  ],
+  "summary_short": "BlueChip leans NCSU. Top signal: Overall team strength is the clearest signal.",
+  "summary_full": "NC State Wolfpack at Virginia Cavaliers.\n\nBlueChip leans NCSU. Overall team strength is the clearest signal.\n\nWhy NCSU has the edge\n\n\nBlueChip projection\nMarket: UVA -5.5\nBCW desk \u03bc (home): +5.5 (Research Preview)\nWin probability: unavailable until probability model passes validation.\n\nHow each team wins\nUVA: Stay efficient on early downs and avoid giving the visitor explosive answers.\nNCSU: Shorten the game, win the line of scrimmage, and force the favorite into obvious passing downs.\n\nWhat changed this week\n\u2022 Final UVA Starting Lineup Projection Before Week Zero Game vs NC State - Sports Illustrated\n\u2022 College football's mad two-week scramble to land a transfer portal QB\n\u2022 NC State enters Year 14 under Dave Doeren knowing it has a strength in returning QB CJ Bailey - Times West Virginian\n\u2022 NC State vs. Virginia odds: 2026 college football picks, Week 0 predictions from proven model - SportsLine\n\nWhat could make BlueChip wrong?\n\u2022 Turnovers: the projection assumes roughly normal luck; a +2 swing can flip a NCSU lean.\n\u2022 Injury / inactive surprise on either OL or QB would rewrite the pass-rush signal.\n\nBottom line: NCSU has more ways to win on the current MATCHUP SIGNAL board, but football variance (turnovers, explosives) remains large around any margin estimate.",
+  "generation_model": "desk-template",
+  "generation_provider": "fallback",
+  "glossary": {
+    "EPA/play": "Expected Points Added estimates how much each play improves expected scoring position. Positive is good. A 5-yard gain on 3rd-and-3 is not treated like 5 yards on 3rd-and-20.",
+    "MATCHUP SIGNAL": "A descriptive strength\u00d7weakness edge. Not a published win probability and not fed into BCW-RIDGE-v0.1 until validated walk-forward.",
+    "Research Preview": "BlueChip quantitative layer that has not cleared the five public ship gates."
+  },
+  "levels": {
+    "slate": {
+      "lean": "NCSU",
+      "top_edges": [],
+      "market": "UVA -5.5",
+      "mu": 5.5,
+      "confidence_pct": 51.3
+    }
+  }
+}

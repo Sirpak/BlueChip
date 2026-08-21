@@ -1,0 +1,291 @@
+{
+  "game_id": "espn:401872656",
+  "version": "BCW-GIP-v0.1",
+  "created_at": "2026-08-21T03:42:32.222927+00:00",
+  "generated_at": "2026-08-21T03:42:32.222927+00:00",
+  "information_cutoff": "2026-08-21T03:42:32.222927+00:00",
+  "source_set_hash": "22afd51644e0580669bc440c",
+  "game": {
+    "game_id": "espn:401872656",
+    "league": "NFL",
+    "matchup": "NE @ SEA",
+    "home_team": "SEA",
+    "away_team": "NE",
+    "home_name": "Seattle Seahawks",
+    "away_name": "New England Patriots",
+    "spread_label": "SEA -3.5",
+    "home_spread": -3.5,
+    "total_line": 44.5,
+    "week": 1
+  },
+  "lean_team": "NE",
+  "projection": {
+    "model_id": "BCW-DESK-STRENGTH-v0.x",
+    "method": "0.65\u00b7Elo/25+HFA + 0.35\u00b7(SRS+HFA)",
+    "mu_home": 1.96,
+    "sigma": 13.5,
+    "p_home_win": 0.543,
+    "p_home_cover": 0.4399,
+    "edge_vs_minus_110": -0.0839,
+    "model_lean": "AWAY",
+    "model_lean_team": "NE",
+    "label": "Research Preview",
+    "public_probability_published": false,
+    "confidence_pct": 56.0
+  },
+  "matchup_edges": [
+    {
+      "key": "PASS_RUSH",
+      "title": "Pass rush / protection (proxy)",
+      "side": "AWAY",
+      "side_team": "NE",
+      "strength": "MILD",
+      "home_stat": 0.1839,
+      "away_stat": 0.2339,
+      "mismatch_z": -0.5,
+      "fan_line": "+ NE \u2014 Pass rush / protection (proxy)",
+      "label": "MATCHUP SIGNAL",
+      "why": "Proxy until true pressure/PBWR data: lower pass EPA allowed \u21d2 stronger pass defense / rush. MATCHUP SIGNAL only \u2014 not a published win probability."
+    },
+    {
+      "key": "PASSING",
+      "title": "Passing offense vs pass defense",
+      "side": "AWAY",
+      "side_team": "NE",
+      "strength": "EVEN",
+      "home_stat": -0.0675,
+      "away_stat": 0.0032,
+      "mismatch_z": -0.393,
+      "fan_line": "\u00b7 NE \u2014 Passing offense vs pass defense",
+      "label": "MATCHUP SIGNAL",
+      "why": "EPA/play on passes plus how much EPA the opposing defense allows. EPA weights plays by situation (3rd-and-3 \u2260 3rd-and-20)."
+    },
+    {
+      "key": "RUN_GAME",
+      "title": "Rushing offense vs run defense",
+      "side": "HOME",
+      "side_team": "SEA",
+      "strength": "EVEN",
+      "home_stat": -0.122,
+      "away_stat": -0.164,
+      "mismatch_z": 0.3,
+      "fan_line": "\u00b7 SEA \u2014 Rushing offense vs run defense",
+      "label": "MATCHUP SIGNAL",
+      "why": "Rush EPA/play vs EPA allowed on rushes \u2014 better than raw yards/carry."
+    },
+    {
+      "key": "OVERALL",
+      "title": "Overall efficiency",
+      "side": "EVEN",
+      "side_team": "SEA",
+      "strength": "EVEN",
+      "home_stat": 0.2392,
+      "away_stat": 0.2592,
+      "mismatch_z": -0.1,
+      "fan_line": "Overall efficiency: roughly even",
+      "label": "MATCHUP SIGNAL",
+      "why": "Net EPA/play (offense minus defense). Broad team-strength interaction."
+    }
+  ],
+  "headline_cards": [
+    {
+      "marks": "+",
+      "key": "PASS_RUSH",
+      "title": "Pass rush / protection (proxy)",
+      "team": "NE",
+      "strength": "MILD",
+      "fan_line": "+ NE \u2014 Pass rush / protection (proxy)",
+      "mismatch_z": -0.5,
+      "percentile_hint": null,
+      "label": "MATCHUP SIGNAL",
+      "why": "Proxy until true pressure/PBWR data: lower pass EPA allowed \u21d2 stronger pass defense / rush. MATCHUP SIGNAL only \u2014 not a published win probability.",
+      "home_stat": 0.1839,
+      "away_stat": 0.2339
+    },
+    {
+      "marks": "\u00b7",
+      "key": "PASSING",
+      "title": "Passing offense vs pass defense",
+      "team": "NE",
+      "strength": "EVEN",
+      "fan_line": "\u00b7 NE \u2014 Passing offense vs pass defense",
+      "mismatch_z": -0.393,
+      "percentile_hint": null,
+      "label": "MATCHUP SIGNAL",
+      "why": "EPA/play on passes plus how much EPA the opposing defense allows. EPA weights plays by situation (3rd-and-3 \u2260 3rd-and-20).",
+      "home_stat": -0.0675,
+      "away_stat": 0.0032
+    }
+  ],
+  "slate_edges": [
+    "+ NE Pass Rush"
+  ],
+  "matchup_logistic": {
+    "model_id": "BCW-MATCHUP-LOGISTIC-v0.x",
+    "label": "Research Preview",
+    "public_probability_published": false,
+    "logit": -0.1522,
+    "p_home_win": 0.462,
+    "lean": "AWAY",
+    "contributions": [
+      {
+        "key": "PASS_RUSH",
+        "weight": 0.35,
+        "z": -0.5,
+        "term": -0.175
+      },
+      {
+        "key": "PASSING",
+        "weight": 0.4,
+        "z": -0.393,
+        "term": -0.1572
+      },
+      {
+        "key": "RUN_GAME",
+        "weight": 0.25,
+        "z": 0.3,
+        "term": 0.075
+      },
+      {
+        "key": "OVERALL",
+        "weight": 0.45,
+        "z": -0.1,
+        "term": -0.045
+      }
+    ],
+    "note": "Heuristic matchup logistic on EDGE z-scores. Not BCW-RIDGE. Not a ship gate."
+  },
+  "paths": {
+    "home": "Stay efficient on early downs and avoid giving the visitor explosive answers.",
+    "away": "Attack via pass rush / protection (proxy) and keep the favorite from playing its preferred script."
+  },
+  "risks": [
+    "Turnovers: the projection assumes roughly normal luck; a +2 swing can flip a NE lean.",
+    "Injury / inactive surprise on either OL or QB would rewrite the pass-rush signal."
+  ],
+  "adjustment": {
+    "points_home": -0.45,
+    "label": "MATCHUP SIGNAL (unvalidated additive)",
+    "note": "Not fed into BCW-RIDGE-v0.1. Research Preview display only."
+  },
+  "events": [
+    {
+      "game_id": "espn:401872656",
+      "event_type": "other",
+      "headline": "A.J. Brown, Jalen Hurts reunite briefly amid post-trade rift",
+      "publisher": "ESPN",
+      "source_url": "https://www.espn.com/nfl/story/_/id/49672812/aj-brown-jalen-hurts-reunite-briefly-amid-post-trade-rift",
+      "bucket": "availability",
+      "structured_fact": "A.J. Brown, Jalen Hurts reunite briefly amid post-trade rift",
+      "confidence": 0.45,
+      "tier": 2
+    },
+    {
+      "game_id": "espn:401872656",
+      "event_type": "market",
+      "headline": "Will the New England Patriots Miss the Playoffs? Odds & Schedule Breakdown - betmgm.com",
+      "publisher": "betmgm.com",
+      "source_url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOYUVkcTZYQ18xT2EwTVJJeGRYZjN6ODByU0ZRaXYtdGx0YWlOVmg0NGlJVkpQRnZoOWVSaThtLWRudHVhMDM0TzhHZmkxZ3g4bW5oaGxFamlubnNuYW1nUEtUYzNRMVZIak44RXZUS0NubkxGMzhlRS1JRV9Gbk5LX1MxVzA5TnZ6cFFud21rU1FXX1l5cnc?oc=5",
+      "bucket": "analysis",
+      "structured_fact": "Will the New England Patriots Miss the Playoffs? Odds & Schedule Breakdown - betmgm.com",
+      "confidence": 0.7,
+      "tier": 3
+    },
+    {
+      "game_id": "espn:401872656",
+      "event_type": "other",
+      "headline": "Seattle Seahawks vs. New England Patriots Game Preview | Super Bowl LX - Seattle Seahawks",
+      "publisher": "Seattle Seahawks",
+      "source_url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQOHBpVTRtZUlEX2pHcjFPUnNPSmlhTkdrdEhfbHdlRkdDdUhxdkF2eVMtVjIwUjJNbGl0VFZPdjFmckpwMEUtVldpLVk2UDVGdkVOaUJrM3M1cmJxRHNhbVU1MFhqeFhncC05QWU0Z3k5SUNCUTloNkEwMnVwNEh3QkxXTllERVVYMEln?oc=5",
+      "bucket": "analysis",
+      "structured_fact": "Seattle Seahawks vs. New England Patriots Game Preview | Super Bowl LX - Seattle Seahawks",
+      "confidence": 0.45,
+      "tier": 3
+    },
+    {
+      "game_id": "espn:401872656",
+      "event_type": "other",
+      "headline": "Patriots reach injury settlement with offensive lineman Andrew Rupcich - Yahoo Sports",
+      "publisher": "Yahoo Sports",
+      "source_url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQU2ZVNmNyQVNmS2VQbkdiNXFUc0VLLWVLMkZnWnFSS2ZlRkpIWEtHdEt6bklNMTEzMHRFbGJERVVJWlEyRm5zZUZaX0toZFJjSGJXalYwcUgwbmNDM1lZSThqcEd6VkVvTV9vY1J2RVBBUmRrQ3FzLVVEYWRaak9OQnd5VXo3ZVMzMVQzWG40SzVncEZJd1E?oc=5",
+      "bucket": "availability",
+      "structured_fact": "Patriots reach injury settlement with offensive lineman Andrew Rupcich - Yahoo Sports",
+      "confidence": 0.45,
+      "tier": 3
+    },
+    {
+      "game_id": "espn:401872656",
+      "event_type": "coach_comment",
+      "headline": "Colin Cowherd Ranks Patriots' Drake Maye, Mike Vrabel Top-10 QB, Coach Combo - roundtable.io",
+      "publisher": "roundtable.io",
+      "source_url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOLUtRQnZpTzZrTzhERFZFS1JrT0s3QXVuUlRKeEFGNlJwWjdWUER2WTdzX1Z5b2hqakpJZmRfRGxpdVhNNVhFRS1ySHFjRWgyR1ZWNUszZXl2NktabVFCX1ZjY1RfWGQ3SjRCOVZDYU51SXcxT3dCRkk5RlZWR29ER2h1S3JZUHFVcERoX3RULUU1QXE4VVBmVFBaNHFHQ2xLeDdwQVpIU2M5WS1uemszR2RoVEJMM1U?oc=5",
+      "bucket": "availability",
+      "structured_fact": "Colin Cowherd Ranks Patriots' Drake Maye, Mike Vrabel Top-10 QB, Coach Combo - roundtable.io",
+      "confidence": 0.7,
+      "tier": 3
+    },
+    {
+      "game_id": "espn:401872656",
+      "event_type": "other",
+      "headline": "Seahawks' Tory Horton reveals the weirdness behind his leg injury - Yahoo Sports",
+      "publisher": "Yahoo Sports",
+      "source_url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNTGI1elBpd2xUOFB1dXMxZ2JCQzY3bHJLTlQtUnlLeEhTTWJTazdoYmg3R1VHRXhyWGI5T1N4bmFWMU1aQ3pkdTZoXzB4ZDhseHVzb19WVzFvZGZMaVdnaVExWjUtWURERzFDeGoyQnVENDVnLVNtZUFMYzNiZXpaUklEM3h2UDZ4RWZQaXJXYWE?oc=5",
+      "bucket": "availability",
+      "structured_fact": "Seahawks' Tory Horton reveals the weirdness behind his leg injury - Yahoo Sports",
+      "confidence": 0.45,
+      "tier": 3
+    }
+  ],
+  "news_citations": [
+    {
+      "headline": "A.J. Brown, Jalen Hurts reunite briefly amid post-trade rift",
+      "url": "https://www.espn.com/nfl/story/_/id/49672812/aj-brown-jalen-hurts-reunite-briefly-amid-post-trade-rift",
+      "publisher": "ESPN"
+    },
+    {
+      "headline": "Will the New England Patriots Miss the Playoffs? Odds & Schedule Breakdown - betmgm.com",
+      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOYUVkcTZYQ18xT2EwTVJJeGRYZjN6ODByU0ZRaXYtdGx0YWlOVmg0NGlJVkpQRnZoOWVSaThtLWRudHVhMDM0TzhHZmkxZ3g4bW5oaGxFamlubnNuYW1nUEtUYzNRMVZIak44RXZUS0NubkxGMzhlRS1JRV9Gbk5LX1MxVzA5TnZ6cFFud21rU1FXX1l5cnc?oc=5",
+      "publisher": "betmgm.com"
+    },
+    {
+      "headline": "Seattle Seahawks vs. New England Patriots Game Preview | Super Bowl LX - Seattle Seahawks",
+      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQOHBpVTRtZUlEX2pHcjFPUnNPSmlhTkdrdEhfbHdlRkdDdUhxdkF2eVMtVjIwUjJNbGl0VFZPdjFmckpwMEUtVldpLVk2UDVGdkVOaUJrM3M1cmJxRHNhbVU1MFhqeFhncC05QWU0Z3k5SUNCUTloNkEwMnVwNEh3QkxXTllERVVYMEln?oc=5",
+      "publisher": "Seattle Seahawks"
+    },
+    {
+      "headline": "Patriots reach injury settlement with offensive lineman Andrew Rupcich - Yahoo Sports",
+      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQU2ZVNmNyQVNmS2VQbkdiNXFUc0VLLWVLMkZnWnFSS2ZlRkpIWEtHdEt6bklNMTEzMHRFbGJERVVJWlEyRm5zZUZaX0toZFJjSGJXalYwcUgwbmNDM1lZSThqcEd6VkVvTV9vY1J2RVBBUmRrQ3FzLVVEYWRaak9OQnd5VXo3ZVMzMVQzWG40SzVncEZJd1E?oc=5",
+      "publisher": "Yahoo Sports"
+    },
+    {
+      "headline": "Colin Cowherd Ranks Patriots' Drake Maye, Mike Vrabel Top-10 QB, Coach Combo - roundtable.io",
+      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOLUtRQnZpTzZrTzhERFZFS1JrT0s3QXVuUlRKeEFGNlJwWjdWUER2WTdzX1Z5b2hqakpJZmRfRGxpdVhNNVhFRS1ySHFjRWgyR1ZWNUszZXl2NktabVFCX1ZjY1RfWGQ3SjRCOVZDYU51SXcxT3dCRkk5RlZWR29ER2h1S3JZUHFVcERoX3RULUU1QXE4VVBmVFBaNHFHQ2xLeDdwQVpIU2M5WS1uemszR2RoVEJMM1U?oc=5",
+      "publisher": "roundtable.io"
+    },
+    {
+      "headline": "Seahawks' Tory Horton reveals the weirdness behind his leg injury - Yahoo Sports",
+      "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNTGI1elBpd2xUOFB1dXMxZ2JCQzY3bHJLTlQtUnlLeEhTTWJTazdoYmg3R1VHRXhyWGI5T1N4bmFWMU1aQ3pkdTZoXzB4ZDhseHVzb19WVzFvZGZMaVdnaVExWjUtWURERzFDeGoyQnVENDVnLVNtZUFMYzNiZXpaUklEM3h2UDZ4RWZQaXJXYWE?oc=5",
+      "publisher": "Yahoo Sports"
+    }
+  ],
+  "summary_short": "BlueChip leans NE. Top signal: + NE \u2014 Pass rush / protection (proxy)",
+  "summary_full": "New England Patriots at Seattle Seahawks.\n\nBlueChip leans NE. + NE \u2014 Pass rush / protection (proxy)\n\nWhy NE has the edge\n- + NE \u2014 Pass rush / protection (proxy)\n- \u00b7 NE \u2014 Passing offense vs pass defense\n\nBlueChip projection\nMarket: SEA -3.5\nBCW desk \u03bc (home): +2.0 (Research Preview)\nWin probability: unavailable until probability model passes validation.\n\nHow each team wins\nSEA: Stay efficient on early downs and avoid giving the visitor explosive answers.\nNE: Attack via pass rush / protection (proxy) and keep the favorite from playing its preferred script.\n\nWhat changed this week\n\u2022 A.J. Brown, Jalen Hurts reunite briefly amid post-trade rift\n\u2022 Will the New England Patriots Miss the Playoffs? Odds & Schedule Breakdown - betmgm.com\n\u2022 Seattle Seahawks vs. New England Patriots Game Preview | Super Bowl LX - Seattle Seahawks\n\u2022 Patriots reach injury settlement with offensive lineman Andrew Rupcich - Yahoo Sports\n\nWhat could make BlueChip wrong?\n\u2022 Turnovers: the projection assumes roughly normal luck; a +2 swing can flip a NE lean.\n\u2022 Injury / inactive surprise on either OL or QB would rewrite the pass-rush signal.\n\nBottom line: NE has more ways to win on the current MATCHUP SIGNAL board, but football variance (turnovers, explosives) remains large around any margin estimate.",
+  "generation_model": "desk-template",
+  "generation_provider": "fallback",
+  "glossary": {
+    "EPA/play": "Expected Points Added estimates how much each play improves expected scoring position. Positive is good. A 5-yard gain on 3rd-and-3 is not treated like 5 yards on 3rd-and-20.",
+    "MATCHUP SIGNAL": "A descriptive strength\u00d7weakness edge. Not a published win probability and not fed into BCW-RIDGE-v0.1 until validated walk-forward.",
+    "Research Preview": "BlueChip quantitative layer that has not cleared the five public ship gates."
+  },
+  "levels": {
+    "slate": {
+      "lean": "NE",
+      "top_edges": [
+        "+ NE Pass Rush"
+      ],
+      "market": "SEA -3.5",
+      "mu": 1.96,
+      "confidence_pct": 56.0
+    }
+  }
+}

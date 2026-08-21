@@ -21,6 +21,7 @@ const ITEMS: NavItem[] = [
   { to: '/teams', label: 'Teams', d: I.users, entitlement: 'teams_basic' },
   { to: '/backtests', label: 'Backtests', d: I.flask, entitlement: 'backtests_preview' },
   { to: '/research', label: 'Research', d: I.book, entitlement: 'research_preview' },
+  { to: '/about', label: 'About', d: I.info },
   { to: '/pricing', label: 'Pricing', d: I.card },
   { to: '/settings', label: 'Settings', d: I.cog },
 ]

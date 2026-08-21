@@ -1,0 +1,220 @@
+{
+  "game_id": "espn:401858433",
+  "version": "BCW-GIP-v0.1",
+  "created_at": "2026-08-21T03:40:39.400976+00:00",
+  "generated_at": "2026-08-21T03:40:39.400976+00:00",
+  "information_cutoff": "2026-08-21T03:40:39.400976+00:00",
+  "source_set_hash": "03d1f2f5ce3625bc0108bbd8",
+  "game": {
+    "game_id": "espn:401858433",
+    "league": "CFB",
+    "matchup": "BOIS @ ORE",
+    "home_team": "ORE",
+    "away_team": "BOIS",
+    "home_name": "Oregon Ducks",
+    "away_name": "Boise State Broncos",
+    "spread_label": "ORE -24.5",
+    "home_spread": -24.5,
+    "total_line": 52.5,
+    "week": 1
+  },
+  "lean_team": "ORE",
+  "projection": {
+    "model_id": "BCW-DESK-STRENGTH-v0.x",
+    "method": "Market line + AP rank edge (CFB; no CFB Elo yet)",
+    "mu_home": 30.5,
+    "sigma": 15.0,
+    "p_home_win": 0.9772,
+    "p_home_cover": 0.6431,
+    "edge_vs_minus_110": 0.1193,
+    "model_lean": "HOME",
+    "model_lean_team": "ORE",
+    "label": "Research Preview",
+    "public_probability_published": false,
+    "confidence_pct": 64.3
+  },
+  "matchup_edges": [
+    {
+      "key": "AP_RANK",
+      "title": "AP ranking gap",
+      "side": "HOME",
+      "side_team": "ORE",
+      "strength": "MAJOR",
+      "home_stat": 30.0,
+      "away_stat": 2.0,
+      "mismatch_z": 3.5,
+      "fan_line": "+++ ORE \u2014 AP ranking gap",
+      "label": "MATCHUP SIGNAL",
+      "why": "College prior until CFB EPA ingest. Lower AP rank is stronger."
+    }
+  ],
+  "headline_cards": [
+    {
+      "marks": "+++",
+      "key": "AP_RANK",
+      "title": "AP ranking gap",
+      "team": "ORE",
+      "strength": "MAJOR",
+      "fan_line": "+++ ORE \u2014 AP ranking gap",
+      "mismatch_z": 3.5,
+      "percentile_hint": "More extreme than ~95% of similar unit mismatches in a normal sample.",
+      "label": "MATCHUP SIGNAL",
+      "why": "College prior until CFB EPA ingest. Lower AP rank is stronger.",
+      "home_stat": 30.0,
+      "away_stat": 2.0
+    }
+  ],
+  "slate_edges": [
+    "+++ ORE Ap Rank"
+  ],
+  "matchup_logistic": {
+    "model_id": "BCW-MATCHUP-LOGISTIC-v0.x",
+    "label": "Research Preview",
+    "public_probability_published": false,
+    "logit": 1.2,
+    "p_home_win": 0.7685,
+    "lean": "HOME",
+    "contributions": [
+      {
+        "key": "AP_RANK",
+        "weight": 0.3,
+        "z": 3.5,
+        "term": 1.05
+      }
+    ],
+    "note": "Heuristic matchup logistic on EDGE z-scores. Not BCW-RIDGE. Not a ship gate."
+  },
+  "paths": {
+    "home": "Lean on ap ranking gap. Convert that mismatch before the game becomes a coin-flip script.",
+    "away": "Shorten the game, win the line of scrimmage, and force the favorite into obvious passing downs."
+  },
+  "risks": [
+    "Turnovers: the projection assumes roughly normal luck; a +2 swing can flip a ORE lean.",
+    "Injury / inactive surprise on either OL or QB would rewrite the pass-rush signal."
+  ],
+  "adjustment": {
+    "points_home": 1.6,
+    "label": "MATCHUP SIGNAL (unvalidated additive)",
+    "note": "Not fed into BCW-RIDGE-v0.1. Research Preview display only."
+  },
+  "events": [
+    {
+      "game_id": "espn:401858433",
+      "event_type": "other",
+      "headline": "Oregon QB Dante Moore sees golf as aid in getting Ducks to national title",
+      "publisher": "ESPN",
+      "source_url": "https://www.espn.com/college-football/story/_/id/49629307/oregon-qb-dante-moore-sees-golf-aid-getting-ducks-national-title",
+      "bucket": "availability",
+      "structured_fact": "Oregon QB Dante Moore sees golf as aid in getting Ducks to national title",
+      "confidence": 0.45,
+      "tier": 2
+    },
+    {
+      "game_id": "espn:401858433",
+      "event_type": "market",
+      "headline": "Oregon football betting preview 2026: Ducks odds, futures, win total prediction, sportsbook promos and more - sportingnews.com",
+      "publisher": "sportingnews.com",
+      "source_url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNVHduMm41S1FoRDVpSHRyb0M3bDFDSThMakJBdUVrQ0dyNjdKSS1lVXdnMHJwWk00Tjh1NlhQUHZKWDZUUXI4MmxibDV6Qld4ZWh5ZjAta1A2WHpsMDhLNFBCV1RCRWI1Q2N2U1dFd1JJX05kTGg4Znh2X1pVNndmdGxsVXpZRVNvN05TREt6VUdEaURTZDJfQXFla25MLXhwUnVoSjBlQ3ZxV3FPSW9LcS1lQXJRbmN2ODlXM25nZkhSZGJPbHF6cg?oc=5",
+      "bucket": "analysis",
+      "structured_fact": "Oregon football betting preview 2026: Ducks odds, futures, win total prediction, sportsbook promos and more - sportingnews.com",
+      "confidence": 0.7,
+      "tier": 3
+    },
+    {
+      "game_id": "espn:401858433",
+      "event_type": "other",
+      "headline": "Big Ten Football Preview: Oregon Ducks - KIWA Radio",
+      "publisher": "KIWA Radio",
+      "source_url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE44LTU3Zk51Y1dxNnpHX2dYZEJoMFRXWVpxazdhWmUyS2x1WGxCTGJRY0VFOHRLX2w1UENmNVhGbFdpdHY0TlhmSm5QRXg4X3lCNE1YNU5kelZzN1dydUR3MjBSTFgxbnFyVmdvdExXM196eUlJb1E?oc=5",
+      "bucket": "analysis",
+      "structured_fact": "Big Ten Football Preview: Oregon Ducks - KIWA Radio",
+      "confidence": 0.45,
+      "tier": 3
+    },
+    {
+      "game_id": "espn:401858433",
+      "event_type": "other",
+      "headline": "Boise State's Week 1 matchup with Oregon gets an early injury update - Yahoo Sports",
+      "publisher": "Yahoo Sports",
+      "source_url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxNTlVuOVRQWThWWlNjaDY3aHNDMWl5MEZOcU1aYlpjSFl0VzJGU21LdlZHUFNVUXROY0I5UVB0a0FLWjhzR2hIVnljenlMd3ZHd2FTM0h4Y0kzb2cwMG1mOUduQTJwZ0VGemJhQzhMZFBDanpJVVZTWWxGeVU0ZE1pcG5R?oc=5",
+      "bucket": "availability",
+      "structured_fact": "Boise State's Week 1 matchup with Oregon gets an early injury update - Yahoo Sports",
+      "confidence": 0.45,
+      "tier": 3
+    },
+    {
+      "game_id": "espn:401858433",
+      "event_type": "other",
+      "headline": "QB Dante Moore returns and No. 2 Oregon aiming high again in Big Ten, national title chases - Oregon Public Broadcasting - OPB",
+      "publisher": "Oregon Public Broadcasting - OPB",
+      "source_url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPYkJtYkNPbXdzUjhhbkFRMnJialA3MmhYRGhqdWtqZjRoTkJtUEsyMmI2Vmc2OEZTWHltV3FrUlFEQTNwcDd5elB6QVk1UVRIVG5FOHpHdFNaYlhqYXY1N1FEZFFKYWJlclhQempoWVY5V3EtZlBqaFRLeU14Z3lFX281dm5xTDZ4TVhhMnpnTEE4WGNkemwxQXB2TVNnVi1zaE5TbkZxNS1mTkRsRWlkeg?oc=5",
+      "bucket": "availability",
+      "structured_fact": "QB Dante Moore returns and No. 2 Oregon aiming high again in Big Ten, national title chases - Oregon Public Broadcasting - OPB",
+      "confidence": 0.45,
+      "tier": 3
+    },
+    {
+      "game_id": "espn:401858433",
+      "event_type": "other",
+      "headline": "College football's mad two-week scramble to land a transfer portal QB",
+      "publisher": "ESPN",
+      "source_url": "https://www.espn.com/college-football/story/_/id/49650906/college-football-two-week-scramble-transfer-portal-qb",
+      "bucket": "availability",
+      "structured_fact": "College football's mad two-week scramble to land a transfer portal QB",
+      "confidence": 0.45,
+      "tier": 2
+    }
+  ],
+  "news_citations": [
+    {
+      "headline": "Oregon QB Dante Moore sees golf as aid in getting Ducks to national title",
+      "url": "https://www.espn.com/college-football/story/_/id/49629307/oregon-qb-dante-moore-sees-golf-aid-getting-ducks-national-title",
+      "publisher": "ESPN"
+    },
+    {
+      "headline": "Oregon football betting preview 2026: Ducks odds, futures, win total prediction, sportsbook promos and more - sportingnews.com",
+      "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNVHduMm41S1FoRDVpSHRyb0M3bDFDSThMakJBdUVrQ0dyNjdKSS1lVXdnMHJwWk00Tjh1NlhQUHZKWDZUUXI4MmxibDV6Qld4ZWh5ZjAta1A2WHpsMDhLNFBCV1RCRWI1Q2N2U1dFd1JJX05kTGg4Znh2X1pVNndmdGxsVXpZRVNvN05TREt6VUdEaURTZDJfQXFla25MLXhwUnVoSjBlQ3ZxV3FPSW9LcS1lQXJRbmN2ODlXM25nZkhSZGJPbHF6cg?oc=5",
+      "publisher": "sportingnews.com"
+    },
+    {
+      "headline": "Big Ten Football Preview: Oregon Ducks - KIWA Radio",
+      "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE44LTU3Zk51Y1dxNnpHX2dYZEJoMFRXWVpxazdhWmUyS2x1WGxCTGJRY0VFOHRLX2w1UENmNVhGbFdpdHY0TlhmSm5QRXg4X3lCNE1YNU5kelZzN1dydUR3MjBSTFgxbnFyVmdvdExXM196eUlJb1E?oc=5",
+      "publisher": "KIWA Radio"
+    },
+    {
+      "headline": "Boise State's Week 1 matchup with Oregon gets an early injury update - Yahoo Sports",
+      "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxNTlVuOVRQWThWWlNjaDY3aHNDMWl5MEZOcU1aYlpjSFl0VzJGU21LdlZHUFNVUXROY0I5UVB0a0FLWjhzR2hIVnljenlMd3ZHd2FTM0h4Y0kzb2cwMG1mOUduQTJwZ0VGemJhQzhMZFBDanpJVVZTWWxGeVU0ZE1pcG5R?oc=5",
+      "publisher": "Yahoo Sports"
+    },
+    {
+      "headline": "QB Dante Moore returns and No. 2 Oregon aiming high again in Big Ten, national title chases - Oregon Public Broadcasting - OPB",
+      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPYkJtYkNPbXdzUjhhbkFRMnJialA3MmhYRGhqdWtqZjRoTkJtUEsyMmI2Vmc2OEZTWHltV3FrUlFEQTNwcDd5elB6QVk1UVRIVG5FOHpHdFNaYlhqYXY1N1FEZFFKYWJlclhQempoWVY5V3EtZlBqaFRLeU14Z3lFX281dm5xTDZ4TVhhMnpnTEE4WGNkemwxQXB2TVNnVi1zaE5TbkZxNS1mTkRsRWlkeg?oc=5",
+      "publisher": "Oregon Public Broadcasting - OPB"
+    },
+    {
+      "headline": "College football's mad two-week scramble to land a transfer portal QB",
+      "url": "https://www.espn.com/college-football/story/_/id/49650906/college-football-two-week-scramble-transfer-portal-qb",
+      "publisher": "ESPN"
+    }
+  ],
+  "summary_short": "BlueChip leans ORE. Top signal: +++ ORE \u2014 AP ranking gap",
+  "summary_full": "Boise State Broncos at Oregon Ducks.\n\nBlueChip leans ORE. +++ ORE \u2014 AP ranking gap\n\nWhy ORE has the edge\n- +++ ORE \u2014 AP ranking gap\n\nBlueChip projection\nMarket: ORE -24.5\nBCW desk \u03bc (home): +30.5 (Research Preview)\nWin probability: unavailable until probability model passes validation.\n\nHow each team wins\nORE: Lean on ap ranking gap. Convert that mismatch before the game becomes a coin-flip script.\nBOIS: Shorten the game, win the line of scrimmage, and force the favorite into obvious passing downs.\n\nWhat changed this week\n\u2022 Oregon QB Dante Moore sees golf as aid in getting Ducks to national title\n\u2022 Oregon football betting preview 2026: Ducks odds, futures, win total prediction, sportsbook promos and more - sportingnews.com\n\u2022 Big Ten Football Preview: Oregon Ducks - KIWA Radio\n\u2022 Boise State's Week 1 matchup with Oregon gets an early injury update - Yahoo Sports\n\nWhat could make BlueChip wrong?\n\u2022 Turnovers: the projection assumes roughly normal luck; a +2 swing can flip a ORE lean.\n\u2022 Injury / inactive surprise on either OL or QB would rewrite the pass-rush signal.\n\nBottom line: ORE has more ways to win on the current MATCHUP SIGNAL board, but football variance (turnovers, explosives) remains large around any margin estimate.",
+  "generation_model": "desk-template",
+  "generation_provider": "fallback",
+  "glossary": {
+    "EPA/play": "Expected Points Added estimates how much each play improves expected scoring position. Positive is good. A 5-yard gain on 3rd-and-3 is not treated like 5 yards on 3rd-and-20.",
+    "MATCHUP SIGNAL": "A descriptive strength\u00d7weakness edge. Not a published win probability and not fed into BCW-RIDGE-v0.1 until validated walk-forward.",
+    "Research Preview": "BlueChip quantitative layer that has not cleared the five public ship gates."
+  },
+  "levels": {
+    "slate": {
+      "lean": "ORE",
+      "top_edges": [
+        "+++ ORE Ap Rank"
+      ],
+      "market": "ORE -24.5",
+      "mu": 30.5,
+      "confidence_pct": 64.3
+    }
+  }
+}

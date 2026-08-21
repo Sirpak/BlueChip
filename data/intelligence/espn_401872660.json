@@ -1,0 +1,277 @@
+{
+  "game_id": "espn:401872660",
+  "version": "BCW-GIP-v0.1",
+  "created_at": "2026-08-21T03:43:21.205792+00:00",
+  "generated_at": "2026-08-21T03:43:21.205792+00:00",
+  "information_cutoff": "2026-08-21T03:43:21.205792+00:00",
+  "source_set_hash": "4c1e0db50462d76d6b352bb7",
+  "game": {
+    "game_id": "espn:401872660",
+    "league": "NFL",
+    "matchup": "BUF @ HOU",
+    "home_team": "HOU",
+    "away_team": "BUF",
+    "home_name": "Houston Texans",
+    "away_name": "Buffalo Bills",
+    "spread_label": "BUF -1.5",
+    "home_spread": 1.5,
+    "total_line": 44.5,
+    "week": 1
+  },
+  "lean_team": "HOU",
+  "projection": {
+    "model_id": "BCW-DESK-STRENGTH-v0.x",
+    "method": "0.65\u00b7Elo/25+HFA + 0.35\u00b7(SRS+HFA)",
+    "mu_home": -0.17,
+    "sigma": 13.5,
+    "p_home_win": 0.4801,
+    "p_home_cover": 0.5244,
+    "edge_vs_minus_110": 0.0006,
+    "model_lean": "HOME",
+    "model_lean_team": "HOU",
+    "label": "Research Preview",
+    "public_probability_published": false,
+    "confidence_pct": 52.4
+  },
+  "matchup_edges": [
+    {
+      "key": "PASS_RUSH",
+      "title": "Pass rush / protection (proxy)",
+      "side": "HOME",
+      "side_team": "HOU",
+      "strength": "STRONG",
+      "home_stat": 0.2519,
+      "away_stat": 0.1415,
+      "mismatch_z": 1.105,
+      "fan_line": "++ HOU \u2014 Pass rush / protection (proxy)",
+      "label": "MATCHUP SIGNAL",
+      "why": "Proxy until true pressure/PBWR data: lower pass EPA allowed \u21d2 stronger pass defense / rush. MATCHUP SIGNAL only \u2014 not a published win probability."
+    },
+    {
+      "key": "PASSING",
+      "title": "Passing offense vs pass defense",
+      "side": "AWAY",
+      "side_team": "BUF",
+      "strength": "EVEN",
+      "home_stat": -0.1108,
+      "away_stat": -0.0557,
+      "mismatch_z": -0.306,
+      "fan_line": "\u00b7 BUF \u2014 Passing offense vs pass defense",
+      "label": "MATCHUP SIGNAL",
+      "why": "EPA/play on passes plus how much EPA the opposing defense allows. EPA weights plays by situation (3rd-and-3 \u2260 3rd-and-20)."
+    },
+    {
+      "key": "RUN_GAME",
+      "title": "Rushing offense vs run defense",
+      "side": "EVEN",
+      "side_team": "HOU",
+      "strength": "EVEN",
+      "home_stat": -0.0422,
+      "away_stat": -0.0526,
+      "mismatch_z": 0.075,
+      "fan_line": "Rushing offense vs run defense: roughly even",
+      "label": "MATCHUP SIGNAL",
+      "why": "Rush EPA/play vs EPA allowed on rushes \u2014 better than raw yards/carry."
+    },
+    {
+      "key": "OVERALL",
+      "title": "Overall efficiency",
+      "side": "EVEN",
+      "side_team": "HOU",
+      "strength": "EVEN",
+      "home_stat": 0.1885,
+      "away_stat": 0.1801,
+      "mismatch_z": 0.042,
+      "fan_line": "Overall efficiency: roughly even",
+      "label": "MATCHUP SIGNAL",
+      "why": "Net EPA/play (offense minus defense). Broad team-strength interaction."
+    }
+  ],
+  "headline_cards": [
+    {
+      "marks": "++",
+      "key": "PASS_RUSH",
+      "title": "Pass rush / protection (proxy)",
+      "team": "HOU",
+      "strength": "STRONG",
+      "fan_line": "++ HOU \u2014 Pass rush / protection (proxy)",
+      "mismatch_z": 1.105,
+      "percentile_hint": "Clearly tilted versus a typical NFL/CFB unit matchup.",
+      "label": "MATCHUP SIGNAL",
+      "why": "Proxy until true pressure/PBWR data: lower pass EPA allowed \u21d2 stronger pass defense / rush. MATCHUP SIGNAL only \u2014 not a published win probability.",
+      "home_stat": 0.2519,
+      "away_stat": 0.1415
+    }
+  ],
+  "slate_edges": [
+    "++ HOU Pass Rush"
+  ],
+  "matchup_logistic": {
+    "model_id": "BCW-MATCHUP-LOGISTIC-v0.x",
+    "label": "Research Preview",
+    "public_probability_published": false,
+    "logit": 0.452,
+    "p_home_win": 0.6111,
+    "lean": "HOME",
+    "contributions": [
+      {
+        "key": "PASS_RUSH",
+        "weight": 0.35,
+        "z": 1.105,
+        "term": 0.3867
+      },
+      {
+        "key": "PASSING",
+        "weight": 0.4,
+        "z": -0.306,
+        "term": -0.1224
+      },
+      {
+        "key": "RUN_GAME",
+        "weight": 0.25,
+        "z": 0.075,
+        "term": 0.0187
+      },
+      {
+        "key": "OVERALL",
+        "weight": 0.45,
+        "z": 0.042,
+        "term": 0.0189
+      }
+    ],
+    "note": "Heuristic matchup logistic on EDGE z-scores. Not BCW-RIDGE. Not a ship gate."
+  },
+  "paths": {
+    "home": "Lean on pass rush / protection (proxy). Convert that mismatch before the game becomes a coin-flip script.",
+    "away": "Shorten the game, win the line of scrimmage, and force the favorite into obvious passing downs."
+  },
+  "risks": [
+    "Turnovers: the projection assumes roughly normal luck; a +2 swing can flip a HOU lean.",
+    "Injury / inactive surprise on either OL or QB would rewrite the pass-rush signal."
+  ],
+  "adjustment": {
+    "points_home": 1.0,
+    "label": "MATCHUP SIGNAL (unvalidated additive)",
+    "note": "Not fed into BCW-RIDGE-v0.1. Research Preview display only."
+  },
+  "events": [
+    {
+      "game_id": "espn:401872660",
+      "event_type": "market",
+      "headline": "Houston Texans vs Buffalo Bills NFL Picks, Odds & Predictions - Kingpin Sports",
+      "publisher": "Kingpin Sports",
+      "source_url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNRHNwSFJENzdPM1NwUGFoQTg1VVpMQ3JLUWpKOS14bkcxV05wZktPMEV4RllBQmh4R1I3QkhqSUhpcS1VX2NqRWMxSHpWRXV1LVF6dnBmVlRYb1pvWkFjR0tfU0NiakNqNEFTUTNUc3RUV19ZM0VVeTJmZFJBcGh4QlBSSkpXRkJlYlozZDFwa2lnX1FFdlZ1ei1Jb1ZMVm9iZE9tdTdtS3lJNEh6NmR4R3RBaGU1dUVt?oc=5",
+      "bucket": "analysis",
+      "structured_fact": "Houston Texans vs Buffalo Bills NFL Picks, Odds & Predictions - Kingpin Sports",
+      "confidence": 0.7,
+      "tier": 3
+    },
+    {
+      "game_id": "espn:401872660",
+      "event_type": "other",
+      "headline": "4 Houston Texans WR Targets After Jayden Higgins Injury - Sportsnaut",
+      "publisher": "Sportsnaut",
+      "source_url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNTzBNX2xpQ2g2QTFKNVp1UE9wUXJxOHhsUHJpV0lvZVJoZ0NPRHc1Z0txc3ExeGswVnROMFc1RUQyeUk5NXZmRGQzaFhPQWhvQm1hYk9nbHNxWk5lMmJiU3doakdDQm5uMWI2QkNfaWJxbUVQaXNNMnpJbjRfQ3NfdERSNkZMTnM?oc=5",
+      "bucket": "availability",
+      "structured_fact": "4 Houston Texans WR Targets After Jayden Higgins Injury - Sportsnaut",
+      "confidence": 0.45,
+      "tier": 3
+    },
+    {
+      "game_id": "espn:401872660",
+      "event_type": "other",
+      "headline": "Texans ready to feature David Montgomery's dual-threat ability",
+      "publisher": "ESPN",
+      "source_url": "https://www.espn.com/nfl/story/_/id/49640061/houston-texans-rb-david-montgomery-spark-offense-cj-stroud",
+      "bucket": "availability",
+      "structured_fact": "Texans ready to feature David Montgomery's dual-threat ability",
+      "confidence": 0.45,
+      "tier": 2
+    },
+    {
+      "game_id": "espn:401872660",
+      "event_type": "injury",
+      "headline": "Raiders cornerback carted off field in Houston with knee injury - Las Vegas Review-Journal",
+      "publisher": "Las Vegas Review-Journal",
+      "source_url": "https://news.google.com/rss/articles/CBMi_wJBVV95cUxNajRSdkROV1ZFQVE3Uzc1d1ptLUdNN1o3bGhCMmVyWjRERm4zcFloUlpaRHpwSlFrSVZpYVZReVJvQW5SQ1AwcmtkNXlXLTVXR2tDcUF4SGVwQUUyTWtLc1R3UlFWUkhOMDdoazQ1Z1h1YjB2cTFKN2xSMkpKSXhLeU9oVlc3S2lxR2F4NkhST25XUFNwVHlhREo3clEyZzR6bHhpQ0c2OFlFWEZ1UkRsWUNPQndoUGY3bkFRb05hSGJ5T2RqbmJKcEktay1ZUVBQUjhDSHp6LVF1dzFnOW5MYU9ZZlAyZzFHcjdnbTlMVjB3LWVDOFdIUFBIejVfRWI5X3M3V25MMVhBNGdsdThlZGQ2VGVXemxsWEt2OFNGSzROMW0tanhNX0lBRjlfUnp3Tk5SYmJ2WWs2ekdrODJ3Z01lV3RQdU5lS0xCc2JleTFtTHo2TEN0VlNxUU42R2ZabFFJaGdnU3dtdWd1aGtiTTIwU01DbGYyY0J6M2Jjbw?oc=5",
+      "bucket": "availability",
+      "structured_fact": "Raiders cornerback carted off field in Houston with knee injury - Las Vegas Review-Journal",
+      "confidence": 0.7,
+      "tier": 3
+    },
+    {
+      "game_id": "espn:401872660",
+      "event_type": "other",
+      "headline": "Bills Taunt Browns QB Shedeur Sanders With 2-Word Insult - Yahoo Sports",
+      "publisher": "Yahoo Sports",
+      "source_url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPUlJCcnVyZWdfNkxSaE1BazNRQ3JLSlFBZE5JTWtwNGkyU1RNNnlaMDVyTUw0TDRtTGx5SzZxWHBBOTdEcEZhTE03SXFsN2NMSkREZExoOVlHMGk1QlJ2bE9fclN0ZDJCQ25DODJOMEM4aEQ0RHAycDE0UkJjN0lqLUtNUU0?oc=5",
+      "bucket": "availability",
+      "structured_fact": "Bills Taunt Browns QB Shedeur Sanders With 2-Word Insult - Yahoo Sports",
+      "confidence": 0.45,
+      "tier": 3
+    },
+    {
+      "game_id": "espn:401872660",
+      "event_type": "injury",
+      "headline": "NFL Insider Hints at Future Texans WR Trade After Jayden Higgins' Season-Ending Knee Injury - Bleacher Report",
+      "publisher": "Bleacher Report",
+      "source_url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxNaEJMNjhqTExQd3BQUVF4emxNa3VzWFN4X0xJOFBvUk91aUJLZ2loYkF4WWc5MG1EY1lGNEhOUTk4NXZuSXA3bGo2QksyVzZXUGRERjR2QS1aeXNKYzNDejhaaGZ1SVFiaGJvNFRudExxTGludUFDWmdFeUVNcmtNY0VkblJ6c2IxSW95X1d6RDREOTlLRzNBOFA0OS1yelY0NnQ3U1R4SzFQanF6RzNHdEMxU1ZWTGRuYVNQdzJSNkF6N2lsMEZkNDM2VHg?oc=5",
+      "bucket": "availability",
+      "structured_fact": "NFL Insider Hints at Future Texans WR Trade After Jayden Higgins' Season-Ending Knee Injury - Bleacher Report",
+      "confidence": 0.7,
+      "tier": 3
+    }
+  ],
+  "news_citations": [
+    {
+      "headline": "Houston Texans vs Buffalo Bills NFL Picks, Odds & Predictions - Kingpin Sports",
+      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNRHNwSFJENzdPM1NwUGFoQTg1VVpMQ3JLUWpKOS14bkcxV05wZktPMEV4RllBQmh4R1I3QkhqSUhpcS1VX2NqRWMxSHpWRXV1LVF6dnBmVlRYb1pvWkFjR0tfU0NiakNqNEFTUTNUc3RUV19ZM0VVeTJmZFJBcGh4QlBSSkpXRkJlYlozZDFwa2lnX1FFdlZ1ei1Jb1ZMVm9iZE9tdTdtS3lJNEh6NmR4R3RBaGU1dUVt?oc=5",
+      "publisher": "Kingpin Sports"
+    },
+    {
+      "headline": "4 Houston Texans WR Targets After Jayden Higgins Injury - Sportsnaut",
+      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNTzBNX2xpQ2g2QTFKNVp1UE9wUXJxOHhsUHJpV0lvZVJoZ0NPRHc1Z0txc3ExeGswVnROMFc1RUQyeUk5NXZmRGQzaFhPQWhvQm1hYk9nbHNxWk5lMmJiU3doakdDQm5uMWI2QkNfaWJxbUVQaXNNMnpJbjRfQ3NfdERSNkZMTnM?oc=5",
+      "publisher": "Sportsnaut"
+    },
+    {
+      "headline": "Texans ready to feature David Montgomery's dual-threat ability",
+      "url": "https://www.espn.com/nfl/story/_/id/49640061/houston-texans-rb-david-montgomery-spark-offense-cj-stroud",
+      "publisher": "ESPN"
+    },
+    {
+      "headline": "Raiders cornerback carted off field in Houston with knee injury - Las Vegas Review-Journal",
+      "url": "https://news.google.com/rss/articles/CBMi_wJBVV95cUxNajRSdkROV1ZFQVE3Uzc1d1ptLUdNN1o3bGhCMmVyWjRERm4zcFloUlpaRHpwSlFrSVZpYVZReVJvQW5SQ1AwcmtkNXlXLTVXR2tDcUF4SGVwQUUyTWtLc1R3UlFWUkhOMDdoazQ1Z1h1YjB2cTFKN2xSMkpKSXhLeU9oVlc3S2lxR2F4NkhST25XUFNwVHlhREo3clEyZzR6bHhpQ0c2OFlFWEZ1UkRsWUNPQndoUGY3bkFRb05hSGJ5T2RqbmJKcEktay1ZUVBQUjhDSHp6LVF1dzFnOW5MYU9ZZlAyZzFHcjdnbTlMVjB3LWVDOFdIUFBIejVfRWI5X3M3V25MMVhBNGdsdThlZGQ2VGVXemxsWEt2OFNGSzROMW0tanhNX0lBRjlfUnp3Tk5SYmJ2WWs2ekdrODJ3Z01lV3RQdU5lS0xCc2JleTFtTHo2TEN0VlNxUU42R2ZabFFJaGdnU3dtdWd1aGtiTTIwU01DbGYyY0J6M2Jjbw?oc=5",
+      "publisher": "Las Vegas Review-Journal"
+    },
+    {
+      "headline": "Bills Taunt Browns QB Shedeur Sanders With 2-Word Insult - Yahoo Sports",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPUlJCcnVyZWdfNkxSaE1BazNRQ3JLSlFBZE5JTWtwNGkyU1RNNnlaMDVyTUw0TDRtTGx5SzZxWHBBOTdEcEZhTE03SXFsN2NMSkREZExoOVlHMGk1QlJ2bE9fclN0ZDJCQ25DODJOMEM4aEQ0RHAycDE0UkJjN0lqLUtNUU0?oc=5",
+      "publisher": "Yahoo Sports"
+    },
+    {
+      "headline": "NFL Insider Hints at Future Texans WR Trade After Jayden Higgins' Season-Ending Knee Injury - Bleacher Report",
+      "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxNaEJMNjhqTExQd3BQUVF4emxNa3VzWFN4X0xJOFBvUk91aUJLZ2loYkF4WWc5MG1EY1lGNEhOUTk4NXZuSXA3bGo2QksyVzZXUGRERjR2QS1aeXNKYzNDejhaaGZ1SVFiaGJvNFRudExxTGludUFDWmdFeUVNcmtNY0VkblJ6c2IxSW95X1d6RDREOTlLRzNBOFA0OS1yelY0NnQ3U1R4SzFQanF6RzNHdEMxU1ZWTGRuYVNQdzJSNkF6N2lsMEZkNDM2VHg?oc=5",
+      "publisher": "Bleacher Report"
+    }
+  ],
+  "summary_short": "BlueChip leans HOU. Top signal: ++ HOU \u2014 Pass rush / protection (proxy)",
+  "summary_full": "Buffalo Bills at Houston Texans.\n\nBlueChip leans HOU. ++ HOU \u2014 Pass rush / protection (proxy)\n\nWhy HOU has the edge\n- ++ HOU \u2014 Pass rush / protection (proxy)\n\nBlueChip projection\nMarket: BUF -1.5\nBCW desk \u03bc (home): -0.2 (Research Preview)\nWin probability: unavailable until probability model passes validation.\n\nHow each team wins\nHOU: Lean on pass rush / protection (proxy). Convert that mismatch before the game becomes a coin-flip script.\nBUF: Shorten the game, win the line of scrimmage, and force the favorite into obvious passing downs.\n\nWhat changed this week\n\u2022 Houston Texans vs Buffalo Bills NFL Picks, Odds & Predictions - Kingpin Sports\n\u2022 4 Houston Texans WR Targets After Jayden Higgins Injury - Sportsnaut\n\u2022 Texans ready to feature David Montgomery's dual-threat ability\n\u2022 Raiders cornerback carted off field in Houston with knee injury - Las Vegas Review-Journal\n\nWhat could make BlueChip wrong?\n\u2022 Turnovers: the projection assumes roughly normal luck; a +2 swing can flip a HOU lean.\n\u2022 Injury / inactive surprise on either OL or QB would rewrite the pass-rush signal.\n\nBottom line: HOU has more ways to win on the current MATCHUP SIGNAL board, but football variance (turnovers, explosives) remains large around any margin estimate.",
+  "generation_model": "desk-template",
+  "generation_provider": "fallback",
+  "glossary": {
+    "EPA/play": "Expected Points Added estimates how much each play improves expected scoring position. Positive is good. A 5-yard gain on 3rd-and-3 is not treated like 5 yards on 3rd-and-20.",
+    "MATCHUP SIGNAL": "A descriptive strength\u00d7weakness edge. Not a published win probability and not fed into BCW-RIDGE-v0.1 until validated walk-forward.",
+    "Research Preview": "BlueChip quantitative layer that has not cleared the five public ship gates."
+  },
+  "levels": {
+    "slate": {
+      "lean": "HOU",
+      "top_edges": [
+        "++ HOU Pass Rush"
+      ],
+      "market": "BUF -1.5",
+      "mu": -0.17,
+      "confidence_pct": 52.4
+    }
+  }
+}

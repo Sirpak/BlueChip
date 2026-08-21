@@ -1,7 +1,10 @@
 import { Link } from 'react-router-dom'
 import { useAuth } from '../lib/auth'
 import { UpgradeCard } from '../components/Locked'
+import { Hint } from '../components/Hint'
 import { can } from '../lib/entitlements'
+
+export { Teams } from './TeamsPage'
 
 export function MarketsPage() {
   const { user } = useAuth()
@@ -22,41 +25,23 @@ export function MarketsPage() {
       <div className="page-h">
         <div>
           <h1>Markets</h1>
-          <p className="muted">How BlueChip compares model probabilities to sportsbook pricing — de-vig, break-even, Stern P(cover).</p>
+          <p className="muted">How BlueChip compares model chances to sportsbook prices — explained for fans.</p>
         </div>
       </div>
       <section className="card">
         <p>
-          Stage 1 engine: American odds → break-even, multiplicative de-vig, Stern <code>P(cover)</code> with σ<sub>NFL</sub>
-          = 13.5. Interactive quote desk at{' '}
-          <a href="/legacy/markets">/legacy/markets</a> until this page binds <code>/api/markets/price</code>.
+          Stage 1 engine: <Hint t="american-odds">American odds</Hint> → <Hint t="break-even">break-even</Hint>,{' '}
+          <Hint t="no-vig">de-vig</Hint>, and <Hint t="stern">Stern</Hint> cover chance with NFL σ ≈ 13.5. Interactive
+          quote desk at <a href="/legacy/markets">/legacy/markets</a>. Full glossary:{' '}
+          <Link to="/about">About</Link>.
         </p>
         <p className="muted">
-          Negative home spread = home favored (betting convention). Edge = model p − no-vig p — also report vs priced
-          break-even at −110 (52.38%).
+          Negative home <Hint t="spread">spread</Hint> = home favored. <Hint t="edge">Edge</Hint> = model p − no-vig p —
+          also report vs priced break-even at −110 (52.38%).
         </p>
         <a className="btn btn-primary" href="/legacy/markets">
           Open conversion engine
         </a>
-      </section>
-    </>
-  )
-}
-
-export function Teams() {
-  return (
-    <>
-      <div className="page-h">
-        <div>
-          <h1>Teams</h1>
-          <p className="muted">Deeper exploration — roster, trailing EPA, rest, and snapshot features per franchise.</p>
-        </div>
-      </div>
-      <section className="card">
-        <p className="muted">
-          BCW-SNAP-v0.1 stores rolling EPA, Elo, SRS, and opponent-adjusted strength on every game. Team pages will
-          surface those pregame trajectories. Until then, open a game on the board and expand Compare.
-        </p>
       </section>
     </>
   )

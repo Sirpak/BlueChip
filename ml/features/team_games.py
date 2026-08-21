@@ -8,6 +8,7 @@ import pandas as pd
 from sqlalchemy.orm import Session
 
 from ml.features.constants import EXPLOSIVE_PASS_YARDS, EXPLOSIVE_RUSH_YARDS
+from app.ingest.identity import canonicalize_nfl_columns
 
 logger = logging.getLogger(__name__)
 
@@ -39,6 +40,7 @@ def aggregate_team_games(session: Session) -> pd.DataFrame:
     plays = pd.read_sql(PLAY_SQL, session.get_bind())
     if plays.empty:
         return pd.DataFrame()
+    plays = canonicalize_nfl_columns(plays, ["posteam", "defteam"])
 
     off_mask = _as_bool_s(plays["pass_attempt"]) | _as_bool_s(plays["rush_attempt"])
     off = plays.loc[off_mask].copy()

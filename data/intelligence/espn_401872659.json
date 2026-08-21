@@ -1,0 +1,324 @@
+{
+  "game_id": "espn:401872659",
+  "version": "BCW-GIP-v0.1",
+  "created_at": "2026-08-21T03:42:11.244156+00:00",
+  "generated_at": "2026-08-21T03:42:11.244156+00:00",
+  "information_cutoff": "2026-08-21T03:42:11.244156+00:00",
+  "source_set_hash": "a326f9c3bc301b9a8dcd2077",
+  "game": {
+    "game_id": "espn:401872659",
+    "league": "NFL",
+    "matchup": "BAL @ IND",
+    "home_team": "IND",
+    "away_team": "BAL",
+    "home_name": "Indianapolis Colts",
+    "away_name": "Baltimore Ravens",
+    "spread_label": "BAL -3.5",
+    "home_spread": 3.5,
+    "total_line": 48.5,
+    "week": 1
+  },
+  "lean_team": "IND",
+  "projection": {
+    "model_id": "BCW-DESK-STRENGTH-v0.x",
+    "method": "0.65\u00b7Elo/25+HFA + 0.35\u00b7(SRS+HFA)",
+    "mu_home": -0.65,
+    "sigma": 13.5,
+    "p_home_win": 0.4662,
+    "p_home_cover": 0.5692,
+    "edge_vs_minus_110": 0.0454,
+    "model_lean": "HOME",
+    "model_lean_team": "IND",
+    "label": "Research Preview",
+    "public_probability_published": false,
+    "confidence_pct": 56.9
+  },
+  "matchup_edges": [
+    {
+      "key": "RUN_GAME",
+      "title": "Rushing offense vs run defense",
+      "side": "AWAY",
+      "side_team": "BAL",
+      "strength": "MAJOR",
+      "home_stat": -0.1992,
+      "away_stat": 0.0689,
+      "mismatch_z": -1.915,
+      "fan_line": "+++ BAL \u2014 Rushing offense vs run defense",
+      "label": "MATCHUP SIGNAL",
+      "why": "Rush EPA/play vs EPA allowed on rushes \u2014 better than raw yards/carry."
+    },
+    {
+      "key": "OVERALL",
+      "title": "Overall efficiency",
+      "side": "AWAY",
+      "side_team": "BAL",
+      "strength": "MILD",
+      "home_stat": -0.1,
+      "away_stat": 0.0829,
+      "mismatch_z": -0.914,
+      "fan_line": "+ BAL \u2014 Overall efficiency",
+      "label": "MATCHUP SIGNAL",
+      "why": "Net EPA/play (offense minus defense). Broad team-strength interaction."
+    },
+    {
+      "key": "PASSING",
+      "title": "Passing offense vs pass defense",
+      "side": "AWAY",
+      "side_team": "BAL",
+      "strength": "MILD",
+      "home_stat": 0.0312,
+      "away_stat": 0.1766,
+      "mismatch_z": -0.808,
+      "fan_line": "+ BAL \u2014 Passing offense vs pass defense",
+      "label": "MATCHUP SIGNAL",
+      "why": "EPA/play on passes plus how much EPA the opposing defense allows. EPA weights plays by situation (3rd-and-3 \u2260 3rd-and-20)."
+    },
+    {
+      "key": "PASS_RUSH",
+      "title": "Pass rush / protection (proxy)",
+      "side": "AWAY",
+      "side_team": "BAL",
+      "strength": "MILD",
+      "home_stat": -0.1619,
+      "away_stat": -0.105,
+      "mismatch_z": -0.568,
+      "fan_line": "+ BAL \u2014 Pass rush / protection (proxy)",
+      "label": "MATCHUP SIGNAL",
+      "why": "Proxy until true pressure/PBWR data: lower pass EPA allowed \u21d2 stronger pass defense / rush. MATCHUP SIGNAL only \u2014 not a published win probability."
+    }
+  ],
+  "headline_cards": [
+    {
+      "marks": "+++",
+      "key": "RUN_GAME",
+      "title": "Rushing offense vs run defense",
+      "team": "BAL",
+      "strength": "MAJOR",
+      "fan_line": "+++ BAL \u2014 Rushing offense vs run defense",
+      "mismatch_z": -1.915,
+      "percentile_hint": "More extreme than ~90% of similar unit mismatches in a normal sample.",
+      "label": "MATCHUP SIGNAL",
+      "why": "Rush EPA/play vs EPA allowed on rushes \u2014 better than raw yards/carry.",
+      "home_stat": -0.1992,
+      "away_stat": 0.0689
+    },
+    {
+      "marks": "+",
+      "key": "OVERALL",
+      "title": "Overall efficiency",
+      "team": "BAL",
+      "strength": "MILD",
+      "fan_line": "+ BAL \u2014 Overall efficiency",
+      "mismatch_z": -0.914,
+      "percentile_hint": null,
+      "label": "MATCHUP SIGNAL",
+      "why": "Net EPA/play (offense minus defense). Broad team-strength interaction.",
+      "home_stat": -0.1,
+      "away_stat": 0.0829
+    },
+    {
+      "marks": "+",
+      "key": "PASSING",
+      "title": "Passing offense vs pass defense",
+      "team": "BAL",
+      "strength": "MILD",
+      "fan_line": "+ BAL \u2014 Passing offense vs pass defense",
+      "mismatch_z": -0.808,
+      "percentile_hint": null,
+      "label": "MATCHUP SIGNAL",
+      "why": "EPA/play on passes plus how much EPA the opposing defense allows. EPA weights plays by situation (3rd-and-3 \u2260 3rd-and-20).",
+      "home_stat": 0.0312,
+      "away_stat": 0.1766
+    },
+    {
+      "marks": "+",
+      "key": "PASS_RUSH",
+      "title": "Pass rush / protection (proxy)",
+      "team": "BAL",
+      "strength": "MILD",
+      "fan_line": "+ BAL \u2014 Pass rush / protection (proxy)",
+      "mismatch_z": -0.568,
+      "percentile_hint": null,
+      "label": "MATCHUP SIGNAL",
+      "why": "Proxy until true pressure/PBWR data: lower pass EPA allowed \u21d2 stronger pass defense / rush. MATCHUP SIGNAL only \u2014 not a published win probability.",
+      "home_stat": -0.1619,
+      "away_stat": -0.105
+    }
+  ],
+  "slate_edges": [
+    "+++ BAL Run Game",
+    "+ BAL Overall",
+    "+ BAL Passing"
+  ],
+  "matchup_logistic": {
+    "model_id": "BCW-MATCHUP-LOGISTIC-v0.x",
+    "label": "Research Preview",
+    "public_probability_published": false,
+    "logit": -1.262,
+    "p_home_win": 0.2206,
+    "lean": "AWAY",
+    "contributions": [
+      {
+        "key": "RUN_GAME",
+        "weight": 0.25,
+        "z": -1.915,
+        "term": -0.4788
+      },
+      {
+        "key": "OVERALL",
+        "weight": 0.45,
+        "z": -0.914,
+        "term": -0.4113
+      },
+      {
+        "key": "PASSING",
+        "weight": 0.4,
+        "z": -0.808,
+        "term": -0.3232
+      },
+      {
+        "key": "PASS_RUSH",
+        "weight": 0.35,
+        "z": -0.568,
+        "term": -0.1988
+      }
+    ],
+    "note": "Heuristic matchup logistic on EDGE z-scores. Not BCW-RIDGE. Not a ship gate."
+  },
+  "paths": {
+    "home": "Stay efficient on early downs and avoid giving the visitor explosive answers.",
+    "away": "Attack via rushing offense vs run defense and keep the favorite from playing its preferred script."
+  },
+  "risks": [
+    "Turnovers: the projection assumes roughly normal luck; a +2 swing can flip a IND lean.",
+    "BAL path: if rushing offense vs run defense plays up, IND's edge shrinks.",
+    "Injury / inactive surprise on either OL or QB would rewrite the pass-rush signal."
+  ],
+  "adjustment": {
+    "points_home": -2.95,
+    "label": "MATCHUP SIGNAL (unvalidated additive)",
+    "note": "Not fed into BCW-RIDGE-v0.1. Research Preview display only."
+  },
+  "events": [
+    {
+      "game_id": "espn:401872659",
+      "event_type": "other",
+      "headline": "Tyler Warren injury update: Indianapolis Colts TE suffers abductor strain - On3",
+      "publisher": "On3",
+      "source_url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNU0MxaGo3SnpELVh6VzFaUGxCeWRGamU3QmZwTTNCNC1Zd2dmMmpZWGFGbEo0eTBfZVhuWkxwOVNTZHpjVUtYZElwZTZSeHQzSjRtZXRTY1I3TVUzWGM3N3AwRGhIdElWS19uMmhBTHFQV0pBcTZrcXBvM3FWdk9QUUxSTWlqZWdPNUEtWnh4TTgxOXJRY3B2ZXFzUQ?oc=5",
+      "bucket": "availability",
+      "structured_fact": "Tyler Warren injury update: Indianapolis Colts TE suffers abductor strain - On3",
+      "confidence": 0.45,
+      "tier": 3
+    },
+    {
+      "game_id": "espn:401872659",
+      "event_type": "other",
+      "headline": "Former UConn QB Joe Fagnano shines in NFL preseason debut with Baltimore Ravens - fox61.com",
+      "publisher": "fox61.com",
+      "source_url": "https://news.google.com/rss/articles/CBMiigJBVV95cUxOSGZhdXhxNGFnWnpINFdNbV81a1AyU21uNUNMRWhSeGMyQkFrQTJYYmJ5c0kxT3dJSnZ0Mk5MUWgyR2FwVFNuZy1zeTRNWmNING5HUEZUX0c3cFJzWVVNYWZTYmlPQ1hUTExrOGhLck9VSjJlTkpaVHZ1akFlc0Rqc0NQYWJLSk5xNlNEbGN3UGJqNnIxUktjdzJqYlY0MWJrV0JZNHh0eFE5UnpIdGdMRmFiQk54ZWU2VHc1MGZ1dFo4amhhcFJlMVFIMnBJX1dDaDNjYWJoUml3eUNOaWF0WFZqUzFIX3JnSXFkeHhLOFp1Y3g1YXFybER2QjRfU2xQME5pdTA1YU1tUQ?oc=5",
+      "bucket": "availability",
+      "structured_fact": "Former UConn QB Joe Fagnano shines in NFL preseason debut with Baltimore Ravens - fox61.com",
+      "confidence": 0.45,
+      "tier": 3
+    },
+    {
+      "game_id": "espn:401872659",
+      "event_type": "market",
+      "headline": "Baltimore Ravens at Indianapolis Colts - NFL Odds - Sep 13, 2026 - USA Today",
+      "publisher": "USA Today",
+      "source_url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE1hV3hINVRXVjVvSUcyYV9uRVV0OFhraXU2TWxaVmtWZ0tUM0g1ZGZya2lpVnlRMXFuN29HUDdxeUEydEsyMVhLMVF0cHFEWDdvYzEwMDBXa1U5YUhqWDFua0F3YllSLWRp?oc=5",
+      "bucket": "analysis",
+      "structured_fact": "Baltimore Ravens at Indianapolis Colts - NFL Odds - Sep 13, 2026 - USA Today",
+      "confidence": 0.7,
+      "tier": 3
+    },
+    {
+      "game_id": "espn:401872659",
+      "event_type": "market",
+      "headline": "Ravens Vs Colts Odds Week 1: Baltimore -3.5: Kalshi Odds - OddsShopper",
+      "publisher": "OddsShopper",
+      "source_url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE1DSEhmMmwtMnQ5OUJ1VUFOSDRSX05BdWNfb1VDYVlod1NHYWE1YlhoejRVaUVmMDRPNmZ4SFljNFdIVVdVTng3Z2VYWnU5ZEVUdk5MLXN0NkNzMmNpSC10VTc2anVNMW9qc0dWX1hnN2tCVlBVWFVDdGVR?oc=5",
+      "bucket": "analysis",
+      "structured_fact": "Ravens Vs Colts Odds Week 1: Baltimore -3.5: Kalshi Odds - OddsShopper",
+      "confidence": 0.7,
+      "tier": 3
+    },
+    {
+      "game_id": "espn:401872659",
+      "event_type": "other",
+      "headline": "Ravens center Pinter to miss 'extended time' with leg injury",
+      "publisher": "ESPN",
+      "source_url": "https://www.espn.com/nfl/story/_/id/49673480/ravens-center-pinter-miss-extended-leg-injury",
+      "bucket": "availability",
+      "structured_fact": "Ravens center Pinter to miss 'extended time' with leg injury",
+      "confidence": 0.45,
+      "tier": 2
+    },
+    {
+      "game_id": "espn:401872659",
+      "event_type": "starter_change",
+      "headline": "Ravens Starter Suffers Devastating Injury - Steelers Now",
+      "publisher": "Steelers Now",
+      "source_url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1pdEFna2NWajBuNm4xWko3cHVHQmd0d29XSUs4RHc1VWNEOTZkZmhrTExXOHpIMmt5blpHYjVSd0JsRTFtSWxFNHk1MWxCT3g1Vk1id3BhQWFiWTZ0bzlhV2dYOWRNRlVSM3VjN0NLMUhuVXcx?oc=5",
+      "bucket": "availability",
+      "structured_fact": "Ravens Starter Suffers Devastating Injury - Steelers Now",
+      "confidence": 0.7,
+      "tier": 3
+    }
+  ],
+  "news_citations": [
+    {
+      "headline": "Tyler Warren injury update: Indianapolis Colts TE suffers abductor strain - On3",
+      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNU0MxaGo3SnpELVh6VzFaUGxCeWRGamU3QmZwTTNCNC1Zd2dmMmpZWGFGbEo0eTBfZVhuWkxwOVNTZHpjVUtYZElwZTZSeHQzSjRtZXRTY1I3TVUzWGM3N3AwRGhIdElWS19uMmhBTHFQV0pBcTZrcXBvM3FWdk9QUUxSTWlqZWdPNUEtWnh4TTgxOXJRY3B2ZXFzUQ?oc=5",
+      "publisher": "On3"
+    },
+    {
+      "headline": "Former UConn QB Joe Fagnano shines in NFL preseason debut with Baltimore Ravens - fox61.com",
+      "url": "https://news.google.com/rss/articles/CBMiigJBVV95cUxOSGZhdXhxNGFnWnpINFdNbV81a1AyU21uNUNMRWhSeGMyQkFrQTJYYmJ5c0kxT3dJSnZ0Mk5MUWgyR2FwVFNuZy1zeTRNWmNING5HUEZUX0c3cFJzWVVNYWZTYmlPQ1hUTExrOGhLck9VSjJlTkpaVHZ1akFlc0Rqc0NQYWJLSk5xNlNEbGN3UGJqNnIxUktjdzJqYlY0MWJrV0JZNHh0eFE5UnpIdGdMRmFiQk54ZWU2VHc1MGZ1dFo4amhhcFJlMVFIMnBJX1dDaDNjYWJoUml3eUNOaWF0WFZqUzFIX3JnSXFkeHhLOFp1Y3g1YXFybER2QjRfU2xQME5pdTA1YU1tUQ?oc=5",
+      "publisher": "fox61.com"
+    },
+    {
+      "headline": "Baltimore Ravens at Indianapolis Colts - NFL Odds - Sep 13, 2026 - USA Today",
+      "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE1hV3hINVRXVjVvSUcyYV9uRVV0OFhraXU2TWxaVmtWZ0tUM0g1ZGZya2lpVnlRMXFuN29HUDdxeUEydEsyMVhLMVF0cHFEWDdvYzEwMDBXa1U5YUhqWDFua0F3YllSLWRp?oc=5",
+      "publisher": "USA Today"
+    },
+    {
+      "headline": "Ravens Vs Colts Odds Week 1: Baltimore -3.5: Kalshi Odds - OddsShopper",
+      "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE1DSEhmMmwtMnQ5OUJ1VUFOSDRSX05BdWNfb1VDYVlod1NHYWE1YlhoejRVaUVmMDRPNmZ4SFljNFdIVVdVTng3Z2VYWnU5ZEVUdk5MLXN0NkNzMmNpSC10VTc2anVNMW9qc0dWX1hnN2tCVlBVWFVDdGVR?oc=5",
+      "publisher": "OddsShopper"
+    },
+    {
+      "headline": "Ravens center Pinter to miss 'extended time' with leg injury",
+      "url": "https://www.espn.com/nfl/story/_/id/49673480/ravens-center-pinter-miss-extended-leg-injury",
+      "publisher": "ESPN"
+    },
+    {
+      "headline": "Ravens Starter Suffers Devastating Injury - Steelers Now",
+      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1pdEFna2NWajBuNm4xWko3cHVHQmd0d29XSUs4RHc1VWNEOTZkZmhrTExXOHpIMmt5blpHYjVSd0JsRTFtSWxFNHk1MWxCT3g1Vk1id3BhQWFiWTZ0bzlhV2dYOWRNRlVSM3VjN0NLMUhuVXcx?oc=5",
+      "publisher": "Steelers Now"
+    }
+  ],
+  "summary_short": "BlueChip leans IND. Top signal: +++ BAL \u2014 Rushing offense vs run defense",
+  "summary_full": "Baltimore Ravens at Indianapolis Colts.\n\nBlueChip leans IND. +++ BAL \u2014 Rushing offense vs run defense\n\nWhy IND has the edge\n- +++ BAL \u2014 Rushing offense vs run defense\n- + BAL \u2014 Overall efficiency\n- + BAL \u2014 Passing offense vs pass defense\n\nBlueChip projection\nMarket: BAL -3.5\nBCW desk \u03bc (home): -0.7 (Research Preview)\nWin probability: unavailable until probability model passes validation.\n\nHow each team wins\nIND: Stay efficient on early downs and avoid giving the visitor explosive answers.\nBAL: Attack via rushing offense vs run defense and keep the favorite from playing its preferred script.\n\nWhat changed this week\n\u2022 Tyler Warren injury update: Indianapolis Colts TE suffers abductor strain - On3\n\u2022 Former UConn QB Joe Fagnano shines in NFL preseason debut with Baltimore Ravens - fox61.com\n\u2022 Baltimore Ravens at Indianapolis Colts - NFL Odds - Sep 13, 2026 - USA Today\n\u2022 Ravens Vs Colts Odds Week 1: Baltimore -3.5: Kalshi Odds - OddsShopper\n\nWhat could make BlueChip wrong?\n\u2022 Turnovers: the projection assumes roughly normal luck; a +2 swing can flip a IND lean.\n\u2022 BAL path: if rushing offense vs run defense plays up, IND's edge shrinks.\n\u2022 Injury / inactive surprise on either OL or QB would rewrite the pass-rush signal.\n\nBottom line: IND has more ways to win on the current MATCHUP SIGNAL board, but football variance (turnovers, explosives) remains large around any margin estimate.",
+  "generation_model": "desk-template",
+  "generation_provider": "fallback",
+  "glossary": {
+    "EPA/play": "Expected Points Added estimates how much each play improves expected scoring position. Positive is good. A 5-yard gain on 3rd-and-3 is not treated like 5 yards on 3rd-and-20.",
+    "MATCHUP SIGNAL": "A descriptive strength\u00d7weakness edge. Not a published win probability and not fed into BCW-RIDGE-v0.1 until validated walk-forward.",
+    "Research Preview": "BlueChip quantitative layer that has not cleared the five public ship gates."
+  },
+  "levels": {
+    "slate": {
+      "lean": "IND",
+      "top_edges": [
+        "+++ BAL Run Game",
+        "+ BAL Overall",
+        "+ BAL Passing"
+      ],
+      "market": "BAL -3.5",
+      "mu": -0.65,
+      "confidence_pct": 56.9
+    }
+  }
+}

@@ -1,0 +1,220 @@
+{
+  "game_id": "espn:401858428",
+  "version": "BCW-GIP-v0.1",
+  "created_at": "2026-08-21T03:42:46.261672+00:00",
+  "generated_at": "2026-08-21T03:42:46.261672+00:00",
+  "information_cutoff": "2026-08-21T03:42:46.261672+00:00",
+  "source_set_hash": "ffa5a7b51ce4ec162d73a413",
+  "game": {
+    "game_id": "espn:401858428",
+    "league": "CFB",
+    "matchup": "WMU @ MICH",
+    "home_team": "MICH",
+    "away_team": "WMU",
+    "home_name": "Michigan Wolverines",
+    "away_name": "Western Michigan Broncos",
+    "spread_label": "MICH -27.5",
+    "home_spread": -27.5,
+    "total_line": 47.5,
+    "week": 1
+  },
+  "lean_team": "MICH",
+  "projection": {
+    "model_id": "BCW-DESK-STRENGTH-v0.x",
+    "method": "Market line + AP rank edge (CFB; no CFB Elo yet)",
+    "mu_home": 30.0,
+    "sigma": 15.0,
+    "p_home_win": 0.9754,
+    "p_home_cover": 0.553,
+    "edge_vs_minus_110": 0.0292,
+    "model_lean": "HOME",
+    "model_lean_team": "MICH",
+    "label": "Research Preview",
+    "public_probability_published": false,
+    "confidence_pct": 55.3
+  },
+  "matchup_edges": [
+    {
+      "key": "AP_RANK",
+      "title": "AP ranking gap",
+      "side": "HOME",
+      "side_team": "MICH",
+      "strength": "STRONG",
+      "home_stat": 30.0,
+      "away_stat": 16.0,
+      "mismatch_z": 1.75,
+      "fan_line": "++ MICH \u2014 AP ranking gap",
+      "label": "MATCHUP SIGNAL",
+      "why": "College prior until CFB EPA ingest. Lower AP rank is stronger."
+    }
+  ],
+  "headline_cards": [
+    {
+      "marks": "++",
+      "key": "AP_RANK",
+      "title": "AP ranking gap",
+      "team": "MICH",
+      "strength": "STRONG",
+      "fan_line": "++ MICH \u2014 AP ranking gap",
+      "mismatch_z": 1.75,
+      "percentile_hint": "More extreme than ~90% of similar unit mismatches in a normal sample.",
+      "label": "MATCHUP SIGNAL",
+      "why": "College prior until CFB EPA ingest. Lower AP rank is stronger.",
+      "home_stat": 30.0,
+      "away_stat": 16.0
+    }
+  ],
+  "slate_edges": [
+    "++ MICH Ap Rank"
+  ],
+  "matchup_logistic": {
+    "model_id": "BCW-MATCHUP-LOGISTIC-v0.x",
+    "label": "Research Preview",
+    "public_probability_published": false,
+    "logit": 0.675,
+    "p_home_win": 0.6626,
+    "lean": "HOME",
+    "contributions": [
+      {
+        "key": "AP_RANK",
+        "weight": 0.3,
+        "z": 1.75,
+        "term": 0.525
+      }
+    ],
+    "note": "Heuristic matchup logistic on EDGE z-scores. Not BCW-RIDGE. Not a ship gate."
+  },
+  "paths": {
+    "home": "Lean on ap ranking gap. Convert that mismatch before the game becomes a coin-flip script.",
+    "away": "Shorten the game, win the line of scrimmage, and force the favorite into obvious passing downs."
+  },
+  "risks": [
+    "Turnovers: the projection assumes roughly normal luck; a +2 swing can flip a MICH lean.",
+    "Injury / inactive surprise on either OL or QB would rewrite the pass-rush signal."
+  ],
+  "adjustment": {
+    "points_home": 1.0,
+    "label": "MATCHUP SIGNAL (unvalidated additive)",
+    "note": "Not fed into BCW-RIDGE-v0.1. Research Preview display only."
+  },
+  "events": [
+    {
+      "game_id": "espn:401858428",
+      "event_type": "starter_change",
+      "headline": "Former Wolverines: 2 Ex-Michigan QBs Win Starting Job, Another Suffers Loss - Sports Illustrated",
+      "publisher": "Sports Illustrated",
+      "source_url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxNaUpfd3hfUHJNclAxMUMxM0xwTGxlMGZ0X2pzSUNMOHAtZi15R3I0dXA2cnl6V3h2dHBsSFlvYkREbG9zNDFDTXN5azhmQ0wySU1aZ1F2SFRWbzRtOHh5eTZKR0psSmVxLUQ2WEtjOUR4SGwxQlJHeHNZZWxJeDhENk9XZURtU2VES09kTk1GNEN0UXVMSFZZaVZvSlZORmVKSTN2RU1VaUotM1NiSkplSE1DV2NUWmpSVGdfZXYwQ1VYOWptY0xtaE5YZw?oc=5",
+      "bucket": "availability",
+      "structured_fact": "Former Wolverines: 2 Ex-Michigan QBs Win Starting Job, Another Suffers Loss - Sports Illustrated",
+      "confidence": 0.7,
+      "tier": 3
+    },
+    {
+      "game_id": "espn:401858428",
+      "event_type": "market",
+      "headline": "Western Michigan Broncos at Michigan Wolverines - NCAAF Odds - Sep 05, 2026 - USA Today",
+      "publisher": "USA Today",
+      "source_url": "https://news.google.com/rss/articles/CBMia0FVX3lxTFBOc2Iyb2wzYUVyczlKeTBPRmNZT3RUeGhSU1UtMzBjMnlmN2xiVGsxNl80bUp6TmNmMjFVaDhCWHBqNDRPYXJwUlcwRmRBU3pPSS1YeVI4bFo4X2xzOEZjQVZsME5oRFpUT0ZV?oc=5",
+      "bucket": "analysis",
+      "structured_fact": "Western Michigan Broncos at Michigan Wolverines - NCAAF Odds - Sep 05, 2026 - USA Today",
+      "confidence": 0.7,
+      "tier": 3
+    },
+    {
+      "game_id": "espn:401858428",
+      "event_type": "other",
+      "headline": "Inside Michigan's QB battle behind Bryce Underwood: A new face has 'closed the gap' - On3",
+      "publisher": "On3",
+      "source_url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxNVjFOd0VnNTNpd0VsUndLMlhrYmtjTndDNE5BSWVYQmxWcHdlZkRMNjFPb0MwZERNYkxnS2NvMmFwTmJnVVgyaGpzZlFxZmZzSnc3S3hWVUNrcFZFLUsxMFBrb0VPQlVyY1FFbjdYcnd3Z0l6NFVnLUdzaGxGNGsxOW1EWmZuMkhsS2FHY2lWdW5sZEdJYkJuUjBrNFZicTZidEw4ZHNsd3ItM2diSmMzSTlQalJIS0tkclBRRG5UV212WVlEMnZ5V2JYcw?oc=5",
+      "bucket": "availability",
+      "structured_fact": "Inside Michigan's QB battle behind Bryce Underwood: A new face has 'closed the gap' - On3",
+      "confidence": 0.45,
+      "tier": 3
+    },
+    {
+      "game_id": "espn:401858428",
+      "event_type": "other",
+      "headline": "Michigan\u2019s 2026 Fate Hinges on Bryce Underwood\u2019s Development at QB - FishDuck",
+      "publisher": "FishDuck",
+      "source_url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNbnBtSXQ4OGZrbmE4eEtjUE1IUGFDM21GZ0xtdy1MQ1l2YXcweWVsZGZvbS1vWUx2UmFzaVFfaDhlVlpFcFNfMzNnaUFUYWRpb09rY3VrNldOSkF5eHBGYXpmN2F5NEkxOHJBZHdwZUp4UktlSXNBOTRMTHA0NGdhb3ZrOWZNWHB4OXkwMmZTajFSbjdXZWRkeGJn?oc=5",
+      "bucket": "availability",
+      "structured_fact": "Michigan\u2019s 2026 Fate Hinges on Bryce Underwood\u2019s Development at QB - FishDuck",
+      "confidence": 0.45,
+      "tier": 3
+    },
+    {
+      "game_id": "espn:401858428",
+      "event_type": "other",
+      "headline": "College football's mad two-week scramble to land a transfer portal QB",
+      "publisher": "ESPN",
+      "source_url": "https://www.espn.com/college-football/story/_/id/49650906/college-football-two-week-scramble-transfer-portal-qb",
+      "bucket": "availability",
+      "structured_fact": "College football's mad two-week scramble to land a transfer portal QB",
+      "confidence": 0.45,
+      "tier": 2
+    },
+    {
+      "game_id": "espn:401858428",
+      "event_type": "market",
+      "headline": "Michigan football betting preview 2026: Wolverines odds, futures, win total prediction, sportsbook promos, more - sportingnews.com",
+      "publisher": "sportingnews.com",
+      "source_url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxQSllFQnNJazYweFFnaUl4V1MyZ3lPS3ZXdEdJRV9icmVmMFY3a3I4bDRFTXdhTjVQWk82aFpTMWRBbVV3R3BMWEoxakRQcWh5aUE1VUpmTTN2UTgweUlFc0JFVXl5T3lKZWNjeDZfRF9fcXlfZm1HRWNJbDI4N0tMc1U2Qk9mSXAtQW95MHBYVTJiOHM2MVBRU2IxNk5MSnZwLXUyUVFlUUJZUWlmSy1uQVJMem1lRkZOOENBTWxhcDg1SXFOakRGR2FzTQ?oc=5",
+      "bucket": "analysis",
+      "structured_fact": "Michigan football betting preview 2026: Wolverines odds, futures, win total prediction, sportsbook promos, more - sportingnews.com",
+      "confidence": 0.7,
+      "tier": 3
+    }
+  ],
+  "news_citations": [
+    {
+      "headline": "Former Wolverines: 2 Ex-Michigan QBs Win Starting Job, Another Suffers Loss - Sports Illustrated",
+      "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxNaUpfd3hfUHJNclAxMUMxM0xwTGxlMGZ0X2pzSUNMOHAtZi15R3I0dXA2cnl6V3h2dHBsSFlvYkREbG9zNDFDTXN5azhmQ0wySU1aZ1F2SFRWbzRtOHh5eTZKR0psSmVxLUQ2WEtjOUR4SGwxQlJHeHNZZWxJeDhENk9XZURtU2VES09kTk1GNEN0UXVMSFZZaVZvSlZORmVKSTN2RU1VaUotM1NiSkplSE1DV2NUWmpSVGdfZXYwQ1VYOWptY0xtaE5YZw?oc=5",
+      "publisher": "Sports Illustrated"
+    },
+    {
+      "headline": "Western Michigan Broncos at Michigan Wolverines - NCAAF Odds - Sep 05, 2026 - USA Today",
+      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTFBOc2Iyb2wzYUVyczlKeTBPRmNZT3RUeGhSU1UtMzBjMnlmN2xiVGsxNl80bUp6TmNmMjFVaDhCWHBqNDRPYXJwUlcwRmRBU3pPSS1YeVI4bFo4X2xzOEZjQVZsME5oRFpUT0ZV?oc=5",
+      "publisher": "USA Today"
+    },
+    {
+      "headline": "Inside Michigan's QB battle behind Bryce Underwood: A new face has 'closed the gap' - On3",
+      "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxNVjFOd0VnNTNpd0VsUndLMlhrYmtjTndDNE5BSWVYQmxWcHdlZkRMNjFPb0MwZERNYkxnS2NvMmFwTmJnVVgyaGpzZlFxZmZzSnc3S3hWVUNrcFZFLUsxMFBrb0VPQlVyY1FFbjdYcnd3Z0l6NFVnLUdzaGxGNGsxOW1EWmZuMkhsS2FHY2lWdW5sZEdJYkJuUjBrNFZicTZidEw4ZHNsd3ItM2diSmMzSTlQalJIS0tkclBRRG5UV212WVlEMnZ5V2JYcw?oc=5",
+      "publisher": "On3"
+    },
+    {
+      "headline": "Michigan\u2019s 2026 Fate Hinges on Bryce Underwood\u2019s Development at QB - FishDuck",
+      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNbnBtSXQ4OGZrbmE4eEtjUE1IUGFDM21GZ0xtdy1MQ1l2YXcweWVsZGZvbS1vWUx2UmFzaVFfaDhlVlpFcFNfMzNnaUFUYWRpb09rY3VrNldOSkF5eHBGYXpmN2F5NEkxOHJBZHdwZUp4UktlSXNBOTRMTHA0NGdhb3ZrOWZNWHB4OXkwMmZTajFSbjdXZWRkeGJn?oc=5",
+      "publisher": "FishDuck"
+    },
+    {
+      "headline": "College football's mad two-week scramble to land a transfer portal QB",
+      "url": "https://www.espn.com/college-football/story/_/id/49650906/college-football-two-week-scramble-transfer-portal-qb",
+      "publisher": "ESPN"
+    },
+    {
+      "headline": "Michigan football betting preview 2026: Wolverines odds, futures, win total prediction, sportsbook promos, more - sportingnews.com",
+      "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxQSllFQnNJazYweFFnaUl4V1MyZ3lPS3ZXdEdJRV9icmVmMFY3a3I4bDRFTXdhTjVQWk82aFpTMWRBbVV3R3BMWEoxakRQcWh5aUE1VUpmTTN2UTgweUlFc0JFVXl5T3lKZWNjeDZfRF9fcXlfZm1HRWNJbDI4N0tMc1U2Qk9mSXAtQW95MHBYVTJiOHM2MVBRU2IxNk5MSnZwLXUyUVFlUUJZUWlmSy1uQVJMem1lRkZOOENBTWxhcDg1SXFOakRGR2FzTQ?oc=5",
+      "publisher": "sportingnews.com"
+    }
+  ],
+  "summary_short": "BlueChip leans MICH. Top signal: ++ MICH \u2014 AP ranking gap",
+  "summary_full": "Western Michigan Broncos at Michigan Wolverines.\n\nBlueChip leans MICH. ++ MICH \u2014 AP ranking gap\n\nWhy MICH has the edge\n- ++ MICH \u2014 AP ranking gap\n\nBlueChip projection\nMarket: MICH -27.5\nBCW desk \u03bc (home): +30.0 (Research Preview)\nWin probability: unavailable until probability model passes validation.\n\nHow each team wins\nMICH: Lean on ap ranking gap. Convert that mismatch before the game becomes a coin-flip script.\nWMU: Shorten the game, win the line of scrimmage, and force the favorite into obvious passing downs.\n\nWhat changed this week\n\u2022 Former Wolverines: 2 Ex-Michigan QBs Win Starting Job, Another Suffers Loss - Sports Illustrated\n\u2022 Western Michigan Broncos at Michigan Wolverines - NCAAF Odds - Sep 05, 2026 - USA Today\n\u2022 Inside Michigan's QB battle behind Bryce Underwood: A new face has 'closed the gap' - On3\n\u2022 Michigan\u2019s 2026 Fate Hinges on Bryce Underwood\u2019s Development at QB - FishDuck\n\nWhat could make BlueChip wrong?\n\u2022 Turnovers: the projection assumes roughly normal luck; a +2 swing can flip a MICH lean.\n\u2022 Injury / inactive surprise on either OL or QB would rewrite the pass-rush signal.\n\nBottom line: MICH has more ways to win on the current MATCHUP SIGNAL board, but football variance (turnovers, explosives) remains large around any margin estimate.",
+  "generation_model": "desk-template",
+  "generation_provider": "fallback",
+  "glossary": {
+    "EPA/play": "Expected Points Added estimates how much each play improves expected scoring position. Positive is good. A 5-yard gain on 3rd-and-3 is not treated like 5 yards on 3rd-and-20.",
+    "MATCHUP SIGNAL": "A descriptive strength\u00d7weakness edge. Not a published win probability and not fed into BCW-RIDGE-v0.1 until validated walk-forward.",
+    "Research Preview": "BlueChip quantitative layer that has not cleared the five public ship gates."
+  },
+  "levels": {
+    "slate": {
+      "lean": "MICH",
+      "top_edges": [
+        "++ MICH Ap Rank"
+      ],
+      "market": "MICH -27.5",
+      "mu": 30.0,
+      "confidence_pct": 55.3
+    }
+  }
+}

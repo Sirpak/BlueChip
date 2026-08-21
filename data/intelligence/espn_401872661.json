@@ -1,0 +1,324 @@
+{
+  "game_id": "espn:401872661",
+  "version": "BCW-GIP-v0.1",
+  "created_at": "2026-08-21T03:42:28.632679+00:00",
+  "generated_at": "2026-08-21T03:42:28.632679+00:00",
+  "information_cutoff": "2026-08-21T03:42:28.632679+00:00",
+  "source_set_hash": "760dbccb92a816cfa9a54e89",
+  "game": {
+    "game_id": "espn:401872661",
+    "league": "NFL",
+    "matchup": "CHI @ CAR",
+    "home_team": "CAR",
+    "away_team": "CHI",
+    "home_name": "Carolina Panthers",
+    "away_name": "Chicago Bears",
+    "spread_label": "CHI -2.5",
+    "home_spread": 2.5,
+    "total_line": 47.5,
+    "week": 1
+  },
+  "lean_team": "CAR",
+  "projection": {
+    "model_id": "BCW-DESK-STRENGTH-v0.x",
+    "method": "0.65\u00b7Elo/25+HFA + 0.35\u00b7(SRS+HFA)",
+    "mu_home": 0.07,
+    "sigma": 13.5,
+    "p_home_win": 0.4873,
+    "p_home_cover": 0.5609,
+    "edge_vs_minus_110": 0.0371,
+    "model_lean": "HOME",
+    "model_lean_team": "CAR",
+    "label": "Research Preview",
+    "public_probability_published": false,
+    "confidence_pct": 56.1
+  },
+  "matchup_edges": [
+    {
+      "key": "RUN_GAME",
+      "title": "Rushing offense vs run defense",
+      "side": "AWAY",
+      "side_team": "CHI",
+      "strength": "STRONG",
+      "home_stat": -0.1171,
+      "away_stat": 0.1178,
+      "mismatch_z": -1.678,
+      "fan_line": "++ CHI \u2014 Rushing offense vs run defense",
+      "label": "MATCHUP SIGNAL",
+      "why": "Rush EPA/play vs EPA allowed on rushes \u2014 better than raw yards/carry."
+    },
+    {
+      "key": "OVERALL",
+      "title": "Overall efficiency",
+      "side": "AWAY",
+      "side_team": "CHI",
+      "strength": "STRONG",
+      "home_stat": -0.1469,
+      "away_stat": 0.1052,
+      "mismatch_z": -1.26,
+      "fan_line": "++ CHI \u2014 Overall efficiency",
+      "label": "MATCHUP SIGNAL",
+      "why": "Net EPA/play (offense minus defense). Broad team-strength interaction."
+    },
+    {
+      "key": "PASSING",
+      "title": "Passing offense vs pass defense",
+      "side": "AWAY",
+      "side_team": "CHI",
+      "strength": "STRONG",
+      "home_stat": -0.1029,
+      "away_stat": 0.1029,
+      "mismatch_z": -1.144,
+      "fan_line": "++ CHI \u2014 Passing offense vs pass defense",
+      "label": "MATCHUP SIGNAL",
+      "why": "EPA/play on passes plus how much EPA the opposing defense allows. EPA weights plays by situation (3rd-and-3 \u2260 3rd-and-20)."
+    },
+    {
+      "key": "PASS_RUSH",
+      "title": "Pass rush / protection (proxy)",
+      "side": "AWAY",
+      "side_team": "CHI",
+      "strength": "MILD",
+      "home_stat": -0.0503,
+      "away_stat": 0.0105,
+      "mismatch_z": -0.609,
+      "fan_line": "+ CHI \u2014 Pass rush / protection (proxy)",
+      "label": "MATCHUP SIGNAL",
+      "why": "Proxy until true pressure/PBWR data: lower pass EPA allowed \u21d2 stronger pass defense / rush. MATCHUP SIGNAL only \u2014 not a published win probability."
+    }
+  ],
+  "headline_cards": [
+    {
+      "marks": "++",
+      "key": "RUN_GAME",
+      "title": "Rushing offense vs run defense",
+      "team": "CHI",
+      "strength": "STRONG",
+      "fan_line": "++ CHI \u2014 Rushing offense vs run defense",
+      "mismatch_z": -1.678,
+      "percentile_hint": "More extreme than ~90% of similar unit mismatches in a normal sample.",
+      "label": "MATCHUP SIGNAL",
+      "why": "Rush EPA/play vs EPA allowed on rushes \u2014 better than raw yards/carry.",
+      "home_stat": -0.1171,
+      "away_stat": 0.1178
+    },
+    {
+      "marks": "++",
+      "key": "OVERALL",
+      "title": "Overall efficiency",
+      "team": "CHI",
+      "strength": "STRONG",
+      "fan_line": "++ CHI \u2014 Overall efficiency",
+      "mismatch_z": -1.26,
+      "percentile_hint": "Clearly tilted versus a typical NFL/CFB unit matchup.",
+      "label": "MATCHUP SIGNAL",
+      "why": "Net EPA/play (offense minus defense). Broad team-strength interaction.",
+      "home_stat": -0.1469,
+      "away_stat": 0.1052
+    },
+    {
+      "marks": "++",
+      "key": "PASSING",
+      "title": "Passing offense vs pass defense",
+      "team": "CHI",
+      "strength": "STRONG",
+      "fan_line": "++ CHI \u2014 Passing offense vs pass defense",
+      "mismatch_z": -1.144,
+      "percentile_hint": "Clearly tilted versus a typical NFL/CFB unit matchup.",
+      "label": "MATCHUP SIGNAL",
+      "why": "EPA/play on passes plus how much EPA the opposing defense allows. EPA weights plays by situation (3rd-and-3 \u2260 3rd-and-20).",
+      "home_stat": -0.1029,
+      "away_stat": 0.1029
+    },
+    {
+      "marks": "+",
+      "key": "PASS_RUSH",
+      "title": "Pass rush / protection (proxy)",
+      "team": "CHI",
+      "strength": "MILD",
+      "fan_line": "+ CHI \u2014 Pass rush / protection (proxy)",
+      "mismatch_z": -0.609,
+      "percentile_hint": null,
+      "label": "MATCHUP SIGNAL",
+      "why": "Proxy until true pressure/PBWR data: lower pass EPA allowed \u21d2 stronger pass defense / rush. MATCHUP SIGNAL only \u2014 not a published win probability.",
+      "home_stat": -0.0503,
+      "away_stat": 0.0105
+    }
+  ],
+  "slate_edges": [
+    "++ CHI Run Game",
+    "++ CHI Overall",
+    "++ CHI Passing"
+  ],
+  "matchup_logistic": {
+    "model_id": "BCW-MATCHUP-LOGISTIC-v0.x",
+    "label": "Research Preview",
+    "public_probability_published": false,
+    "logit": -1.5072,
+    "p_home_win": 0.1813,
+    "lean": "AWAY",
+    "contributions": [
+      {
+        "key": "RUN_GAME",
+        "weight": 0.25,
+        "z": -1.678,
+        "term": -0.4195
+      },
+      {
+        "key": "OVERALL",
+        "weight": 0.45,
+        "z": -1.26,
+        "term": -0.567
+      },
+      {
+        "key": "PASSING",
+        "weight": 0.4,
+        "z": -1.144,
+        "term": -0.4576
+      },
+      {
+        "key": "PASS_RUSH",
+        "weight": 0.35,
+        "z": -0.609,
+        "term": -0.2131
+      }
+    ],
+    "note": "Heuristic matchup logistic on EDGE z-scores. Not BCW-RIDGE. Not a ship gate."
+  },
+  "paths": {
+    "home": "Stay efficient on early downs and avoid giving the visitor explosive answers.",
+    "away": "Attack via rushing offense vs run defense and keep the favorite from playing its preferred script."
+  },
+  "risks": [
+    "Turnovers: the projection assumes roughly normal luck; a +2 swing can flip a CAR lean.",
+    "CHI path: if rushing offense vs run defense plays up, CAR's edge shrinks.",
+    "Injury / inactive surprise on either OL or QB would rewrite the pass-rush signal."
+  ],
+  "adjustment": {
+    "points_home": -3.45,
+    "label": "MATCHUP SIGNAL (unvalidated additive)",
+    "note": "Not fed into BCW-RIDGE-v0.1. Research Preview display only."
+  },
+  "events": [
+    {
+      "game_id": "espn:401872661",
+      "event_type": "other",
+      "headline": "Chicago Bears in quarterback concerns with star suffering injury in preseason opener - the-sun.com",
+      "publisher": "the-sun.com",
+      "source_url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNWXNFcWdGLWhBdDBCekxDTFpycnNLamF2OU5oU1V6cWhVWmNYaEl2c1RIeEpfV1Q5MjR6YkI1cFFOb0xRb0l6QV94eUFYSnVsLVlJY3l2V3dFM01uckVwdm4ybEtJb1FXNWwxcE9MMmd5elJkN2Q5OVR2bHJTa1E4b3MyQzhvR3pWS0E?oc=5",
+      "bucket": "availability",
+      "structured_fact": "Chicago Bears in quarterback concerns with star suffering injury in preseason opener - the-sun.com",
+      "confidence": 0.45,
+      "tier": 3
+    },
+    {
+      "game_id": "espn:401872661",
+      "event_type": "other",
+      "headline": "Haynes King's Injury Could Cost Carolina Panthers Dearly - Sports Illustrated",
+      "publisher": "Sports Illustrated",
+      "source_url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOeTNOeFB5dzZVSmlhNFUtNFFhaGU0SXBvZmtfUC16Yjc1a3c3V1k2WkZSb2pIdUdkZ2h6OWcwNC0tQ3lURUNHRHBadUhLbWdnYVl0VVVvRnBfUU9QZS1TT0V1bkt0dzhlT2lScWpYY01kbGcwRHJlTllQOXhnNmVLdVN3ejczQXctRThkbXB0SGg2TWVHQnc?oc=5",
+      "bucket": "availability",
+      "structured_fact": "Haynes King's Injury Could Cost Carolina Panthers Dearly - Sports Illustrated",
+      "confidence": 0.45,
+      "tier": 3
+    },
+    {
+      "game_id": "espn:401872661",
+      "event_type": "other",
+      "headline": "QB Tyson Bagent doesn't travel with Bears, is 'week-to-week' - Chicago Sun-Times",
+      "publisher": "Chicago Sun-Times",
+      "source_url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxQdGlJRlBjeHlmVTJiSjdGUGNBdXIzMlVhZzhZa2lOV1BzME5YdGNxWHdZelRkRF84VmhZcTdzUHZsbFdyVmxvbmF1bXZWS0o1VVVFUFZMMVlvZWEyV3l1QU9XeTFwSm1qSXBRXzJJcEVnYVNzYVVZVWdaLWg1LXpDV0RGRHgyUTNlQTNRX1NINi02U2pQOUR2aDkwUk1nWVphWnF4eWMyYkE3Y3hadzk5WHM0eHNXcXg3ay1GTmhrU0QwUW5CSEpkQnBDYmxraUxPSGNv?oc=5",
+      "bucket": "availability",
+      "structured_fact": "QB Tyson Bagent doesn't travel with Bears, is 'week-to-week' - Chicago Sun-Times",
+      "confidence": 0.45,
+      "tier": 3
+    },
+    {
+      "game_id": "espn:401872661",
+      "event_type": "other",
+      "headline": "The Chicago Bears Just Signed a Player With Elite NFL Speed - Yahoo Sports",
+      "publisher": "Yahoo Sports",
+      "source_url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPZkg0MzJpTlFqcklYNnQ1b0RiTzlxUEtkWDZiUzR5ZXIyak16SUNKeW9WSjlCOGV2WlhPRldiX2czMEd3LUE1MmNTUm9kNTdJczNoNkxEYWo3ZXp3WW4yZTJxSXlNM2ZVQ3BOTllOZGxTNDJreHpURVRJUW5iZ3Z4VnhKdVlXeU5m?oc=5",
+      "bucket": "availability",
+      "structured_fact": "The Chicago Bears Just Signed a Player With Elite NFL Speed - Yahoo Sports",
+      "confidence": 0.45,
+      "tier": 3
+    },
+    {
+      "game_id": "espn:401872661",
+      "event_type": "other",
+      "headline": "Why Ben Johnson's Bears offense works and 2026 expectations",
+      "publisher": "ESPN",
+      "source_url": "https://www.espn.com/nfl/story/_/id/49652191/chicago-bears-coach-ben-johnson-offense-caleb-williams",
+      "bucket": "availability",
+      "structured_fact": "Why Ben Johnson's Bears offense works and 2026 expectations",
+      "confidence": 0.45,
+      "tier": 2
+    },
+    {
+      "game_id": "espn:401872661",
+      "event_type": "other",
+      "headline": "QB Tyson Bagent joins list of Bears wounded in grueling preseason - Chicago Sun-Times",
+      "publisher": "Chicago Sun-Times",
+      "source_url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxNYzJYT1JCWFktSWdST0daX1N2UjNsSDRvelBJdEpXRG10Tms5MnlzYk5pR0JKUDFHUzEwT2xxT19QTC1rTXZ4MHdfRTdnWWNsUUlXMkJIaEdfM1FzMnJoUU5FX0FLNkdGV2pCQTFhRVNteDRDRzBTT1hhVDZYdFl5bl9YV0p5X3V4dFVCT1pYZkFNMEZ2eDNXM0FLMW9PU0g1UEFqMFN0SDNSWlJIWkRnRVBMVWoxQ0xLVm1jZG5iSWd5aV9faWhwRjhKZ1J4VE9INS1MYmFadTdvdHB6?oc=5",
+      "bucket": "availability",
+      "structured_fact": "QB Tyson Bagent joins list of Bears wounded in grueling preseason - Chicago Sun-Times",
+      "confidence": 0.45,
+      "tier": 3
+    }
+  ],
+  "news_citations": [
+    {
+      "headline": "Chicago Bears in quarterback concerns with star suffering injury in preseason opener - the-sun.com",
+      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNWXNFcWdGLWhBdDBCekxDTFpycnNLamF2OU5oU1V6cWhVWmNYaEl2c1RIeEpfV1Q5MjR6YkI1cFFOb0xRb0l6QV94eUFYSnVsLVlJY3l2V3dFM01uckVwdm4ybEtJb1FXNWwxcE9MMmd5elJkN2Q5OVR2bHJTa1E4b3MyQzhvR3pWS0E?oc=5",
+      "publisher": "the-sun.com"
+    },
+    {
+      "headline": "Haynes King's Injury Could Cost Carolina Panthers Dearly - Sports Illustrated",
+      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOeTNOeFB5dzZVSmlhNFUtNFFhaGU0SXBvZmtfUC16Yjc1a3c3V1k2WkZSb2pIdUdkZ2h6OWcwNC0tQ3lURUNHRHBadUhLbWdnYVl0VVVvRnBfUU9QZS1TT0V1bkt0dzhlT2lScWpYY01kbGcwRHJlTllQOXhnNmVLdVN3ejczQXctRThkbXB0SGg2TWVHQnc?oc=5",
+      "publisher": "Sports Illustrated"
+    },
+    {
+      "headline": "QB Tyson Bagent doesn't travel with Bears, is 'week-to-week' - Chicago Sun-Times",
+      "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxQdGlJRlBjeHlmVTJiSjdGUGNBdXIzMlVhZzhZa2lOV1BzME5YdGNxWHdZelRkRF84VmhZcTdzUHZsbFdyVmxvbmF1bXZWS0o1VVVFUFZMMVlvZWEyV3l1QU9XeTFwSm1qSXBRXzJJcEVnYVNzYVVZVWdaLWg1LXpDV0RGRHgyUTNlQTNRX1NINi02U2pQOUR2aDkwUk1nWVphWnF4eWMyYkE3Y3hadzk5WHM0eHNXcXg3ay1GTmhrU0QwUW5CSEpkQnBDYmxraUxPSGNv?oc=5",
+      "publisher": "Chicago Sun-Times"
+    },
+    {
+      "headline": "The Chicago Bears Just Signed a Player With Elite NFL Speed - Yahoo Sports",
+      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPZkg0MzJpTlFqcklYNnQ1b0RiTzlxUEtkWDZiUzR5ZXIyak16SUNKeW9WSjlCOGV2WlhPRldiX2czMEd3LUE1MmNTUm9kNTdJczNoNkxEYWo3ZXp3WW4yZTJxSXlNM2ZVQ3BOTllOZGxTNDJreHpURVRJUW5iZ3Z4VnhKdVlXeU5m?oc=5",
+      "publisher": "Yahoo Sports"
+    },
+    {
+      "headline": "Why Ben Johnson's Bears offense works and 2026 expectations",
+      "url": "https://www.espn.com/nfl/story/_/id/49652191/chicago-bears-coach-ben-johnson-offense-caleb-williams",
+      "publisher": "ESPN"
+    },
+    {
+      "headline": "QB Tyson Bagent joins list of Bears wounded in grueling preseason - Chicago Sun-Times",
+      "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxNYzJYT1JCWFktSWdST0daX1N2UjNsSDRvelBJdEpXRG10Tms5MnlzYk5pR0JKUDFHUzEwT2xxT19QTC1rTXZ4MHdfRTdnWWNsUUlXMkJIaEdfM1FzMnJoUU5FX0FLNkdGV2pCQTFhRVNteDRDRzBTT1hhVDZYdFl5bl9YV0p5X3V4dFVCT1pYZkFNMEZ2eDNXM0FLMW9PU0g1UEFqMFN0SDNSWlJIWkRnRVBMVWoxQ0xLVm1jZG5iSWd5aV9faWhwRjhKZ1J4VE9INS1MYmFadTdvdHB6?oc=5",
+      "publisher": "Chicago Sun-Times"
+    }
+  ],
+  "summary_short": "BlueChip leans CAR. Top signal: ++ CHI \u2014 Rushing offense vs run defense",
+  "summary_full": "Chicago Bears at Carolina Panthers.\n\nBlueChip leans CAR. ++ CHI \u2014 Rushing offense vs run defense\n\nWhy CAR has the edge\n- ++ CHI \u2014 Rushing offense vs run defense\n- ++ CHI \u2014 Overall efficiency\n- ++ CHI \u2014 Passing offense vs pass defense\n\nBlueChip projection\nMarket: CHI -2.5\nBCW desk \u03bc (home): +0.1 (Research Preview)\nWin probability: unavailable until probability model passes validation.\n\nHow each team wins\nCAR: Stay efficient on early downs and avoid giving the visitor explosive answers.\nCHI: Attack via rushing offense vs run defense and keep the favorite from playing its preferred script.\n\nWhat changed this week\n\u2022 Chicago Bears in quarterback concerns with star suffering injury in preseason opener - the-sun.com\n\u2022 Haynes King's Injury Could Cost Carolina Panthers Dearly - Sports Illustrated\n\u2022 QB Tyson Bagent doesn't travel with Bears, is 'week-to-week' - Chicago Sun-Times\n\u2022 The Chicago Bears Just Signed a Player With Elite NFL Speed - Yahoo Sports\n\nWhat could make BlueChip wrong?\n\u2022 Turnovers: the projection assumes roughly normal luck; a +2 swing can flip a CAR lean.\n\u2022 CHI path: if rushing offense vs run defense plays up, CAR's edge shrinks.\n\u2022 Injury / inactive surprise on either OL or QB would rewrite the pass-rush signal.\n\nBottom line: CAR has more ways to win on the current MATCHUP SIGNAL board, but football variance (turnovers, explosives) remains large around any margin estimate.",
+  "generation_model": "desk-template",
+  "generation_provider": "fallback",
+  "glossary": {
+    "EPA/play": "Expected Points Added estimates how much each play improves expected scoring position. Positive is good. A 5-yard gain on 3rd-and-3 is not treated like 5 yards on 3rd-and-20.",
+    "MATCHUP SIGNAL": "A descriptive strength\u00d7weakness edge. Not a published win probability and not fed into BCW-RIDGE-v0.1 until validated walk-forward.",
+    "Research Preview": "BlueChip quantitative layer that has not cleared the five public ship gates."
+  },
+  "levels": {
+    "slate": {
+      "lean": "CAR",
+      "top_edges": [
+        "++ CHI Run Game",
+        "++ CHI Overall",
+        "++ CHI Passing"
+      ],
+      "market": "CHI -2.5",
+      "mu": 0.07,
+      "confidence_pct": 56.1
+    }
+  }
+}

@@ -1,0 +1,307 @@
+{
+  "game_id": "espn:401872658",
+  "version": "BCW-GIP-v0.1",
+  "created_at": "2026-08-21T03:42:50.016841+00:00",
+  "generated_at": "2026-08-21T03:42:50.016841+00:00",
+  "information_cutoff": "2026-08-21T03:42:50.016841+00:00",
+  "source_set_hash": "34e5c322ef664dbece02a0fb",
+  "game": {
+    "game_id": "espn:401872658",
+    "league": "NFL",
+    "matchup": "ATL @ PIT",
+    "home_team": "PIT",
+    "away_team": "ATL",
+    "home_name": "Pittsburgh Steelers",
+    "away_name": "Atlanta Falcons",
+    "spread_label": "PIT -3.0",
+    "home_spread": -3.0,
+    "total_line": 42.5,
+    "week": 1
+  },
+  "lean_team": "PIT",
+  "projection": {
+    "model_id": "BCW-DESK-STRENGTH-v0.x",
+    "method": "0.65\u00b7Elo/25+HFA + 0.35\u00b7(SRS+HFA)",
+    "mu_home": 5.24,
+    "sigma": 13.5,
+    "p_home_win": 0.6373,
+    "p_home_cover": 0.5514,
+    "edge_vs_minus_110": 0.0276,
+    "model_lean": "HOME",
+    "model_lean_team": "PIT",
+    "label": "Research Preview",
+    "public_probability_published": false,
+    "confidence_pct": 55.1
+  },
+  "matchup_edges": [
+    {
+      "key": "RUN_GAME",
+      "title": "Rushing offense vs run defense",
+      "side": "HOME",
+      "side_team": "PIT",
+      "strength": "MILD",
+      "home_stat": 0.0575,
+      "away_stat": -0.0779,
+      "mismatch_z": 0.967,
+      "fan_line": "+ PIT \u2014 Rushing offense vs run defense",
+      "label": "MATCHUP SIGNAL",
+      "why": "Rush EPA/play vs EPA allowed on rushes \u2014 better than raw yards/carry."
+    },
+    {
+      "key": "PASSING",
+      "title": "Passing offense vs pass defense",
+      "side": "HOME",
+      "side_team": "PIT",
+      "strength": "MILD",
+      "home_stat": 0.1237,
+      "away_stat": 0.0244,
+      "mismatch_z": 0.551,
+      "fan_line": "+ PIT \u2014 Passing offense vs pass defense",
+      "label": "MATCHUP SIGNAL",
+      "why": "EPA/play on passes plus how much EPA the opposing defense allows. EPA weights plays by situation (3rd-and-3 \u2260 3rd-and-20)."
+    },
+    {
+      "key": "OVERALL",
+      "title": "Overall efficiency",
+      "side": "HOME",
+      "side_team": "PIT",
+      "strength": "EVEN",
+      "home_stat": 0.0448,
+      "away_stat": -0.0384,
+      "mismatch_z": 0.416,
+      "fan_line": "\u00b7 PIT \u2014 Overall efficiency",
+      "label": "MATCHUP SIGNAL",
+      "why": "Net EPA/play (offense minus defense). Broad team-strength interaction."
+    },
+    {
+      "key": "PASS_RUSH",
+      "title": "Pass rush / protection (proxy)",
+      "side": "EVEN",
+      "side_team": "PIT",
+      "strength": "EVEN",
+      "home_stat": -0.0443,
+      "away_stat": -0.0544,
+      "mismatch_z": 0.101,
+      "fan_line": "Pass rush / protection (proxy): roughly even",
+      "label": "MATCHUP SIGNAL",
+      "why": "Proxy until true pressure/PBWR data: lower pass EPA allowed \u21d2 stronger pass defense / rush. MATCHUP SIGNAL only \u2014 not a published win probability."
+    }
+  ],
+  "headline_cards": [
+    {
+      "marks": "+",
+      "key": "RUN_GAME",
+      "title": "Rushing offense vs run defense",
+      "team": "PIT",
+      "strength": "MILD",
+      "fan_line": "+ PIT \u2014 Rushing offense vs run defense",
+      "mismatch_z": 0.967,
+      "percentile_hint": null,
+      "label": "MATCHUP SIGNAL",
+      "why": "Rush EPA/play vs EPA allowed on rushes \u2014 better than raw yards/carry.",
+      "home_stat": 0.0575,
+      "away_stat": -0.0779
+    },
+    {
+      "marks": "+",
+      "key": "PASSING",
+      "title": "Passing offense vs pass defense",
+      "team": "PIT",
+      "strength": "MILD",
+      "fan_line": "+ PIT \u2014 Passing offense vs pass defense",
+      "mismatch_z": 0.551,
+      "percentile_hint": null,
+      "label": "MATCHUP SIGNAL",
+      "why": "EPA/play on passes plus how much EPA the opposing defense allows. EPA weights plays by situation (3rd-and-3 \u2260 3rd-and-20).",
+      "home_stat": 0.1237,
+      "away_stat": 0.0244
+    },
+    {
+      "marks": "\u00b7",
+      "key": "OVERALL",
+      "title": "Overall efficiency",
+      "team": "PIT",
+      "strength": "EVEN",
+      "fan_line": "\u00b7 PIT \u2014 Overall efficiency",
+      "mismatch_z": 0.416,
+      "percentile_hint": null,
+      "label": "MATCHUP SIGNAL",
+      "why": "Net EPA/play (offense minus defense). Broad team-strength interaction.",
+      "home_stat": 0.0448,
+      "away_stat": -0.0384
+    }
+  ],
+  "slate_edges": [
+    "+ PIT Run Game",
+    "+ PIT Passing"
+  ],
+  "matchup_logistic": {
+    "model_id": "BCW-MATCHUP-LOGISTIC-v0.x",
+    "label": "Research Preview",
+    "public_probability_published": false,
+    "logit": 0.8347,
+    "p_home_win": 0.6973,
+    "lean": "HOME",
+    "contributions": [
+      {
+        "key": "RUN_GAME",
+        "weight": 0.25,
+        "z": 0.967,
+        "term": 0.2417
+      },
+      {
+        "key": "PASSING",
+        "weight": 0.4,
+        "z": 0.551,
+        "term": 0.2204
+      },
+      {
+        "key": "OVERALL",
+        "weight": 0.45,
+        "z": 0.416,
+        "term": 0.1872
+      },
+      {
+        "key": "PASS_RUSH",
+        "weight": 0.35,
+        "z": 0.101,
+        "term": 0.0353
+      }
+    ],
+    "note": "Heuristic matchup logistic on EDGE z-scores. Not BCW-RIDGE. Not a ship gate."
+  },
+  "paths": {
+    "home": "Lean on rushing offense vs run defense. Convert that mismatch before the game becomes a coin-flip script.",
+    "away": "Shorten the game, win the line of scrimmage, and force the favorite into obvious passing downs."
+  },
+  "risks": [
+    "Turnovers: the projection assumes roughly normal luck; a +2 swing can flip a PIT lean.",
+    "Injury / inactive surprise on either OL or QB would rewrite the pass-rush signal."
+  ],
+  "adjustment": {
+    "points_home": 0.9,
+    "label": "MATCHUP SIGNAL (unvalidated additive)",
+    "note": "Not fed into BCW-RIDGE-v0.1. Research Preview display only."
+  },
+  "events": [
+    {
+      "game_id": "espn:401872658",
+      "event_type": "other",
+      "headline": "Experts update Jets vs. Steelers NFL preseason Week 2 predictions after Breece Hall injury news - Syracuse.com",
+      "publisher": "Syracuse.com",
+      "source_url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxNRGF1S3JsaEEtQ0d1VUtJUnJSX3VZUkdlb2NQbWJPNmtfdDBoRHkxWkxxOGRveTZ5aExPdHN2bVctcGZRd2hWUDRBTGFUeGpRODRYMUtfSkNKSlg0elMyQ1FwRVZ1NUxSMEdfMXI4WEg1QTRaOHU5dEpaZVBMb0dPdUx0LWdYRUdLTjM3YzlyRXZWUXJQc0s4MkU2Vm9qNGs0Y2QxV09MV005S3ZGTi1Hd180T1pLMDhoMjVvVHk3SzRqS2xqQWlySGFnNUJXMktMUHBCZXcxcw?oc=5",
+      "bucket": "availability",
+      "structured_fact": "Experts update Jets vs. Steelers NFL preseason Week 2 predictions after Breece Hall injury news - Syracuse.com",
+      "confidence": 0.45,
+      "tier": 3
+    },
+    {
+      "game_id": "espn:401872658",
+      "event_type": "other",
+      "headline": "Falcons QB Michael Penix Jr. continues his rehab from ACL surgery during trip back to Indiana - Bozeman Daily Chronicle",
+      "publisher": "Bozeman Daily Chronicle",
+      "source_url": "https://news.google.com/rss/articles/CBMikgJBVV95cUxOZU1leVZwN1ZIN2xfMXpOb3Nkenk4aW95bGZxUlpRbnlsSWJEbkNyTmJsbDZYUFR4ME1Lc3JuN1BBSkJ6X2RBV3NEZm5ZbDhZcTFiQmppMGE0cU1Ga0oxbkd6anlmVS14N21yZUtzZ1YwQ3ppNTE5VHBCYnpsOGlMbndET2pXcEZEbXNNSkFraV9RMnNMZUVSUFRqY3JiMWg0b2EyT1IzSWVaQWotOFlPZXhSVEJmUmdEdWhBYk1wWUpXYXNtSDA1eUNmLWI1VWNWZ2RzbmhkS3BPLUZfWTg0QjVQWmhFMDY0TzJMZ1J2c0JBY1lOZngtSHhTdkNOenp6NzNkeEVFN3NwTU0tSy1fZmpB?oc=5",
+      "bucket": "availability",
+      "structured_fact": "Falcons QB Michael Penix Jr. continues his rehab from ACL surgery during trip back to Indiana - Bozeman Daily Chronicle",
+      "confidence": 0.45,
+      "tier": 3
+    },
+    {
+      "game_id": "espn:401872658",
+      "event_type": "other",
+      "headline": "Falcons QB Michael Penix Jr. gets honest on final hurdle in ACL recovery - Yahoo Sports",
+      "publisher": "Yahoo Sports",
+      "source_url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxPMEkzX3lWOXJjNXctaWxteDhObDNCSU5IQ28wWl80N000b0Q5QW9LdUhkOFNDZDdOeEJqUXFGQVdmaFk1QzVIWHRjRnJLVld0UjAyY01MZTdYbGoyRnNSRGMyT1FJRGxyaWNsM3dfSndwVDZGeXBucXNkTWFNSWZlMG5B?oc=5",
+      "bucket": "availability",
+      "structured_fact": "Falcons QB Michael Penix Jr. gets honest on final hurdle in ACL recovery - Yahoo Sports",
+      "confidence": 0.45,
+      "tier": 3
+    },
+    {
+      "game_id": "espn:401872658",
+      "event_type": "other",
+      "headline": "ESPN projects uncertainty for Falcons at QB even beyond 2026 - Yahoo Sports",
+      "publisher": "Yahoo Sports",
+      "source_url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOU0JzZDNwaXNFVXJtWEhfVlhYYnVFbWduemdrWTU3R2JXZWpfb3ZRUlh6bk1XSEVtSjJYU2VrVk54c3RUV2xNVmhpRmFWbTFJZEk0RmxlMlZSckVSTWNmNl83OTJYQ2ExS3Riald5UUxKY1NUMEN5WjJ6TDJJQVoySkpFZGgtVGdQUHFKVDNn?oc=5",
+      "bucket": "availability",
+      "structured_fact": "ESPN projects uncertainty for Falcons at QB even beyond 2026 - Yahoo Sports",
+      "confidence": 0.45,
+      "tier": 3
+    },
+    {
+      "game_id": "espn:401872658",
+      "event_type": "other",
+      "headline": "Dolphins named team to watch for Steelers QB trade - Behind the Steel Curtain",
+      "publisher": "Behind the Steel Curtain",
+      "source_url": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxNWk1lT3ppdG9veUoxakpfLVNrTEc1MmZibEowNDZTOENqTWtybXRyREJSRWNCVUYzSDBFWkxtSVI1Z1oyRThiXy11aE5ITExSX0dLYk93QVNzeDl5cm1rdmpYaW9zemQyNHQzeUJoY1JhTEtvN181ZXFOX0FwbDk2LVVxOTlNMEpoaTBTY3hYTlVKTHc4NmNVOGNIRUZPY0Y2aXBUbk9kbVVjRnhTZWd2MHVYejJ3Q0tPYWJmYXphbC1XLW9WNzZiTUF5OThDYS1ub2N1Z2NzODRza0xGM2JxX1BkcnBQSEM0R202N2NsUUZONmM?oc=5",
+      "bucket": "availability",
+      "structured_fact": "Dolphins named team to watch for Steelers QB trade - Behind the Steel Curtain",
+      "confidence": 0.45,
+      "tier": 3
+    },
+    {
+      "game_id": "espn:401872658",
+      "event_type": "other",
+      "headline": "Howard, Allar to get all of Steelers' QB reps vs. Jets",
+      "publisher": "ESPN",
+      "source_url": "https://www.espn.com/nfl/story/_/id/49660895/howard-allar-get-all-steelers-qb-reps-vs-jets",
+      "bucket": "availability",
+      "structured_fact": "Howard, Allar to get all of Steelers' QB reps vs. Jets",
+      "confidence": 0.45,
+      "tier": 2
+    }
+  ],
+  "news_citations": [
+    {
+      "headline": "Experts update Jets vs. Steelers NFL preseason Week 2 predictions after Breece Hall injury news - Syracuse.com",
+      "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxNRGF1S3JsaEEtQ0d1VUtJUnJSX3VZUkdlb2NQbWJPNmtfdDBoRHkxWkxxOGRveTZ5aExPdHN2bVctcGZRd2hWUDRBTGFUeGpRODRYMUtfSkNKSlg0elMyQ1FwRVZ1NUxSMEdfMXI4WEg1QTRaOHU5dEpaZVBMb0dPdUx0LWdYRUdLTjM3YzlyRXZWUXJQc0s4MkU2Vm9qNGs0Y2QxV09MV005S3ZGTi1Hd180T1pLMDhoMjVvVHk3SzRqS2xqQWlySGFnNUJXMktMUHBCZXcxcw?oc=5",
+      "publisher": "Syracuse.com"
+    },
+    {
+      "headline": "Falcons QB Michael Penix Jr. continues his rehab from ACL surgery during trip back to Indiana - Bozeman Daily Chronicle",
+      "url": "https://news.google.com/rss/articles/CBMikgJBVV95cUxOZU1leVZwN1ZIN2xfMXpOb3Nkenk4aW95bGZxUlpRbnlsSWJEbkNyTmJsbDZYUFR4ME1Lc3JuN1BBSkJ6X2RBV3NEZm5ZbDhZcTFiQmppMGE0cU1Ga0oxbkd6anlmVS14N21yZUtzZ1YwQ3ppNTE5VHBCYnpsOGlMbndET2pXcEZEbXNNSkFraV9RMnNMZUVSUFRqY3JiMWg0b2EyT1IzSWVaQWotOFlPZXhSVEJmUmdEdWhBYk1wWUpXYXNtSDA1eUNmLWI1VWNWZ2RzbmhkS3BPLUZfWTg0QjVQWmhFMDY0TzJMZ1J2c0JBY1lOZngtSHhTdkNOenp6NzNkeEVFN3NwTU0tSy1fZmpB?oc=5",
+      "publisher": "Bozeman Daily Chronicle"
+    },
+    {
+      "headline": "Falcons QB Michael Penix Jr. gets honest on final hurdle in ACL recovery - Yahoo Sports",
+      "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxPMEkzX3lWOXJjNXctaWxteDhObDNCSU5IQ28wWl80N000b0Q5QW9LdUhkOFNDZDdOeEJqUXFGQVdmaFk1QzVIWHRjRnJLVld0UjAyY01MZTdYbGoyRnNSRGMyT1FJRGxyaWNsM3dfSndwVDZGeXBucXNkTWFNSWZlMG5B?oc=5",
+      "publisher": "Yahoo Sports"
+    },
+    {
+      "headline": "ESPN projects uncertainty for Falcons at QB even beyond 2026 - Yahoo Sports",
+      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOU0JzZDNwaXNFVXJtWEhfVlhYYnVFbWduemdrWTU3R2JXZWpfb3ZRUlh6bk1XSEVtSjJYU2VrVk54c3RUV2xNVmhpRmFWbTFJZEk0RmxlMlZSckVSTWNmNl83OTJYQ2ExS3Riald5UUxKY1NUMEN5WjJ6TDJJQVoySkpFZGgtVGdQUHFKVDNn?oc=5",
+      "publisher": "Yahoo Sports"
+    },
+    {
+      "headline": "Dolphins named team to watch for Steelers QB trade - Behind the Steel Curtain",
+      "url": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxNWk1lT3ppdG9veUoxakpfLVNrTEc1MmZibEowNDZTOENqTWtybXRyREJSRWNCVUYzSDBFWkxtSVI1Z1oyRThiXy11aE5ITExSX0dLYk93QVNzeDl5cm1rdmpYaW9zemQyNHQzeUJoY1JhTEtvN181ZXFOX0FwbDk2LVVxOTlNMEpoaTBTY3hYTlVKTHc4NmNVOGNIRUZPY0Y2aXBUbk9kbVVjRnhTZWd2MHVYejJ3Q0tPYWJmYXphbC1XLW9WNzZiTUF5OThDYS1ub2N1Z2NzODRza0xGM2JxX1BkcnBQSEM0R202N2NsUUZONmM?oc=5",
+      "publisher": "Behind the Steel Curtain"
+    },
+    {
+      "headline": "Howard, Allar to get all of Steelers' QB reps vs. Jets",
+      "url": "https://www.espn.com/nfl/story/_/id/49660895/howard-allar-get-all-steelers-qb-reps-vs-jets",
+      "publisher": "ESPN"
+    }
+  ],
+  "summary_short": "BlueChip leans PIT. Top signal: + PIT \u2014 Rushing offense vs run defense",
+  "summary_full": "Atlanta Falcons at Pittsburgh Steelers.\n\nBlueChip leans PIT. + PIT \u2014 Rushing offense vs run defense\n\nWhy PIT has the edge\n- + PIT \u2014 Rushing offense vs run defense\n- + PIT \u2014 Passing offense vs pass defense\n- \u00b7 PIT \u2014 Overall efficiency\n\nBlueChip projection\nMarket: PIT -3.0\nBCW desk \u03bc (home): +5.2 (Research Preview)\nWin probability: unavailable until probability model passes validation.\n\nHow each team wins\nPIT: Lean on rushing offense vs run defense. Convert that mismatch before the game becomes a coin-flip script.\nATL: Shorten the game, win the line of scrimmage, and force the favorite into obvious passing downs.\n\nWhat changed this week\n\u2022 Experts update Jets vs. Steelers NFL preseason Week 2 predictions after Breece Hall injury news - Syracuse.com\n\u2022 Falcons QB Michael Penix Jr. continues his rehab from ACL surgery during trip back to Indiana - Bozeman Daily Chronicle\n\u2022 Falcons QB Michael Penix Jr. gets honest on final hurdle in ACL recovery - Yahoo Sports\n\u2022 ESPN projects uncertainty for Falcons at QB even beyond 2026 - Yahoo Sports\n\nWhat could make BlueChip wrong?\n\u2022 Turnovers: the projection assumes roughly normal luck; a +2 swing can flip a PIT lean.\n\u2022 Injury / inactive surprise on either OL or QB would rewrite the pass-rush signal.\n\nBottom line: PIT has more ways to win on the current MATCHUP SIGNAL board, but football variance (turnovers, explosives) remains large around any margin estimate.",
+  "generation_model": "desk-template",
+  "generation_provider": "fallback",
+  "glossary": {
+    "EPA/play": "Expected Points Added estimates how much each play improves expected scoring position. Positive is good. A 5-yard gain on 3rd-and-3 is not treated like 5 yards on 3rd-and-20.",
+    "MATCHUP SIGNAL": "A descriptive strength\u00d7weakness edge. Not a published win probability and not fed into BCW-RIDGE-v0.1 until validated walk-forward.",
+    "Research Preview": "BlueChip quantitative layer that has not cleared the five public ship gates."
+  },
+  "levels": {
+    "slate": {
+      "lean": "PIT",
+      "top_edges": [
+        "+ PIT Run Game",
+        "+ PIT Passing"
+      ],
+      "market": "PIT -3.0",
+      "mu": 5.24,
+      "confidence_pct": 55.1
+    }
+  }
+}

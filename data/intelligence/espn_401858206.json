@@ -1,0 +1,220 @@
+{
+  "game_id": "espn:401858206",
+  "version": "BCW-GIP-v0.1",
+  "created_at": "2026-08-21T03:40:43.852499+00:00",
+  "generated_at": "2026-08-21T03:40:43.852499+00:00",
+  "information_cutoff": "2026-08-21T03:40:43.852499+00:00",
+  "source_set_hash": "502c92c3b5412f2755457f4c",
+  "game": {
+    "game_id": "espn:401858206",
+    "league": "CFB",
+    "matchup": "MIA @ STAN",
+    "home_team": "STAN",
+    "away_team": "MIA",
+    "home_name": "Stanford Cardinal",
+    "away_name": "Miami Hurricanes",
+    "spread_label": "MIA -24.5",
+    "home_spread": 24.5,
+    "total_line": 48.5,
+    "week": 1
+  },
+  "lean_team": "MIA",
+  "projection": {
+    "model_id": "BCW-DESK-STRENGTH-v0.x",
+    "method": "Market line + AP rank edge (CFB; no CFB Elo yet)",
+    "mu_home": -29.25,
+    "sigma": 15.0,
+    "p_home_win": 0.0237,
+    "p_home_cover": 0.3632,
+    "edge_vs_minus_110": -0.1606,
+    "model_lean": "AWAY",
+    "model_lean_team": "MIA",
+    "label": "Research Preview",
+    "public_probability_published": false,
+    "confidence_pct": 63.7
+  },
+  "matchup_edges": [
+    {
+      "key": "AP_RANK",
+      "title": "AP ranking gap",
+      "side": "AWAY",
+      "side_team": "MIA",
+      "strength": "MAJOR",
+      "home_stat": 7.0,
+      "away_stat": 30.0,
+      "mismatch_z": -2.875,
+      "fan_line": "+++ MIA \u2014 AP ranking gap",
+      "label": "MATCHUP SIGNAL",
+      "why": "College prior until CFB EPA ingest. Lower AP rank is stronger."
+    }
+  ],
+  "headline_cards": [
+    {
+      "marks": "+++",
+      "key": "AP_RANK",
+      "title": "AP ranking gap",
+      "team": "MIA",
+      "strength": "MAJOR",
+      "fan_line": "+++ MIA \u2014 AP ranking gap",
+      "mismatch_z": -2.875,
+      "percentile_hint": "More extreme than ~95% of similar unit mismatches in a normal sample.",
+      "label": "MATCHUP SIGNAL",
+      "why": "College prior until CFB EPA ingest. Lower AP rank is stronger.",
+      "home_stat": 7.0,
+      "away_stat": 30.0
+    }
+  ],
+  "slate_edges": [
+    "+++ MIA Ap Rank"
+  ],
+  "matchup_logistic": {
+    "model_id": "BCW-MATCHUP-LOGISTIC-v0.x",
+    "label": "Research Preview",
+    "public_probability_published": false,
+    "logit": -0.7125,
+    "p_home_win": 0.329,
+    "lean": "AWAY",
+    "contributions": [
+      {
+        "key": "AP_RANK",
+        "weight": 0.3,
+        "z": -2.875,
+        "term": -0.8625
+      }
+    ],
+    "note": "Heuristic matchup logistic on EDGE z-scores. Not BCW-RIDGE. Not a ship gate."
+  },
+  "paths": {
+    "home": "Stay efficient on early downs and avoid giving the visitor explosive answers.",
+    "away": "Attack via ap ranking gap and keep the favorite from playing its preferred script."
+  },
+  "risks": [
+    "Turnovers: the projection assumes roughly normal luck; a +2 swing can flip a MIA lean.",
+    "Injury / inactive surprise on either OL or QB would rewrite the pass-rush signal."
+  ],
+  "adjustment": {
+    "points_home": -1.6,
+    "label": "MATCHUP SIGNAL (unvalidated additive)",
+    "note": "Not fed into BCW-RIDGE-v0.1. Research Preview display only."
+  },
+  "events": [
+    {
+      "game_id": "espn:401858206",
+      "event_type": "other",
+      "headline": "2026 Game Preview: Miami Hurricanes at Stanford Cardinal - State of The U",
+      "publisher": "State of The U",
+      "source_url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOak1teTFjeTNfZHJTRTJ0b0Mzdl9MVHRyNUxRLW5vR1lNbXc1N0JjQ2ZHUllBQ2xoVF9PVzkwQnp6SmtYclBRY1JiTmpnc1lfNnluMFV2eV9BRUcySGdKOEVtQUdCN2RQMjZ2NHlCTlhxY2lnTlU4ZnZBOUdqWERraWxoSkRSRjVVMmlCZE4tTE1WVVRBUnNJZXhGM05iRFhCX194S3BB?oc=5",
+      "bucket": "analysis",
+      "structured_fact": "2026 Game Preview: Miami Hurricanes at Stanford Cardinal - State of The U",
+      "confidence": 0.45,
+      "tier": 3
+    },
+    {
+      "game_id": "espn:401858206",
+      "event_type": "starter_change",
+      "headline": "Stanford names ex-Michigan QB Davis Warren as starter",
+      "publisher": "ESPN",
+      "source_url": "https://www.espn.com/college-football/story/_/id/49654443/stanford-names-ex-michigan-qb-davis-warren-starter",
+      "bucket": "availability",
+      "structured_fact": "Stanford names ex-Michigan QB Davis Warren as starter",
+      "confidence": 0.7,
+      "tier": 2
+    },
+    {
+      "game_id": "espn:401858206",
+      "event_type": "market",
+      "headline": "Miami football betting preview 2026: Hurricanes odds, futures, win total prediction, sportsbook promos and more - sportingnews.com",
+      "publisher": "sportingnews.com",
+      "source_url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPakVndDY3NGVrdGFTUm0wV216NlQ4Q3c4YWpDWUhDWjE3V1RuZkI1YjVFV0NNSzlWc285cmpZMmwtUEdyWUljYmduOWpsdTF3aWdNaDZfTUJPR1FPV2FSLUVNOGtyWFRjenVzY2lSckVkSzhDaTVDbm1aZFl0bVRXYkJmQXlSbFEycHhLaVVLS3NzR0VmQlp4eFRzaU95c0xoMnpfX0g0Szg0S0RmZFl1OFViZlhya0RmZFNiRDlxLTdEcDZhTzY0?oc=5",
+      "bucket": "analysis",
+      "structured_fact": "Miami football betting preview 2026: Hurricanes odds, futures, win total prediction, sportsbook promos and more - sportingnews.com",
+      "confidence": 0.7,
+      "tier": 3
+    },
+    {
+      "game_id": "espn:401858206",
+      "event_type": "other",
+      "headline": "2026 Miami Hurricanes Position Preview: Quarterback - State of The U",
+      "publisher": "State of The U",
+      "source_url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxPUVFSVEFmLXRNcV9YZWRET042WkhQUldxSUxscno1UEphM1NaRVFEUUhYaDdQMm42WXVQWGlrZXJ6bVAzalJZS1JQNzhfMncyenlGeHpyY2REU2l6bWk4VDVURWlNcU40ZFZTdl9fTlBQaWxwVEk5SmJGcG1Mc3lOeW5KRWJzb1lwR1hvVy1WMmVsUHA5SDNNeEZ2bFpBWGhnNmltdzRaNmRVbzVrODg5Q3QydFpPMzdVV2dJamNscWxWQUJhOWw3SXdWMVdWNW9jc2pRbERB?oc=5",
+      "bucket": "availability",
+      "structured_fact": "2026 Miami Hurricanes Position Preview: Quarterback - State of The U",
+      "confidence": 0.45,
+      "tier": 3
+    },
+    {
+      "game_id": "espn:401858206",
+      "event_type": "other",
+      "headline": "Sources: Stanford QB Ben Gulbranson expected to start at Miami - ABC7 Bay Area",
+      "publisher": "ABC7 Bay Area",
+      "source_url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOVklQOHV6Z0ZPTDhKTlFVTE9vTEhuY1REdkYzNUx3VU5lRnZlOGdxR3N1Rm51RnNTck1ETUpoV2xnUWxRU0ozNjBiTjduME5MaXRzU0pRSDEtTklReEhtc1hpS3FGX0dhNG83NE5rWUZ3bzJCWVRETlFYUmZveWU2X256OFktY0o0X2JpOXRnQVRTclFmRHc?oc=5",
+      "bucket": "availability",
+      "structured_fact": "Sources: Stanford QB Ben Gulbranson expected to start at Miami - ABC7 Bay Area",
+      "confidence": 0.45,
+      "tier": 3
+    },
+    {
+      "game_id": "espn:401858206",
+      "event_type": "starter_change",
+      "headline": "Stanford makes it official: QB Davis Warren will start season opener against Hawaii on Aug. 29 - The Mercury News",
+      "publisher": "The Mercury News",
+      "source_url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxPbHdnUG5uNWVBc3MxenBBb0phdkZPVTBEOEc2Uk1OMlR2aE9LdEx1Zm8zeG90b2h6UmtnelNaUmNEdDJ5SUp4amczb195Z1NwVlM5d1VYTFk0ZWJJZWxFa1NPMy1QUHNiU3VUbEhHcTZDYlcwWmtuSUdUMldaYVEtWV92VTUxX2ZvVkFzUHNvOGU3M2hDbHpBRHUxM0Z0RU9CSjZGWUVWaktBSW1DdXNwWktRNWtMai10VzZwcnpWMmNDVzY0MkZoT0tOWULSAdIBQVVfeXFMUHNremZIZkpOYV9pZ0FmdUhDby0tVVQtb2lRaXNFYk90bGtTWF9oNXBnamE0R3lJZWJySWxOd2JJcUt2WGRpX1F3M3pxNHI4ZVNQc1JHZ2RsOF9kVTVhVjQ0MVRERU5jTDlXclFPT3ZKMGsyOHR2TzlQNFBmbFNwbmhQdENIMWxUM2h4QnAtQlZCV0ljYnBOQUFCdDYxakdxUENab1hCdC0xcVBRc082c2FFSEwtY21UbGVzbF9SR3ZuT0sxVzhNaFFFMGFBRjQ3cDJB?oc=5",
+      "bucket": "availability",
+      "structured_fact": "Stanford makes it official: QB Davis Warren will start season opener against Hawaii on Aug. 29 - The Mercury News",
+      "confidence": 0.7,
+      "tier": 3
+    }
+  ],
+  "news_citations": [
+    {
+      "headline": "2026 Game Preview: Miami Hurricanes at Stanford Cardinal - State of The U",
+      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOak1teTFjeTNfZHJTRTJ0b0Mzdl9MVHRyNUxRLW5vR1lNbXc1N0JjQ2ZHUllBQ2xoVF9PVzkwQnp6SmtYclBRY1JiTmpnc1lfNnluMFV2eV9BRUcySGdKOEVtQUdCN2RQMjZ2NHlCTlhxY2lnTlU4ZnZBOUdqWERraWxoSkRSRjVVMmlCZE4tTE1WVVRBUnNJZXhGM05iRFhCX194S3BB?oc=5",
+      "publisher": "State of The U"
+    },
+    {
+      "headline": "Stanford names ex-Michigan QB Davis Warren as starter",
+      "url": "https://www.espn.com/college-football/story/_/id/49654443/stanford-names-ex-michigan-qb-davis-warren-starter",
+      "publisher": "ESPN"
+    },
+    {
+      "headline": "Miami football betting preview 2026: Hurricanes odds, futures, win total prediction, sportsbook promos and more - sportingnews.com",
+      "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPakVndDY3NGVrdGFTUm0wV216NlQ4Q3c4YWpDWUhDWjE3V1RuZkI1YjVFV0NNSzlWc285cmpZMmwtUEdyWUljYmduOWpsdTF3aWdNaDZfTUJPR1FPV2FSLUVNOGtyWFRjenVzY2lSckVkSzhDaTVDbm1aZFl0bVRXYkJmQXlSbFEycHhLaVVLS3NzR0VmQlp4eFRzaU95c0xoMnpfX0g0Szg0S0RmZFl1OFViZlhya0RmZFNiRDlxLTdEcDZhTzY0?oc=5",
+      "publisher": "sportingnews.com"
+    },
+    {
+      "headline": "2026 Miami Hurricanes Position Preview: Quarterback - State of The U",
+      "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxPUVFSVEFmLXRNcV9YZWRET042WkhQUldxSUxscno1UEphM1NaRVFEUUhYaDdQMm42WXVQWGlrZXJ6bVAzalJZS1JQNzhfMncyenlGeHpyY2REU2l6bWk4VDVURWlNcU40ZFZTdl9fTlBQaWxwVEk5SmJGcG1Mc3lOeW5KRWJzb1lwR1hvVy1WMmVsUHA5SDNNeEZ2bFpBWGhnNmltdzRaNmRVbzVrODg5Q3QydFpPMzdVV2dJamNscWxWQUJhOWw3SXdWMVdWNW9jc2pRbERB?oc=5",
+      "publisher": "State of The U"
+    },
+    {
+      "headline": "Sources: Stanford QB Ben Gulbranson expected to start at Miami - ABC7 Bay Area",
+      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOVklQOHV6Z0ZPTDhKTlFVTE9vTEhuY1REdkYzNUx3VU5lRnZlOGdxR3N1Rm51RnNTck1ETUpoV2xnUWxRU0ozNjBiTjduME5MaXRzU0pRSDEtTklReEhtc1hpS3FGX0dhNG83NE5rWUZ3bzJCWVRETlFYUmZveWU2X256OFktY0o0X2JpOXRnQVRTclFmRHc?oc=5",
+      "publisher": "ABC7 Bay Area"
+    },
+    {
+      "headline": "Stanford makes it official: QB Davis Warren will start season opener against Hawaii on Aug. 29 - The Mercury News",
+      "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxPbHdnUG5uNWVBc3MxenBBb0phdkZPVTBEOEc2Uk1OMlR2aE9LdEx1Zm8zeG90b2h6UmtnelNaUmNEdDJ5SUp4amczb195Z1NwVlM5d1VYTFk0ZWJJZWxFa1NPMy1QUHNiU3VUbEhHcTZDYlcwWmtuSUdUMldaYVEtWV92VTUxX2ZvVkFzUHNvOGU3M2hDbHpBRHUxM0Z0RU9CSjZGWUVWaktBSW1DdXNwWktRNWtMai10VzZwcnpWMmNDVzY0MkZoT0tOWULSAdIBQVVfeXFMUHNremZIZkpOYV9pZ0FmdUhDby0tVVQtb2lRaXNFYk90bGtTWF9oNXBnamE0R3lJZWJySWxOd2JJcUt2WGRpX1F3M3pxNHI4ZVNQc1JHZ2RsOF9kVTVhVjQ0MVRERU5jTDlXclFPT3ZKMGsyOHR2TzlQNFBmbFNwbmhQdENIMWxUM2h4QnAtQlZCV0ljYnBOQUFCdDYxakdxUENab1hCdC0xcVBRc082c2FFSEwtY21UbGVzbF9SR3ZuT0sxVzhNaFFFMGFBRjQ3cDJB?oc=5",
+      "publisher": "The Mercury News"
+    }
+  ],
+  "summary_short": "BlueChip leans MIA. Top signal: +++ MIA \u2014 AP ranking gap",
+  "summary_full": "Miami Hurricanes at Stanford Cardinal.\n\nBlueChip leans MIA. +++ MIA \u2014 AP ranking gap\n\nWhy MIA has the edge\n- +++ MIA \u2014 AP ranking gap\n\nBlueChip projection\nMarket: MIA -24.5\nBCW desk \u03bc (home): -29.2 (Research Preview)\nWin probability: unavailable until probability model passes validation.\n\nHow each team wins\nSTAN: Stay efficient on early downs and avoid giving the visitor explosive answers.\nMIA: Attack via ap ranking gap and keep the favorite from playing its preferred script.\n\nWhat changed this week\n\u2022 2026 Game Preview: Miami Hurricanes at Stanford Cardinal - State of The U\n\u2022 Stanford names ex-Michigan QB Davis Warren as starter\n\u2022 Miami football betting preview 2026: Hurricanes odds, futures, win total prediction, sportsbook promos and more - sportingnews.com\n\u2022 2026 Miami Hurricanes Position Preview: Quarterback - State of The U\n\nWhat could make BlueChip wrong?\n\u2022 Turnovers: the projection assumes roughly normal luck; a +2 swing can flip a MIA lean.\n\u2022 Injury / inactive surprise on either OL or QB would rewrite the pass-rush signal.\n\nBottom line: MIA has more ways to win on the current MATCHUP SIGNAL board, but football variance (turnovers, explosives) remains large around any margin estimate.",
+  "generation_model": "desk-template",
+  "generation_provider": "fallback",
+  "glossary": {
+    "EPA/play": "Expected Points Added estimates how much each play improves expected scoring position. Positive is good. A 5-yard gain on 3rd-and-3 is not treated like 5 yards on 3rd-and-20.",
+    "MATCHUP SIGNAL": "A descriptive strength\u00d7weakness edge. Not a published win probability and not fed into BCW-RIDGE-v0.1 until validated walk-forward.",
+    "Research Preview": "BlueChip quantitative layer that has not cleared the five public ship gates."
+  },
+  "levels": {
+    "slate": {
+      "lean": "MIA",
+      "top_edges": [
+        "+++ MIA Ap Rank"
+      ],
+      "market": "MIA -24.5",
+      "mu": -29.25,
+      "confidence_pct": 63.7
+    }
+  }
+}

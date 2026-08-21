@@ -1,0 +1,309 @@
+{
+  "game_id": "espn:401872923",
+  "version": "BCW-GIP-v0.1",
+  "created_at": "2026-08-21T03:42:03.402217+00:00",
+  "generated_at": "2026-08-21T03:42:03.402217+00:00",
+  "information_cutoff": "2026-08-21T03:42:03.402217+00:00",
+  "source_set_hash": "550974b91299b905bd937d3b",
+  "game": {
+    "game_id": "espn:401872923",
+    "league": "NFL",
+    "matchup": "NO @ DET",
+    "home_team": "DET",
+    "away_team": "NO",
+    "home_name": "Detroit Lions",
+    "away_name": "New Orleans Saints",
+    "spread_label": "DET -7.0",
+    "home_spread": -7.0,
+    "total_line": 48.5,
+    "week": 1
+  },
+  "lean_team": "NO",
+  "projection": {
+    "model_id": "BCW-DESK-STRENGTH-v0.x",
+    "method": "0.65\u00b7Elo/25+HFA + 0.35\u00b7(SRS+HFA)",
+    "mu_home": 4.94,
+    "sigma": 13.5,
+    "p_home_win": 0.6288,
+    "p_home_cover": 0.4248,
+    "edge_vs_minus_110": -0.099,
+    "model_lean": "AWAY",
+    "model_lean_team": "NO",
+    "label": "Research Preview",
+    "public_probability_published": false,
+    "confidence_pct": 57.5
+  },
+  "matchup_edges": [
+    {
+      "key": "RUN_GAME",
+      "title": "Rushing offense vs run defense",
+      "side": "AWAY",
+      "side_team": "NO",
+      "strength": "STRONG",
+      "home_stat": -0.2663,
+      "away_stat": -0.0718,
+      "mismatch_z": -1.389,
+      "fan_line": "++ NO \u2014 Rushing offense vs run defense",
+      "label": "MATCHUP SIGNAL",
+      "why": "Rush EPA/play vs EPA allowed on rushes \u2014 better than raw yards/carry."
+    },
+    {
+      "key": "PASS_RUSH",
+      "title": "Pass rush / protection (proxy)",
+      "side": "AWAY",
+      "side_team": "NO",
+      "strength": "MILD",
+      "home_stat": 0.0488,
+      "away_stat": 0.1319,
+      "mismatch_z": -0.83,
+      "fan_line": "+ NO \u2014 Pass rush / protection (proxy)",
+      "label": "MATCHUP SIGNAL",
+      "why": "Proxy until true pressure/PBWR data: lower pass EPA allowed \u21d2 stronger pass defense / rush. MATCHUP SIGNAL only \u2014 not a published win probability."
+    },
+    {
+      "key": "OVERALL",
+      "title": "Overall efficiency",
+      "side": "AWAY",
+      "side_team": "NO",
+      "strength": "MILD",
+      "home_stat": -0.0125,
+      "away_stat": 0.1142,
+      "mismatch_z": -0.633,
+      "fan_line": "+ NO \u2014 Overall efficiency",
+      "label": "MATCHUP SIGNAL",
+      "why": "Net EPA/play (offense minus defense). Broad team-strength interaction."
+    },
+    {
+      "key": "PASSING",
+      "title": "Passing offense vs pass defense",
+      "side": "AWAY",
+      "side_team": "NO",
+      "strength": "EVEN",
+      "home_stat": -0.021,
+      "away_stat": 0.0337,
+      "mismatch_z": -0.304,
+      "fan_line": "\u00b7 NO \u2014 Passing offense vs pass defense",
+      "label": "MATCHUP SIGNAL",
+      "why": "EPA/play on passes plus how much EPA the opposing defense allows. EPA weights plays by situation (3rd-and-3 \u2260 3rd-and-20)."
+    }
+  ],
+  "headline_cards": [
+    {
+      "marks": "++",
+      "key": "RUN_GAME",
+      "title": "Rushing offense vs run defense",
+      "team": "NO",
+      "strength": "STRONG",
+      "fan_line": "++ NO \u2014 Rushing offense vs run defense",
+      "mismatch_z": -1.389,
+      "percentile_hint": "Clearly tilted versus a typical NFL/CFB unit matchup.",
+      "label": "MATCHUP SIGNAL",
+      "why": "Rush EPA/play vs EPA allowed on rushes \u2014 better than raw yards/carry.",
+      "home_stat": -0.2663,
+      "away_stat": -0.0718
+    },
+    {
+      "marks": "+",
+      "key": "PASS_RUSH",
+      "title": "Pass rush / protection (proxy)",
+      "team": "NO",
+      "strength": "MILD",
+      "fan_line": "+ NO \u2014 Pass rush / protection (proxy)",
+      "mismatch_z": -0.83,
+      "percentile_hint": null,
+      "label": "MATCHUP SIGNAL",
+      "why": "Proxy until true pressure/PBWR data: lower pass EPA allowed \u21d2 stronger pass defense / rush. MATCHUP SIGNAL only \u2014 not a published win probability.",
+      "home_stat": 0.0488,
+      "away_stat": 0.1319
+    },
+    {
+      "marks": "+",
+      "key": "OVERALL",
+      "title": "Overall efficiency",
+      "team": "NO",
+      "strength": "MILD",
+      "fan_line": "+ NO \u2014 Overall efficiency",
+      "mismatch_z": -0.633,
+      "percentile_hint": null,
+      "label": "MATCHUP SIGNAL",
+      "why": "Net EPA/play (offense minus defense). Broad team-strength interaction.",
+      "home_stat": -0.0125,
+      "away_stat": 0.1142
+    }
+  ],
+  "slate_edges": [
+    "++ NO Run Game",
+    "+ NO Pass Rush",
+    "+ NO Overall"
+  ],
+  "matchup_logistic": {
+    "model_id": "BCW-MATCHUP-LOGISTIC-v0.x",
+    "label": "Research Preview",
+    "public_probability_published": false,
+    "logit": -0.8942,
+    "p_home_win": 0.2902,
+    "lean": "AWAY",
+    "contributions": [
+      {
+        "key": "RUN_GAME",
+        "weight": 0.25,
+        "z": -1.389,
+        "term": -0.3473
+      },
+      {
+        "key": "PASS_RUSH",
+        "weight": 0.35,
+        "z": -0.83,
+        "term": -0.2905
+      },
+      {
+        "key": "OVERALL",
+        "weight": 0.45,
+        "z": -0.633,
+        "term": -0.2848
+      },
+      {
+        "key": "PASSING",
+        "weight": 0.4,
+        "z": -0.304,
+        "term": -0.1216
+      }
+    ],
+    "note": "Heuristic matchup logistic on EDGE z-scores. Not BCW-RIDGE. Not a ship gate."
+  },
+  "paths": {
+    "home": "Stay efficient on early downs and avoid giving the visitor explosive answers.",
+    "away": "Attack via rushing offense vs run defense and keep the favorite from playing its preferred script."
+  },
+  "risks": [
+    "Turnovers: the projection assumes roughly normal luck; a +2 swing can flip a NO lean.",
+    "Injury / inactive surprise on either OL or QB would rewrite the pass-rush signal."
+  ],
+  "adjustment": {
+    "points_home": -1.9,
+    "label": "MATCHUP SIGNAL (unvalidated additive)",
+    "note": "Not fed into BCW-RIDGE-v0.1. Research Preview display only."
+  },
+  "events": [
+    {
+      "game_id": "espn:401872923",
+      "event_type": "other",
+      "headline": "Jordyn Tyson\u2019s latest injury forces the New Orleans Saints to confront the risk they accepted with the No. 8 pick - A to Z Sports",
+      "publisher": "A to Z Sports",
+      "source_url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQRzdGc2s1eDE3RzQ3ZXBaU20yQVlwS1lBU3ZzX08tSHhibjI1V0YzTDQyaFpMVE53cGpfQU10ZlF5WTR6aUp0azg2MkpnbXM3M2MyZ1FZSHVKRnE3OEhXYUEwZlZjQkJocEFKZ21hN3Z3YW9DWUNEWGhaWG9mbGtkUlkzTTlKUE9vdW9lWWIwZ3ZWZDNETnJJMUxNbzJuVDRZTm1kOWFDUkNHRUNuc0xPWTVYU3M?oc=5",
+      "bucket": "availability",
+      "structured_fact": "Jordyn Tyson\u2019s latest injury forces the New Orleans Saints to confront the risk they accepted with the No. 8 pick - A to Z Sports",
+      "confidence": 0.45,
+      "tier": 3
+    },
+    {
+      "game_id": "espn:401872923",
+      "event_type": "other",
+      "headline": "Lions tight end Sam LaPorta dealing with hip injury - The Detroit News",
+      "publisher": "The Detroit News",
+      "source_url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxQZ18ydmhJdHpoTHZUQ0cwalpKRGhxOWl3bERDYWJpLVhzaVZEczhzelItelJYbHY4WXZPNnRsajRIUlQ1ajRfS1BxaGxPMzVweE5iTElnQTk1QXk1OV9TYW9mSEJVWDdVaDR5WWZBZ1hqRlc2dmh2dDM0ZHhUcUY0STg1djJIUE1hcTlnX1pJc2RqdWg2X3lMVnNNeVY3V2RPbEg2UlVHU09vRUN0SE9Jc2EwZVR5dDJlRkRmOHU3RERwbURTeGdyMw?oc=5",
+      "bucket": "availability",
+      "structured_fact": "Lions tight end Sam LaPorta dealing with hip injury - The Detroit News",
+      "confidence": 0.45,
+      "tier": 3
+    },
+    {
+      "game_id": "espn:401872923",
+      "event_type": "other",
+      "headline": "Sam LaPorta out indefinitely with hip injury, leaving Lions weak at TE - Detroit Free Press",
+      "publisher": "Detroit Free Press",
+      "source_url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQUmN0UG9mbGNxQk1PUUdEb3VJbU5UdVdNVUNkUEdfZGJzSlg1Z050Y3AwZVBUNVlESWZfTldRWTZkdXlob3lwZy1xUFI5Y2pURFRNS2VkNzh1bXVCOTZDWlFpanF5SUh5ejlPMHpKWHFhQUNENnp6clB6SXR1T2N6aTI4QlVBRmptYWY2b3R2RGdvQlV2NGNRYWRuY0NqRzE1dEIzRGtIVzBnOVByQ2c?oc=5",
+      "bucket": "availability",
+      "structured_fact": "Sam LaPorta out indefinitely with hip injury, leaving Lions weak at TE - Detroit Free Press",
+      "confidence": 0.45,
+      "tier": 3
+    },
+    {
+      "game_id": "espn:401872923",
+      "event_type": "other",
+      "headline": "Detroit Lions 'Don't Know' If Sam LaPorta's Injury Will Impact Week 1 - FOX Sports",
+      "publisher": "FOX Sports",
+      "source_url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOY3RleVBpVkJlaEVvZ3BVM3JuOEd2bGR1Ri03TVRGRVRZT29DOWQtakpEbDY3ZlZtYjhjSm9LMVJDalVJMmh4SzNVTFJkSG5TNzRyVXdvMmFNUExpWFVzNzIwMWhnTTA5T3dWRkVLRDk3OEdlT1pEdDZfT1ZINXlIcF9R0gGCAUFVX3lxTFBPRlctd3RaNWhUWFZEb01oU2ExckVyUHFjbTFIYUdwYy1lYnpVQ2JHNktlYk5aM3NucGx0NFlBczZzWGtFZUdFaTZoSkRlZmJZZm5CeWI4RnZJWDZLR0FLTF9XcDYzU1RBRUh5Wl93eUdtVlliR1ZiV3c0aGVVbUt3WlE?oc=5",
+      "bucket": "availability",
+      "structured_fact": "Detroit Lions 'Don't Know' If Sam LaPorta's Injury Will Impact Week 1 - FOX Sports",
+      "confidence": 0.45,
+      "tier": 3
+    },
+    {
+      "game_id": "espn:401872923",
+      "event_type": "other",
+      "headline": "Detroit Lions camp observations: Ennis Rakestraw exits with leg injury; Jack Campbell a wrecking ball during short practice - Detroit Football Network",
+      "publisher": "Detroit Football Network",
+      "source_url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE5sVXljbk1kQ1NVQ1g4YTNCd1l4MFNCVEZqaDZpU3FDbFRBc3ZwdXVQZ1pqcVdQNFFaTXJIOXdSeWlDZ3NFb0xFVkRCMC11LUpSRXUzeExMcXptU2VxSFF0Z3JrdU14Q0lETHBWamh6c2pqVVpCMVczNWFxVQ?oc=5",
+      "bucket": "availability",
+      "structured_fact": "Detroit Lions camp observations: Ennis Rakestraw exits with leg injury; Jack Campbell a wrecking ball during short practice - Detroit Football Network",
+      "confidence": 0.45,
+      "tier": 3
+    },
+    {
+      "game_id": "espn:401872923",
+      "event_type": "other",
+      "headline": "Detroit Lions share Sam LaPorta injury update - Lions Wire",
+      "publisher": "Lions Wire",
+      "source_url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPS3dvX1E0UlFuUXZuSzBXTno4Z3FLbzR5UEwyMG1zX280Yk1zZURZNThROEctMjUxb0xSbWItbTRwMjdwU29ESlVhUlM0RU94VW9Jbk9vR2xyWnBqVmpiSjhYT2hKNEpoYXlTbkswNnBEMlVFblRDaU1LX2dUUHU4SmxtNWxVREs5ZXdOS0d4QTFaeXBzSTR3cWNNcTZIV2FJOHdjOUhScTFYSVQzd18tVE9kN0dTSjN0?oc=5",
+      "bucket": "availability",
+      "structured_fact": "Detroit Lions share Sam LaPorta injury update - Lions Wire",
+      "confidence": 0.45,
+      "tier": 3
+    }
+  ],
+  "news_citations": [
+    {
+      "headline": "Jordyn Tyson\u2019s latest injury forces the New Orleans Saints to confront the risk they accepted with the No. 8 pick - A to Z Sports",
+      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQRzdGc2s1eDE3RzQ3ZXBaU20yQVlwS1lBU3ZzX08tSHhibjI1V0YzTDQyaFpMVE53cGpfQU10ZlF5WTR6aUp0azg2MkpnbXM3M2MyZ1FZSHVKRnE3OEhXYUEwZlZjQkJocEFKZ21hN3Z3YW9DWUNEWGhaWG9mbGtkUlkzTTlKUE9vdW9lWWIwZ3ZWZDNETnJJMUxNbzJuVDRZTm1kOWFDUkNHRUNuc0xPWTVYU3M?oc=5",
+      "publisher": "A to Z Sports"
+    },
+    {
+      "headline": "Lions tight end Sam LaPorta dealing with hip injury - The Detroit News",
+      "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxQZ18ydmhJdHpoTHZUQ0cwalpKRGhxOWl3bERDYWJpLVhzaVZEczhzelItelJYbHY4WXZPNnRsajRIUlQ1ajRfS1BxaGxPMzVweE5iTElnQTk1QXk1OV9TYW9mSEJVWDdVaDR5WWZBZ1hqRlc2dmh2dDM0ZHhUcUY0STg1djJIUE1hcTlnX1pJc2RqdWg2X3lMVnNNeVY3V2RPbEg2UlVHU09vRUN0SE9Jc2EwZVR5dDJlRkRmOHU3RERwbURTeGdyMw?oc=5",
+      "publisher": "The Detroit News"
+    },
+    {
+      "headline": "Sam LaPorta out indefinitely with hip injury, leaving Lions weak at TE - Detroit Free Press",
+      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQUmN0UG9mbGNxQk1PUUdEb3VJbU5UdVdNVUNkUEdfZGJzSlg1Z050Y3AwZVBUNVlESWZfTldRWTZkdXlob3lwZy1xUFI5Y2pURFRNS2VkNzh1bXVCOTZDWlFpanF5SUh5ejlPMHpKWHFhQUNENnp6clB6SXR1T2N6aTI4QlVBRmptYWY2b3R2RGdvQlV2NGNRYWRuY0NqRzE1dEIzRGtIVzBnOVByQ2c?oc=5",
+      "publisher": "Detroit Free Press"
+    },
+    {
+      "headline": "Detroit Lions 'Don't Know' If Sam LaPorta's Injury Will Impact Week 1 - FOX Sports",
+      "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOY3RleVBpVkJlaEVvZ3BVM3JuOEd2bGR1Ri03TVRGRVRZT29DOWQtakpEbDY3ZlZtYjhjSm9LMVJDalVJMmh4SzNVTFJkSG5TNzRyVXdvMmFNUExpWFVzNzIwMWhnTTA5T3dWRkVLRDk3OEdlT1pEdDZfT1ZINXlIcF9R0gGCAUFVX3lxTFBPRlctd3RaNWhUWFZEb01oU2ExckVyUHFjbTFIYUdwYy1lYnpVQ2JHNktlYk5aM3NucGx0NFlBczZzWGtFZUdFaTZoSkRlZmJZZm5CeWI4RnZJWDZLR0FLTF9XcDYzU1RBRUh5Wl93eUdtVlliR1ZiV3c0aGVVbUt3WlE?oc=5",
+      "publisher": "FOX Sports"
+    },
+    {
+      "headline": "Detroit Lions camp observations: Ennis Rakestraw exits with leg injury; Jack Campbell a wrecking ball during short practice - Detroit Football Network",
+      "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE5sVXljbk1kQ1NVQ1g4YTNCd1l4MFNCVEZqaDZpU3FDbFRBc3ZwdXVQZ1pqcVdQNFFaTXJIOXdSeWlDZ3NFb0xFVkRCMC11LUpSRXUzeExMcXptU2VxSFF0Z3JrdU14Q0lETHBWamh6c2pqVVpCMVczNWFxVQ?oc=5",
+      "publisher": "Detroit Football Network"
+    },
+    {
+      "headline": "Detroit Lions share Sam LaPorta injury update - Lions Wire",
+      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPS3dvX1E0UlFuUXZuSzBXTno4Z3FLbzR5UEwyMG1zX280Yk1zZURZNThROEctMjUxb0xSbWItbTRwMjdwU29ESlVhUlM0RU94VW9Jbk9vR2xyWnBqVmpiSjhYT2hKNEpoYXlTbkswNnBEMlVFblRDaU1LX2dUUHU4SmxtNWxVREs5ZXdOS0d4QTFaeXBzSTR3cWNNcTZIV2FJOHdjOUhScTFYSVQzd18tVE9kN0dTSjN0?oc=5",
+      "publisher": "Lions Wire"
+    }
+  ],
+  "summary_short": "BlueChip leans NO. Top signal: ++ NO \u2014 Rushing offense vs run defense",
+  "summary_full": "New Orleans Saints at Detroit Lions.\n\nBlueChip leans NO. ++ NO \u2014 Rushing offense vs run defense\n\nWhy NO has the edge\n- ++ NO \u2014 Rushing offense vs run defense\n- + NO \u2014 Pass rush / protection (proxy)\n- + NO \u2014 Overall efficiency\n\nBlueChip projection\nMarket: DET -7.0\nBCW desk \u03bc (home): +4.9 (Research Preview)\nWin probability: unavailable until probability model passes validation.\n\nHow each team wins\nDET: Stay efficient on early downs and avoid giving the visitor explosive answers.\nNO: Attack via rushing offense vs run defense and keep the favorite from playing its preferred script.\n\nWhat changed this week\n\u2022 Jordyn Tyson\u2019s latest injury forces the New Orleans Saints to confront the risk they accepted with the No. 8 pick - A to Z Sports\n\u2022 Lions tight end Sam LaPorta dealing with hip injury - The Detroit News\n\u2022 Sam LaPorta out indefinitely with hip injury, leaving Lions weak at TE - Detroit Free Press\n\u2022 Detroit Lions 'Don't Know' If Sam LaPorta's Injury Will Impact Week 1 - FOX Sports\n\nWhat could make BlueChip wrong?\n\u2022 Turnovers: the projection assumes roughly normal luck; a +2 swing can flip a NO lean.\n\u2022 Injury / inactive surprise on either OL or QB would rewrite the pass-rush signal.\n\nBottom line: NO has more ways to win on the current MATCHUP SIGNAL board, but football variance (turnovers, explosives) remains large around any margin estimate.",
+  "generation_model": "desk-template",
+  "generation_provider": "fallback",
+  "glossary": {
+    "EPA/play": "Expected Points Added estimates how much each play improves expected scoring position. Positive is good. A 5-yard gain on 3rd-and-3 is not treated like 5 yards on 3rd-and-20.",
+    "MATCHUP SIGNAL": "A descriptive strength\u00d7weakness edge. Not a published win probability and not fed into BCW-RIDGE-v0.1 until validated walk-forward.",
+    "Research Preview": "BlueChip quantitative layer that has not cleared the five public ship gates."
+  },
+  "levels": {
+    "slate": {
+      "lean": "NO",
+      "top_edges": [
+        "++ NO Run Game",
+        "+ NO Pass Rush",
+        "+ NO Overall"
+      ],
+      "market": "DET -7.0",
+      "mu": 4.94,
+      "confidence_pct": 57.5
+    }
+  }
+}

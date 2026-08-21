@@ -1,0 +1,220 @@
+{
+  "game_id": "espn:401858434",
+  "version": "BCW-GIP-v0.1",
+  "created_at": "2026-08-21T03:43:13.864558+00:00",
+  "generated_at": "2026-08-21T03:43:13.864558+00:00",
+  "information_cutoff": "2026-08-21T03:43:13.864558+00:00",
+  "source_set_hash": "2bcd8d654f03dca34e7c14d1",
+  "game": {
+    "game_id": "espn:401858434",
+    "league": "CFB",
+    "matchup": "MRSH @ PSU",
+    "home_team": "PSU",
+    "away_team": "MRSH",
+    "home_name": "Penn State Nittany Lions",
+    "away_name": "Marshall Thundering Herd",
+    "spread_label": "PSU -24.5",
+    "home_spread": -24.5,
+    "total_line": 54.5,
+    "week": 1
+  },
+  "lean_team": "PSU",
+  "projection": {
+    "model_id": "BCW-DESK-STRENGTH-v0.x",
+    "method": "Market line + AP rank edge (CFB; no CFB Elo yet)",
+    "mu_home": 26.5,
+    "sigma": 15.0,
+    "p_home_win": 0.9585,
+    "p_home_cover": 0.5398,
+    "edge_vs_minus_110": 0.016,
+    "model_lean": "HOME",
+    "model_lean_team": "PSU",
+    "label": "Research Preview",
+    "public_probability_published": false,
+    "confidence_pct": 54.0
+  },
+  "matchup_edges": [
+    {
+      "key": "AP_RANK",
+      "title": "AP ranking gap",
+      "side": "HOME",
+      "side_team": "PSU",
+      "strength": "STRONG",
+      "home_stat": 30.0,
+      "away_stat": 18.0,
+      "mismatch_z": 1.5,
+      "fan_line": "++ PSU \u2014 AP ranking gap",
+      "label": "MATCHUP SIGNAL",
+      "why": "College prior until CFB EPA ingest. Lower AP rank is stronger."
+    }
+  ],
+  "headline_cards": [
+    {
+      "marks": "++",
+      "key": "AP_RANK",
+      "title": "AP ranking gap",
+      "team": "PSU",
+      "strength": "STRONG",
+      "fan_line": "++ PSU \u2014 AP ranking gap",
+      "mismatch_z": 1.5,
+      "percentile_hint": "Clearly tilted versus a typical NFL/CFB unit matchup.",
+      "label": "MATCHUP SIGNAL",
+      "why": "College prior until CFB EPA ingest. Lower AP rank is stronger.",
+      "home_stat": 30.0,
+      "away_stat": 18.0
+    }
+  ],
+  "slate_edges": [
+    "++ PSU Ap Rank"
+  ],
+  "matchup_logistic": {
+    "model_id": "BCW-MATCHUP-LOGISTIC-v0.x",
+    "label": "Research Preview",
+    "public_probability_published": false,
+    "logit": 0.6,
+    "p_home_win": 0.6457,
+    "lean": "HOME",
+    "contributions": [
+      {
+        "key": "AP_RANK",
+        "weight": 0.3,
+        "z": 1.5,
+        "term": 0.45
+      }
+    ],
+    "note": "Heuristic matchup logistic on EDGE z-scores. Not BCW-RIDGE. Not a ship gate."
+  },
+  "paths": {
+    "home": "Lean on ap ranking gap. Convert that mismatch before the game becomes a coin-flip script.",
+    "away": "Shorten the game, win the line of scrimmage, and force the favorite into obvious passing downs."
+  },
+  "risks": [
+    "Turnovers: the projection assumes roughly normal luck; a +2 swing can flip a PSU lean.",
+    "Injury / inactive surprise on either OL or QB would rewrite the pass-rush signal."
+  ],
+  "adjustment": {
+    "points_home": 1.0,
+    "label": "MATCHUP SIGNAL (unvalidated additive)",
+    "note": "Not fed into BCW-RIDGE-v0.1. Research Preview display only."
+  },
+  "events": [
+    {
+      "game_id": "espn:401858434",
+      "event_type": "market",
+      "headline": "Penn State football betting preview 2026: Nittany Lions odds, futures, win total prediction, sportsbook promos and more - sportingnews.com",
+      "publisher": "sportingnews.com",
+      "source_url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxPOVdQQTJBdllrMndTMWdUX0FfdVQxS002VkFkVUQ3SEhCRTdQNzFUWnRfWUVBdkZHRDN5cXB4UHNIcnZ3UF9Rb1lINHFrVVNVUk9vU05QRkI1Q3FfYXNpbWNVQVgtWV9SQmZUckVNLUZXSEhXM1ZVMUtacDdaUV9QX0wtQ2djMnZHSWNNRUVQTGszZ1RMa3VtQmV4RXFldnhVcEUwZUlsQTN4OVRJUVdrd3dRWWlqcDA0T2JBWk1fTlUxLWdCeFIwa2xNMURtZw?oc=5",
+      "bucket": "analysis",
+      "structured_fact": "Penn State football betting preview 2026: Nittany Lions odds, futures, win total prediction, sportsbook promos and more - sportingnews.com",
+      "confidence": 0.7,
+      "tier": 3
+    },
+    {
+      "game_id": "espn:401858434",
+      "event_type": "other",
+      "headline": "Penn State Opponent Preview: Week One, Marshall Thundering Herd - roundtable.io",
+      "publisher": "roundtable.io",
+      "source_url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOQUVBejh6OVF2R0F1MUthYmNVTGpQZ2pwUW9tbjdseFVHWEk3VlFFanRxbEd1MjF3MHlSaHNNcnBIWURSdDZnSERwU2VoSFZrOFp4TEJydmxsMHNWdnNydEpPNEg3c290R3kwdkNZY3gzUW12NmEzSnN3RHp0U3RBSjcyV29UUmRRX0MyRy1XdXFGMmRvZ2xLSVlzTWVXcmo0clVidnA2cFh5Y3BRbVhFYVVZWmM?oc=5",
+      "bucket": "analysis",
+      "structured_fact": "Penn State Opponent Preview: Week One, Marshall Thundering Herd - roundtable.io",
+      "confidence": 0.45,
+      "tier": 3
+    },
+    {
+      "game_id": "espn:401858434",
+      "event_type": "market",
+      "headline": "Marshall Thundering Herd at Penn State Nittany Lions - NCAAF Odds - Sep 05, 2026 - USA Today",
+      "publisher": "USA Today",
+      "source_url": "https://news.google.com/rss/articles/CBMia0FVX3lxTFBIX2tvQkFCdHlEQ0NPQ2s0OENvNURkWDE1dnFBeTdHQUVzQTRFdVdrT050cWVBSElpZ0VOdDV5cVE2VEpKb2tFelB4U0hCMWh1ZlBwVjcydmlhdEJ4RDJJdHZCWE5QUDlqbDNz?oc=5",
+      "bucket": "analysis",
+      "structured_fact": "Marshall Thundering Herd at Penn State Nittany Lions - NCAAF Odds - Sep 05, 2026 - USA Today",
+      "confidence": 0.7,
+      "tier": 3
+    },
+    {
+      "game_id": "espn:401858434",
+      "event_type": "other",
+      "headline": "Penn State QB Rocco Becht Lands on the Johnny Unitas Award Watch List - Yahoo Sports",
+      "publisher": "Yahoo Sports",
+      "source_url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBmYjVfOTZJOWJLOVR1SkNCdmxDUktlRGhyazZCQl9ZRHlRbndkTUtHR1RDSlg2RVJFUFlrSDlqYl9UanAwQ3ZwWGhZWm15a2d5UXVFOVB3QW5UZ0U0M3dkMEJpR3Q5a1JkbVBleVcxSzZGWm5YSkI2djFWaDR0bWM?oc=5",
+      "bucket": "availability",
+      "structured_fact": "Penn State QB Rocco Becht Lands on the Johnny Unitas Award Watch List - Yahoo Sports",
+      "confidence": 0.45,
+      "tier": 3
+    },
+    {
+      "game_id": "espn:401858434",
+      "event_type": "other",
+      "headline": "Analyzing the Penn State football quarterback room, Rocco Becht - York Daily Record",
+      "publisher": "York Daily Record",
+      "source_url": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxQVlo2LXJrcVoydDEybm05emsyZVRaMHpPX1hzUW9KOWQzbGdZVXloU29JZnYxcVlTbjRWTWR5dDBkZFhsNzRrQUdBcGk3OWJnclJPVzh5YXVzbXNDUThUTzlEdXRhWER0TXZIdjZSX00yUzNRT08ySDVIRVlwUUQ2eWVmcGRMUXRDV1lNYjZ2LWRFTE1HX0NaMmI5NURIQnE1cFJRVFdHVG9kN2hsQzZxT2drZ0NneE5YUDB6eThQam5FeWl5RTZhNzRRalhJNVFIWUh4SUc2S0o4Rjlqc09PcEJVMHBvMlB1bkE?oc=5",
+      "bucket": "availability",
+      "structured_fact": "Analyzing the Penn State football quarterback room, Rocco Becht - York Daily Record",
+      "confidence": 0.45,
+      "tier": 3
+    },
+    {
+      "game_id": "espn:401858434",
+      "event_type": "other",
+      "headline": "Louisville Baseball Opponent Preview: Marshall Thundering Herd - The State of Louisville",
+      "publisher": "The State of Louisville",
+      "source_url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNcmk0aUhIODZzOGhUSVp1YXlFelYxNS1vSFV0b1RYZnFjWWlaY1hVWjZNV0x4NklpdjVVaGNodHVyVFFhNEp6d1V3bVJsdjVIb3ZMVzhkX2VyY2hxckVZZ0JiWTFfcjRTNGZHQ1h1YU1tY2ZFMng3UGJBNzlxc1pUVGZGVHIwZElVNHlPWDNIZFNlbUFkRUZ3?oc=5",
+      "bucket": "analysis",
+      "structured_fact": "Louisville Baseball Opponent Preview: Marshall Thundering Herd - The State of Louisville",
+      "confidence": 0.45,
+      "tier": 3
+    }
+  ],
+  "news_citations": [
+    {
+      "headline": "Penn State football betting preview 2026: Nittany Lions odds, futures, win total prediction, sportsbook promos and more - sportingnews.com",
+      "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxPOVdQQTJBdllrMndTMWdUX0FfdVQxS002VkFkVUQ3SEhCRTdQNzFUWnRfWUVBdkZHRDN5cXB4UHNIcnZ3UF9Rb1lINHFrVVNVUk9vU05QRkI1Q3FfYXNpbWNVQVgtWV9SQmZUckVNLUZXSEhXM1ZVMUtacDdaUV9QX0wtQ2djMnZHSWNNRUVQTGszZ1RMa3VtQmV4RXFldnhVcEUwZUlsQTN4OVRJUVdrd3dRWWlqcDA0T2JBWk1fTlUxLWdCeFIwa2xNMURtZw?oc=5",
+      "publisher": "sportingnews.com"
+    },
+    {
+      "headline": "Penn State Opponent Preview: Week One, Marshall Thundering Herd - roundtable.io",
+      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOQUVBejh6OVF2R0F1MUthYmNVTGpQZ2pwUW9tbjdseFVHWEk3VlFFanRxbEd1MjF3MHlSaHNNcnBIWURSdDZnSERwU2VoSFZrOFp4TEJydmxsMHNWdnNydEpPNEg3c290R3kwdkNZY3gzUW12NmEzSnN3RHp0U3RBSjcyV29UUmRRX0MyRy1XdXFGMmRvZ2xLSVlzTWVXcmo0clVidnA2cFh5Y3BRbVhFYVVZWmM?oc=5",
+      "publisher": "roundtable.io"
+    },
+    {
+      "headline": "Marshall Thundering Herd at Penn State Nittany Lions - NCAAF Odds - Sep 05, 2026 - USA Today",
+      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTFBIX2tvQkFCdHlEQ0NPQ2s0OENvNURkWDE1dnFBeTdHQUVzQTRFdVdrT050cWVBSElpZ0VOdDV5cVE2VEpKb2tFelB4U0hCMWh1ZlBwVjcydmlhdEJ4RDJJdHZCWE5QUDlqbDNz?oc=5",
+      "publisher": "USA Today"
+    },
+    {
+      "headline": "Penn State QB Rocco Becht Lands on the Johnny Unitas Award Watch List - Yahoo Sports",
+      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBmYjVfOTZJOWJLOVR1SkNCdmxDUktlRGhyazZCQl9ZRHlRbndkTUtHR1RDSlg2RVJFUFlrSDlqYl9UanAwQ3ZwWGhZWm15a2d5UXVFOVB3QW5UZ0U0M3dkMEJpR3Q5a1JkbVBleVcxSzZGWm5YSkI2djFWaDR0bWM?oc=5",
+      "publisher": "Yahoo Sports"
+    },
+    {
+      "headline": "Analyzing the Penn State football quarterback room, Rocco Becht - York Daily Record",
+      "url": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxQVlo2LXJrcVoydDEybm05emsyZVRaMHpPX1hzUW9KOWQzbGdZVXloU29JZnYxcVlTbjRWTWR5dDBkZFhsNzRrQUdBcGk3OWJnclJPVzh5YXVzbXNDUThUTzlEdXRhWER0TXZIdjZSX00yUzNRT08ySDVIRVlwUUQ2eWVmcGRMUXRDV1lNYjZ2LWRFTE1HX0NaMmI5NURIQnE1cFJRVFdHVG9kN2hsQzZxT2drZ0NneE5YUDB6eThQam5FeWl5RTZhNzRRalhJNVFIWUh4SUc2S0o4Rjlqc09PcEJVMHBvMlB1bkE?oc=5",
+      "publisher": "York Daily Record"
+    },
+    {
+      "headline": "Louisville Baseball Opponent Preview: Marshall Thundering Herd - The State of Louisville",
+      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNcmk0aUhIODZzOGhUSVp1YXlFelYxNS1vSFV0b1RYZnFjWWlaY1hVWjZNV0x4NklpdjVVaGNodHVyVFFhNEp6d1V3bVJsdjVIb3ZMVzhkX2VyY2hxckVZZ0JiWTFfcjRTNGZHQ1h1YU1tY2ZFMng3UGJBNzlxc1pUVGZGVHIwZElVNHlPWDNIZFNlbUFkRUZ3?oc=5",
+      "publisher": "The State of Louisville"
+    }
+  ],
+  "summary_short": "BlueChip leans PSU. Top signal: ++ PSU \u2014 AP ranking gap",
+  "summary_full": "Marshall Thundering Herd at Penn State Nittany Lions.\n\nBlueChip leans PSU. ++ PSU \u2014 AP ranking gap\n\nWhy PSU has the edge\n- ++ PSU \u2014 AP ranking gap\n\nBlueChip projection\nMarket: PSU -24.5\nBCW desk \u03bc (home): +26.5 (Research Preview)\nWin probability: unavailable until probability model passes validation.\n\nHow each team wins\nPSU: Lean on ap ranking gap. Convert that mismatch before the game becomes a coin-flip script.\nMRSH: Shorten the game, win the line of scrimmage, and force the favorite into obvious passing downs.\n\nWhat changed this week\n\u2022 Penn State football betting preview 2026: Nittany Lions odds, futures, win total prediction, sportsbook promos and more - sportingnews.com\n\u2022 Penn State Opponent Preview: Week One, Marshall Thundering Herd - roundtable.io\n\u2022 Marshall Thundering Herd at Penn State Nittany Lions - NCAAF Odds - Sep 05, 2026 - USA Today\n\u2022 Penn State QB Rocco Becht Lands on the Johnny Unitas Award Watch List - Yahoo Sports\n\nWhat could make BlueChip wrong?\n\u2022 Turnovers: the projection assumes roughly normal luck; a +2 swing can flip a PSU lean.\n\u2022 Injury / inactive surprise on either OL or QB would rewrite the pass-rush signal.\n\nBottom line: PSU has more ways to win on the current MATCHUP SIGNAL board, but football variance (turnovers, explosives) remains large around any margin estimate.",
+  "generation_model": "desk-template",
+  "generation_provider": "fallback",
+  "glossary": {
+    "EPA/play": "Expected Points Added estimates how much each play improves expected scoring position. Positive is good. A 5-yard gain on 3rd-and-3 is not treated like 5 yards on 3rd-and-20.",
+    "MATCHUP SIGNAL": "A descriptive strength\u00d7weakness edge. Not a published win probability and not fed into BCW-RIDGE-v0.1 until validated walk-forward.",
+    "Research Preview": "BlueChip quantitative layer that has not cleared the five public ship gates."
+  },
+  "levels": {
+    "slate": {
+      "lean": "PSU",
+      "top_edges": [
+        "++ PSU Ap Rank"
+      ],
+      "market": "PSU -24.5",
+      "mu": 26.5,
+      "confidence_pct": 54.0
+    }
+  }
+}

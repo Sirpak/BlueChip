@@ -1,0 +1,220 @@
+{
+  "game_id": "espn:401856664",
+  "version": "BCW-GIP-v0.1",
+  "created_at": "2026-08-21T03:41:10.239032+00:00",
+  "generated_at": "2026-08-21T03:41:10.239032+00:00",
+  "information_cutoff": "2026-08-21T03:41:10.239032+00:00",
+  "source_set_hash": "79edad80bca57a4b602048e6",
+  "game": {
+    "game_id": "espn:401856664",
+    "league": "CFB",
+    "matchup": "UTEP @ OU",
+    "home_team": "OU",
+    "away_team": "UTEP",
+    "home_name": "Oklahoma Sooners",
+    "away_name": "UTEP Miners",
+    "spread_label": "OU -41.5",
+    "home_spread": -41.5,
+    "total_line": 50.5,
+    "week": 1
+  },
+  "lean_team": "OU",
+  "projection": {
+    "model_id": "BCW-DESK-STRENGTH-v0.x",
+    "method": "Market line + AP rank edge (CFB; no CFB Elo yet)",
+    "mu_home": 45.5,
+    "sigma": 15.0,
+    "p_home_win": 0.9987,
+    "p_home_cover": 0.5922,
+    "edge_vs_minus_110": 0.0684,
+    "model_lean": "HOME",
+    "model_lean_team": "OU",
+    "label": "Research Preview",
+    "public_probability_published": false,
+    "confidence_pct": 59.2
+  },
+  "matchup_edges": [
+    {
+      "key": "AP_RANK",
+      "title": "AP ranking gap",
+      "side": "HOME",
+      "side_team": "OU",
+      "strength": "MAJOR",
+      "home_stat": 30.0,
+      "away_stat": 10.0,
+      "mismatch_z": 2.5,
+      "fan_line": "+++ OU \u2014 AP ranking gap",
+      "label": "MATCHUP SIGNAL",
+      "why": "College prior until CFB EPA ingest. Lower AP rank is stronger."
+    }
+  ],
+  "headline_cards": [
+    {
+      "marks": "+++",
+      "key": "AP_RANK",
+      "title": "AP ranking gap",
+      "team": "OU",
+      "strength": "MAJOR",
+      "fan_line": "+++ OU \u2014 AP ranking gap",
+      "mismatch_z": 2.5,
+      "percentile_hint": "More extreme than ~95% of similar unit mismatches in a normal sample.",
+      "label": "MATCHUP SIGNAL",
+      "why": "College prior until CFB EPA ingest. Lower AP rank is stronger.",
+      "home_stat": 30.0,
+      "away_stat": 10.0
+    }
+  ],
+  "slate_edges": [
+    "+++ OU Ap Rank"
+  ],
+  "matchup_logistic": {
+    "model_id": "BCW-MATCHUP-LOGISTIC-v0.x",
+    "label": "Research Preview",
+    "public_probability_published": false,
+    "logit": 0.9,
+    "p_home_win": 0.7109,
+    "lean": "HOME",
+    "contributions": [
+      {
+        "key": "AP_RANK",
+        "weight": 0.3,
+        "z": 2.5,
+        "term": 0.75
+      }
+    ],
+    "note": "Heuristic matchup logistic on EDGE z-scores. Not BCW-RIDGE. Not a ship gate."
+  },
+  "paths": {
+    "home": "Lean on ap ranking gap. Convert that mismatch before the game becomes a coin-flip script.",
+    "away": "Shorten the game, win the line of scrimmage, and force the favorite into obvious passing downs."
+  },
+  "risks": [
+    "Turnovers: the projection assumes roughly normal luck; a +2 swing can flip a OU lean.",
+    "Injury / inactive surprise on either OL or QB would rewrite the pass-rush signal."
+  ],
+  "adjustment": {
+    "points_home": 1.6,
+    "label": "MATCHUP SIGNAL (unvalidated additive)",
+    "note": "Not fed into BCW-RIDGE-v0.1. Research Preview display only."
+  },
+  "events": [
+    {
+      "game_id": "espn:401856664",
+      "event_type": "other",
+      "headline": "No. 10 Oklahoma has another stout defense and its QB back. The run game is a question mark - FOX Sports",
+      "publisher": "FOX Sports",
+      "source_url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNb2l1aVlQQ0NaRk5QTEdYbXhFcG5RR1VDa2I2V1RyNUg2Vm94SmRpNDZrS092RWtRZXdZOUZTbWlvbDViRkp4d3RBX3o4WDdKUXlleGhUdWY3WTZ5dVlfclpiN05STm1hbDNBLTcycFB2MWx3V3hUZlVpbjk2WWZEdThOZHl4eHFKQndCVi1mMG80by0ybnZtRDAzNGpvSW42aXFqZk56cWpzWi1uQnQxUGU1Q19MY3RDRm9BS2htckRoQW1JY0E?oc=5",
+      "bucket": "availability",
+      "structured_fact": "No. 10 Oklahoma has another stout defense and its QB back. The run game is a question mark - FOX Sports",
+      "confidence": 0.45,
+      "tier": 3
+    },
+    {
+      "game_id": "espn:401856664",
+      "event_type": "other",
+      "headline": "2026 College Football Preview: Oklahoma Sooners - PFF",
+      "publisher": "PFF",
+      "source_url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE9MckJfbTRhSkdLSXJzRy1qZjNIbTc4M0dZV2lXTTIyZnFpeGsyQnl5WGpWeWFnaXFpZXFuQWpuRzlfNkYxQjRkMTdsOW9JSGUxZUFJQVFnUnVwRE0xU2diZmVYdHFuTkltYnhQTWdSclM2MVFu?oc=5",
+      "bucket": "analysis",
+      "structured_fact": "2026 College Football Preview: Oklahoma Sooners - PFF",
+      "confidence": 0.45,
+      "tier": 3
+    },
+    {
+      "game_id": "espn:401856664",
+      "event_type": "other",
+      "headline": "College football's mad two-week scramble to land a transfer portal QB",
+      "publisher": "ESPN",
+      "source_url": "https://www.espn.com/college-football/story/_/id/49650906/college-football-two-week-scramble-transfer-portal-qb",
+      "bucket": "availability",
+      "structured_fact": "College football's mad two-week scramble to land a transfer portal QB",
+      "confidence": 0.45,
+      "tier": 2
+    },
+    {
+      "game_id": "espn:401856664",
+      "event_type": "other",
+      "headline": "Oklahoma football news: Sooners, Brent Venables agree to 6-year contract extension - Yahoo Sports",
+      "publisher": "Yahoo Sports",
+      "source_url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNeXlmc2lrOHNDUlVWbTlJN3ZEM04yTkxVRl8yRTVvdHhXWmVEMUwzMzhIeV9DcFV0UEJSRXF1QWZuMGxEYTM1eUlDaTB3MW9jY0diWi1BN0NEVEVpYy1FVENfYjZmNHQ4cERTNXlnYl80a0FsRE9EX2QyMW81TzBJSWxNd09LZWNySTdmSldB?oc=5",
+      "bucket": "update",
+      "structured_fact": "Oklahoma football news: Sooners, Brent Venables agree to 6-year contract extension - Yahoo Sports",
+      "confidence": 0.45,
+      "tier": 3
+    },
+    {
+      "game_id": "espn:401856664",
+      "event_type": "other",
+      "headline": "Grading UTEP's 2026 Transfer Portal Class - Dave Campbell's Texas High School Football",
+      "publisher": "Dave Campbell's Texas High School Football",
+      "source_url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOYXM4SHN2UVhZbHhtaXVleHc5bm1uSjdSZFg0akhkNzA5SVJfVU1TengwSW1NOWNrSFNTUE1rXzduNmwxLV81U09kaURsSDV5R3NFNkZ5cWFnQU80X2ZWR0lGQ3VyOVlHWGFacGQ3VXVzejNkTG02LVg1dXpjSzcwQ3RGclhMcHJEVzlVUC15T19zemQ5VXY3bTk3ZktSM1BIanZSMWk3VjhxYmp0TnJ3czc1OGNGdUVN?oc=5",
+      "bucket": "availability",
+      "structured_fact": "Grading UTEP's 2026 Transfer Portal Class - Dave Campbell's Texas High School Football",
+      "confidence": 0.45,
+      "tier": 3
+    },
+    {
+      "game_id": "espn:401856664",
+      "event_type": "other",
+      "headline": "UTEP Miners 2026 Team Preview | The College Football Experience (Ep. 3082) - Sports Gambling Podcast",
+      "publisher": "Sports Gambling Podcast",
+      "source_url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQUTY1X0RYcTVncG9iTjR5TWk3NlVzNFZlX3o0QkJtdVl0XzlXTnBVaEdYb0NUaVl4WEQ5aGNGZXk0dmJzVXhxN0tvcHN6VEtnTk50amFpM3RhdEtYaFcxdURKVWE3ZEo5c182VFIyRU9wdmRjdm50eWdJTTBGeGlmZXpxcTMzdjNKZW95N0txbEpjYTQtOE5lNXgtalJlcThjZW10VnlWSnlmOWdKS1l5MzVOOVVVS1ZFY29n?oc=5",
+      "bucket": "analysis",
+      "structured_fact": "UTEP Miners 2026 Team Preview | The College Football Experience (Ep. 3082) - Sports Gambling Podcast",
+      "confidence": 0.45,
+      "tier": 3
+    }
+  ],
+  "news_citations": [
+    {
+      "headline": "No. 10 Oklahoma has another stout defense and its QB back. The run game is a question mark - FOX Sports",
+      "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNb2l1aVlQQ0NaRk5QTEdYbXhFcG5RR1VDa2I2V1RyNUg2Vm94SmRpNDZrS092RWtRZXdZOUZTbWlvbDViRkp4d3RBX3o4WDdKUXlleGhUdWY3WTZ5dVlfclpiN05STm1hbDNBLTcycFB2MWx3V3hUZlVpbjk2WWZEdThOZHl4eHFKQndCVi1mMG80by0ybnZtRDAzNGpvSW42aXFqZk56cWpzWi1uQnQxUGU1Q19MY3RDRm9BS2htckRoQW1JY0E?oc=5",
+      "publisher": "FOX Sports"
+    },
+    {
+      "headline": "2026 College Football Preview: Oklahoma Sooners - PFF",
+      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE9MckJfbTRhSkdLSXJzRy1qZjNIbTc4M0dZV2lXTTIyZnFpeGsyQnl5WGpWeWFnaXFpZXFuQWpuRzlfNkYxQjRkMTdsOW9JSGUxZUFJQVFnUnVwRE0xU2diZmVYdHFuTkltYnhQTWdSclM2MVFu?oc=5",
+      "publisher": "PFF"
+    },
+    {
+      "headline": "College football's mad two-week scramble to land a transfer portal QB",
+      "url": "https://www.espn.com/college-football/story/_/id/49650906/college-football-two-week-scramble-transfer-portal-qb",
+      "publisher": "ESPN"
+    },
+    {
+      "headline": "Oklahoma football news: Sooners, Brent Venables agree to 6-year contract extension - Yahoo Sports",
+      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNeXlmc2lrOHNDUlVWbTlJN3ZEM04yTkxVRl8yRTVvdHhXWmVEMUwzMzhIeV9DcFV0UEJSRXF1QWZuMGxEYTM1eUlDaTB3MW9jY0diWi1BN0NEVEVpYy1FVENfYjZmNHQ4cERTNXlnYl80a0FsRE9EX2QyMW81TzBJSWxNd09LZWNySTdmSldB?oc=5",
+      "publisher": "Yahoo Sports"
+    },
+    {
+      "headline": "Grading UTEP's 2026 Transfer Portal Class - Dave Campbell's Texas High School Football",
+      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOYXM4SHN2UVhZbHhtaXVleHc5bm1uSjdSZFg0akhkNzA5SVJfVU1TengwSW1NOWNrSFNTUE1rXzduNmwxLV81U09kaURsSDV5R3NFNkZ5cWFnQU80X2ZWR0lGQ3VyOVlHWGFacGQ3VXVzejNkTG02LVg1dXpjSzcwQ3RGclhMcHJEVzlVUC15T19zemQ5VXY3bTk3ZktSM1BIanZSMWk3VjhxYmp0TnJ3czc1OGNGdUVN?oc=5",
+      "publisher": "Dave Campbell's Texas High School Football"
+    },
+    {
+      "headline": "UTEP Miners 2026 Team Preview | The College Football Experience (Ep. 3082) - Sports Gambling Podcast",
+      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQUTY1X0RYcTVncG9iTjR5TWk3NlVzNFZlX3o0QkJtdVl0XzlXTnBVaEdYb0NUaVl4WEQ5aGNGZXk0dmJzVXhxN0tvcHN6VEtnTk50amFpM3RhdEtYaFcxdURKVWE3ZEo5c182VFIyRU9wdmRjdm50eWdJTTBGeGlmZXpxcTMzdjNKZW95N0txbEpjYTQtOE5lNXgtalJlcThjZW10VnlWSnlmOWdKS1l5MzVOOVVVS1ZFY29n?oc=5",
+      "publisher": "Sports Gambling Podcast"
+    }
+  ],
+  "summary_short": "BlueChip leans OU. Top signal: +++ OU \u2014 AP ranking gap",
+  "summary_full": "UTEP Miners at Oklahoma Sooners.\n\nBlueChip leans OU. +++ OU \u2014 AP ranking gap\n\nWhy OU has the edge\n- +++ OU \u2014 AP ranking gap\n\nBlueChip projection\nMarket: OU -41.5\nBCW desk \u03bc (home): +45.5 (Research Preview)\nWin probability: unavailable until probability model passes validation.\n\nHow each team wins\nOU: Lean on ap ranking gap. Convert that mismatch before the game becomes a coin-flip script.\nUTEP: Shorten the game, win the line of scrimmage, and force the favorite into obvious passing downs.\n\nWhat changed this week\n\u2022 No. 10 Oklahoma has another stout defense and its QB back. The run game is a question mark - FOX Sports\n\u2022 2026 College Football Preview: Oklahoma Sooners - PFF\n\u2022 College football's mad two-week scramble to land a transfer portal QB\n\u2022 Oklahoma football news: Sooners, Brent Venables agree to 6-year contract extension - Yahoo Sports\n\nWhat could make BlueChip wrong?\n\u2022 Turnovers: the projection assumes roughly normal luck; a +2 swing can flip a OU lean.\n\u2022 Injury / inactive surprise on either OL or QB would rewrite the pass-rush signal.\n\nBottom line: OU has more ways to win on the current MATCHUP SIGNAL board, but football variance (turnovers, explosives) remains large around any margin estimate.",
+  "generation_model": "desk-template",
+  "generation_provider": "fallback",
+  "glossary": {
+    "EPA/play": "Expected Points Added estimates how much each play improves expected scoring position. Positive is good. A 5-yard gain on 3rd-and-3 is not treated like 5 yards on 3rd-and-20.",
+    "MATCHUP SIGNAL": "A descriptive strength\u00d7weakness edge. Not a published win probability and not fed into BCW-RIDGE-v0.1 until validated walk-forward.",
+    "Research Preview": "BlueChip quantitative layer that has not cleared the five public ship gates."
+  },
+  "levels": {
+    "slate": {
+      "lean": "OU",
+      "top_edges": [
+        "+++ OU Ap Rank"
+      ],
+      "market": "OU -41.5",
+      "mu": 45.5,
+      "confidence_pct": 59.2
+    }
+  }
+}

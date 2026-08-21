@@ -1,0 +1,324 @@
+{
+  "game_id": "espn:401872657",
+  "version": "BCW-GIP-v0.1",
+  "created_at": "2026-08-21T03:42:41.823408+00:00",
+  "generated_at": "2026-08-21T03:42:41.823408+00:00",
+  "information_cutoff": "2026-08-21T03:42:41.823408+00:00",
+  "source_set_hash": "86bad0e5c3d178dab3c41c70",
+  "game": {
+    "game_id": "espn:401872657",
+    "league": "NFL",
+    "matchup": "SF vs LAR",
+    "home_team": "LAR",
+    "away_team": "SF",
+    "home_name": "Los Angeles Rams",
+    "away_name": "San Francisco 49ers",
+    "spread_label": "LAR -3.5",
+    "home_spread": -3.5,
+    "total_line": 48.5,
+    "week": 1
+  },
+  "lean_team": "SF",
+  "projection": {
+    "model_id": "BCW-DESK-STRENGTH-v0.x",
+    "method": "0.65\u00b7Elo/25+HFA + 0.35\u00b7(SRS+HFA)",
+    "mu_home": 2.14,
+    "sigma": 13.5,
+    "p_home_win": 0.5484,
+    "p_home_cover": 0.4453,
+    "edge_vs_minus_110": -0.0785,
+    "model_lean": "AWAY",
+    "model_lean_team": "SF",
+    "label": "Research Preview",
+    "public_probability_published": false,
+    "confidence_pct": 55.5
+  },
+  "matchup_edges": [
+    {
+      "key": "PASS_RUSH",
+      "title": "Pass rush / protection (proxy)",
+      "side": "HOME",
+      "side_team": "LAR",
+      "strength": "MILD",
+      "home_stat": 0.0037,
+      "away_stat": -0.0861,
+      "mismatch_z": 0.898,
+      "fan_line": "+ LAR \u2014 Pass rush / protection (proxy)",
+      "label": "MATCHUP SIGNAL",
+      "why": "Proxy until true pressure/PBWR data: lower pass EPA allowed \u21d2 stronger pass defense / rush. MATCHUP SIGNAL only \u2014 not a published win probability."
+    },
+    {
+      "key": "OVERALL",
+      "title": "Overall efficiency",
+      "side": "HOME",
+      "side_team": "LAR",
+      "strength": "MILD",
+      "home_stat": 0.1239,
+      "away_stat": 0.0077,
+      "mismatch_z": 0.581,
+      "fan_line": "+ LAR \u2014 Overall efficiency",
+      "label": "MATCHUP SIGNAL",
+      "why": "Net EPA/play (offense minus defense). Broad team-strength interaction."
+    },
+    {
+      "key": "RUN_GAME",
+      "title": "Rushing offense vs run defense",
+      "side": "HOME",
+      "side_team": "LAR",
+      "strength": "MILD",
+      "home_stat": 0.0604,
+      "away_stat": -0.0162,
+      "mismatch_z": 0.547,
+      "fan_line": "+ LAR \u2014 Rushing offense vs run defense",
+      "label": "MATCHUP SIGNAL",
+      "why": "Rush EPA/play vs EPA allowed on rushes \u2014 better than raw yards/carry."
+    },
+    {
+      "key": "PASSING",
+      "title": "Passing offense vs pass defense",
+      "side": "HOME",
+      "side_team": "LAR",
+      "strength": "MILD",
+      "home_stat": 0.261,
+      "away_stat": 0.1679,
+      "mismatch_z": 0.517,
+      "fan_line": "+ LAR \u2014 Passing offense vs pass defense",
+      "label": "MATCHUP SIGNAL",
+      "why": "EPA/play on passes plus how much EPA the opposing defense allows. EPA weights plays by situation (3rd-and-3 \u2260 3rd-and-20)."
+    }
+  ],
+  "headline_cards": [
+    {
+      "marks": "+",
+      "key": "PASS_RUSH",
+      "title": "Pass rush / protection (proxy)",
+      "team": "LAR",
+      "strength": "MILD",
+      "fan_line": "+ LAR \u2014 Pass rush / protection (proxy)",
+      "mismatch_z": 0.898,
+      "percentile_hint": null,
+      "label": "MATCHUP SIGNAL",
+      "why": "Proxy until true pressure/PBWR data: lower pass EPA allowed \u21d2 stronger pass defense / rush. MATCHUP SIGNAL only \u2014 not a published win probability.",
+      "home_stat": 0.0037,
+      "away_stat": -0.0861
+    },
+    {
+      "marks": "+",
+      "key": "OVERALL",
+      "title": "Overall efficiency",
+      "team": "LAR",
+      "strength": "MILD",
+      "fan_line": "+ LAR \u2014 Overall efficiency",
+      "mismatch_z": 0.581,
+      "percentile_hint": null,
+      "label": "MATCHUP SIGNAL",
+      "why": "Net EPA/play (offense minus defense). Broad team-strength interaction.",
+      "home_stat": 0.1239,
+      "away_stat": 0.0077
+    },
+    {
+      "marks": "+",
+      "key": "RUN_GAME",
+      "title": "Rushing offense vs run defense",
+      "team": "LAR",
+      "strength": "MILD",
+      "fan_line": "+ LAR \u2014 Rushing offense vs run defense",
+      "mismatch_z": 0.547,
+      "percentile_hint": null,
+      "label": "MATCHUP SIGNAL",
+      "why": "Rush EPA/play vs EPA allowed on rushes \u2014 better than raw yards/carry.",
+      "home_stat": 0.0604,
+      "away_stat": -0.0162
+    },
+    {
+      "marks": "+",
+      "key": "PASSING",
+      "title": "Passing offense vs pass defense",
+      "team": "LAR",
+      "strength": "MILD",
+      "fan_line": "+ LAR \u2014 Passing offense vs pass defense",
+      "mismatch_z": 0.517,
+      "percentile_hint": null,
+      "label": "MATCHUP SIGNAL",
+      "why": "EPA/play on passes plus how much EPA the opposing defense allows. EPA weights plays by situation (3rd-and-3 \u2260 3rd-and-20).",
+      "home_stat": 0.261,
+      "away_stat": 0.1679
+    }
+  ],
+  "slate_edges": [
+    "+ LAR Pass Rush",
+    "+ LAR Overall",
+    "+ LAR Run Game"
+  ],
+  "matchup_logistic": {
+    "model_id": "BCW-MATCHUP-LOGISTIC-v0.x",
+    "label": "Research Preview",
+    "public_probability_published": false,
+    "logit": 1.0693,
+    "p_home_win": 0.7445,
+    "lean": "HOME",
+    "contributions": [
+      {
+        "key": "PASS_RUSH",
+        "weight": 0.35,
+        "z": 0.898,
+        "term": 0.3143
+      },
+      {
+        "key": "OVERALL",
+        "weight": 0.45,
+        "z": 0.581,
+        "term": 0.2615
+      },
+      {
+        "key": "RUN_GAME",
+        "weight": 0.25,
+        "z": 0.547,
+        "term": 0.1368
+      },
+      {
+        "key": "PASSING",
+        "weight": 0.4,
+        "z": 0.517,
+        "term": 0.2068
+      }
+    ],
+    "note": "Heuristic matchup logistic on EDGE z-scores. Not BCW-RIDGE. Not a ship gate."
+  },
+  "paths": {
+    "home": "Lean on pass rush / protection (proxy). Convert that mismatch before the game becomes a coin-flip script.",
+    "away": "Shorten the game, win the line of scrimmage, and force the favorite into obvious passing downs."
+  },
+  "risks": [
+    "Turnovers: the projection assumes roughly normal luck; a +2 swing can flip a SF lean.",
+    "LAR path: if pass rush / protection (proxy) plays up, SF's edge shrinks.",
+    "Injury / inactive surprise on either OL or QB would rewrite the pass-rush signal."
+  ],
+  "adjustment": {
+    "points_home": 1.8,
+    "label": "MATCHUP SIGNAL (unvalidated additive)",
+    "note": "Not fed into BCW-RIDGE-v0.1. Research Preview display only."
+  },
+  "events": [
+    {
+      "game_id": "espn:401872657",
+      "event_type": "other",
+      "headline": "San Francisco 49ers Get George Kittle Injury News from Renowned Sports Doctor - heavy.com",
+      "publisher": "heavy.com",
+      "source_url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPTnc4VVE4amFGbWt3UEdqVDRYUE5GYzY4ZkpzY0gxRWdOWEctM25xamRGSHNwMEt5dGpyN2xoZEsyZjk0MVFpRHZ5bnZmOHM1aTJhR3ZWZkFnd1ZBVUFPZHJncHYzdTZqdEQ4azNXNjQ5ZUJNd182TDZBaEEyUHpRTHNUNDNiV0hVTzFydUprcGRQS2xQRlZHakRQcw?oc=5",
+      "bucket": "availability",
+      "structured_fact": "San Francisco 49ers Get George Kittle Injury News from Renowned Sports Doctor - heavy.com",
+      "confidence": 0.45,
+      "tier": 3
+    },
+    {
+      "game_id": "espn:401872657",
+      "event_type": "market",
+      "headline": "San Francisco 49ers @ Los Angeles Chargers Odds - FanDuel Sportsbook",
+      "publisher": "FanDuel Sportsbook",
+      "source_url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNNmNUQjZrZmNlUUFvUDhhOXktU0VHTHo3TGVmYzlBUTRNbllSeHNSdGRMaExGN2lndmRfc3ViZXlrMmt1Ukg2bmxDRGFYanZHWmI1dFVKbGo0YWo5RGpKb2RPSGpsZnFEMk1mUDJlRy1VV2lVbEpCb01GSUJCZHlJNnZuSGMyZmRyLVFNSnV6YzR6OGFpS0VJLW5BYkIzYkduTTFVWGJ1T2w?oc=5",
+      "bucket": "analysis",
+      "structured_fact": "San Francisco 49ers @ Los Angeles Chargers Odds - FanDuel Sportsbook",
+      "confidence": 0.7,
+      "tier": 3
+    },
+    {
+      "game_id": "espn:401872657",
+      "event_type": "injury",
+      "headline": "Retired Aaron Donald works out for Rams for second time",
+      "publisher": "ESPN",
+      "source_url": "https://www.espn.com/nfl/story/_/id/49631972/retired-aaron-donald-works-rams-second",
+      "bucket": "availability",
+      "structured_fact": "Retired Aaron Donald works out for Rams for second time",
+      "confidence": 0.7,
+      "tier": 2
+    },
+    {
+      "game_id": "espn:401872657",
+      "event_type": "starter_change",
+      "headline": "49ers starting CB suffers injury in preseason battle vs. Chargers - Central Oregon Daily",
+      "publisher": "Central Oregon Daily",
+      "source_url": "https://news.google.com/rss/articles/CBMihwJBVV95cUxNMGNldDBmOXRkQkw1TXlpemxtYnU2T21rNmRuRUlWZ2g2Q0NuSFZFTHlHS0FnSDVhaWdGZHZ5bk44SE9aNVIzM3hxUU5FdGhuZlJrTXNKWktTX2wxeHhqdTdSM0hfMFc3eFYtRG81aHJLRDQ2UDl1MmJvNmxkTXpDVVAwQ3VkejVIYTFkQVc2eldfQURPaW5RdkxFaURkUTNXOVJHeVZEMDdoSllObDd2eXFrdjN1MWRPNkhOMzhtM1BwVHZJOFVLejlFYzRwa0hoTVNMbGJObXctMFNacW1PTWRpN29ySG51SUhvaHRqRE9lSDgxMXhXelJUZ2JhRVJwRGhVTjMyZw?oc=5",
+      "bucket": "availability",
+      "structured_fact": "49ers starting CB suffers injury in preseason battle vs. Chargers - Central Oregon Daily",
+      "confidence": 0.7,
+      "tier": 3
+    },
+    {
+      "game_id": "espn:401872657",
+      "event_type": "other",
+      "headline": "Rams' Keagen Trost Receives Injury Return Timeline Update - Yahoo Sports",
+      "publisher": "Yahoo Sports",
+      "source_url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQb1Znc29ZWkVGckVkNVp6WHE0bVVJZ241UUZ3dXc1Z2N1N1JEdkxBZTE5bHBTbTZoY0haMEFLT1ZDaV96bmRTeTBKb0RSWl9MdWlJVHJaUkljRWlMNFVHcDNrTG5kd1VmU0tVMm9KalJtcEdIZHBzV2xpSFBkbFB2azl6bFdzY29INUE?oc=5",
+      "bucket": "availability",
+      "structured_fact": "Rams' Keagen Trost Receives Injury Return Timeline Update - Yahoo Sports",
+      "confidence": 0.45,
+      "tier": 3
+    },
+    {
+      "game_id": "espn:401872657",
+      "event_type": "other",
+      "headline": "First-round pick Ty Simpson throws 2 TD passes, rallies Rams past Chiefs 20-12 in preseason debut",
+      "publisher": "ESPN",
+      "source_url": "http://www.espn.com/nfl/recap?gameId=401873283",
+      "bucket": "analysis",
+      "structured_fact": "First-round pick Ty Simpson throws 2 TD passes, rallies Rams past Chiefs 20-12 in preseason debut",
+      "confidence": 0.45,
+      "tier": 2
+    }
+  ],
+  "news_citations": [
+    {
+      "headline": "San Francisco 49ers Get George Kittle Injury News from Renowned Sports Doctor - heavy.com",
+      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPTnc4VVE4amFGbWt3UEdqVDRYUE5GYzY4ZkpzY0gxRWdOWEctM25xamRGSHNwMEt5dGpyN2xoZEsyZjk0MVFpRHZ5bnZmOHM1aTJhR3ZWZkFnd1ZBVUFPZHJncHYzdTZqdEQ4azNXNjQ5ZUJNd182TDZBaEEyUHpRTHNUNDNiV0hVTzFydUprcGRQS2xQRlZHakRQcw?oc=5",
+      "publisher": "heavy.com"
+    },
+    {
+      "headline": "San Francisco 49ers @ Los Angeles Chargers Odds - FanDuel Sportsbook",
+      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNNmNUQjZrZmNlUUFvUDhhOXktU0VHTHo3TGVmYzlBUTRNbllSeHNSdGRMaExGN2lndmRfc3ViZXlrMmt1Ukg2bmxDRGFYanZHWmI1dFVKbGo0YWo5RGpKb2RPSGpsZnFEMk1mUDJlRy1VV2lVbEpCb01GSUJCZHlJNnZuSGMyZmRyLVFNSnV6YzR6OGFpS0VJLW5BYkIzYkduTTFVWGJ1T2w?oc=5",
+      "publisher": "FanDuel Sportsbook"
+    },
+    {
+      "headline": "Retired Aaron Donald works out for Rams for second time",
+      "url": "https://www.espn.com/nfl/story/_/id/49631972/retired-aaron-donald-works-rams-second",
+      "publisher": "ESPN"
+    },
+    {
+      "headline": "49ers starting CB suffers injury in preseason battle vs. Chargers - Central Oregon Daily",
+      "url": "https://news.google.com/rss/articles/CBMihwJBVV95cUxNMGNldDBmOXRkQkw1TXlpemxtYnU2T21rNmRuRUlWZ2g2Q0NuSFZFTHlHS0FnSDVhaWdGZHZ5bk44SE9aNVIzM3hxUU5FdGhuZlJrTXNKWktTX2wxeHhqdTdSM0hfMFc3eFYtRG81aHJLRDQ2UDl1MmJvNmxkTXpDVVAwQ3VkejVIYTFkQVc2eldfQURPaW5RdkxFaURkUTNXOVJHeVZEMDdoSllObDd2eXFrdjN1MWRPNkhOMzhtM1BwVHZJOFVLejlFYzRwa0hoTVNMbGJObXctMFNacW1PTWRpN29ySG51SUhvaHRqRE9lSDgxMXhXelJUZ2JhRVJwRGhVTjMyZw?oc=5",
+      "publisher": "Central Oregon Daily"
+    },
+    {
+      "headline": "Rams' Keagen Trost Receives Injury Return Timeline Update - Yahoo Sports",
+      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQb1Znc29ZWkVGckVkNVp6WHE0bVVJZ241UUZ3dXc1Z2N1N1JEdkxBZTE5bHBTbTZoY0haMEFLT1ZDaV96bmRTeTBKb0RSWl9MdWlJVHJaUkljRWlMNFVHcDNrTG5kd1VmU0tVMm9KalJtcEdIZHBzV2xpSFBkbFB2azl6bFdzY29INUE?oc=5",
+      "publisher": "Yahoo Sports"
+    },
+    {
+      "headline": "First-round pick Ty Simpson throws 2 TD passes, rallies Rams past Chiefs 20-12 in preseason debut",
+      "url": "http://www.espn.com/nfl/recap?gameId=401873283",
+      "publisher": "ESPN"
+    }
+  ],
+  "summary_short": "BlueChip leans SF. Top signal: + LAR \u2014 Pass rush / protection (proxy)",
+  "summary_full": "San Francisco 49ers at Los Angeles Rams.\n\nBlueChip leans SF. + LAR \u2014 Pass rush / protection (proxy)\n\nWhy SF has the edge\n- + LAR \u2014 Pass rush / protection (proxy)\n- + LAR \u2014 Overall efficiency\n- + LAR \u2014 Rushing offense vs run defense\n\nBlueChip projection\nMarket: LAR -3.5\nBCW desk \u03bc (home): +2.1 (Research Preview)\nWin probability: unavailable until probability model passes validation.\n\nHow each team wins\nLAR: Lean on pass rush / protection (proxy). Convert that mismatch before the game becomes a coin-flip script.\nSF: Shorten the game, win the line of scrimmage, and force the favorite into obvious passing downs.\n\nWhat changed this week\n\u2022 San Francisco 49ers Get George Kittle Injury News from Renowned Sports Doctor - heavy.com\n\u2022 San Francisco 49ers @ Los Angeles Chargers Odds - FanDuel Sportsbook\n\u2022 Retired Aaron Donald works out for Rams for second time\n\u2022 49ers starting CB suffers injury in preseason battle vs. Chargers - Central Oregon Daily\n\nWhat could make BlueChip wrong?\n\u2022 Turnovers: the projection assumes roughly normal luck; a +2 swing can flip a SF lean.\n\u2022 LAR path: if pass rush / protection (proxy) plays up, SF's edge shrinks.\n\u2022 Injury / inactive surprise on either OL or QB would rewrite the pass-rush signal.\n\nBottom line: SF has more ways to win on the current MATCHUP SIGNAL board, but football variance (turnovers, explosives) remains large around any margin estimate.",
+  "generation_model": "desk-template",
+  "generation_provider": "fallback",
+  "glossary": {
+    "EPA/play": "Expected Points Added estimates how much each play improves expected scoring position. Positive is good. A 5-yard gain on 3rd-and-3 is not treated like 5 yards on 3rd-and-20.",
+    "MATCHUP SIGNAL": "A descriptive strength\u00d7weakness edge. Not a published win probability and not fed into BCW-RIDGE-v0.1 until validated walk-forward.",
+    "Research Preview": "BlueChip quantitative layer that has not cleared the five public ship gates."
+  },
+  "levels": {
+    "slate": {
+      "lean": "SF",
+      "top_edges": [
+        "+ LAR Pass Rush",
+        "+ LAR Overall",
+        "+ LAR Run Game"
+      ],
+      "market": "LAR -3.5",
+      "mu": 2.14,
+      "confidence_pct": 55.5
+    }
+  }
+}

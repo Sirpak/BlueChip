@@ -16,6 +16,7 @@ from sqlalchemy.orm import Session
 
 from app.ingest.game_fields import SCHEDULE_OWNED_GAME_COLS
 from app.config import Settings, get_settings
+from app.ingest.identity import canonicalize_nfl_team
 from db.models import Game, Play
 
 # Windows / corporate roots: use OS certificate store for TLS.
@@ -249,8 +250,8 @@ def _games_from_pbp(df: pd.DataFrame) -> list[dict[str, Any]]:
                 "season_type": str(record.get("season_type") or "REG"),
                 "game_date": _as_date(record.get("game_date")),
                 "kickoff": None,
-                "home_team": str(record["home_team"]),
-                "away_team": str(record["away_team"]),
+                "home_team": canonicalize_nfl_team(str(record["home_team"])) or str(record["home_team"]),
+                "away_team": canonicalize_nfl_team(str(record["away_team"])) or str(record["away_team"]),
                 "home_score": int(home_score) if home_score is not None else None,
                 "away_score": int(away_score) if away_score is not None else None,
                 "roof": _to_python(record.get("roof")),
@@ -315,7 +316,12 @@ def _plays_from_pbp(df: pd.DataFrame) -> list[dict[str, Any]]:
                 "away_team",
             }:
                 val = _to_python(raw)
-                row[col] = str(val) if val is not None else None
+                if val is None:
+                    row[col] = None
+                elif col in {"posteam", "defteam", "home_team", "away_team"}:
+                    row[col] = canonicalize_nfl_team(str(val)) or str(val)
+                else:
+                    row[col] = str(val)
             else:
                 row[col] = _to_python(raw)
 

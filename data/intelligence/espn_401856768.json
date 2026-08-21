@@ -1,0 +1,220 @@
+{
+  "game_id": "espn:401856768",
+  "version": "BCW-GIP-v0.1",
+  "created_at": "2026-08-21T03:43:25.012261+00:00",
+  "generated_at": "2026-08-21T03:43:25.012261+00:00",
+  "information_cutoff": "2026-08-21T03:43:25.012261+00:00",
+  "source_set_hash": "771bb0a400a683ad63df3f4c",
+  "game": {
+    "game_id": "espn:401856768",
+    "league": "CFB",
+    "matchup": "IDHO @ UTAH",
+    "home_team": "UTAH",
+    "away_team": "IDHO",
+    "home_name": "Utah Utes",
+    "away_name": "Idaho Vandals",
+    "spread_label": "UTAH -32.5",
+    "home_spread": -32.5,
+    "total_line": 56.5,
+    "week": 1
+  },
+  "lean_team": "UTAH",
+  "projection": {
+    "model_id": "BCW-DESK-STRENGTH-v0.x",
+    "method": "Market line + AP rank edge (CFB; no CFB Elo yet)",
+    "mu_home": 33.75,
+    "sigma": 15.0,
+    "p_home_win": 0.9867,
+    "p_home_cover": 0.5199,
+    "edge_vs_minus_110": -0.0039,
+    "model_lean": "HOME",
+    "model_lean_team": "UTAH",
+    "label": "Research Preview",
+    "public_probability_published": false,
+    "confidence_pct": 52.0
+  },
+  "matchup_edges": [
+    {
+      "key": "AP_RANK",
+      "title": "AP ranking gap",
+      "side": "HOME",
+      "side_team": "UTAH",
+      "strength": "STRONG",
+      "home_stat": 30.0,
+      "away_stat": 21.0,
+      "mismatch_z": 1.125,
+      "fan_line": "++ UTAH \u2014 AP ranking gap",
+      "label": "MATCHUP SIGNAL",
+      "why": "College prior until CFB EPA ingest. Lower AP rank is stronger."
+    }
+  ],
+  "headline_cards": [
+    {
+      "marks": "++",
+      "key": "AP_RANK",
+      "title": "AP ranking gap",
+      "team": "UTAH",
+      "strength": "STRONG",
+      "fan_line": "++ UTAH \u2014 AP ranking gap",
+      "mismatch_z": 1.125,
+      "percentile_hint": "Clearly tilted versus a typical NFL/CFB unit matchup.",
+      "label": "MATCHUP SIGNAL",
+      "why": "College prior until CFB EPA ingest. Lower AP rank is stronger.",
+      "home_stat": 30.0,
+      "away_stat": 21.0
+    }
+  ],
+  "slate_edges": [
+    "++ UTAH Ap Rank"
+  ],
+  "matchup_logistic": {
+    "model_id": "BCW-MATCHUP-LOGISTIC-v0.x",
+    "label": "Research Preview",
+    "public_probability_published": false,
+    "logit": 0.4875,
+    "p_home_win": 0.6195,
+    "lean": "HOME",
+    "contributions": [
+      {
+        "key": "AP_RANK",
+        "weight": 0.3,
+        "z": 1.125,
+        "term": 0.3375
+      }
+    ],
+    "note": "Heuristic matchup logistic on EDGE z-scores. Not BCW-RIDGE. Not a ship gate."
+  },
+  "paths": {
+    "home": "Lean on ap ranking gap. Convert that mismatch before the game becomes a coin-flip script.",
+    "away": "Shorten the game, win the line of scrimmage, and force the favorite into obvious passing downs."
+  },
+  "risks": [
+    "Turnovers: the projection assumes roughly normal luck; a +2 swing can flip a UTAH lean.",
+    "Injury / inactive surprise on either OL or QB would rewrite the pass-rush signal."
+  ],
+  "adjustment": {
+    "points_home": 1.0,
+    "label": "MATCHUP SIGNAL (unvalidated additive)",
+    "note": "Not fed into BCW-RIDGE-v0.1. Research Preview display only."
+  },
+  "events": [
+    {
+      "game_id": "espn:401856768",
+      "event_type": "other",
+      "headline": "2024 Utah Utes Qb Rating Stats & Leaders - NCAA College Football Passing Stats - FOX Sports",
+      "publisher": "FOX Sports",
+      "source_url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxPR3hNMzdzOUxkYlp2OHAwczc3dGFLZ0VzbVBmcWlYZHFFOXBFd3pRRnpTVDdKb2gySktpYXNlVFdyR2dlWURMNGdBbjVBSDlfY1UyVGtvcTRBZUV3NmdXQ1VLZnVIcV9TaVU0VHlUZDBVYVJzY05kNlZ0WDlQZnFPbF9XQ1ZxYjJJUjlKSnVqMzhTSzZ2WGtGN2xSQjVnNTR0Vk1FQWlieXNrTzNjOG9PR2txNEp0cmt4ajZoTDNuc3E4OHdHMUN5QnZGWjhxQmU0VmFKMVF5cThscDhX?oc=5",
+      "bucket": "availability",
+      "structured_fact": "2024 Utah Utes Qb Rating Stats & Leaders - NCAA College Football Passing Stats - FOX Sports",
+      "confidence": 0.45,
+      "tier": 3
+    },
+    {
+      "game_id": "espn:401856768",
+      "event_type": "other",
+      "headline": "Utah State 2026 Opponent Preview \u2014 Utah Utes - Cache Valley Daily",
+      "publisher": "Cache Valley Daily",
+      "source_url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxNQ2JoR0Z3RzZNbTluR2liZVNBRVZLV0FRSUVXcDRBaERJMVhGajg3VXg5S1lJejJDY2JYYkhpbWFTVmx1R0pTSFR6Qi00cnpJSFo4ZHVrTGFGRVpna0MzYmstX3lPMm5HU3BBdzFPbTk4VDZidVJwRVhlalJlZ1lDY1hWX3NUUkFmV19KYy1LdXZzTGxWNlRBTXlmTGNBaGFpMHBBV2tycDVUWnNqSnBaenl5T2ZTbXM4QlAwaC1LM3FaMHNNbEF2ZEd4c1I?oc=5",
+      "bucket": "analysis",
+      "structured_fact": "Utah State 2026 Opponent Preview \u2014 Utah Utes - Cache Valley Daily",
+      "confidence": 0.45,
+      "tier": 3
+    },
+    {
+      "game_id": "espn:401856768",
+      "event_type": "other",
+      "headline": "Group of players granted restraining order enter transfer portal",
+      "publisher": "ESPN",
+      "source_url": "https://www.espn.com/college-football/story/_/id/49674298/group-players-granted-restraining-order-enter-transfer-portal",
+      "bucket": "availability",
+      "structured_fact": "Group of players granted restraining order enter transfer portal",
+      "confidence": 0.45,
+      "tier": 2
+    },
+    {
+      "game_id": "espn:401856768",
+      "event_type": "other",
+      "headline": "College football's mad two-week scramble to land a transfer portal QB",
+      "publisher": "ESPN",
+      "source_url": "https://www.espn.com/college-football/story/_/id/49650906/college-football-two-week-scramble-transfer-portal-qb",
+      "bucket": "availability",
+      "structured_fact": "College football's mad two-week scramble to land a transfer portal QB",
+      "confidence": 0.45,
+      "tier": 2
+    },
+    {
+      "game_id": "espn:401856768",
+      "event_type": "other",
+      "headline": "This college football analyst ranks Utah as one of nation\u2019s top QB rooms - Deseret News",
+      "publisher": "Deseret News",
+      "source_url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNeVVDZXlZRzBWM1hvTzZrOGVhaHBmY0xlWkZVd1lIUktaRlNMSG5zSnZOQVB5VlNtYTJqUm9DNXEtbnptdS1GczZlVlUyMnNPXzZUN3dIMW5aVThJMU5PMGpESk5oQXljcHhicWV4RldBSDEtNlFROFFxUGxCZGdqenVoM3FTempyQ2RXc2czVjlqTkFXMzZ5R1FMM0JnQVNQRzVWN2h0cGNKMjlP?oc=5",
+      "bucket": "availability",
+      "structured_fact": "This college football analyst ranks Utah as one of nation\u2019s top QB rooms - Deseret News",
+      "confidence": 0.45,
+      "tier": 3
+    },
+    {
+      "game_id": "espn:401856768",
+      "event_type": "other",
+      "headline": "Williams' TD run with 9 seconds left pushes Sacramento State over Idaho 23-20",
+      "publisher": "ESPN",
+      "source_url": "http://www.espn.com/ncf/recap?gameId=401767096",
+      "bucket": "availability",
+      "structured_fact": "Williams' TD run with 9 seconds left pushes Sacramento State over Idaho 23-20",
+      "confidence": 0.45,
+      "tier": 2
+    }
+  ],
+  "news_citations": [
+    {
+      "headline": "2024 Utah Utes Qb Rating Stats & Leaders - NCAA College Football Passing Stats - FOX Sports",
+      "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxPR3hNMzdzOUxkYlp2OHAwczc3dGFLZ0VzbVBmcWlYZHFFOXBFd3pRRnpTVDdKb2gySktpYXNlVFdyR2dlWURMNGdBbjVBSDlfY1UyVGtvcTRBZUV3NmdXQ1VLZnVIcV9TaVU0VHlUZDBVYVJzY05kNlZ0WDlQZnFPbF9XQ1ZxYjJJUjlKSnVqMzhTSzZ2WGtGN2xSQjVnNTR0Vk1FQWlieXNrTzNjOG9PR2txNEp0cmt4ajZoTDNuc3E4OHdHMUN5QnZGWjhxQmU0VmFKMVF5cThscDhX?oc=5",
+      "publisher": "FOX Sports"
+    },
+    {
+      "headline": "Utah State 2026 Opponent Preview \u2014 Utah Utes - Cache Valley Daily",
+      "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxNQ2JoR0Z3RzZNbTluR2liZVNBRVZLV0FRSUVXcDRBaERJMVhGajg3VXg5S1lJejJDY2JYYkhpbWFTVmx1R0pTSFR6Qi00cnpJSFo4ZHVrTGFGRVpna0MzYmstX3lPMm5HU3BBdzFPbTk4VDZidVJwRVhlalJlZ1lDY1hWX3NUUkFmV19KYy1LdXZzTGxWNlRBTXlmTGNBaGFpMHBBV2tycDVUWnNqSnBaenl5T2ZTbXM4QlAwaC1LM3FaMHNNbEF2ZEd4c1I?oc=5",
+      "publisher": "Cache Valley Daily"
+    },
+    {
+      "headline": "Group of players granted restraining order enter transfer portal",
+      "url": "https://www.espn.com/college-football/story/_/id/49674298/group-players-granted-restraining-order-enter-transfer-portal",
+      "publisher": "ESPN"
+    },
+    {
+      "headline": "College football's mad two-week scramble to land a transfer portal QB",
+      "url": "https://www.espn.com/college-football/story/_/id/49650906/college-football-two-week-scramble-transfer-portal-qb",
+      "publisher": "ESPN"
+    },
+    {
+      "headline": "This college football analyst ranks Utah as one of nation\u2019s top QB rooms - Deseret News",
+      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNeVVDZXlZRzBWM1hvTzZrOGVhaHBmY0xlWkZVd1lIUktaRlNMSG5zSnZOQVB5VlNtYTJqUm9DNXEtbnptdS1GczZlVlUyMnNPXzZUN3dIMW5aVThJMU5PMGpESk5oQXljcHhicWV4RldBSDEtNlFROFFxUGxCZGdqenVoM3FTempyQ2RXc2czVjlqTkFXMzZ5R1FMM0JnQVNQRzVWN2h0cGNKMjlP?oc=5",
+      "publisher": "Deseret News"
+    },
+    {
+      "headline": "Williams' TD run with 9 seconds left pushes Sacramento State over Idaho 23-20",
+      "url": "http://www.espn.com/ncf/recap?gameId=401767096",
+      "publisher": "ESPN"
+    }
+  ],
+  "summary_short": "BlueChip leans UTAH. Top signal: ++ UTAH \u2014 AP ranking gap",
+  "summary_full": "Idaho Vandals at Utah Utes.\n\nBlueChip leans UTAH. ++ UTAH \u2014 AP ranking gap\n\nWhy UTAH has the edge\n- ++ UTAH \u2014 AP ranking gap\n\nBlueChip projection\nMarket: UTAH -32.5\nBCW desk \u03bc (home): +33.8 (Research Preview)\nWin probability: unavailable until probability model passes validation.\n\nHow each team wins\nUTAH: Lean on ap ranking gap. Convert that mismatch before the game becomes a coin-flip script.\nIDHO: Shorten the game, win the line of scrimmage, and force the favorite into obvious passing downs.\n\nWhat changed this week\n\u2022 2024 Utah Utes Qb Rating Stats & Leaders - NCAA College Football Passing Stats - FOX Sports\n\u2022 Utah State 2026 Opponent Preview \u2014 Utah Utes - Cache Valley Daily\n\u2022 Group of players granted restraining order enter transfer portal\n\u2022 College football's mad two-week scramble to land a transfer portal QB\n\nWhat could make BlueChip wrong?\n\u2022 Turnovers: the projection assumes roughly normal luck; a +2 swing can flip a UTAH lean.\n\u2022 Injury / inactive surprise on either OL or QB would rewrite the pass-rush signal.\n\nBottom line: UTAH has more ways to win on the current MATCHUP SIGNAL board, but football variance (turnovers, explosives) remains large around any margin estimate.",
+  "generation_model": "desk-template",
+  "generation_provider": "fallback",
+  "glossary": {
+    "EPA/play": "Expected Points Added estimates how much each play improves expected scoring position. Positive is good. A 5-yard gain on 3rd-and-3 is not treated like 5 yards on 3rd-and-20.",
+    "MATCHUP SIGNAL": "A descriptive strength\u00d7weakness edge. Not a published win probability and not fed into BCW-RIDGE-v0.1 until validated walk-forward.",
+    "Research Preview": "BlueChip quantitative layer that has not cleared the five public ship gates."
+  },
+  "levels": {
+    "slate": {
+      "lean": "UTAH",
+      "top_edges": [
+        "++ UTAH Ap Rank"
+      ],
+      "market": "UTAH -32.5",
+      "mu": 33.75,
+      "confidence_pct": 52.0
+    }
+  }
+}

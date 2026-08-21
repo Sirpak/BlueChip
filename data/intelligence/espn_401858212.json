@@ -1,0 +1,220 @@
+{
+  "game_id": "espn:401858212",
+  "version": "BCW-GIP-v0.1",
+  "created_at": "2026-08-21T03:42:37.830968+00:00",
+  "generated_at": "2026-08-21T03:42:37.830968+00:00",
+  "information_cutoff": "2026-08-21T03:42:37.830968+00:00",
+  "source_set_hash": "2351ae964805ee570679cfa6",
+  "game": {
+    "game_id": "espn:401858212",
+    "league": "CFB",
+    "matchup": "SMU @ FSU",
+    "home_team": "FSU",
+    "away_team": "SMU",
+    "home_name": "Florida State Seminoles",
+    "away_name": "SMU Mustangs",
+    "spread_label": "SMU -2.5",
+    "home_spread": 2.5,
+    "total_line": 53.5,
+    "week": 1
+  },
+  "lean_team": "SMU",
+  "projection": {
+    "model_id": "BCW-DESK-STRENGTH-v0.x",
+    "method": "Market line + AP rank edge (CFB; no CFB Elo yet)",
+    "mu_home": -4.25,
+    "sigma": 15.0,
+    "p_home_win": 0.3757,
+    "p_home_cover": 0.4404,
+    "edge_vs_minus_110": -0.0834,
+    "model_lean": "AWAY",
+    "model_lean_team": "SMU",
+    "label": "Research Preview",
+    "public_probability_published": false,
+    "confidence_pct": 56.0
+  },
+  "matchup_edges": [
+    {
+      "key": "AP_RANK",
+      "title": "AP ranking gap",
+      "side": "AWAY",
+      "side_team": "SMU",
+      "strength": "STRONG",
+      "home_stat": 19.0,
+      "away_stat": 30.0,
+      "mismatch_z": -1.375,
+      "fan_line": "++ SMU \u2014 AP ranking gap",
+      "label": "MATCHUP SIGNAL",
+      "why": "College prior until CFB EPA ingest. Lower AP rank is stronger."
+    }
+  ],
+  "headline_cards": [
+    {
+      "marks": "++",
+      "key": "AP_RANK",
+      "title": "AP ranking gap",
+      "team": "SMU",
+      "strength": "STRONG",
+      "fan_line": "++ SMU \u2014 AP ranking gap",
+      "mismatch_z": -1.375,
+      "percentile_hint": "Clearly tilted versus a typical NFL/CFB unit matchup.",
+      "label": "MATCHUP SIGNAL",
+      "why": "College prior until CFB EPA ingest. Lower AP rank is stronger.",
+      "home_stat": 19.0,
+      "away_stat": 30.0
+    }
+  ],
+  "slate_edges": [
+    "++ SMU Ap Rank"
+  ],
+  "matchup_logistic": {
+    "model_id": "BCW-MATCHUP-LOGISTIC-v0.x",
+    "label": "Research Preview",
+    "public_probability_published": false,
+    "logit": -0.2625,
+    "p_home_win": 0.4347,
+    "lean": "AWAY",
+    "contributions": [
+      {
+        "key": "AP_RANK",
+        "weight": 0.3,
+        "z": -1.375,
+        "term": -0.4125
+      }
+    ],
+    "note": "Heuristic matchup logistic on EDGE z-scores. Not BCW-RIDGE. Not a ship gate."
+  },
+  "paths": {
+    "home": "Stay efficient on early downs and avoid giving the visitor explosive answers.",
+    "away": "Attack via ap ranking gap and keep the favorite from playing its preferred script."
+  },
+  "risks": [
+    "Turnovers: the projection assumes roughly normal luck; a +2 swing can flip a SMU lean.",
+    "Injury / inactive surprise on either OL or QB would rewrite the pass-rush signal."
+  ],
+  "adjustment": {
+    "points_home": -1.0,
+    "label": "MATCHUP SIGNAL (unvalidated additive)",
+    "note": "Not fed into BCW-RIDGE-v0.1. Research Preview display only."
+  },
+  "events": [
+    {
+      "game_id": "espn:401858212",
+      "event_type": "injury",
+      "headline": "SMU QB Kevin Jennings limited in camp with jammed finger",
+      "publisher": "ESPN",
+      "source_url": "https://www.espn.com/college-football/story/_/id/49577946/smu-qb-kevin-jennings-limited-camp-jammed-finger",
+      "bucket": "availability",
+      "structured_fact": "SMU QB Kevin Jennings limited in camp with jammed finger",
+      "confidence": 0.7,
+      "tier": 2
+    },
+    {
+      "game_id": "espn:401858212",
+      "event_type": "other",
+      "headline": "No. 19 SMU eyes another ACC run as QB Kevin Jennings' final season opens with early road tests - FOX Sports",
+      "publisher": "FOX Sports",
+      "source_url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxNQ084LUo2cTZIcWpKWTF1OGl0clFudkdSUHY2TW5KYWRDX3FKLTZYM0VKc2hoTXFWNWZ3UFFHakt3V1RwOEpJVl83RHFhRmtHM2o5bV83bmFvRnNGVWNUdEZYeVR6MG9IU2VhdlNiRkNxQmM0OUFNVng5bnVabjlSV2pGNldRS3hNYk81T21pSjFVTHgtUmdnV1htR1FnN0dyZC1qYTlycExDMDVydTJqS2ZOQWdHRUdBQTNvcDdMNFo3QjBRQkszcGVsTQ?oc=5",
+      "bucket": "availability",
+      "structured_fact": "No. 19 SMU eyes another ACC run as QB Kevin Jennings' final season opens with early road tests - FOX Sports",
+      "confidence": 0.45,
+      "tier": 3
+    },
+    {
+      "game_id": "espn:401858212",
+      "event_type": "other",
+      "headline": "SMU football news: Kevin Jennings gets '100%' injury prediction from Rhett Lashlee - Yahoo Sports",
+      "publisher": "Yahoo Sports",
+      "source_url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPMUZtdlZ0ZTY5TTBfcmplQ0hXWmJjYlVpQ0w4TTZsX1I0c1o3NE9DeGVxb3lWaWMwQnMtUGxzTzU0SEEwWGlEdzl2SzY4WTNTX0hNdmpDZjh6QndHNWxMTFlPaDJISDF5SGdtUjZMWC1Sbi1wY2hSbHpSM3A2VjRlc2w0SG1DTXBE?oc=5",
+      "bucket": "availability",
+      "structured_fact": "SMU football news: Kevin Jennings gets '100%' injury prediction from Rhett Lashlee - Yahoo Sports",
+      "confidence": 0.45,
+      "tier": 3
+    },
+    {
+      "game_id": "espn:401858212",
+      "event_type": "other",
+      "headline": "2026 FSU Schedule Preview: SMU Mustangs - Tomahawk Nation",
+      "publisher": "Tomahawk Nation",
+      "source_url": "https://news.google.com/rss/articles/CBMinAJBVV95cUxNLS10VVlRNUROSzdOWHRyeWFlRGxHNDJSTnlhek0yLVV5dmFNUlZRT0FOd25qV0pzWm4tUWhyRlNmQkdkV1Ffa0owa1BhSVJhbW1saDY5OGQ2Qm91NXlWYXU1RU5JaGwxVzQ1VUVBdWx3czkyTWh2bzJTcmI5OV9xazNpWEg3NU5hYk93MjdfcHpHMVN0NU1YY0VnRXEyNk5iRWV2X250TGVfU0hkR1JjdGFrRnhIeTg5RFVEam9yeXZqMi1zbWxZSUNzcVUyMlJZT0w5SW5BVGZkMFZJQTZWTTF6QU9nNHh5cDV3WDZGQmVRY2VKLUJXMkxtXzBsUVNXc2p2YUpxbmUycm5YNlFOM0RaTnBtYl8zMzJ6Zw?oc=5",
+      "bucket": "analysis",
+      "structured_fact": "2026 FSU Schedule Preview: SMU Mustangs - Tomahawk Nation",
+      "confidence": 0.45,
+      "tier": 3
+    },
+    {
+      "game_id": "espn:401858212",
+      "event_type": "other",
+      "headline": "SMU Mustangs 2026 Team Preview | The College Football Experience (Ep. 3117) - Sports Gambling Podcast",
+      "publisher": "Sports Gambling Podcast",
+      "source_url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOSDdfYTVEQnNCc25HdmdZS29udWRnQ2hldzQ2Mm11WlpsblBzVTN5VnpfbVQ2UWRNaTZZenZWbzlEbndhRzdjcnlsQmZ6SlRLWEVFSkkzeEVFUS1mRUkxZ2RURHpiNkg1aUdpMnVLVGdjMzMxTkhVa0wtdml0M29qUkxJdE4yRXRxYm1PQUoyNTBOWEFLUFhRWmE1VXBQNmVCSGdnNnRTLUVNcHdMd1J6VnN5WkY0S1pjaV9YOA?oc=5",
+      "bucket": "analysis",
+      "structured_fact": "SMU Mustangs 2026 Team Preview | The College Football Experience (Ep. 3117) - Sports Gambling Podcast",
+      "confidence": 0.45,
+      "tier": 3
+    },
+    {
+      "game_id": "espn:401858212",
+      "event_type": "other",
+      "headline": "Group of players granted restraining order enter transfer portal",
+      "publisher": "ESPN",
+      "source_url": "https://www.espn.com/college-football/story/_/id/49674298/group-players-granted-restraining-order-enter-transfer-portal",
+      "bucket": "availability",
+      "structured_fact": "Group of players granted restraining order enter transfer portal",
+      "confidence": 0.45,
+      "tier": 2
+    }
+  ],
+  "news_citations": [
+    {
+      "headline": "SMU QB Kevin Jennings limited in camp with jammed finger",
+      "url": "https://www.espn.com/college-football/story/_/id/49577946/smu-qb-kevin-jennings-limited-camp-jammed-finger",
+      "publisher": "ESPN"
+    },
+    {
+      "headline": "No. 19 SMU eyes another ACC run as QB Kevin Jennings' final season opens with early road tests - FOX Sports",
+      "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxNQ084LUo2cTZIcWpKWTF1OGl0clFudkdSUHY2TW5KYWRDX3FKLTZYM0VKc2hoTXFWNWZ3UFFHakt3V1RwOEpJVl83RHFhRmtHM2o5bV83bmFvRnNGVWNUdEZYeVR6MG9IU2VhdlNiRkNxQmM0OUFNVng5bnVabjlSV2pGNldRS3hNYk81T21pSjFVTHgtUmdnV1htR1FnN0dyZC1qYTlycExDMDVydTJqS2ZOQWdHRUdBQTNvcDdMNFo3QjBRQkszcGVsTQ?oc=5",
+      "publisher": "FOX Sports"
+    },
+    {
+      "headline": "SMU football news: Kevin Jennings gets '100%' injury prediction from Rhett Lashlee - Yahoo Sports",
+      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPMUZtdlZ0ZTY5TTBfcmplQ0hXWmJjYlVpQ0w4TTZsX1I0c1o3NE9DeGVxb3lWaWMwQnMtUGxzTzU0SEEwWGlEdzl2SzY4WTNTX0hNdmpDZjh6QndHNWxMTFlPaDJISDF5SGdtUjZMWC1Sbi1wY2hSbHpSM3A2VjRlc2w0SG1DTXBE?oc=5",
+      "publisher": "Yahoo Sports"
+    },
+    {
+      "headline": "2026 FSU Schedule Preview: SMU Mustangs - Tomahawk Nation",
+      "url": "https://news.google.com/rss/articles/CBMinAJBVV95cUxNLS10VVlRNUROSzdOWHRyeWFlRGxHNDJSTnlhek0yLVV5dmFNUlZRT0FOd25qV0pzWm4tUWhyRlNmQkdkV1Ffa0owa1BhSVJhbW1saDY5OGQ2Qm91NXlWYXU1RU5JaGwxVzQ1VUVBdWx3czkyTWh2bzJTcmI5OV9xazNpWEg3NU5hYk93MjdfcHpHMVN0NU1YY0VnRXEyNk5iRWV2X250TGVfU0hkR1JjdGFrRnhIeTg5RFVEam9yeXZqMi1zbWxZSUNzcVUyMlJZT0w5SW5BVGZkMFZJQTZWTTF6QU9nNHh5cDV3WDZGQmVRY2VKLUJXMkxtXzBsUVNXc2p2YUpxbmUycm5YNlFOM0RaTnBtYl8zMzJ6Zw?oc=5",
+      "publisher": "Tomahawk Nation"
+    },
+    {
+      "headline": "SMU Mustangs 2026 Team Preview | The College Football Experience (Ep. 3117) - Sports Gambling Podcast",
+      "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOSDdfYTVEQnNCc25HdmdZS29udWRnQ2hldzQ2Mm11WlpsblBzVTN5VnpfbVQ2UWRNaTZZenZWbzlEbndhRzdjcnlsQmZ6SlRLWEVFSkkzeEVFUS1mRUkxZ2RURHpiNkg1aUdpMnVLVGdjMzMxTkhVa0wtdml0M29qUkxJdE4yRXRxYm1PQUoyNTBOWEFLUFhRWmE1VXBQNmVCSGdnNnRTLUVNcHdMd1J6VnN5WkY0S1pjaV9YOA?oc=5",
+      "publisher": "Sports Gambling Podcast"
+    },
+    {
+      "headline": "Group of players granted restraining order enter transfer portal",
+      "url": "https://www.espn.com/college-football/story/_/id/49674298/group-players-granted-restraining-order-enter-transfer-portal",
+      "publisher": "ESPN"
+    }
+  ],
+  "summary_short": "BlueChip leans SMU. Top signal: ++ SMU \u2014 AP ranking gap",
+  "summary_full": "SMU Mustangs at Florida State Seminoles.\n\nBlueChip leans SMU. ++ SMU \u2014 AP ranking gap\n\nWhy SMU has the edge\n- ++ SMU \u2014 AP ranking gap\n\nBlueChip projection\nMarket: SMU -2.5\nBCW desk \u03bc (home): -4.2 (Research Preview)\nWin probability: unavailable until probability model passes validation.\n\nHow each team wins\nFSU: Stay efficient on early downs and avoid giving the visitor explosive answers.\nSMU: Attack via ap ranking gap and keep the favorite from playing its preferred script.\n\nWhat changed this week\n\u2022 SMU QB Kevin Jennings limited in camp with jammed finger\n\u2022 No. 19 SMU eyes another ACC run as QB Kevin Jennings' final season opens with early road tests - FOX Sports\n\u2022 SMU football news: Kevin Jennings gets '100%' injury prediction from Rhett Lashlee - Yahoo Sports\n\u2022 2026 FSU Schedule Preview: SMU Mustangs - Tomahawk Nation\n\nWhat could make BlueChip wrong?\n\u2022 Turnovers: the projection assumes roughly normal luck; a +2 swing can flip a SMU lean.\n\u2022 Injury / inactive surprise on either OL or QB would rewrite the pass-rush signal.\n\nBottom line: SMU has more ways to win on the current MATCHUP SIGNAL board, but football variance (turnovers, explosives) remains large around any margin estimate.",
+  "generation_model": "desk-template",
+  "generation_provider": "fallback",
+  "glossary": {
+    "EPA/play": "Expected Points Added estimates how much each play improves expected scoring position. Positive is good. A 5-yard gain on 3rd-and-3 is not treated like 5 yards on 3rd-and-20.",
+    "MATCHUP SIGNAL": "A descriptive strength\u00d7weakness edge. Not a published win probability and not fed into BCW-RIDGE-v0.1 until validated walk-forward.",
+    "Research Preview": "BlueChip quantitative layer that has not cleared the five public ship gates."
+  },
+  "levels": {
+    "slate": {
+      "lean": "SMU",
+      "top_edges": [
+        "++ SMU Ap Rank"
+      ],
+      "market": "SMU -2.5",
+      "mu": -4.25,
+      "confidence_pct": 56.0
+    }
+  }
+}

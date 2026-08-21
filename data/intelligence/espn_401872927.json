@@ -1,0 +1,292 @@
+{
+  "game_id": "espn:401872927",
+  "version": "BCW-GIP-v0.1",
+  "created_at": "2026-08-21T03:43:09.402808+00:00",
+  "generated_at": "2026-08-21T03:43:09.402808+00:00",
+  "information_cutoff": "2026-08-21T03:43:09.402808+00:00",
+  "source_set_hash": "0ca944c0f43f2533f7a66f3f",
+  "game": {
+    "game_id": "espn:401872927",
+    "league": "NFL",
+    "matchup": "GB @ MIN",
+    "home_team": "MIN",
+    "away_team": "GB",
+    "home_name": "Minnesota Vikings",
+    "away_name": "Green Bay Packers",
+    "spread_label": "MIN -1.5",
+    "home_spread": -1.5,
+    "total_line": 45.5,
+    "week": 1
+  },
+  "lean_team": "GB",
+  "projection": {
+    "model_id": "BCW-DESK-STRENGTH-v0.x",
+    "method": "0.65\u00b7Elo/25+HFA + 0.35\u00b7(SRS+HFA)",
+    "mu_home": 0.62,
+    "sigma": 13.5,
+    "p_home_win": 0.5037,
+    "p_home_cover": 0.4594,
+    "edge_vs_minus_110": -0.0644,
+    "model_lean": "AWAY",
+    "model_lean_team": "GB",
+    "label": "Research Preview",
+    "public_probability_published": false,
+    "confidence_pct": 54.1
+  },
+  "matchup_edges": [
+    {
+      "key": "PASS_RUSH",
+      "title": "Pass rush / protection (proxy)",
+      "side": "HOME",
+      "side_team": "MIN",
+      "strength": "MAJOR",
+      "home_stat": 0.0914,
+      "away_stat": -0.1441,
+      "mismatch_z": 2.355,
+      "fan_line": "+++ MIN \u2014 Pass rush / protection (proxy)",
+      "label": "MATCHUP SIGNAL",
+      "why": "Proxy until true pressure/PBWR data: lower pass EPA allowed \u21d2 stronger pass defense / rush. MATCHUP SIGNAL only \u2014 not a published win probability."
+    },
+    {
+      "key": "PASSING",
+      "title": "Passing offense vs pass defense",
+      "side": "HOME",
+      "side_team": "MIN",
+      "strength": "EVEN",
+      "home_stat": 0.0299,
+      "away_stat": -0.043,
+      "mismatch_z": 0.406,
+      "fan_line": "\u00b7 MIN \u2014 Passing offense vs pass defense",
+      "label": "MATCHUP SIGNAL",
+      "why": "EPA/play on passes plus how much EPA the opposing defense allows. EPA weights plays by situation (3rd-and-3 \u2260 3rd-and-20)."
+    },
+    {
+      "key": "RUN_GAME",
+      "title": "Rushing offense vs run defense",
+      "side": "HOME",
+      "side_team": "MIN",
+      "strength": "EVEN",
+      "home_stat": -0.0775,
+      "away_stat": -0.115,
+      "mismatch_z": 0.268,
+      "fan_line": "\u00b7 MIN \u2014 Rushing offense vs run defense",
+      "label": "MATCHUP SIGNAL",
+      "why": "Rush EPA/play vs EPA allowed on rushes \u2014 better than raw yards/carry."
+    },
+    {
+      "key": "OVERALL",
+      "title": "Overall efficiency",
+      "side": "EVEN",
+      "side_team": "MIN",
+      "strength": "EVEN",
+      "home_stat": -0.0387,
+      "away_stat": -0.0418,
+      "mismatch_z": 0.016,
+      "fan_line": "Overall efficiency: roughly even",
+      "label": "MATCHUP SIGNAL",
+      "why": "Net EPA/play (offense minus defense). Broad team-strength interaction."
+    }
+  ],
+  "headline_cards": [
+    {
+      "marks": "+++",
+      "key": "PASS_RUSH",
+      "title": "Pass rush / protection (proxy)",
+      "team": "MIN",
+      "strength": "MAJOR",
+      "fan_line": "+++ MIN \u2014 Pass rush / protection (proxy)",
+      "mismatch_z": 2.355,
+      "percentile_hint": "More extreme than ~95% of similar unit mismatches in a normal sample.",
+      "label": "MATCHUP SIGNAL",
+      "why": "Proxy until true pressure/PBWR data: lower pass EPA allowed \u21d2 stronger pass defense / rush. MATCHUP SIGNAL only \u2014 not a published win probability.",
+      "home_stat": 0.0914,
+      "away_stat": -0.1441
+    },
+    {
+      "marks": "\u00b7",
+      "key": "PASSING",
+      "title": "Passing offense vs pass defense",
+      "team": "MIN",
+      "strength": "EVEN",
+      "fan_line": "\u00b7 MIN \u2014 Passing offense vs pass defense",
+      "mismatch_z": 0.406,
+      "percentile_hint": null,
+      "label": "MATCHUP SIGNAL",
+      "why": "EPA/play on passes plus how much EPA the opposing defense allows. EPA weights plays by situation (3rd-and-3 \u2260 3rd-and-20).",
+      "home_stat": 0.0299,
+      "away_stat": -0.043
+    }
+  ],
+  "slate_edges": [
+    "+++ MIN Pass Rush"
+  ],
+  "matchup_logistic": {
+    "model_id": "BCW-MATCHUP-LOGISTIC-v0.x",
+    "label": "Research Preview",
+    "public_probability_published": false,
+    "logit": 1.2108,
+    "p_home_win": 0.7704,
+    "lean": "HOME",
+    "contributions": [
+      {
+        "key": "PASS_RUSH",
+        "weight": 0.35,
+        "z": 2.355,
+        "term": 0.8242
+      },
+      {
+        "key": "PASSING",
+        "weight": 0.4,
+        "z": 0.406,
+        "term": 0.1624
+      },
+      {
+        "key": "RUN_GAME",
+        "weight": 0.25,
+        "z": 0.268,
+        "term": 0.067
+      },
+      {
+        "key": "OVERALL",
+        "weight": 0.45,
+        "z": 0.016,
+        "term": 0.0072
+      }
+    ],
+    "note": "Heuristic matchup logistic on EDGE z-scores. Not BCW-RIDGE. Not a ship gate."
+  },
+  "paths": {
+    "home": "Lean on pass rush / protection (proxy). Convert that mismatch before the game becomes a coin-flip script.",
+    "away": "Shorten the game, win the line of scrimmage, and force the favorite into obvious passing downs."
+  },
+  "risks": [
+    "Turnovers: the projection assumes roughly normal luck; a +2 swing can flip a GB lean.",
+    "MIN path: if pass rush / protection (proxy) plays up, GB's edge shrinks.",
+    "Injury / inactive surprise on either OL or QB would rewrite the pass-rush signal."
+  ],
+  "adjustment": {
+    "points_home": 1.6,
+    "label": "MATCHUP SIGNAL (unvalidated additive)",
+    "note": "Not fed into BCW-RIDGE-v0.1. Research Preview display only."
+  },
+  "events": [
+    {
+      "game_id": "espn:401872927",
+      "event_type": "market",
+      "headline": "Green Bay Packers at Denver Broncos odds, picks and predictions - USA Today",
+      "publisher": "USA Today",
+      "source_url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQRGFrOXVlZXJtbmNxTk5WVlctZ1hqVmdycnNWOHc5T3B4MG4za2hNR2l5WWdMS1QwazFTY0FHVkVnUlEzTzBvQmo0clRTXzBoWVZ0OFVBMnZoa21fZFplcDdIVFlqWDh2a2ZSd044UUJaZmNhajVMdU81ZDVtZE52MVZfRkJvdGRIcTc5QkFTOE5KcWVtOUdwNWh4OFE2Mms0U05WZzRsLWxLZnNNX1VHYUNOX25SajRVWnVnZUlDTQ?oc=5",
+      "bucket": "analysis",
+      "structured_fact": "Green Bay Packers at Denver Broncos odds, picks and predictions - USA Today",
+      "confidence": 0.7,
+      "tier": 3
+    },
+    {
+      "game_id": "espn:401872927",
+      "event_type": "other",
+      "headline": "Packers starters set to play again vs. Broncos",
+      "publisher": "ESPN",
+      "source_url": "https://www.espn.com/video/clip/_/id/49675141/packers-starters-set-play-again-vs-broncos",
+      "bucket": "analysis",
+      "structured_fact": "Packers starters set to play again vs. Broncos",
+      "confidence": 0.45,
+      "tier": 2
+    },
+    {
+      "game_id": "espn:401872927",
+      "event_type": "market",
+      "headline": "Minnesota Vikings at Green Bay Packers - NFL Odds - Nov 15, 2026 - USA Today",
+      "publisher": "USA Today",
+      "source_url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE9HQWlQbGJiX09mcmlRcjlyV3Y0T2RFQ0VSeG1sTkFZUm5kSW5nOUNwOUJZTEhtNkVVTldkdXV3MXdnRGlpWElCZHR4RzAyYUtKbE0tZWxzZEQ5TExqRkVHZU1FdVJPSGZK?oc=5",
+      "bucket": "analysis",
+      "structured_fact": "Minnesota Vikings at Green Bay Packers - NFL Odds - Nov 15, 2026 - USA Today",
+      "confidence": 0.7,
+      "tier": 3
+    },
+    {
+      "game_id": "espn:401872927",
+      "event_type": "other",
+      "headline": "Minnesota Vikings: 5 Bold Predictions for Preseason Matchup vs Ravens - Sportsnaut",
+      "publisher": "Sportsnaut",
+      "source_url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNWnJmOUF3OFpDU1daLThucjRNN0FrbDBoZ0lFbFRISXJnNWlyOXBwRDlybzJMQXl6VVVwQ0duZXpDODZEeVBxSjhoZm12RVd0SzlrR256MXZULUR3VWlfcURtRXZwa1M5YnR4SDVYaXA2TllFNEpaZU5lOW5OTjJmZzJBekU?oc=5",
+      "bucket": "analysis",
+      "structured_fact": "Minnesota Vikings: 5 Bold Predictions for Preseason Matchup vs Ravens - Sportsnaut",
+      "confidence": 0.45,
+      "tier": 3
+    },
+    {
+      "game_id": "espn:401872927",
+      "event_type": "other",
+      "headline": "Vikings' J.J. McCarthy after losing QB battle: Minnesota 'is place I want to be' - NFL.com",
+      "publisher": "NFL.com",
+      "source_url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQVmhFVlpjOC1KOHBuN2hWYkxXSGNTbnFjVTdOY09HS055UlU1TEZHaWd3NUdlb2w3VVAyc1NocF9TeDc5bWVMMHlDSG1uV0J2dmloYXFLdFpjd2RacXVrLUUzMXpNZFBRNVBxd2w2TVc3cDdRY1VvTUVFZW1FaHJEbGlpNS16ZE5QOUMwWExOdUVzbjZUZll1aFFlYw?oc=5",
+      "bucket": "availability",
+      "structured_fact": "Vikings' J.J. McCarthy after losing QB battle: Minnesota 'is place I want to be' - NFL.com",
+      "confidence": 0.45,
+      "tier": 2
+    },
+    {
+      "game_id": "espn:401872927",
+      "event_type": "other",
+      "headline": "Vikings QB JJ McCarthy Gets Bad News on NFL Future - heavy.com",
+      "publisher": "heavy.com",
+      "source_url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxOanBtUjdVekVwRzFZVFVmWkkwdk9Tc0E5clZtYkRxd21UVXRSREJOSEVaRi1VZzdtTGRSWW9URXZEbXpIOUNBZm9hRGtORi1ieWtueHd0UG9xR2g1cjYzVFdTTVA2MENpNmpXS21saS0tWkJnelU2Qm9ER0FiUWU0aWt3Vkw0Ymt1R0czQmFxRnY?oc=5",
+      "bucket": "availability",
+      "structured_fact": "Vikings QB JJ McCarthy Gets Bad News on NFL Future - heavy.com",
+      "confidence": 0.45,
+      "tier": 3
+    }
+  ],
+  "news_citations": [
+    {
+      "headline": "Green Bay Packers at Denver Broncos odds, picks and predictions - USA Today",
+      "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQRGFrOXVlZXJtbmNxTk5WVlctZ1hqVmdycnNWOHc5T3B4MG4za2hNR2l5WWdMS1QwazFTY0FHVkVnUlEzTzBvQmo0clRTXzBoWVZ0OFVBMnZoa21fZFplcDdIVFlqWDh2a2ZSd044UUJaZmNhajVMdU81ZDVtZE52MVZfRkJvdGRIcTc5QkFTOE5KcWVtOUdwNWh4OFE2Mms0U05WZzRsLWxLZnNNX1VHYUNOX25SajRVWnVnZUlDTQ?oc=5",
+      "publisher": "USA Today"
+    },
+    {
+      "headline": "Packers starters set to play again vs. Broncos",
+      "url": "https://www.espn.com/video/clip/_/id/49675141/packers-starters-set-play-again-vs-broncos",
+      "publisher": "ESPN"
+    },
+    {
+      "headline": "Minnesota Vikings at Green Bay Packers - NFL Odds - Nov 15, 2026 - USA Today",
+      "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE9HQWlQbGJiX09mcmlRcjlyV3Y0T2RFQ0VSeG1sTkFZUm5kSW5nOUNwOUJZTEhtNkVVTldkdXV3MXdnRGlpWElCZHR4RzAyYUtKbE0tZWxzZEQ5TExqRkVHZU1FdVJPSGZK?oc=5",
+      "publisher": "USA Today"
+    },
+    {
+      "headline": "Minnesota Vikings: 5 Bold Predictions for Preseason Matchup vs Ravens - Sportsnaut",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNWnJmOUF3OFpDU1daLThucjRNN0FrbDBoZ0lFbFRISXJnNWlyOXBwRDlybzJMQXl6VVVwQ0duZXpDODZEeVBxSjhoZm12RVd0SzlrR256MXZULUR3VWlfcURtRXZwa1M5YnR4SDVYaXA2TllFNEpaZU5lOW5OTjJmZzJBekU?oc=5",
+      "publisher": "Sportsnaut"
+    },
+    {
+      "headline": "Vikings' J.J. McCarthy after losing QB battle: Minnesota 'is place I want to be' - NFL.com",
+      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQVmhFVlpjOC1KOHBuN2hWYkxXSGNTbnFjVTdOY09HS055UlU1TEZHaWd3NUdlb2w3VVAyc1NocF9TeDc5bWVMMHlDSG1uV0J2dmloYXFLdFpjd2RacXVrLUUzMXpNZFBRNVBxd2w2TVc3cDdRY1VvTUVFZW1FaHJEbGlpNS16ZE5QOUMwWExOdUVzbjZUZll1aFFlYw?oc=5",
+      "publisher": "NFL.com"
+    },
+    {
+      "headline": "Vikings QB JJ McCarthy Gets Bad News on NFL Future - heavy.com",
+      "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxOanBtUjdVekVwRzFZVFVmWkkwdk9Tc0E5clZtYkRxd21UVXRSREJOSEVaRi1VZzdtTGRSWW9URXZEbXpIOUNBZm9hRGtORi1ieWtueHd0UG9xR2g1cjYzVFdTTVA2MENpNmpXS21saS0tWkJnelU2Qm9ER0FiUWU0aWt3Vkw0Ymt1R0czQmFxRnY?oc=5",
+      "publisher": "heavy.com"
+    }
+  ],
+  "summary_short": "BlueChip leans GB. Top signal: +++ MIN \u2014 Pass rush / protection (proxy)",
+  "summary_full": "Green Bay Packers at Minnesota Vikings.\n\nBlueChip leans GB. +++ MIN \u2014 Pass rush / protection (proxy)\n\nWhy GB has the edge\n- +++ MIN \u2014 Pass rush / protection (proxy)\n- \u00b7 MIN \u2014 Passing offense vs pass defense\n\nBlueChip projection\nMarket: MIN -1.5\nBCW desk \u03bc (home): +0.6 (Research Preview)\nWin probability: unavailable until probability model passes validation.\n\nHow each team wins\nMIN: Lean on pass rush / protection (proxy). Convert that mismatch before the game becomes a coin-flip script.\nGB: Shorten the game, win the line of scrimmage, and force the favorite into obvious passing downs.\n\nWhat changed this week\n\u2022 Green Bay Packers at Denver Broncos odds, picks and predictions - USA Today\n\u2022 Packers starters set to play again vs. Broncos\n\u2022 Minnesota Vikings at Green Bay Packers - NFL Odds - Nov 15, 2026 - USA Today\n\u2022 Minnesota Vikings: 5 Bold Predictions for Preseason Matchup vs Ravens - Sportsnaut\n\nWhat could make BlueChip wrong?\n\u2022 Turnovers: the projection assumes roughly normal luck; a +2 swing can flip a GB lean.\n\u2022 MIN path: if pass rush / protection (proxy) plays up, GB's edge shrinks.\n\u2022 Injury / inactive surprise on either OL or QB would rewrite the pass-rush signal.\n\nBottom line: GB has more ways to win on the current MATCHUP SIGNAL board, but football variance (turnovers, explosives) remains large around any margin estimate.",
+  "generation_model": "desk-template",
+  "generation_provider": "fallback",
+  "glossary": {
+    "EPA/play": "Expected Points Added estimates how much each play improves expected scoring position. Positive is good. A 5-yard gain on 3rd-and-3 is not treated like 5 yards on 3rd-and-20.",
+    "MATCHUP SIGNAL": "A descriptive strength\u00d7weakness edge. Not a published win probability and not fed into BCW-RIDGE-v0.1 until validated walk-forward.",
+    "Research Preview": "BlueChip quantitative layer that has not cleared the five public ship gates."
+  },
+  "levels": {
+    "slate": {
+      "lean": "GB",
+      "top_edges": [
+        "+++ MIN Pass Rush"
+      ],
+      "market": "MIN -1.5",
+      "mu": 0.62,
+      "confidence_pct": 54.1
+    }
+  }
+}

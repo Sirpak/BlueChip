@@ -1,0 +1,220 @@
+{
+  "game_id": "espn:401856661",
+  "version": "BCW-GIP-v0.1",
+  "created_at": "2026-08-21T03:40:28.235091+00:00",
+  "generated_at": "2026-08-21T03:40:28.235091+00:00",
+  "information_cutoff": "2026-08-21T03:40:28.235091+00:00",
+  "source_set_hash": "d98770c7663eeef04a959cec",
+  "game": {
+    "game_id": "espn:401856661",
+    "league": "CFB",
+    "matchup": "LOU vs MISS",
+    "home_team": "MISS",
+    "away_team": "LOU",
+    "home_name": "Ole Miss Rebels",
+    "away_name": "Louisville Cardinals",
+    "spread_label": "MISS -6.5",
+    "home_spread": -6.5,
+    "total_line": 55.5,
+    "week": 1
+  },
+  "lean_team": "MISS",
+  "projection": {
+    "model_id": "BCW-DESK-STRENGTH-v0.x",
+    "method": "Market line + AP rank edge (CFB; no CFB Elo yet)",
+    "mu_home": 14.75,
+    "sigma": 15.0,
+    "p_home_win": 0.8289,
+    "p_home_cover": 0.6973,
+    "edge_vs_minus_110": 0.1735,
+    "model_lean": "HOME",
+    "model_lean_team": "MISS",
+    "label": "Research Preview",
+    "public_probability_published": false,
+    "confidence_pct": 69.7
+  },
+  "matchup_edges": [
+    {
+      "key": "AP_RANK",
+      "title": "AP ranking gap",
+      "side": "HOME",
+      "side_team": "MISS",
+      "strength": "MAJOR",
+      "home_stat": 24.0,
+      "away_stat": 9.0,
+      "mismatch_z": 1.875,
+      "fan_line": "+++ MISS \u2014 AP ranking gap",
+      "label": "MATCHUP SIGNAL",
+      "why": "College prior until CFB EPA ingest. Lower AP rank is stronger."
+    }
+  ],
+  "headline_cards": [
+    {
+      "marks": "+++",
+      "key": "AP_RANK",
+      "title": "AP ranking gap",
+      "team": "MISS",
+      "strength": "MAJOR",
+      "fan_line": "+++ MISS \u2014 AP ranking gap",
+      "mismatch_z": 1.875,
+      "percentile_hint": "More extreme than ~90% of similar unit mismatches in a normal sample.",
+      "label": "MATCHUP SIGNAL",
+      "why": "College prior until CFB EPA ingest. Lower AP rank is stronger.",
+      "home_stat": 24.0,
+      "away_stat": 9.0
+    }
+  ],
+  "slate_edges": [
+    "+++ MISS Ap Rank"
+  ],
+  "matchup_logistic": {
+    "model_id": "BCW-MATCHUP-LOGISTIC-v0.x",
+    "label": "Research Preview",
+    "public_probability_published": false,
+    "logit": 0.7125,
+    "p_home_win": 0.671,
+    "lean": "HOME",
+    "contributions": [
+      {
+        "key": "AP_RANK",
+        "weight": 0.3,
+        "z": 1.875,
+        "term": 0.5625
+      }
+    ],
+    "note": "Heuristic matchup logistic on EDGE z-scores. Not BCW-RIDGE. Not a ship gate."
+  },
+  "paths": {
+    "home": "Lean on ap ranking gap. Convert that mismatch before the game becomes a coin-flip script.",
+    "away": "Shorten the game, win the line of scrimmage, and force the favorite into obvious passing downs."
+  },
+  "risks": [
+    "Turnovers: the projection assumes roughly normal luck; a +2 swing can flip a MISS lean.",
+    "Injury / inactive surprise on either OL or QB would rewrite the pass-rush signal."
+  ],
+  "adjustment": {
+    "points_home": 1.6,
+    "label": "MATCHUP SIGNAL (unvalidated additive)",
+    "note": "Not fed into BCW-RIDGE-v0.1. Research Preview display only."
+  },
+  "events": [
+    {
+      "game_id": "espn:401856661",
+      "event_type": "other",
+      "headline": "Where Ole Miss' Chances Stand of Reuniting With Dae\u2019Quan Wright From Transfer Portal - Sports Illustrated",
+      "publisher": "Sports Illustrated",
+      "source_url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPR2w2RzdYRk03NGN5ejlaNl80ZUxWUTdHSy1qX1FiTlBhTlJ5TldhcGNOUm5hQUVEMVJOT0xEQ2J2ZUMwQzZLTXFvWjFaYWxYRlFLTGtvck1LNnJwTnRlZDAyTUpIXzJhZm9mQVcycVNNcmtCSXhuS1ZWSEVhRmc4U2N0T0tCb0FtRmR3V1NuempycXo1a0tybTVKVklnaVlmdDFxeTZXQ0JfV3pOeVRSR1QyRVd2TDJWUVNtMkFYSWpDLWxJ?oc=5",
+      "bucket": "availability",
+      "structured_fact": "Where Ole Miss' Chances Stand of Reuniting With Dae\u2019Quan Wright From Transfer Portal - Sports Illustrated",
+      "confidence": 0.45,
+      "tier": 3
+    },
+    {
+      "game_id": "espn:401856661",
+      "event_type": "other",
+      "headline": "Ex-Ole Miss starters granted restraining order for 5th year",
+      "publisher": "ESPN",
+      "source_url": "https://www.espn.com/college-football/story/_/id/49662242/ex-ole-miss-starters-granted-restraining-order-5th-year",
+      "bucket": "availability",
+      "structured_fact": "Ex-Ole Miss starters granted restraining order for 5th year",
+      "confidence": 0.45,
+      "tier": 2
+    },
+    {
+      "game_id": "espn:401856661",
+      "event_type": "other",
+      "headline": "2026 College Football Preview: Ole Miss Rebels - PFF",
+      "publisher": "PFF",
+      "source_url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE1PeThxbDEzQkZJc3lGRHBZd293ZFFaWVVBeTZnaWNlYlVXN3VpcndyQ1J1RzBOLWU3NVM4NUcxQldKb0luaC1hUTNHbHMzVGd4OUVfUVdCRHZYNEdBRzNnZFVKT1JxYjNFa282TUxjcTFpVnc?oc=5",
+      "bucket": "analysis",
+      "structured_fact": "2026 College Football Preview: Ole Miss Rebels - PFF",
+      "confidence": 0.45,
+      "tier": 3
+    },
+    {
+      "game_id": "espn:401856661",
+      "event_type": "other",
+      "headline": "Louisville Preseason CFB27 Preview Series: Game 1 vs. Ole Miss - Sports Illustrated",
+      "publisher": "Sports Illustrated",
+      "source_url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOVEVhWmVHT2JFa09CWW9tWS1WcjNaYWdqRmowelFzbFkwbGp2RHpUcFVMeVFnX1BfU2diMzdGcnhLalM5UXo5aXY2WnN5VU5TQm9GenhXSWR5R1FncGpDcDF2bDZIMVl6VkwtMnZXM3V2Q2pVNzJGM0J5VUsxczYtelNTd29CUQ?oc=5",
+      "bucket": "analysis",
+      "structured_fact": "Louisville Preseason CFB27 Preview Series: Game 1 vs. Ole Miss - Sports Illustrated",
+      "confidence": 0.45,
+      "tier": 3
+    },
+    {
+      "game_id": "espn:401856661",
+      "event_type": "other",
+      "headline": "Way-Too-Early Louisville 2026 Opponent Preview: Ole Miss - Sports Illustrated",
+      "publisher": "Sports Illustrated",
+      "source_url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOdWF4NldXQ1FTWi1fXzRIYVZIUFQyUHRqVHQ5b1ZIQmIyS3FSTnFDYkNWcmdJTlhSb3hNei1vdVJSeUVtQy1PYlZVUWk1TEkxUEVHWUo1cXBwRUVkRHd6YmpjRzAwZ0pNQ25QUW5ycVdKWWxieWx6M0ZjV2lhWlZFN09QdGR6OGtmR3FWQUNLUjY3UnRQY0E?oc=5",
+      "bucket": "analysis",
+      "structured_fact": "Way-Too-Early Louisville 2026 Opponent Preview: Ole Miss - Sports Illustrated",
+      "confidence": 0.45,
+      "tier": 3
+    },
+    {
+      "game_id": "espn:401856661",
+      "event_type": "other",
+      "headline": "Following Dae\u2019Quan Wright, entire Browns roster enters transfer portal. - Red Cup Rebellion",
+      "publisher": "Red Cup Rebellion",
+      "source_url": "https://news.google.com/rss/articles/CBMilAJBVV95cUxPdHJVUDYxeGZZclZBMUpZNjlfM0ZvN1lVSVVzeDdWdTg0bDZIVWNfMUxFODR3RkFwYVMwaG5FbmRtdE9qV0NUNlFHQmdpTGM3T0JkZm1MOXdJbG9DNTJMcGJvalo2cUQ1bnJDcVA1RWc3THpXQ2FER1Fic0lleFIyRmxKaXdZVjl4UnhZQWZxOEtCSXU2QWdpcEJQZTFPd250U0hfZm50UFNOMEJHbm55WTZ2UGJPOGF0MG1WeEo3X3VkV2N2MTFOOElNcHYwY2VvVGQwRGQ1LWZNUzZyOWgwWmdMUmZobGgza1YwY0RzT2FMbUxDRFhTejV1OUZqOE1kalpXOThKeGpKV2lFeDhKTVFyZW4?oc=5",
+      "bucket": "availability",
+      "structured_fact": "Following Dae\u2019Quan Wright, entire Browns roster enters transfer portal. - Red Cup Rebellion",
+      "confidence": 0.45,
+      "tier": 3
+    }
+  ],
+  "news_citations": [
+    {
+      "headline": "Where Ole Miss' Chances Stand of Reuniting With Dae\u2019Quan Wright From Transfer Portal - Sports Illustrated",
+      "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPR2w2RzdYRk03NGN5ejlaNl80ZUxWUTdHSy1qX1FiTlBhTlJ5TldhcGNOUm5hQUVEMVJOT0xEQ2J2ZUMwQzZLTXFvWjFaYWxYRlFLTGtvck1LNnJwTnRlZDAyTUpIXzJhZm9mQVcycVNNcmtCSXhuS1ZWSEVhRmc4U2N0T0tCb0FtRmR3V1NuempycXo1a0tybTVKVklnaVlmdDFxeTZXQ0JfV3pOeVRSR1QyRVd2TDJWUVNtMkFYSWpDLWxJ?oc=5",
+      "publisher": "Sports Illustrated"
+    },
+    {
+      "headline": "Ex-Ole Miss starters granted restraining order for 5th year",
+      "url": "https://www.espn.com/college-football/story/_/id/49662242/ex-ole-miss-starters-granted-restraining-order-5th-year",
+      "publisher": "ESPN"
+    },
+    {
+      "headline": "2026 College Football Preview: Ole Miss Rebels - PFF",
+      "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE1PeThxbDEzQkZJc3lGRHBZd293ZFFaWVVBeTZnaWNlYlVXN3VpcndyQ1J1RzBOLWU3NVM4NUcxQldKb0luaC1hUTNHbHMzVGd4OUVfUVdCRHZYNEdBRzNnZFVKT1JxYjNFa282TUxjcTFpVnc?oc=5",
+      "publisher": "PFF"
+    },
+    {
+      "headline": "Louisville Preseason CFB27 Preview Series: Game 1 vs. Ole Miss - Sports Illustrated",
+      "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOVEVhWmVHT2JFa09CWW9tWS1WcjNaYWdqRmowelFzbFkwbGp2RHpUcFVMeVFnX1BfU2diMzdGcnhLalM5UXo5aXY2WnN5VU5TQm9GenhXSWR5R1FncGpDcDF2bDZIMVl6VkwtMnZXM3V2Q2pVNzJGM0J5VUsxczYtelNTd29CUQ?oc=5",
+      "publisher": "Sports Illustrated"
+    },
+    {
+      "headline": "Way-Too-Early Louisville 2026 Opponent Preview: Ole Miss - Sports Illustrated",
+      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOdWF4NldXQ1FTWi1fXzRIYVZIUFQyUHRqVHQ5b1ZIQmIyS3FSTnFDYkNWcmdJTlhSb3hNei1vdVJSeUVtQy1PYlZVUWk1TEkxUEVHWUo1cXBwRUVkRHd6YmpjRzAwZ0pNQ25QUW5ycVdKWWxieWx6M0ZjV2lhWlZFN09QdGR6OGtmR3FWQUNLUjY3UnRQY0E?oc=5",
+      "publisher": "Sports Illustrated"
+    },
+    {
+      "headline": "Following Dae\u2019Quan Wright, entire Browns roster enters transfer portal. - Red Cup Rebellion",
+      "url": "https://news.google.com/rss/articles/CBMilAJBVV95cUxPdHJVUDYxeGZZclZBMUpZNjlfM0ZvN1lVSVVzeDdWdTg0bDZIVWNfMUxFODR3RkFwYVMwaG5FbmRtdE9qV0NUNlFHQmdpTGM3T0JkZm1MOXdJbG9DNTJMcGJvalo2cUQ1bnJDcVA1RWc3THpXQ2FER1Fic0lleFIyRmxKaXdZVjl4UnhZQWZxOEtCSXU2QWdpcEJQZTFPd250U0hfZm50UFNOMEJHbm55WTZ2UGJPOGF0MG1WeEo3X3VkV2N2MTFOOElNcHYwY2VvVGQwRGQ1LWZNUzZyOWgwWmdMUmZobGgza1YwY0RzT2FMbUxDRFhTejV1OUZqOE1kalpXOThKeGpKV2lFeDhKTVFyZW4?oc=5",
+      "publisher": "Red Cup Rebellion"
+    }
+  ],
+  "summary_short": "BlueChip leans MISS. Top signal: +++ MISS \u2014 AP ranking gap",
+  "summary_full": "Louisville Cardinals at Ole Miss Rebels.\n\nBlueChip leans MISS. +++ MISS \u2014 AP ranking gap\n\nWhy MISS has the edge\n- +++ MISS \u2014 AP ranking gap\n\nBlueChip projection\nMarket: MISS -6.5\nBCW desk \u03bc (home): +14.8 (Research Preview)\nWin probability: unavailable until probability model passes validation.\n\nHow each team wins\nMISS: Lean on ap ranking gap. Convert that mismatch before the game becomes a coin-flip script.\nLOU: Shorten the game, win the line of scrimmage, and force the favorite into obvious passing downs.\n\nWhat changed this week\n\u2022 Where Ole Miss' Chances Stand of Reuniting With Dae\u2019Quan Wright From Transfer Portal - Sports Illustrated\n\u2022 Ex-Ole Miss starters granted restraining order for 5th year\n\u2022 2026 College Football Preview: Ole Miss Rebels - PFF\n\u2022 Louisville Preseason CFB27 Preview Series: Game 1 vs. Ole Miss - Sports Illustrated\n\nWhat could make BlueChip wrong?\n\u2022 Turnovers: the projection assumes roughly normal luck; a +2 swing can flip a MISS lean.\n\u2022 Injury / inactive surprise on either OL or QB would rewrite the pass-rush signal.\n\nBottom line: MISS has more ways to win on the current MATCHUP SIGNAL board, but football variance (turnovers, explosives) remains large around any margin estimate.",
+  "generation_model": "desk-template",
+  "generation_provider": "fallback",
+  "glossary": {
+    "EPA/play": "Expected Points Added estimates how much each play improves expected scoring position. Positive is good. A 5-yard gain on 3rd-and-3 is not treated like 5 yards on 3rd-and-20.",
+    "MATCHUP SIGNAL": "A descriptive strength\u00d7weakness edge. Not a published win probability and not fed into BCW-RIDGE-v0.1 until validated walk-forward.",
+    "Research Preview": "BlueChip quantitative layer that has not cleared the five public ship gates."
+  },
+  "levels": {
+    "slate": {
+      "lean": "MISS",
+      "top_edges": [
+        "+++ MISS Ap Rank"
+      ],
+      "market": "MISS -6.5",
+      "mu": 14.75,
+      "confidence_pct": 69.7
+    }
+  }
+}

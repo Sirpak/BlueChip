@@ -12,6 +12,7 @@ import httpx
 import truststore
 
 from app.config import get_settings
+from app.ingest.identity import canonicalize_nfl_team
 
 truststore.inject_into_ssl()
 
@@ -104,12 +105,16 @@ def _competitor(comp: dict[str, Any], side: str) -> dict[str, Any]:
     for row in comp.get("competitors") or []:
         if row.get("homeAway") == side:
             team = row.get("team") or {}
+            raw_id = team.get("id") or row.get("id")
+            abbr = team.get("abbreviation") or row.get("abbreviation") or "?"
+            # NFL only — CFB codes are not franchise-relocated the same way.
             return {
-                "abbr": team.get("abbreviation") or row.get("abbreviation") or "?",
+                "abbr": abbr,
                 "name": team.get("displayName") or row.get("displayName"),
+                "espn_id": str(raw_id) if raw_id is not None else None,
                 "score": row.get("score"),
             }
-    return {"abbr": "?", "name": None, "score": None}
+    return {"abbr": "?", "name": None, "espn_id": None, "score": None}
 
 
 def home_spread_from_odds(odds: dict[str, Any]) -> float | None:
@@ -140,6 +145,9 @@ def parse_event(event: dict[str, Any], *, league: str, fallback_week: int | None
         return None
     home = _competitor(comp, "home")
     away = _competitor(comp, "away")
+    if league.upper() == "NFL":
+        home["abbr"] = canonicalize_nfl_team(home["abbr"]) or home["abbr"]
+        away["abbr"] = canonicalize_nfl_team(away["abbr"]) or away["abbr"]
     kickoff = parse_kickoff(event.get("date") or comp.get("date"))
     status_type = ((event.get("status") or {}).get("type") or {})
     status_name = (status_type.get("name") or status_type.get("state") or "unknown").lower()
@@ -170,6 +178,8 @@ def parse_event(event: dict[str, Any], *, league: str, fallback_week: int | None
         "home_team": home["abbr"],
         "away_name": away["name"],
         "home_name": home["name"],
+        "away_espn_id": away.get("espn_id"),
+        "home_espn_id": home.get("espn_id"),
         "neutral": neutral,
         "matchup": matchup,
         "home_spread": home_spread,

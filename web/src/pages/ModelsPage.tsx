@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import { HintLabel } from '../components/Hint'
 import {
   MODELS,
   PRODUCTION_MODEL_ID,
@@ -48,12 +49,24 @@ function ModelCard({ model, featured }: { model: ModelEntry; featured?: boolean 
       <table className="board model-metrics">
         <thead>
           <tr>
-            <th>Brier</th>
-            <th>Log loss</th>
-            <th>MAE</th>
-            <th>RMSE</th>
-            <th>ATS vs close</th>
-            <th>N</th>
+            <th>
+              <HintLabel t="Brier">Brier</HintLabel>
+            </th>
+            <th>
+              <HintLabel t="Log loss">Log loss</HintLabel>
+            </th>
+            <th>
+              <HintLabel t="MAE">MAE</HintLabel>
+            </th>
+            <th>
+              <HintLabel t="RMSE">RMSE</HintLabel>
+            </th>
+            <th>
+              <HintLabel t="ATS vs close">ATS vs close</HintLabel>
+            </th>
+            <th>
+              <HintLabel t="N">N</HintLabel>
+            </th>
           </tr>
         </thead>
         <tbody>
@@ -84,8 +97,8 @@ export function ModelsPage() {
         <div>
           <h1>BlueChip Model Lab</h1>
           <p className="muted">
-            What BlueChip computes today — honest status, not mock probabilities. Leaderboard metrics appear after
-            walk-forward on 2009–2022.
+            What each model is trying to do — in status language, not fake probabilities. New to the terms? Open{' '}
+            <Link to="/about">About (plain English)</Link> or hover dotted labels.
           </p>
         </div>
       </div>
@@ -160,12 +173,24 @@ export function ModelsPage() {
             <tr>
               <th>Model</th>
               <th>Status</th>
-              <th>Brier ↓</th>
-              <th>Log loss ↓</th>
-              <th>MAE ↓</th>
-              <th>RMSE ↓</th>
-              <th>ATS</th>
-              <th>N</th>
+              <th>
+                <HintLabel t="Brier">Brier ↓</HintLabel>
+              </th>
+              <th>
+                <HintLabel t="Log loss">Log loss ↓</HintLabel>
+              </th>
+              <th>
+                <HintLabel t="MAE">MAE ↓</HintLabel>
+              </th>
+              <th>
+                <HintLabel t="RMSE">RMSE ↓</HintLabel>
+              </th>
+              <th>
+                <HintLabel t="ATS vs close">ATS</HintLabel>
+              </th>
+              <th>
+                <HintLabel t="N">N</HintLabel>
+              </th>
               <th>Calibration</th>
             </tr>
           </thead>

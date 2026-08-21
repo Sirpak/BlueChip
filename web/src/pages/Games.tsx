@@ -1,6 +1,10 @@
-import { useMemo, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { Link, useSearchParams } from 'react-router-dom'
 import { TeamMark } from '../components/Marks'
+import { Hint } from '../components/Hint'
+import { weeklyMuLabel } from '../components/WeeklyDeskCard'
+import { SlateIntelligenceChip } from '../components/GameIntelligenceBrief'
+import { fetchIntelligenceIndex, fetchWeeklySlate, type WeeklyCard, type WeeklySlate } from '../lib/api'
 import { dateKey } from '../lib/preview'
 import { useSlate } from '../lib/slate'
 
@@ -11,6 +15,11 @@ export function Games() {
   const [week, setWeek] = useState<number | 'all'>('all')
   const [stype, setStype] = useState<'all' | 'PRE' | 'REG' | 'POST'>('all')
   const [ask, setAsk] = useState('')
+  const [weekly, setWeekly] = useState<Record<string, WeeklyCard>>({})
+  const [bestCfb, setBestCfb] = useState<WeeklySlate['highest_confidence_cfb_week1']>()
+  const [intelIndex, setIntelIndex] = useState<
+    Record<string, { lean_team?: string; top_edges?: string[]; summary_short?: string }>
+  >({})
 
   const weeks = useMemo(() => {
     const set = new Set<number>()
@@ -20,6 +29,25 @@ export function Games() {
     const found = [...set].sort((a, b) => a - b)
     return found.length ? found : Array.from({ length: 18 }, (_, i) => i + 1)
   }, [games])
+
+  useEffect(() => {
+    let live = true
+    Promise.all([fetchWeeklySlate(), fetchIntelligenceIndex()])
+      .then(([payload, intel]) => {
+        if (!live) return
+        setWeekly(payload.by_game_id || {})
+        setBestCfb(payload.highest_confidence_cfb_week1)
+        setIntelIndex(intel.packages || {})
+      })
+      .catch(() => {
+        if (!live) return
+        setWeekly({})
+        setIntelIndex({})
+      })
+    return () => {
+      live = false
+    }
+  }, [])
 
   const dates = useMemo(() => {
     const map = new Map<string, number>()
@@ -55,12 +83,68 @@ export function Games() {
       <div className="page-h">
         <div>
           <h1>Games</h1>
-          <p className="muted">NFL and college football schedules, markets, and BlueChip probabilities.</p>
+          <p className="muted">
+            Schedules and <Hint t="spread">market lines</Hint>. Featured weekly cards show desk μ + AI handicapper.
+            Confused by a term? <Link to="/about">About in plain English</Link>.
+          </p>
         </div>
         <span className="preview-flag">
           {count.nfl} NFL · {count.cfb} CFB
         </span>
       </div>
+
+      {bestCfb && (
+        <div className="best-conf-banner">
+          <span className="muted">Highest confidence · CFB Week 1</span>
+          <b>
+            Bet {bestCfb.recommendation_team} · {Number(bestCfb.confidence_pct).toFixed(1)}%
+          </b>
+          <span className="muted">
+            {bestCfb.matchup}
+            {bestCfb.spread_label ? ` · ${bestCfb.spread_label}` : ''}
+          </span>
+          <Link className="chip" to={`/games/${encodeURIComponent(bestCfb.game_id)}`}>
+            Open preview
+          </Link>
+        </div>
+      )}
+
+      {Object.keys(weekly).length > 0 && (
+        <section className="card" style={{ marginBottom: 12 }}>
+          <div className="weekly-card-head">
+            <div>
+              <h2 style={{ margin: 0 }}>Featured weekly desk</h2>
+              <p className="muted" style={{ margin: '4px 0 0' }}>
+                Week 1 CFB/NFL — click any game for snapshot pending + bet lean + confidence %.
+              </p>
+            </div>
+          </div>
+          <div className="featured-grid">
+            {Object.values(weekly)
+              .filter((c) => c.featured || c.league === 'CFB')
+              .sort(
+                (a, b) =>
+                  Number(b.projection.confidence_pct ?? 0) - Number(a.projection.confidence_pct ?? 0),
+              )
+              .slice(0, 12)
+              .map((c) => (
+              <Link key={c.game_id} className="featured-chip" to={`/games/${encodeURIComponent(c.game_id)}`}>
+                <strong>
+                  {c.away_team} @ {c.home_team}
+                </strong>
+                <span className="muted">{c.league} W{c.week ?? 1}</span>
+                <SlateIntelligenceChip
+                  lean={intelIndex[c.game_id]?.lean_team || c.ai.recommendation_team}
+                  edges={intelIndex[c.game_id]?.top_edges}
+                  market={c.spread_label}
+                  mu={c.projection.mu_home}
+                />
+                <span className="weekly-mu">{weeklyMuLabel(c)}</span>
+              </Link>
+            ))}
+          </div>
+        </section>
+      )}
 
       <div className="filters">
         <select className="filter-sel" value={league} onChange={(e) => setLeague(e.target.value)}>
@@ -170,7 +254,7 @@ export function Games() {
               <th>Spread</th>
               <th>Total</th>
               <th>BCW Research Preview</th>
-              <th>Public probability</th>
+              <th>Bet / confidence</th>
               <th></th>
             </tr>
           </thead>
@@ -180,8 +264,8 @@ export function Games() {
                 <td>
                   <Link to={`/games/${encodeURIComponent(g.game_id)}`} className="game-cell">
                     <div className="logos">
-                      <TeamMark abbr={g.away_team} league={g.league} />
-                      <TeamMark abbr={g.home_team} league={g.league} />
+                      <TeamMark abbr={g.away_team} league={g.league} espnId={g.away_espn_id} />
+                      <TeamMark abbr={g.home_team} league={g.league} espnId={g.home_espn_id} />
                     </div>
                     <div>
                       <strong>
@@ -196,7 +280,9 @@ export function Games() {
                 <td>{g.spread_label ?? '—'}</td>
                 <td>{g.total_line ?? '—'}</td>
                 <td className="muted">Snapshot pending</td>
-                <td className="muted">Not yet published</td>
+                <td className={weekly[g.game_id] ? 'weekly-mu' : 'muted'}>
+                  {weekly[g.game_id] ? weeklyMuLabel(weekly[g.game_id]) : '—'}
+                </td>
                 <td>
                   <Link className="chip" to={`/games/${encodeURIComponent(g.game_id)}`}>
                     Matchup
@@ -212,7 +298,11 @@ export function Games() {
               <strong>
                 {g.away_team} @ {g.home_team}
               </strong>
-              <div className="muted">{g.spread_label} · probability not published</div>
+              <div className="muted">
+                {weekly[g.game_id]
+                  ? `${g.spread_label} · ${weeklyMuLabel(weekly[g.game_id])}`
+                  : `${g.spread_label} · probability not published`}
+              </div>
             </Link>
           ))}
         </div>

@@ -1,0 +1,220 @@
+{
+  "game_id": "espn:401858437",
+  "version": "BCW-GIP-v0.1",
+  "created_at": "2026-08-21T03:43:02.044485+00:00",
+  "generated_at": "2026-08-21T03:43:02.044485+00:00",
+  "information_cutoff": "2026-08-21T03:43:02.044485+00:00",
+  "source_set_hash": "4dad5c35888c190f4120db90",
+  "game": {
+    "game_id": "espn:401858437",
+    "league": "CFB",
+    "matchup": "WSU @ WASH",
+    "home_team": "WASH",
+    "away_team": "WSU",
+    "home_name": "Washington Huskies",
+    "away_name": "Washington State Cougars",
+    "spread_label": "WASH -22.5",
+    "home_spread": -22.5,
+    "total_line": 50.5,
+    "week": 1
+  },
+  "lean_team": "WASH",
+  "projection": {
+    "model_id": "BCW-DESK-STRENGTH-v0.x",
+    "method": "Market line + AP rank edge (CFB; no CFB Elo yet)",
+    "mu_home": 24.75,
+    "sigma": 15.0,
+    "p_home_win": 0.947,
+    "p_home_cover": 0.5464,
+    "edge_vs_minus_110": 0.0226,
+    "model_lean": "HOME",
+    "model_lean_team": "WASH",
+    "label": "Research Preview",
+    "public_probability_published": false,
+    "confidence_pct": 54.6
+  },
+  "matchup_edges": [
+    {
+      "key": "AP_RANK",
+      "title": "AP ranking gap",
+      "side": "HOME",
+      "side_team": "WASH",
+      "strength": "STRONG",
+      "home_stat": 30.0,
+      "away_stat": 17.0,
+      "mismatch_z": 1.625,
+      "fan_line": "++ WASH \u2014 AP ranking gap",
+      "label": "MATCHUP SIGNAL",
+      "why": "College prior until CFB EPA ingest. Lower AP rank is stronger."
+    }
+  ],
+  "headline_cards": [
+    {
+      "marks": "++",
+      "key": "AP_RANK",
+      "title": "AP ranking gap",
+      "team": "WASH",
+      "strength": "STRONG",
+      "fan_line": "++ WASH \u2014 AP ranking gap",
+      "mismatch_z": 1.625,
+      "percentile_hint": "Clearly tilted versus a typical NFL/CFB unit matchup.",
+      "label": "MATCHUP SIGNAL",
+      "why": "College prior until CFB EPA ingest. Lower AP rank is stronger.",
+      "home_stat": 30.0,
+      "away_stat": 17.0
+    }
+  ],
+  "slate_edges": [
+    "++ WASH Ap Rank"
+  ],
+  "matchup_logistic": {
+    "model_id": "BCW-MATCHUP-LOGISTIC-v0.x",
+    "label": "Research Preview",
+    "public_probability_published": false,
+    "logit": 0.6375,
+    "p_home_win": 0.6542,
+    "lean": "HOME",
+    "contributions": [
+      {
+        "key": "AP_RANK",
+        "weight": 0.3,
+        "z": 1.625,
+        "term": 0.4875
+      }
+    ],
+    "note": "Heuristic matchup logistic on EDGE z-scores. Not BCW-RIDGE. Not a ship gate."
+  },
+  "paths": {
+    "home": "Lean on ap ranking gap. Convert that mismatch before the game becomes a coin-flip script.",
+    "away": "Shorten the game, win the line of scrimmage, and force the favorite into obvious passing downs."
+  },
+  "risks": [
+    "Turnovers: the projection assumes roughly normal luck; a +2 swing can flip a WASH lean.",
+    "Injury / inactive surprise on either OL or QB would rewrite the pass-rush signal."
+  ],
+  "adjustment": {
+    "points_home": 1.0,
+    "label": "MATCHUP SIGNAL (unvalidated additive)",
+    "note": "Not fed into BCW-RIDGE-v0.1. Research Preview display only."
+  },
+  "events": [
+    {
+      "game_id": "espn:401858437",
+      "event_type": "other",
+      "headline": "Opponent Preview: Week 7 \u2013 Washington Huskies - Yahoo Sports",
+      "publisher": "Yahoo Sports",
+      "source_url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNR2lLc08zaDJQb2FSZjY5S1RYR3JIZEZRczBFRVdOMmZUS0pwbmo0NHgwS3luQjA2ZzdRYW5Lajh5M3JPR3VUb01uRVUzV2EwdXZmM2lDQjZlODNPSWh3OXBQbVJqMHRtaXlNUmFmT3d5VWJCRDBsSHFPMXNYeGQtTVFUajZuYlZMdEVr?oc=5",
+      "bucket": "analysis",
+      "structured_fact": "Opponent Preview: Week 7 \u2013 Washington Huskies - Yahoo Sports",
+      "confidence": 0.45,
+      "tier": 3
+    },
+    {
+      "game_id": "espn:401858437",
+      "event_type": "other",
+      "headline": "Season Preview: Meet Kirby Moore, Washington State Cougars New-Look Coaching Staff - Emerald City Spectrum",
+      "publisher": "Emerald City Spectrum",
+      "source_url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQWnpfdV9PdGxFUnJHVFJlQ3d2RXlkM2VOU2Z1cTVmUDlmQ05KTUFDdjROSC12aHFMZ1plM19mUno3Q0EwR3JIXzZUNEE0M2lFZ3lNS3pEeWtpQkJMaldjQjRhanZNaXVCQlRQeGNuQndqQzk2TzRacUIxcWtwV201UEVibEkyVmJ0eE1MZXFaNE1sTzBpZ2F2V01qT3lMLW4xUDQwQUlmaS1FZ1FONHZmanRn?oc=5",
+      "bucket": "analysis",
+      "structured_fact": "Season Preview: Meet Kirby Moore, Washington State Cougars New-Look Coaching Staff - Emerald City Spectrum",
+      "confidence": 0.45,
+      "tier": 3
+    },
+    {
+      "game_id": "espn:401858437",
+      "event_type": "other",
+      "headline": "College football's mad two-week scramble to land a transfer portal QB",
+      "publisher": "ESPN",
+      "source_url": "https://www.espn.com/college-football/story/_/id/49650906/college-football-two-week-scramble-transfer-portal-qb",
+      "bucket": "availability",
+      "structured_fact": "College football's mad two-week scramble to land a transfer portal QB",
+      "confidence": 0.45,
+      "tier": 2
+    },
+    {
+      "game_id": "espn:401858437",
+      "event_type": "coach_comment",
+      "headline": "Ex-Washington State football coach Jim Walden dies at 88",
+      "publisher": "ESPN",
+      "source_url": "https://www.espn.com/college-football/story/_/id/49259839/ex-washington-state-football-coach-jim-walden-dies-88",
+      "bucket": "availability",
+      "structured_fact": "Ex-Washington State football coach Jim Walden dies at 88",
+      "confidence": 0.7,
+      "tier": 2
+    },
+    {
+      "game_id": "espn:401858437",
+      "event_type": "other",
+      "headline": "Pac-12 QB rankings: Boise State, Texas State and Washington State are well positioned with quality and depth - The Mercury News",
+      "publisher": "The Mercury News",
+      "source_url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNdUljaWwtdUVjM0Nuc3BrNjZFX1NGQmUyY3d6RGN1Z0lsSmprcy0yQ3BRdTNsYmJoNGk1bDNKSk1JcWxHeUpHLTBFekJmdHFRUVp3YXJjLWRucVdRdC1UeW5OQm5JRmpBbEttOXRSNzVHOVF2SmNiZ19mclE3SXkxNU9ZOENZeUdpdThaZGpSeC1id9IBlwFBVV95cUxNWm9vU3ROcENUaDhDYmIxbEU1ODBCc3NlTVRYTmc4Sm1LbVVpU1ltZkxNTUdPWVRJX3V1NU1MOHZNLW03WUVaR2lvLUVBUmZPaUotUDNERGg4UV9wR3Fjc2FkenA2U0FWNkFVUThxYjQtV0hWYUVGd2h2LS1adHR6a1J6Z1lncmZiWlVUU2Y5UmJrLVhiWjRB?oc=5",
+      "bucket": "availability",
+      "structured_fact": "Pac-12 QB rankings: Boise State, Texas State and Washington State are well positioned with quality and depth - The Mercury News",
+      "confidence": 0.45,
+      "tier": 3
+    },
+    {
+      "game_id": "espn:401858437",
+      "event_type": "other",
+      "headline": "Opponent Preview: Week 2 \u2013 Washington State Cougars - Yahoo Sports",
+      "publisher": "Yahoo Sports",
+      "source_url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQeGt6RGVwU3FpVUs5WHBaZ1F4eWo2ZGRDcGJHUkFfOEFMczQ3eTd0eUZqenpqV0FoM3lsN19sN21CX3lPWUVIbkluNUNLTXE3WUVKSEdINFVWUlRqSEpWUkNvZFd5b0tjaVRfRTI5YWJ2TFk4SU1GNEowWXlBVkh4M3dJY1VDWEgyRUdB?oc=5",
+      "bucket": "analysis",
+      "structured_fact": "Opponent Preview: Week 2 \u2013 Washington State Cougars - Yahoo Sports",
+      "confidence": 0.45,
+      "tier": 3
+    }
+  ],
+  "news_citations": [
+    {
+      "headline": "Opponent Preview: Week 7 \u2013 Washington Huskies - Yahoo Sports",
+      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNR2lLc08zaDJQb2FSZjY5S1RYR3JIZEZRczBFRVdOMmZUS0pwbmo0NHgwS3luQjA2ZzdRYW5Lajh5M3JPR3VUb01uRVUzV2EwdXZmM2lDQjZlODNPSWh3OXBQbVJqMHRtaXlNUmFmT3d5VWJCRDBsSHFPMXNYeGQtTVFUajZuYlZMdEVr?oc=5",
+      "publisher": "Yahoo Sports"
+    },
+    {
+      "headline": "Season Preview: Meet Kirby Moore, Washington State Cougars New-Look Coaching Staff - Emerald City Spectrum",
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQWnpfdV9PdGxFUnJHVFJlQ3d2RXlkM2VOU2Z1cTVmUDlmQ05KTUFDdjROSC12aHFMZ1plM19mUno3Q0EwR3JIXzZUNEE0M2lFZ3lNS3pEeWtpQkJMaldjQjRhanZNaXVCQlRQeGNuQndqQzk2TzRacUIxcWtwV201UEVibEkyVmJ0eE1MZXFaNE1sTzBpZ2F2V01qT3lMLW4xUDQwQUlmaS1FZ1FONHZmanRn?oc=5",
+      "publisher": "Emerald City Spectrum"
+    },
+    {
+      "headline": "College football's mad two-week scramble to land a transfer portal QB",
+      "url": "https://www.espn.com/college-football/story/_/id/49650906/college-football-two-week-scramble-transfer-portal-qb",
+      "publisher": "ESPN"
+    },
+    {
+      "headline": "Ex-Washington State football coach Jim Walden dies at 88",
+      "url": "https://www.espn.com/college-football/story/_/id/49259839/ex-washington-state-football-coach-jim-walden-dies-88",
+      "publisher": "ESPN"
+    },
+    {
+      "headline": "Pac-12 QB rankings: Boise State, Texas State and Washington State are well positioned with quality and depth - The Mercury News",
+      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNdUljaWwtdUVjM0Nuc3BrNjZFX1NGQmUyY3d6RGN1Z0lsSmprcy0yQ3BRdTNsYmJoNGk1bDNKSk1JcWxHeUpHLTBFekJmdHFRUVp3YXJjLWRucVdRdC1UeW5OQm5JRmpBbEttOXRSNzVHOVF2SmNiZ19mclE3SXkxNU9ZOENZeUdpdThaZGpSeC1id9IBlwFBVV95cUxNWm9vU3ROcENUaDhDYmIxbEU1ODBCc3NlTVRYTmc4Sm1LbVVpU1ltZkxNTUdPWVRJX3V1NU1MOHZNLW03WUVaR2lvLUVBUmZPaUotUDNERGg4UV9wR3Fjc2FkenA2U0FWNkFVUThxYjQtV0hWYUVGd2h2LS1adHR6a1J6Z1lncmZiWlVUU2Y5UmJrLVhiWjRB?oc=5",
+      "publisher": "The Mercury News"
+    },
+    {
+      "headline": "Opponent Preview: Week 2 \u2013 Washington State Cougars - Yahoo Sports",
+      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQeGt6RGVwU3FpVUs5WHBaZ1F4eWo2ZGRDcGJHUkFfOEFMczQ3eTd0eUZqenpqV0FoM3lsN19sN21CX3lPWUVIbkluNUNLTXE3WUVKSEdINFVWUlRqSEpWUkNvZFd5b0tjaVRfRTI5YWJ2TFk4SU1GNEowWXlBVkh4M3dJY1VDWEgyRUdB?oc=5",
+      "publisher": "Yahoo Sports"
+    }
+  ],
+  "summary_short": "BlueChip leans WASH. Top signal: ++ WASH \u2014 AP ranking gap",
+  "summary_full": "Washington State Cougars at Washington Huskies.\n\nBlueChip leans WASH. ++ WASH \u2014 AP ranking gap\n\nWhy WASH has the edge\n- ++ WASH \u2014 AP ranking gap\n\nBlueChip projection\nMarket: WASH -22.5\nBCW desk \u03bc (home): +24.8 (Research Preview)\nWin probability: unavailable until probability model passes validation.\n\nHow each team wins\nWASH: Lean on ap ranking gap. Convert that mismatch before the game becomes a coin-flip script.\nWSU: Shorten the game, win the line of scrimmage, and force the favorite into obvious passing downs.\n\nWhat changed this week\n\u2022 Opponent Preview: Week 7 \u2013 Washington Huskies - Yahoo Sports\n\u2022 Season Preview: Meet Kirby Moore, Washington State Cougars New-Look Coaching Staff - Emerald City Spectrum\n\u2022 College football's mad two-week scramble to land a transfer portal QB\n\u2022 Ex-Washington State football coach Jim Walden dies at 88\n\nWhat could make BlueChip wrong?\n\u2022 Turnovers: the projection assumes roughly normal luck; a +2 swing can flip a WASH lean.\n\u2022 Injury / inactive surprise on either OL or QB would rewrite the pass-rush signal.\n\nBottom line: WASH has more ways to win on the current MATCHUP SIGNAL board, but football variance (turnovers, explosives) remains large around any margin estimate.",
+  "generation_model": "desk-template",
+  "generation_provider": "fallback",
+  "glossary": {
+    "EPA/play": "Expected Points Added estimates how much each play improves expected scoring position. Positive is good. A 5-yard gain on 3rd-and-3 is not treated like 5 yards on 3rd-and-20.",
+    "MATCHUP SIGNAL": "A descriptive strength\u00d7weakness edge. Not a published win probability and not fed into BCW-RIDGE-v0.1 until validated walk-forward.",
+    "Research Preview": "BlueChip quantitative layer that has not cleared the five public ship gates."
+  },
+  "levels": {
+    "slate": {
+      "lean": "WASH",
+      "top_edges": [
+        "++ WASH Ap Rank"
+      ],
+      "market": "WASH -22.5",
+      "mu": 24.75,
+      "confidence_pct": 54.6
+    }
+  }
+}

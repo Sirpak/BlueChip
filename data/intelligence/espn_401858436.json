@@ -1,0 +1,220 @@
+{
+  "game_id": "espn:401858436",
+  "version": "BCW-GIP-v0.1",
+  "created_at": "2026-08-21T03:42:17.247598+00:00",
+  "generated_at": "2026-08-21T03:42:17.247598+00:00",
+  "information_cutoff": "2026-08-21T03:42:17.247598+00:00",
+  "source_set_hash": "7672a2a9f8b7ac63c859e95b",
+  "game": {
+    "game_id": "espn:401858436",
+    "league": "CFB",
+    "matchup": "FRES @ USC",
+    "home_team": "USC",
+    "away_team": "FRES",
+    "home_name": "USC Trojans",
+    "away_name": "Fresno State Bulldogs",
+    "spread_label": "USC -22.5",
+    "home_spread": -22.5,
+    "total_line": 51.5,
+    "week": 1
+  },
+  "lean_team": "USC",
+  "projection": {
+    "model_id": "BCW-DESK-STRENGTH-v0.x",
+    "method": "Market line + AP rank edge (CFB; no CFB Elo yet)",
+    "mu_home": 25.5,
+    "sigma": 15.0,
+    "p_home_win": 0.9522,
+    "p_home_cover": 0.5662,
+    "edge_vs_minus_110": 0.0424,
+    "model_lean": "HOME",
+    "model_lean_team": "USC",
+    "label": "Research Preview",
+    "public_probability_published": false,
+    "confidence_pct": 56.6
+  },
+  "matchup_edges": [
+    {
+      "key": "AP_RANK",
+      "title": "AP ranking gap",
+      "side": "HOME",
+      "side_team": "USC",
+      "strength": "MAJOR",
+      "home_stat": 30.0,
+      "away_stat": 14.0,
+      "mismatch_z": 2.0,
+      "fan_line": "+++ USC \u2014 AP ranking gap",
+      "label": "MATCHUP SIGNAL",
+      "why": "College prior until CFB EPA ingest. Lower AP rank is stronger."
+    }
+  ],
+  "headline_cards": [
+    {
+      "marks": "+++",
+      "key": "AP_RANK",
+      "title": "AP ranking gap",
+      "team": "USC",
+      "strength": "MAJOR",
+      "fan_line": "+++ USC \u2014 AP ranking gap",
+      "mismatch_z": 2.0,
+      "percentile_hint": "More extreme than ~95% of similar unit mismatches in a normal sample.",
+      "label": "MATCHUP SIGNAL",
+      "why": "College prior until CFB EPA ingest. Lower AP rank is stronger.",
+      "home_stat": 30.0,
+      "away_stat": 14.0
+    }
+  ],
+  "slate_edges": [
+    "+++ USC Ap Rank"
+  ],
+  "matchup_logistic": {
+    "model_id": "BCW-MATCHUP-LOGISTIC-v0.x",
+    "label": "Research Preview",
+    "public_probability_published": false,
+    "logit": 0.75,
+    "p_home_win": 0.6792,
+    "lean": "HOME",
+    "contributions": [
+      {
+        "key": "AP_RANK",
+        "weight": 0.3,
+        "z": 2.0,
+        "term": 0.6
+      }
+    ],
+    "note": "Heuristic matchup logistic on EDGE z-scores. Not BCW-RIDGE. Not a ship gate."
+  },
+  "paths": {
+    "home": "Lean on ap ranking gap. Convert that mismatch before the game becomes a coin-flip script.",
+    "away": "Shorten the game, win the line of scrimmage, and force the favorite into obvious passing downs."
+  },
+  "risks": [
+    "Turnovers: the projection assumes roughly normal luck; a +2 swing can flip a USC lean.",
+    "Injury / inactive surprise on either OL or QB would rewrite the pass-rush signal."
+  ],
+  "adjustment": {
+    "points_home": 1.6,
+    "label": "MATCHUP SIGNAL (unvalidated additive)",
+    "note": "Not fed into BCW-RIDGE-v0.1. Research Preview display only."
+  },
+  "events": [
+    {
+      "game_id": "espn:401858436",
+      "event_type": "starter_change",
+      "headline": "USC depth chart: Projecting the Trojans\u2019 starting offense - Yahoo Sports",
+      "publisher": "Yahoo Sports",
+      "source_url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQNTFfQ0xkaDFvRE5HcTVaYnJiUHpad0dsc2paU3MtZ2hoM3llT0FITzFTbmtlQzY1XzE0Y2liTF8xZ282S3dpd0MzTHNCbGVtYzBQb2pPaE56WnA4dWtHM0U3emFaVDRfZWZsb2tCTEQ3NWJFWFlkUU1WWkV0cVFjS3VaMF94SGxlTmc4?oc=5",
+      "bucket": "availability",
+      "structured_fact": "USC depth chart: Projecting the Trojans\u2019 starting offense - Yahoo Sports",
+      "confidence": 0.7,
+      "tier": 3
+    },
+    {
+      "game_id": "espn:401858436",
+      "event_type": "market",
+      "headline": "USC Trojans vs. Fresno State Bulldogs Betting Odds Make Early Statement - Sports Illustrated",
+      "publisher": "Sports Illustrated",
+      "source_url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQLS1PTnoyTERhV25BWEFPYWpUeVIzRmQ4RXBscElNdlZMODdIUEJWS0FlMmRxSGRTb0RnNVZNSk5jcURxeVRUbFRRZkxOcEVRaWd3eGRNei1VQmZDejFjTTZUeFIxTm4ycTRleVF3U3R0allMQUIzc3U0WjNTVzE3aHpsQU16VnBiU3A5VWFta1FDSjV1YXdrT0xJV05mMXJ4ZTZxcEV4LWdTZFU?oc=5",
+      "bucket": "analysis",
+      "structured_fact": "USC Trojans vs. Fresno State Bulldogs Betting Odds Make Early Statement - Sports Illustrated",
+      "confidence": 0.7,
+      "tier": 3
+    },
+    {
+      "game_id": "espn:401858436",
+      "event_type": "other",
+      "headline": "Preview magazine has USC and Notre Dame facing off in CFP - Trojans Wire",
+      "publisher": "Trojans Wire",
+      "source_url": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxPZkh2OGVJdHRiNU5jUF9OMUVOX2MzRjIxdkpvMzZmWHl0RWhacy03RnlILXlfVmZBTDEwSEJiZG5rbUxPamxoTHJfbTk4UnNhZm5VcFJmOTNyTVVvX3NiNWJIUnJTZjlwcjZnTUR1d21xemdiMjBXa2t0ODRkcGFPMU9FQXRHWWNrTG5lU1diVnhSVnEzdVJpbTU0bEo3ODlscGhYaVNiSVF2YmZaaVYtNlVKTmpQV0IwZjRfRXJNRm1jUGQyU3R3cUlramctY09FejFhN1JZMTNIeDUxbENqcjNFUXZteVp5M1E?oc=5",
+      "bucket": "analysis",
+      "structured_fact": "Preview magazine has USC and Notre Dame facing off in CFP - Trojans Wire",
+      "confidence": 0.45,
+      "tier": 3
+    },
+    {
+      "game_id": "espn:401858436",
+      "event_type": "other",
+      "headline": "College football's mad two-week scramble to land a transfer portal QB",
+      "publisher": "ESPN",
+      "source_url": "https://www.espn.com/college-football/story/_/id/49650906/college-football-two-week-scramble-transfer-portal-qb",
+      "bucket": "availability",
+      "structured_fact": "College football's mad two-week scramble to land a transfer portal QB",
+      "confidence": 0.45,
+      "tier": 2
+    },
+    {
+      "game_id": "espn:401858436",
+      "event_type": "other",
+      "headline": "USC season preview: Trojan tackles have to slow down Oregon pass rush - Yahoo Sports",
+      "publisher": "Yahoo Sports",
+      "source_url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxOSFc3ODg2ak5TTlZlQ213ei1xbXkxN0RBcTdmMGJrR1BCR09UeDFSUnZBSlYtZV94NG84QmRMQnB4eFhzS2FNSndQdzFONTVsbkdSZXhfV1NfbUhwNmlKS2dCV3ZPdXIzR0FOUFZLQWhvYjhaTEZzb3dQWXh2dVAxVW5fMFpFT1BpdWc?oc=5",
+      "bucket": "analysis",
+      "structured_fact": "USC season preview: Trojan tackles have to slow down Oregon pass rush - Yahoo Sports",
+      "confidence": 0.45,
+      "tier": 3
+    },
+    {
+      "game_id": "espn:401858436",
+      "event_type": "other",
+      "headline": "Big Ten season preview: USC has to expect Wisconsin's very best game - Yahoo Sports",
+      "publisher": "Yahoo Sports",
+      "source_url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxOdFo1QlZLQTBmeUFVb1JZRkRvVFhQay05M241djNBYzNUaDNYLVhiekxkWTQ5a2RlZUdlX1RIMlA1ZjlEamxES0d4YkJENTVRMEU4WHV0RWlKZXk2N0VISEI1NTV5RjhuLURrQVhaU1k3WGt0SjF3OVQ0NWs1Q3h4QQ?oc=5",
+      "bucket": "analysis",
+      "structured_fact": "Big Ten season preview: USC has to expect Wisconsin's very best game - Yahoo Sports",
+      "confidence": 0.45,
+      "tier": 3
+    }
+  ],
+  "news_citations": [
+    {
+      "headline": "USC depth chart: Projecting the Trojans\u2019 starting offense - Yahoo Sports",
+      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQNTFfQ0xkaDFvRE5HcTVaYnJiUHpad0dsc2paU3MtZ2hoM3llT0FITzFTbmtlQzY1XzE0Y2liTF8xZ282S3dpd0MzTHNCbGVtYzBQb2pPaE56WnA4dWtHM0U3emFaVDRfZWZsb2tCTEQ3NWJFWFlkUU1WWkV0cVFjS3VaMF94SGxlTmc4?oc=5",
+      "publisher": "Yahoo Sports"
+    },
+    {
+      "headline": "USC Trojans vs. Fresno State Bulldogs Betting Odds Make Early Statement - Sports Illustrated",
+      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQLS1PTnoyTERhV25BWEFPYWpUeVIzRmQ4RXBscElNdlZMODdIUEJWS0FlMmRxSGRTb0RnNVZNSk5jcURxeVRUbFRRZkxOcEVRaWd3eGRNei1VQmZDejFjTTZUeFIxTm4ycTRleVF3U3R0allMQUIzc3U0WjNTVzE3aHpsQU16VnBiU3A5VWFta1FDSjV1YXdrT0xJV05mMXJ4ZTZxcEV4LWdTZFU?oc=5",
+      "publisher": "Sports Illustrated"
+    },
+    {
+      "headline": "Preview magazine has USC and Notre Dame facing off in CFP - Trojans Wire",
+      "url": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxPZkh2OGVJdHRiNU5jUF9OMUVOX2MzRjIxdkpvMzZmWHl0RWhacy03RnlILXlfVmZBTDEwSEJiZG5rbUxPamxoTHJfbTk4UnNhZm5VcFJmOTNyTVVvX3NiNWJIUnJTZjlwcjZnTUR1d21xemdiMjBXa2t0ODRkcGFPMU9FQXRHWWNrTG5lU1diVnhSVnEzdVJpbTU0bEo3ODlscGhYaVNiSVF2YmZaaVYtNlVKTmpQV0IwZjRfRXJNRm1jUGQyU3R3cUlramctY09FejFhN1JZMTNIeDUxbENqcjNFUXZteVp5M1E?oc=5",
+      "publisher": "Trojans Wire"
+    },
+    {
+      "headline": "College football's mad two-week scramble to land a transfer portal QB",
+      "url": "https://www.espn.com/college-football/story/_/id/49650906/college-football-two-week-scramble-transfer-portal-qb",
+      "publisher": "ESPN"
+    },
+    {
+      "headline": "USC season preview: Trojan tackles have to slow down Oregon pass rush - Yahoo Sports",
+      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxOSFc3ODg2ak5TTlZlQ213ei1xbXkxN0RBcTdmMGJrR1BCR09UeDFSUnZBSlYtZV94NG84QmRMQnB4eFhzS2FNSndQdzFONTVsbkdSZXhfV1NfbUhwNmlKS2dCV3ZPdXIzR0FOUFZLQWhvYjhaTEZzb3dQWXh2dVAxVW5fMFpFT1BpdWc?oc=5",
+      "publisher": "Yahoo Sports"
+    },
+    {
+      "headline": "Big Ten season preview: USC has to expect Wisconsin's very best game - Yahoo Sports",
+      "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxOdFo1QlZLQTBmeUFVb1JZRkRvVFhQay05M241djNBYzNUaDNYLVhiekxkWTQ5a2RlZUdlX1RIMlA1ZjlEamxES0d4YkJENTVRMEU4WHV0RWlKZXk2N0VISEI1NTV5RjhuLURrQVhaU1k3WGt0SjF3OVQ0NWs1Q3h4QQ?oc=5",
+      "publisher": "Yahoo Sports"
+    }
+  ],
+  "summary_short": "BlueChip leans USC. Top signal: +++ USC \u2014 AP ranking gap",
+  "summary_full": "Fresno State Bulldogs at USC Trojans.\n\nBlueChip leans USC. +++ USC \u2014 AP ranking gap\n\nWhy USC has the edge\n- +++ USC \u2014 AP ranking gap\n\nBlueChip projection\nMarket: USC -22.5\nBCW desk \u03bc (home): +25.5 (Research Preview)\nWin probability: unavailable until probability model passes validation.\n\nHow each team wins\nUSC: Lean on ap ranking gap. Convert that mismatch before the game becomes a coin-flip script.\nFRES: Shorten the game, win the line of scrimmage, and force the favorite into obvious passing downs.\n\nWhat changed this week\n\u2022 USC depth chart: Projecting the Trojans\u2019 starting offense - Yahoo Sports\n\u2022 USC Trojans vs. Fresno State Bulldogs Betting Odds Make Early Statement - Sports Illustrated\n\u2022 Preview magazine has USC and Notre Dame facing off in CFP - Trojans Wire\n\u2022 College football's mad two-week scramble to land a transfer portal QB\n\nWhat could make BlueChip wrong?\n\u2022 Turnovers: the projection assumes roughly normal luck; a +2 swing can flip a USC lean.\n\u2022 Injury / inactive surprise on either OL or QB would rewrite the pass-rush signal.\n\nBottom line: USC has more ways to win on the current MATCHUP SIGNAL board, but football variance (turnovers, explosives) remains large around any margin estimate.",
+  "generation_model": "desk-template",
+  "generation_provider": "fallback",
+  "glossary": {
+    "EPA/play": "Expected Points Added estimates how much each play improves expected scoring position. Positive is good. A 5-yard gain on 3rd-and-3 is not treated like 5 yards on 3rd-and-20.",
+    "MATCHUP SIGNAL": "A descriptive strength\u00d7weakness edge. Not a published win probability and not fed into BCW-RIDGE-v0.1 until validated walk-forward.",
+    "Research Preview": "BlueChip quantitative layer that has not cleared the five public ship gates."
+  },
+  "levels": {
+    "slate": {
+      "lean": "USC",
+      "top_edges": [
+        "+++ USC Ap Rank"
+      ],
+      "market": "USC -22.5",
+      "mu": 25.5,
+      "confidence_pct": 56.6
+    }
+  }
+}
