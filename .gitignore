@@ -41,3 +41,12 @@ web/dist/
 .ruff_cache/
 .coverage
 htmlcov/
+
+# Cursor / local AI tooling — never publish
+.cursor/
+.cursorignore
+.cursorrules
+AGENTS.md
+**/AGENTS.md
+*.canvas.tsx
+
