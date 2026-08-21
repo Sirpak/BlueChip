@@ -42,7 +42,7 @@ web/dist/
 .coverage
 htmlcov/
 
-# Local AI / editor agent config — never publish
+# Local AI / editor agent config - never publish
 .cursor/
 **/.cursor/
 .cursorignore
