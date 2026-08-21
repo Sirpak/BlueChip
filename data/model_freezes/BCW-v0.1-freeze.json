@@ -3,7 +3,7 @@
   "holdout_period": "2023-2025",
   "feature_version": "PURE-RAW-v0.x",
   "ridge_family": "E",
-  "ridge_lambda": 100.0,
+  "ridge_lambda": 500.0,
   "ewma_alpha": 0.2,
   "logistic_family": null,
   "logistic_lambda": null,
@@ -20,6 +20,6 @@
   ],
   "holdout_opened": false,
   "status": "searching",
-  "updated_at": "2026-08-18T10:16:20.813943+00:00",
+  "updated_at": "2026-08-21T00:42:27.181544+00:00",
   "notes": "Protocol frozen. Feature \u03bb/\u03b1/family not frozen. 2023\u20132025 sealed."
 }
